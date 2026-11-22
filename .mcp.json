@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mkt-skills": {
+      "type": "http",
+      "url": "https://mktskills.com/mcp"
+    }
+  }
+}

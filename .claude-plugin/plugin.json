@@ -1,0 +1,22 @@
+{
+  "name": "mkt-skills",
+  "displayName": "MKT Skills",
+  "version": "0.2.2",
+  "description": "31 evidence-led marketing skills for strategy, paid media, creative, copy, CRO, SEO, pricing, retention, measurement and reporting, with an optional read-only MKT Skills connector for authorized report files and selected Google Ads accounts.",
+  "author": {
+    "name": "Vince Servidad"
+  },
+  "license": "MIT",
+  "homepage": "https://mktskills.com/",
+  "privacyPolicyUrl": "https://mktskills.com/privacy",
+  "repository": "https://github.com/vinceservidad/mkt-skills-plugin",
+  "icon": "./assets/mkt-skills-512.png",
+  "keywords": [
+    "marketing",
+    "paid-media",
+    "cro",
+    "seo",
+    "analytics",
+    "mcp"
+  ]
+}
