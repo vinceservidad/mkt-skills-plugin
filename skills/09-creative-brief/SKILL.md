@@ -77,7 +77,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The brief is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. The single message, tone notes and example lines you write go in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. The single message, tone notes and example lines you write go in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the single message and insight chosen, and what is still missing, then end with the same block.
 

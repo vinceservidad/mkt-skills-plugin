@@ -63,7 +63,7 @@ Then update the file:
 - In the frontmatter, set `status: draft` and `updated: <date>`.
 - Append one line to `## Change log`.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (copy samples, reviews, interviews), with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (copy samples, reviews, interviews), with the source named. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
 
 Reply with:
 - the voice in one line (*we are X, not Y*);

@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/free-tools-guide.md](references/free-tools-guide.md) for tool types, the fit test, data handling, the build decision and measurement.
 
 1. **Outcome.** Name what the tool must produce (qualified leads, booked calls, clients) and the count that would justify the build.
-2. **What exists already.** Count downloads, leads and clients from existing free resources with [scripts/tally.py](scripts/tally.py) or the notes. If people download a resource but are never followed up, fixing that follow-up may beat building something new; say so.
+2. **What exists already.** Count downloads, leads and clients from existing free resources with exact programmatic counting or the notes. If people download a resource but are never followed up, fixing that follow-up may beat building something new; say so.
 3. **Job fit.** Pick the piece of a job the buyer already asks about (in their words from Voice of customer and Jobs), that has a clear answer the tool can give, and that leads to the offer. Ideas that don't touch the core job are dropped with the reason.
 4. **The tool.** Inputs, the output the user sees, and the call to action on the result screen framed around what the paid offer does beyond the tool's snapshot (never a generic call push or an inflated/scary score to frighten buyers into booking, which misleads buyers, damages trust and may break consumer-protection rules — refuse any request to rig the result).
 5. **Data.** Ask only for what the result needs. Financial, health or personal figures are sensitive: decide whether anything is stored, where, for how long and who sees it; say it plainly next to the form; prefer calculating in the browser without storing. Privacy rules are facts to verify or mark *to confirm*. Email capture is optional and its consent wording is the owner's.
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; nothing built, published or collected
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
 
 Reply with the file path, the recommended tool and why, the build decision with its cost, the data rule, and what is still missing, then end with the same block.
 

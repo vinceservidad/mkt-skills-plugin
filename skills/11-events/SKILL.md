@@ -39,7 +39,7 @@ Use [references/events-guide.md](references/events-guide.md) for event types, th
 9. **Approval.** The plan is a draft. Buying a booth or ticket, applying to speak, or contacting attendees needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no attendance, results, offers or costs that aren't in `context/` or `inputs/`. Count from files with [scripts/tally.py](scripts/tally.py), never by eye. Mark inferences `(assumption)` and list what is needed under Open questions. No benchmark event return is evidence.
+**Nothing the context doesn't support.** Write no attendance, results, offers or costs that aren't in `context/` or `inputs/`. Count from files with exact programmatic counting, never by eye. Mark inferences `(assumption)` and list what is needed under Open questions. No benchmark event return is evidence.
 
 ## Output
 
@@ -69,7 +69,7 @@ Status: draft for the owner's approval; nothing bought, applied for or sent
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
 
 Reply with the file path, the recommended option and why, the cost per conversation needed for each option, the dates and deadlines, and what is still missing, then end with the same block.
 

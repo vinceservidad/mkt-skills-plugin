@@ -2,7 +2,7 @@
 
 ## Sample size (two proportions, about 95% confidence, 80% power)
 
-n per arm ≈ 16 × p × (1 − p) ÷ d², where p = baseline rate and d = absolute difference to detect. Example: p = 2.6%, relative lift 20% → d = 0.52 points → n ≈ 16 × 0.026 × 0.974 ÷ 0.0052² ≈ 15,000 per arm. Use scripts/sample_size.py.
+n per arm ≈ 16 × p × (1 − p) ÷ d², where p = baseline rate and d = absolute difference to detect. Example: p = 2.6%, relative lift 20% → d = 0.52 points → n ≈ 16 × 0.026 × 0.974 ÷ 0.0052² ≈ 15,000 per arm. Compute the exact two-proportion sample size for your baseline rate and minimum detectable effect.
 
 ## Duration
 

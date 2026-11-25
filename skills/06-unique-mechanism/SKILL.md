@@ -35,11 +35,11 @@ Use [references/mechanism-guide.md](references/mechanism-guide.md) for the tests
 6. **Name it.** Propose two or three names, descriptive enough to explain themselves, in italics. A name may not promise more than the proof (a day, a number, a speed must match the evidence). Names are untested and not cleared: no trademark, ownership or *proprietary* claim. Brand-level naming belongs to `05-naming`.
 7. **Proof and demonstration.** For each link, name the proof that exists (a number, a review, a sample) or the gap, and one way to show the mechanism to a buyer (a sample report, a before-and-after, a walkthrough) using what exists.
 8. **Hand-offs.** If `message.md` → Mechanism differs from this, hand the update to `08-message-doc`; never edit `message.md`. Proposed parts that would strengthen the mechanism go to `07-offer-design` or `04-product` as suggestions, not claims.
-9. **Check before saving.** Re-read the draft against the Checks and run `scripts/check_quotes.py`. Fix every failure before you save.
+9. **Check before saving.** Re-read the draft against the Checks and verify every quoted phrase verbatim against its named source. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No feature, ingredient, step, result, speed, percentage, study or customer count that isn't in `context/` or `inputs/`. If the business has no distinct way of working beyond what alternatives also do, say so plainly in the section: an honest *no unique mechanism evidenced yet; the strongest candidate is …, which needs …* is a valid result. A mechanism made up for the copy is not.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Mechanism names, links and your summaries go in italics or plain text. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/positioning.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Mechanism names, links and your summaries go in italics or plain text. Verify every quoted phrase in the file verbatim against its named source file.
 
 ## Output
 

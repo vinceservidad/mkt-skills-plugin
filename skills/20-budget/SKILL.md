@@ -25,14 +25,14 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/budget-guide.md](references/budget-guide.md) for affordability, the 70/20/10 split as a heuristic, brand and activation, pacing and reallocation rules.
 
 1. **Affordability.** What the business can spend from contribution margin, payback and cash (from `17-unit-economics` or computed from `inputs/`), shown with arithmetic; the total is the owner's.
-2. **Current spend.** By line and month from `inputs/`, with cost per new customer from the source of truth; compute with [scripts/sum_by.py](scripts/sum_by.py).
+2. **Current spend.** By line and month from `inputs/`, with cost per new customer from the source of truth; compute with exact programmatic summing.
 3. **70/20/10 budget.** A heuristic, not a rule: most to proven work, some to scaling what is promising, a little to experiments; the actual split follows the evidence and the plan's priorities, with the reason for each line. Brand versus activation is discussed as a published heuristic, labelled, not applied blindly.
 4. **Pacing.** Month by month, including seasonal dates and freelancer and tool costs.
 5. **Reallocation rules.** Written in advance: when a line hits or misses its guardrail cost per business outcome, what moves where; scaling goes through `19-scale-paid` gates.
 6. **Approval.** The budget is a draft. Committing or moving money needs the owner's explicit approval.
 7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no budgets, margins, costs or benchmarks that aren't in `context/` or `inputs/`, computed from them, or set by the owner. Heuristics are labelled as heuristics. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no budgets, margins, costs or benchmarks that aren't in `context/` or `inputs/`, computed from them, or set by the owner. Heuristics are labelled as heuristics. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -59,7 +59,7 @@ Status: draft for the owner's approval; no money committed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/20-operations/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, what the business can afford with the arithmetic, the proposed split and why, and the rules for moving money, and what is still missing, then end with the same block.
 

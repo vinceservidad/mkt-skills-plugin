@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/lifecycle-guide.md](references/lifecycle-guide.md) for stages and flows, RFM, channel choice, win-back and how to measure with a holdout.
 
-1. **Stages from evidence.** Define the stages (new, active, repeat, at risk, lapsed, won back) with rules the data can apply, and count customers in each from `inputs/` with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py). Include pause, skip, failed-payment, complaint/low-NPS, and product-buildup (too-much-product) signals inside the **at risk** rule with their counts rather than bundling them into healthy active. Where order data allows, segment by RFM (recency, frequency, monetary) and say what each segment needs.
+1. **Stages from evidence.** Define the stages (new, active, repeat, at risk, lapsed, won back) with rules the data can apply, and count customers in each from `inputs/` with exact row-by-row counting and summing. Include pause, skip, failed-payment, complaint/low-NPS, and product-buildup (too-much-product) signals inside the **at risk** rule with their counts rather than bundling them into healthy active. Where order data allows, segment by RFM (recency, frequency, monetary) and say what each segment needs.
 2. **What exists.** List the current flows and messages; note gaps against the stages.
 3. **Flows.** For each stage that the evidence says matters: trigger, timing, channel, message purpose, the offer it may use (from the Value ladder and `offer.md`), and the stop rule. Welcome and post-purchase answer the questions customers ask then; replenishment matches real usage; at-risk and win-back address the reason customers left, not a default discount.
 4. **Consent per channel.** Email, SMS and push each need the consent the law and the customer gave; transactional messages stay transactional. Push notifications need the app permission and an opt-out. Rules are facts to verify or mark *to confirm*.
@@ -38,7 +38,7 @@ Use [references/lifecycle-guide.md](references/lifecycle-guide.md) for stages an
 7. **Approval.** The plan is a draft. Turning on flows, sending messages or creating offers needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no segment sizes, rates, offers, results or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no segment sizes, rates, offers, results or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; no flow turned on, nothing sent
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the stages with counts, the first three flows to build and why, and the win-back approach, and what is still missing, then end with the same block.
 

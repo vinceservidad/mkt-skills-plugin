@@ -63,7 +63,7 @@ Then update the file:
 - Append one line to `## Change log`.
 - If `context/brand.md` does not exist, create it with frontmatter, the five brand sections (others `Status: empty`) and a change log.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (customer language, existing copy), with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (customer language, existing copy), with the source named. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
 
 Reply with:
 - the recommended name and runner-up, and why;

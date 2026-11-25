@@ -31,13 +31,13 @@ Use [references/price-testing-guide.md](references/price-testing-guide.md) for t
 1. **The decision.** The pricing question (raise, lower, restructure, discount) and what would change it, from `offer.md` and unit economics.
 2. **Design that stays fair.** Prefer new-buyer cohorts over time, regions, or clearly different offers (different bundle, term or tier) over showing different prices for the identical item to people at the same time. If a simultaneous split is used, say why, how it is disclosed and how buyers are treated fairly (for example honoring the lower price on request). Pricing and consumer-protection rules are legal facts to verify with URL and access date or mark *to confirm*.
 3. **Protect existing customers.** Existing subscribers keep their terms unless the owner decides a change with notice; the test is for new buyers.
-4. **Metrics.** Revenue and contribution margin per visitor, conversion, and retention or refunds over the window that matters; computed with [scripts/sum_by.py](scripts/sum_by.py). Conversion alone is not the decision.
+4. **Metrics.** Revenue and contribution margin per visitor, conversion, and retention or refunds over the window that matters; computed with exact programmatic summing. Conversion alone is not the decision.
 5. **Size and duration.** Use the sample-size method in `18-ab-testing`; price tests often need long windows to see retention. If traffic can't decide it, use a sequential cohort test or a survey-based estimate labelled as stated preference.
 6. **Read.** Observed behaviour, stated preference and inference kept separate; the result applies to the period, audience and offer tested.
 7. **Approval.** The design is a draft. Showing any test price or changing live prices needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no prices, elasticities, results or margins that aren't in `context/` or `inputs/` or computed from them. No competitor price or framework default is proof of the right price. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no prices, elasticities, results or margins that aren't in `context/` or `inputs/` or computed from them. No competitor price or framework default is proof of the right price. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -67,7 +67,7 @@ Status: draft for the owner's approval; no price shown or changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/18-experimentation/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the design and why it is fair, the metrics, the duration, and how existing customers are protected, and what is still missing, then end with the same block.
 

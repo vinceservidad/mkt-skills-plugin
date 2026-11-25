@@ -23,7 +23,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/martech-guide.md](references/martech-guide.md) for the stack map, data-flow tracing, CRM and marketing automation choices, RevOps and consolidation.
 
-1. **Inventory.** Every tool from `inputs/` with its job, monthly cost, owner and status (used, unused); sum cost with [scripts/sum_by.py](scripts/sum_by.py).
+1. **Inventory.** Every tool from `inputs/` with its job, monthly cost, owner and status (used, unused); sum cost with exact programmatic summing.
 2. **Data flows.** Trace the flows that matter (sign-up, purchase, cancellation, consent, attribution) across tools; mark breaks.
 3. **Overlaps and gaps.** Tools doing the same job; jobs no tool does; owners missing.
 4. **CRM and marketing automation.** Whether the business needs a CRM or more automation, from the process it must support; a choice of vendor waits until requirements are clear. Vendor features and prices are facts to cite with URL and date or mark *to confirm*.
@@ -32,7 +32,7 @@ Use [references/martech-guide.md](references/martech-guide.md) for the stack map
 7. **Approval.** The map is a draft. Cancelling, buying or reconfiguring tools needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no tools, costs, features or data flows that aren't in `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no tools, costs, features or data flows that aren't in `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -61,7 +61,7 @@ Status: draft for the owner's approval; no tool changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/20-operations/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, total cost, overlaps and unused tools, the broken data flows that matter, and the first changes, and what is still missing, then end with the same block.
 

@@ -27,7 +27,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/lead-scoring-guide.md](references/lead-scoring-guide.md) for fit and intent signals, weighting from outcomes, BANT, bands and routing.
 
-1. **Read the leads.** Count leads, outcomes and conversion by field (source, size, role, location, pages viewed, downloads) from `inputs/` with [scripts/sum_by.py](scripts/sum_by.py) or [scripts/tally.py](scripts/tally.py). Say how many outcomes there are; with few closed leads, weights are *(assumption)* until more data arrives.
+1. **Read the leads.** Count leads, outcomes and conversion by field (source, size, role, location, pages viewed, downloads) from `inputs/` with exact row-by-row summing and counting. Say how many outcomes there are; with few closed leads, weights are *(assumption)* until more data arrives.
 2. **Fit score.** Points from ICP traits (size band, type, location, revenue band, deciding role). Disqualifiers (from the ICP — including wanting an excluded service such as strategic CFO advice rather than bookkeeping) **must override all fit and intent points immediately** when scoring leads in `inputs/`, banding those leads as *Not a fit* (never *Sales now*).
 3. **Intent score.** Points from behaviour that the data links to buying (booked a call, viewed pricing, asked about price in a DM, a referral) and less for weaker signals (a single download). Never treat every download as a buyer. **Do not use email opens as an intent signal** (even if the user asks to score opens): explain that automated email privacy features and security bots make open counts unreliable (mark vendor-specific mechanics *to confirm* rather than stating them as current fact), check whether `inputs/` even shows leads being emailed, and replace opens with real buying-intent behaviours from the data.
 4. **BANT check.** Budget (fits a price band), Authority (decides or reaches who does), Need (named pain), Timing. Use it at the first conversation, recorded as heard or unknown.
@@ -37,7 +37,7 @@ Use [references/lead-scoring-guide.md](references/lead-scoring-guide.md) for fit
 8. **Approval.** The model is a draft. Changing CRM fields, automations or routing needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no conversion rates, weights presented as proven, leads or outcomes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no conversion rates, weights presented as proven, leads or outcomes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; no CRM or routing changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the fit and intent rules, the disqualifiers, the bands with next steps, and the current leads scored, and what is still missing, then end with the same block.
 

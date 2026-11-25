@@ -34,7 +34,7 @@ Use [references/demand-signals.md](references/demand-signals.md) for the detail 
    - **Problem or DIY:** the problem, a template or how-to (*cash flow forecast template*).
    - **Alternative:** another way to solve it (*fractional CFO*).
 
-   Total each group with `scripts/tally.py` or `python3`, never by eye. Say which group is this business's demand and which is only adjacent.
+   Total each group with exact programmatic counting or `python3`, never by eye. Say which group is this business's demand and which is only adjacent.
 2. **Read each signal for what it is.**
    - **Search volume:** the tool's estimate for its location and date, not a count of buyers. Low volume for a specific term can still be valuable; high volume for a generic term mostly belongs to other buyers.
    - **Bid ranges and competition:** what the tool estimates advertisers pay. They signal commercial interest, not profit.
@@ -50,7 +50,7 @@ Use [references/demand-signals.md](references/demand-signals.md) for the detail 
 
    Then say what that means for the next step: capture (search, comparison pages), educate (content and lead magnets on the problem terms), or create (category work, outbound). Leave channel choice to `11-channel-selection`.
 5. **Name the limits.** One export, one date, one location; estimates; terms not checked. List the gaps and how to fill them.
-6. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+6. **Check before saving.** Re-read the draft against every item under Checks, and verify every quoted phrase verbatim against its named source. Fix any failure before you save.
 
 **Platform facts.** Do not state how a keyword tool, search engine or ad library currently works (how it estimates, buckets or hides data, who it shows) unless you have checked the platform's own documentation and cite it as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise describe only what the export or observation shows, and mark anything else *unverified*.
 
@@ -58,7 +58,7 @@ Use [references/demand-signals.md](references/demand-signals.md) for the detail 
 
 **Denominators.** Every count keeps its own denominator, checked against the source: lost deals are out of lost deals (*6 of 29 lost deals*), not out of all calls; closed deals out of closed deals; leads out of leads. Recheck each "x of y" against the file before saving.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Totals come from [scripts/tally.py](scripts/tally.py) (`python3 <this skill's folder>/scripts/tally.py inputs/keywords.csv`) or `python3`.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Verify every quoted phrase in the file verbatim against its named source file. Totals come from exact programmatic counting or `python3`.
 
 ## Output
 

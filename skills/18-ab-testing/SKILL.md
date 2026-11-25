@@ -24,7 +24,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/ab-testing-guide.md](references/ab-testing-guide.md) for sample size, duration, decision rules, peeking, sequential and Bayesian options, and multivariate tests.
 
 1. **One change, one metric.** Name the change, the audience and page, the primary metric (with its denominator) and guardrail metrics (for example refunds, cancellations).
-2. **Sample size.** From the baseline rate and the minimum detectable effect worth acting on, compute visitors per arm with [scripts/sample_size.py](scripts/sample_size.py) (`python3 <this skill's folder>/scripts/sample_size.py <baseline> <relative_mde>`), then duration from daily traffic, rounded up to whole weeks. If it takes too long, say so and propose a bigger change, a higher-traffic step or another method.
+2. **Sample size.** From the baseline rate and the minimum detectable effect worth acting on, compute visitors per arm with exact sample-size calculation, then duration from daily traffic, rounded up to whole weeks. If it takes too long, say so and propose a bigger change, a higher-traffic step or another method.
 3. **Decision rule before launch.** Fixed-horizon (read once at the planned end, at the chosen significance and power), or a sequential or Bayesian method if the tool supports it properly; write the rule and what each outcome triggers.
 4. **Read past tests honestly.** If a past test stopped early or was underpowered, say what it can and can't support.
 5. **Multivariate testing.** Only when traffic supports every combination; usually not for small sites.
@@ -33,7 +33,7 @@ Use [references/ab-testing-guide.md](references/ab-testing-guide.md) for sample 
 8. **Approval.** The design is a draft. Launching the test or shipping a variant needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, lifts, rates or significance that aren't computed from `inputs/`. Expected effects are assumptions. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, lifts, rates or significance that aren't computed from `inputs/`. Expected effects are assumptions. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -61,7 +61,7 @@ Status: draft for the owner's approval; not launched
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/18-experimentation/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the sample size and duration with the arithmetic, the decision rule, and whether the traffic can decide this test, and what is still missing, then end with the same block.
 

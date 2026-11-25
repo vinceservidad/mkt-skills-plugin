@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/community-guide.md](references/community-guide.md) for community types, purpose, rituals, the value exchange, host capacity and engagement measures.
 
-1. **Evidence of demand.** What customers have asked for (to meet peers, to learn, to share), counted from `inputs/` with [scripts/tally.py](scripts/tally.py). No demand evidence means start small and test.
+1. **Evidence of demand.** What customers have asked for (to meet peers, to learn, to share), counted from `inputs/` with exact programmatic counting. No demand evidence means start small and test.
 2. **Purpose and members.** One purpose tied to a job, for a defined group (customers only, the ICP, or a wider audience), with who is not a member and why.
 3. **Format.** Choose the smallest form that serves the purpose: a monthly call, a customer advisory board, an ambassador program, an event series, or an online group. A platform comes last; platform features are facts to cite or mark *to confirm*.
 4. **Rituals.** A regular moment members come for (a monthly session, a teardown, a peer round), at a cadence the host can keep.
@@ -40,7 +40,7 @@ Use [references/community-guide.md](references/community-guide.md) for community
 9. **Approval.** The plan is a draft. Launching a community, inviting customers or creating channels needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no member counts, engagement figures, results or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no member counts, engagement figures, results or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; nothing launched, nobody invited
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the purpose and members, the format and ritual, the host's time, and how success is measured, and what is still missing, then end with the same block.
 

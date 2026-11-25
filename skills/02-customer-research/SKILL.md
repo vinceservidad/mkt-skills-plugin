@@ -66,7 +66,7 @@ Write the research plan from [references/interview-guide.md](references/intervie
 
 Put the founder's beliefs under "Hypotheses to test". Then ask the user to run the interviews and bring the notes back.
 
-Count with [scripts/tally.py](scripts/tally.py) whenever the material is a file: `python3 <this skill's folder>/scripts/tally.py inputs/reviews.csv` prints rows and per-column counts, and `tally.py notes.md 'R\d+|T-\d+'` counts distinct item IDs. Use its numbers, not counts made by reading.
+Compute exact row and category counts programmatically whenever the material is a file; never estimate counts by eye.
 
 ## Output
 

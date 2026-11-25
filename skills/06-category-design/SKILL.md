@@ -48,11 +48,11 @@ Use [references/category-design.md](references/category-design.md) for the tests
    - **Category king criteria:** what would show the business owns the category (buyers using the term, search for it, being named first), each measurable.
 5. **Plan the lightning strike only as far as the evidence goes.** List the moments and assets a launch would need (POV document, sales framing, a launch moment) and who owns them (`12-launch`, `08-message-doc`, `11-pr`). Leave dates, budgets, media and partners to the owner: do not invent them.
 6. **Test before committing.** A cheap test first: frame the next set of sales calls around the named problem and log reactions; check search and call language for the term over a stated period; hand search questions to `01-demand-check`. Name the result that would stop the effort.
-7. **Check before saving.** Re-read the draft against the Checks and run `scripts/check_quotes.py`. Fix every failure before you save.
+7. **Check before saving.** Re-read the draft against the Checks and verify every quoted phrase verbatim against its named source. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No market size, search volume, trend, budget, timeline, competitor move or case-study outcome that isn't in `context/` or `inputs/`. Famous category stories are illustrations, not evidence for this business, and are never used to promise a result. Inferences carry `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Category names, the point of view and your summaries go in italics or plain text. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/positioning.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Category names, the point of view and your summaries go in italics or plain text. Verify every quoted phrase in the file verbatim against its named source file.
 
 ## Output
 

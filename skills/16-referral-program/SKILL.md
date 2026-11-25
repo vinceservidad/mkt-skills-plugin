@@ -30,7 +30,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/referral-guide.md](references/referral-guide.md) for when to ask, reward types and their cost, the kit, qualification, tracking and legal checks.
 
-1. **Read word of mouth today.** Count referred leads, clients and close rates by referrer type from `inputs/` with [scripts/tally.py](scripts/tally.py), compared with other sources. Note when referrals happen (after which moment) and how they are recorded.
+1. **Read word of mouth today.** Count referred leads, clients and close rates by referrer type from `inputs/` with exact programmatic counting, compared with other sources. Note when referrals happen (after which moment) and how they are recorded.
 2. **The moment to ask.** Tie the ask to the moment of felt value the evidence shows (a good review, a result, a milestone), not a random email blast.
 3. **Reward options and cost.** From margin, price and tenure, compute what a qualified referred customer is worth and what each reward option costs, with the arithmetic shown and labelled. Options include none (a thank-you), a fee credit, a gift, a donation, a two-sided reward and cash. Weigh what the evidence says referrers would feel comfortable with; the owner sets the reward.
 4. **The kit.** What the referrer sends: a short description in plain words, the real offer, proof that exists, a link or an intro template. Built from context, not invented claims.
@@ -40,7 +40,7 @@ Use [references/referral-guide.md](references/referral-guide.md) for when to ask
 8. **Approval.** The design is a draft. Launching the program, promising rewards or contacting clients needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no referral counts, rewards, results, quotes or client details that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no referral counts, rewards, results, quotes or client details that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; nothing launched or promised
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, what word of mouth already brings, when to ask, the reward options with cost, and the kit, and what is still missing, then end with the same block.
 

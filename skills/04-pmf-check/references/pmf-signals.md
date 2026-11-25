@@ -15,7 +15,7 @@ Questions 2 to 4 follow the version Rahul Vohra described for Superhuman's produ
 
 **Who to ask.** People who have experienced the core of the product: for software, active users who have used it more than once recently; for a service, customers who have received the core result at least once (a delivered month, a finished project). Exclude, or report separately, brand-new customers who have not yet had the result, churned customers and people who never used it. Record how many were asked, how many answered and who did not: owners who are unhappy answer surveys less often (assumption: non-response bias runs in either direction; say it is unknown).
 
-**Scoring.** Very-disappointed answers ÷ valid answers (N/A excluded and counted). Run `scripts/pmf_score.py` overall and by segment. Report the 95% interval it prints: with 14 answers, a 71% score has an interval of roughly 45% to 88%; with 4 answers, the interval is too wide to say anything.
+**Scoring.** Very-disappointed answers ÷ valid answers (N/A excluded and counted). Run exact PMF calculation overall and by segment. Report the 95% interval it prints: with 14 answers, a 71% score has an interval of roughly 45% to 88%; with 4 answers, the interval is too wide to say anything.
 
 **The 40% line.** Ellis reported that products which went on to grow well tended to score at or above 40% very disappointed. It is a heuristic from his experience, not a law, not a peer-reviewed threshold and not proof of fit. Use it as a reference line; never write "PMF achieved" from a score alone.
 
@@ -23,7 +23,7 @@ Questions 2 to 4 follow the version Rahul Vohra described for Superhuman's produ
 
 ## 2. Retention: do they stay?
 
-**Cohorts.** Group customers by start period. For each age (3, 6, 12, 24 months, or weeks for a product used weekly), count retained ÷ customers old enough to reach that age. A cohort that has not reached an age is *too young*, not *100%*. `scripts/retention.py` does this from a log with start and end months.
+**Cohorts.** Group customers by start period. For each age (3, 6, 12, 24 months, or weeks for a product used weekly), count retained ÷ customers old enough to reach that age. A cohort that has not reached an age is *too young*, not *100%*. exact cohort retention calculation does this from a log with start and end months.
 
 **Shape.** Plot or read the curve per cohort. A curve that drops and then flattens means a group stays; one that keeps falling toward zero means no fit yet for that group. Do not quote a benchmark retention rate for the category; compare cohorts and segments with each other.
 

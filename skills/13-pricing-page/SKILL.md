@@ -45,11 +45,11 @@ Use [references/pricing-page-anatomy.md](references/pricing-page-anatomy.md) for
 9. **Urgency:** only what Urgency and scarcity says is true (a real capacity limit, stated plainly). No countdowns, no invented demand.
 10. **Measure:** primary outcome (paid orders or qualified calls from the page, by plan), guardrails (refunds, wrong-band calls, support questions about price), each change as a test with a window and stopping rule. Hand price experiments to `18-price-testing`, page copy to `10-page-copy`, trust elements to `13-trust-signals`.
 11. **Authorization.** Publishing prices, terms or a guarantee needs the owner's approval and a check afterwards against the baseline.
-12. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+12. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
 
 **Nothing the context doesn't support.** Write no prices, discounts, annual deals, tiers, inclusions, guarantee terms, deadlines or customer numbers that aren't decided in `context/` or `inputs/`. Anything marked `(assumption)` or proposed in `offer.md` stays off the page. Show the whole price the buyer pays (shipping, fees, the condition on any free-shipping or free-trial claim).
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your plan names, headlines and FAQ answers go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your plan names, headlines and FAQ answers go in italics. Verify every quoted phrase in the file verbatim against its named source file.
 
 ## Output
 

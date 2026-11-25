@@ -11,7 +11,7 @@ Every paid social plan names four things, in this order:
 
 ## Reading results that already ran
 
-- Total by concept with `scripts/sum_by.py`. Report spend, platform-reported results and business outcomes side by side, and the cost per business outcome with its count (n).
+- Total by concept with exact programmatic summing. Report spend, platform-reported results and business outcomes side by side, and the cost per business outcome with its count (n).
 - Small counts decide nothing on their own. With one or two outcomes per concept, say the read is directional (heuristic) and name the spend or count that would make it decidable.
 - Platform-reported leads and CRM outcomes disagree routinely. Keep them in separate columns; never substitute one for the other.
 - When a cheap-click concept brings the wrong buyers (the wrong company size, freelancers instead of owners), that is a qualification failure in the creative or the audience, not a winner to scale.

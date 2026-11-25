@@ -30,7 +30,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/dm-guide.md](references/dm-guide.md) for the open, qualify, invite, close flow, reply times, price questions and platform rules.
 
-1. **Read the DM funnel.** Count messages, replies, calls booked and clients from `inputs/` with [scripts/tally.py](scripts/tally.py), with each step's rate *calculated*. Name where people drop (no reply, slow reply, no next step).
+1. **Read the DM funnel.** Count messages, replies, calls booked and clients from `inputs/` with exact programmatic counting, with each step's rate *calculated*. Name where people drop (no reply, slow reply, no next step).
 2. **Common openings.** Group what people write first (a price question, a resource request, a comment on a post) and write a reply for each that answers the question first.
 3. **Qualify lightly.** One or two questions that test the ICP (size, role, the problem) in plain words, never an interrogation.
 4. **Invite.** For fits: the next step that matches their stage (a resource that exists, a short call, the offer). For non-fits: a kind reply and a pointer elsewhere.
@@ -41,7 +41,7 @@ Use [references/dm-guide.md](references/dm-guide.md) for the open, qualify, invi
 9. **Approval.** The playbook is a draft. Sending messages, using automation tools or quoting new offers needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no prices, offers, results, client names or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no prices, offers, results, client names or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -74,7 +74,7 @@ Status: draft for the owner's approval; nothing sent
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the funnel with its drop-off, the reply for each common opening, the reply-time target, and what is still missing, then end with the same block.
 

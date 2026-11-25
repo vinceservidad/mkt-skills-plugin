@@ -25,14 +25,14 @@ Use [references/constraint-guide.md](references/constraint-guide.md) for growth 
 
 1. **Primary business outcome and baseline.** Name it (for example active paying customers, contribution margin), its current level and trend, and the period, from `inputs/`.
 2. **Growth stage.** Validate (does a defined buyer keep buying?), repeat (can we get more of them on purpose?), optimize (are the steps efficient?), expand (new segments, offers or markets). Place the business with evidence.
-3. **Stock and flow.** Customers in, customers out, net change per month; the level the business would settle at if inflow and loss rates stayed the same (inflow ÷ loss rate). Compute with [scripts/sum_by.py](scripts/sum_by.py) or plain arithmetic shown.
+3. **Stock and flow.** Customers in, customers out, net change per month; the level the business would settle at if inflow and loss rates stayed the same (inflow ÷ loss rate). Compute with exact programmatic summing or plain arithmetic shown.
 4. **Check each candidate.** Demand (enough reachable buyers?), conversion (step rates), retention (loss rate, cohorts), delivery and capacity, cash and margin, team time, and measurement quality. For each: the number, the evidence, and whether it limits the outcome now.
 5. **Theory of Constraints.** Name the constraint (or say co-limiting or unresolved, and what evidence would separate them); exploit it before adding elsewhere; say what not to work on now and why.
 6. **Hand-offs.** Route the work to the owning skill (for example `15-churn-prevention`, `13-cro-audit`, `19-scale-paid`) with the number to watch.
 7. **Approval.** The diagnosis is a draft. Changing budgets, offers, pages or operations needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no figures, benchmarks or causes that aren't in `context/` or `inputs/` or computed from them. Guesses are labelled. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no figures, benchmarks or causes that aren't in `context/` or `inputs/` or computed from them. Guesses are labelled. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -61,7 +61,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/19-growth/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the stage, the constraint with its numbers (or why two bind together), what not to work on now, and the first hand-off, and what is still missing, then end with the same block.
 

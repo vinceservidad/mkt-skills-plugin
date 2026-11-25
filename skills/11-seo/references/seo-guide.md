@@ -22,7 +22,7 @@ Score each search on:
 
 ## Reading Search Console
 
-- Total by page and by query with `scripts/sum_by.py`; separate branded queries (the business's name) from non-branded.
+- Total by page and by query with exact programmatic summing; separate branded queries (the business's name) from non-branded.
 - Impressions with few clicks at a low average position mean the page is seen but not chosen or not high enough: check intent match and title before writing new content.
 - Two of the site's own pages appearing for the same query, each with a weak position, suggests cannibalisation (a pattern to confirm by intent, not proof).
 - Average position is an average across searches, places and devices; it is not a rank anyone saw.

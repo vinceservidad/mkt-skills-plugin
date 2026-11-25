@@ -25,7 +25,7 @@ Fail on 1 or 2 → doorway or thin pages. Reject and point the intent at one str
 
 - One row per proposed page. Columns: the fields that would fill the template, and for each whether it is present, unique to that row and useful.
 - Set a minimum (for example: at least N real, row-specific fields, and the core answer to the intent) and label it a heuristic.
-- Count passing rows with `scripts/tally.py` on the data file or a line-by-line table.
+- Count passing rows with exact programmatic counting on the data file or a line-by-line table.
 - Rows with empty or one-word fields are excluded or held until the data exists.
 
 ## Template

@@ -45,11 +45,11 @@ Use [references/frameworks.md](references/frameworks.md) for the detail of each 
    - A regulation or legal change the business has not verified is a question to check, not a fact.
 6. **Timing.** Say whether the market is early, growing, mature or declining, on the evidence, and what that means for entering or expanding now.
 7. **Verdict.** One of: *worth pursuing*, *worth pursuing with conditions* (name them), *not yet: evidence missing* (name it), or *not worth it* (why). Name the evidence that would change it. If a less-contested space shows up (a Blue Ocean move, by changing the factors the category competes on), note it as an opening for `06-positioning`, not as a decision.
-8. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+8. **Check before saving.** Re-read the draft against every item under Checks, and verify every quoted phrase verbatim against its named source. Fix any failure before you save.
 
 **Calculations and labels.** Every number is either copied from a named source, *calculated* from named inputs (show the formula), or marked `(assumption)`. Survey answers are stated preference (*62% say…*), not behaviour. A trade body's figure is that body's estimate, not a fact about this business. No unmarked inference: a motive, trend or frequency the evidence does not state carries `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Count items with [scripts/tally.py](scripts/tally.py) when the material is a file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Verify every quoted phrase in the file verbatim against its named source file. Count items with exact programmatic counting when the material is a file.
 
 ## Output
 

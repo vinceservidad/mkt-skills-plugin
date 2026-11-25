@@ -29,11 +29,11 @@ Use [references/dashboard-guide.md](references/dashboard-guide.md) for choosing 
 4. **Cut the rest.** Vanity metrics (likes, followers, impressions) and duplicate views go off the main view or to a channel appendix, with the reason.
 5. **Layout.** North star and trend at the top, drivers below, each with target, current value and change; a short notes area for data issues. Fewer than a dozen numbers on the main view.
 6. **Rhythm and decisions.** Who reviews it when, and the decision each metric informs; a metric no decision uses is removed.
-7. **Current values.** Where data exists, compute current values with [scripts/sum_by.py](scripts/sum_by.py) and label them; otherwise *unknown*.
+7. **Current values.** Where data exists, compute current values with exact programmatic summing and label them; otherwise *unknown*.
 8. **Approval.** The design is a draft. Building dashboards in tools or sharing data needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no values, targets or definitions that aren't in `context/` or `inputs/` or computed from them. Targets are the owner's. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no values, targets or definitions that aren't in `context/` or `inputs/` or computed from them. Targets are the owner's. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -61,7 +61,7 @@ Status: draft for the owner's approval; nothing built
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the north star, the driver tree, the metrics kept and cut, and the review rhythm, and what is still missing, then end with the same block.
 

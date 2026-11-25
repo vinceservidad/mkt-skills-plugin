@@ -35,7 +35,7 @@ Each bonus should answer the next objection in line. A bonus that answers nothin
 
    If none is true, say so. Recommend a cost-of-waiting reason instead of a fake deadline.
 4. **Write each in one line,** as a proposal without quotation marks, and say where it shows: the offer page, the call or the email. In the objection column, paraphrase the objection and cite its ID (*onboarding is a slog, review 3*). Use quotation marks only for words that appear exactly in the source, never for the note-taker's summary around a quote. Name rejected tactics in italics (*only 3 spots left*), not in quotation marks.
-5. **Check before saving.** Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/offer.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches. This includes objection labels and category names in table cells: a label you coined (*will it work for us*) is italics, not quotation marks. Then re-read the draft against the Checks and fix any failure.
+5. **Check before saving.** Verify every quoted phrase in the file verbatim against its named source file. For any mismatch, copy the exact words from the source or drop the quotation marks and use italics, then run it again until every quotation matches verbatim. This includes objection labels and category names in table cells: a label you coined (*will it work for us*) is italics, not quotation marks. Then re-read the draft against the Checks and fix any failure.
 
 ## Output
 

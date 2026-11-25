@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/seo-guide.md](references/seo-guide.md) for intent, prioritisation, technical checks and the platform-claims rule.
 
 1. **The outcome.** Name the business outcome organic search must produce (qualified calls, subscribers, template downloads that lead to calls) and how it will be measured (analytics landing page to conversion, CRM source). Rankings, impressions and clicks are signals, never the outcome.
-2. **Current visibility.** From Search Console or analytics in `inputs/`, total clicks and impressions by page and by query with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> page`), never by eye. Separate branded from non-branded searches. Label each figure *observed*, *calculated* or *inferred*. A third-party tool's volume or rank estimate is an estimate; say so.
+2. **Current visibility.** From Search Console or analytics in `inputs/`, total clicks and impressions by page and by query with exact programmatic summing, never by eye. Separate branded from non-branded searches. Label each figure *observed*, *calculated* or *inferred*. A third-party tool's volume or rank estimate is an estimate; say so.
 3. **Keyword research by intent.** Sort the searches (from the data, the keyword tool, and the buyer's own words in Voice of customer) into informational, commercial, transactional and navigational intent, and map each to the journey stage and awareness level it serves. Score relevance to the ICP and the offer before volume: a large generic term the ICP does not use, or whose searchers the offer cannot serve, is a non-priority, whatever its volume.
 4. **Priorities.** Rank actions by expected business impact, confidence, effort and reversibility:
    - **Fix and protect** what already earns clicks and links; never delete or redirect a ranking page without evidence and approval.
@@ -84,7 +84,7 @@ Status: draft for the owner's approval; nothing on the site changed
 
 Change nothing in `context/`, and change nothing on the site. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a review, an interview, a search query in an export), with the source named. Write your own titles, headings and proposals in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a review, an interview, a search query in an export), with the source named. Write your own titles, headings and proposals in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the top three actions, what is not a priority and why, and what is still missing, then end with the same block.
 

@@ -23,7 +23,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/campaign-review-guide.md](references/campaign-review-guide.md) for the post-mortem structure, timeline, cause analysis, blameless language and the weekly growth meeting agenda.
 
-1. **Goal versus result.** The goal as set, the result from the source of truth, the gap; computed with [scripts/sum_by.py](scripts/sum_by.py) where needed.
+1. **Goal versus result.** The goal as set, the result from the source of truth, the gap; computed with exact programmatic summing where needed.
 2. **Timeline.** Planned versus actual dates for each step; where it slipped.
 3. **What happened and why.** Observed facts first, then only causal links explicitly stated in `inputs/` (e.g. page live before stock causing refunds, or unready photos causing email delay) — never label inferred process gaps (such as no checklist or no gating) as proven unless `inputs/` explicitly states them — then every inferred gap or unproven explanation (such as missing checks, promo volume, paid spend, season or product mix) as a labelled guess `(assumption)`; process, not people.
 4. **Keep, change, stop.** Each with the evidence and an owner.
@@ -32,7 +32,7 @@ Use [references/campaign-review-guide.md](references/campaign-review-guide.md) f
 7. **Approval.** The review is a draft. Changing processes, budgets or plans needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, dates, causes or numbers that aren't in `inputs/` or computed from them. Guesses are labelled. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, dates, causes or numbers that aren't in `inputs/` or computed from them. Guesses are labelled. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -62,7 +62,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/20-operations/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the gap between goal and result, the main causes with evidence, and the actions with owners, and what is still missing, then end with the same block.
 

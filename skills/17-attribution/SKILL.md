@@ -24,7 +24,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/attribution-guide.md](references/attribution-guide.md) for attribution views, their biases, reconciliation, MMM requirements and decision rules.
 
 1. **Check collection first.** If the tracking plan or reconciliation shows a defect (platform conversions above total orders), say so and read attribution only after correcting or excluding it.
-2. **Lay out the views.** For each channel and the same period: spend, platform-reported conversions and revenue, source-system orders by UTM (last click), and self-reported source, computed with [scripts/sum_by.py](scripts/sum_by.py). Show the total each view claims against total orders.
+2. **Lay out the views.** For each channel and the same period: spend, platform-reported conversions and revenue, source-system orders by UTM (last click), and self-reported source, computed with exact programmatic summing. Show the total each view claims against total orders.
 3. **Explain the gaps.** Windows and view-through, cross-device, untagged links (direct and none), and self-report bias. Label each explanation observed or inferred.
 4. **Choose the decision view.** A primary view for routine decisions (often source-system last click plus survey) with its known bias stated, and a rule for when to use a test instead.
 5. **Marketing Mix Modeling.** Say whether MMM fits: statistical MMM requires many weekly periods across channels with real spend variation and few confounders. Judge directly against the data in `inputs/` (e.g. one quarter / 3 monthly points is far too short and thin to separate channels reliably, marked *(assumption)* unless citing a verified official doc with URL and access date). Never cite a bare tool guide or print unverified numeric year thresholds as fact. If it doesn't fit, say what history and variation would make it possible.
@@ -32,7 +32,7 @@ Use [references/attribution-guide.md](references/attribution-guide.md) for attri
 7. **Approval.** The read is a draft. Budget or bid changes based on it need the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no conversions, revenue, ROAS or shares that aren't computed from `inputs/`; no channel is called incremental without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no conversions, revenue, ROAS or shares that aren't computed from `inputs/`; no channel is called incremental without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -60,7 +60,7 @@ Status: draft for the owner's review; no budget changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the views side by side, why they differ, the decision view, and which questions need a test, and what is still missing, then end with the same block.
 

@@ -25,14 +25,14 @@ Use [references/analytics-guide.md](references/analytics-guide.md) for funnel an
 
 1. **The question.** State the business question and the decision it feeds in one or two sentences.
 2. **The data.** Name each source, its grain, period, and known limits (sampling, tracking defects, self-report). If sources disagree, say which is the system of record.
-3. **Funnel analytics.** Compute step-to-step conversion with counts and denominators, by segment (device, source, new or returning) with [scripts/sum_by.py](scripts/sum_by.py). Name the largest drop in absolute and relative terms.
+3. **Funnel analytics.** Compute step-to-step conversion with counts and denominators, by segment (device, source, new or returning) with exact programmatic summing. Name the largest drop in absolute and relative terms.
 4. **Cohort analysis.** Retention by start cohort on the same window (box, week or month since start), with counts; compare only cohorts with the same exposure time.
 5. **Answer.** What the data shows (observed), what it suggests (inference, labelled), and what it can't show. Small counts are flagged; no causal claim without a test.
 6. **Next step.** The decision it supports, and the test or data that would make it surer (`18-ab-testing`, `17-incrementality`, `17-tracking-plan`).
 7. **Approval.** The analysis is a draft. Acting on it in live accounts or pages needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no figures that aren't computed from `inputs/`, and no causes stated as facts without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no figures that aren't computed from `inputs/`, and no causes stated as facts without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -62,7 +62,7 @@ Status: draft for the owner's review; nothing changed in any account
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
 
 Reply with the file path, the answer to the question in one or two sentences, the key numbers with denominators, and how sure it is, and what is still missing, then end with the same block.
 

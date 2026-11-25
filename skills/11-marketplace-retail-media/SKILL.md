@@ -32,7 +32,7 @@ Use [references/marketplace-retail-media-guide.md](references/marketplace-retail
 
 1. **Outcome and channel role.** Name what the marketplace is for (incremental new-to-brand discovery, sampling entry SKUs that feed DTC repeat/subscription, or capturing existing category demand) and check the strategic trade-off: marketplaces own the buyer relationship and charge referral + fulfillment fees.
 2. **Unit economics and break-even ACoS first.** Compute break-even ACoS only from confirmed numbers (`(Price - COGS - Referral Fee - Fulfillment/Shipping Fee) / Price`). When COGS or marketplace fees are missing from `inputs/`, show the exact formula, mark each input *owner to supply / to confirm*, and never invent a fee rate or target ACoS.
-3. **SKU selection and catalog readiness.** Count catalog SKUs by status and demand with [scripts/tally.py](scripts/tally.py) and [scripts/sum_by.py](scripts/sum_by.py), never by eye. Start with 2 to 5 high-velocity, evergreen, in-stock hero SKUs — exclude sold-out, past, fragile/short-shelf-life or thin-margin SKUs that cannot survive marketplace fees and fulfillment SLAs.
+3. **SKU selection and catalog readiness.** Count catalog SKUs by status and demand with exact programmatic counting and exact programmatic summing, never by eye. Start with 2 to 5 high-velocity, evergreen, in-stock hero SKUs — exclude sold-out, past, fragile/short-shelf-life or thin-margin SKUs that cannot survive marketplace fees and fulfillment SLAs.
 4. **Retail readiness gate (before spending $1 on ads).** Require all six gates before turning on retail media: Buy Box / Featured Offer ownership, conversion-ready main image and gallery, search-indexed listing title/bullets/backend terms (using buyer language from `inputs/` or VoC), A+ / enhanced content, inventory buffer (never run ads into a stockout, which destroys organic rank), and a baseline review plan (e.g., official platform review programs like Amazon Vine — verify current eligibility/fees).
 5. **Retail media structure (platform-matched).**
    - **Amazon Ads:** Separate Sponsored Products into exact/discovery (Auto + Broad/Phrase harvesting into Exact winners), isolate branded vs. non-branded queries so brand defense never hides weak non-brand efficiency, add negative keywords on wasted search terms, and layer Sponsored Brands / Sponsored Display only after Sponsored Products converts cleanly.
@@ -78,7 +78,7 @@ Status: draft for the owner's approval; no listings, commissions or ad campaigns
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed listing titles, bullets and campaign names in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed listing titles, bullets and campaign names in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
 
 Reply with the file path, the unit-economics gate, which SKUs fit (and which stay out), and what is still missing, then end with the same block.
 
