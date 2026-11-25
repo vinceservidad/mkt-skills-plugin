@@ -1,8 +1,8 @@
 {
   "name": "mkt-skills",
   "displayName": "MKT Skills",
-  "version": "0.2.2",
-  "description": "31 evidence-led marketing skills for strategy, paid media, creative, copy, CRO, SEO, pricing, retention, measurement and reporting, with an optional read-only MKT Skills connector for authorized report files and selected Google Ads accounts.",
+  "version": "1.1.0",
+  "description": "133 evidence-led marketing skills across 20 sections (diagnosis router, research, positioning, offers, copywriting, creative, paid ads, shopping feeds, local SEO, marketplaces, WhatsApp, funnels, CRO, sales, retention, measurement, growth, and operations), with an optional read-only MKT Skills connector.",
   "author": {
     "name": "Vince Servidad"
   },
@@ -14,6 +14,7 @@
   "keywords": [
     "marketing",
     "paid-media",
+    "copywriting",
     "cro",
     "seo",
     "analytics",
