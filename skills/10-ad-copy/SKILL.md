@@ -1,6 +1,6 @@
 ---
 name: 10-ad-copy
-description: "Write ad copy across paid channels as testable variants matched to awareness. Use for Google, YouTube, Meta, TikTok, LinkedIn, Pinterest, Reddit, X, Amazon or native ads. Not for UGC."
+description: Write ad copy across paid channels as testable variants matched to awareness. Use for Google, YouTube, Meta, TikTok, LinkedIn, Pinterest, Reddit, X, Amazon or native ads. Not for UGC.
 metadata:
   section: "10 Copywriting"
   covers: "SLAP"
@@ -29,7 +29,7 @@ Required (drafted or confirmed, with content):
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
    Present each source as what it is: two lines from one review are one customer, never *one customer… another said…*.
 5. **Recommend the first test:** which variants, and the metric that decides it, passed to `18-creative-testing`.
-6. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (0 em dashes in ad copy, no mid-sentence bold, no buzzwords, no "It's not X, it's Y", no rhetorical setups, repeat the platform's exact metric name, and pass the portability test). Preserve every qualifier and exact condition from `context/` or `inputs/` when editing (for example, never drop "on paper" or compress a qualified source fact into a broader claim).
+6. **Run the Anti-AI second pass** in [references/anti-ai-check.md](references/anti-ai-check.md): name the reader, fix the 6 whole-piece rules (max 4 items per sentence list, one point one proof, exact platform terms) and all 13 sentence issues (0 em dashes, no mid-sentence bold, no buzzwords, no "It's not X, it's Y", no rhetorical setups), and reread once as the reader. Preserve every qualifier and exact condition from `context/` or `inputs/` when editing (for example, never drop "on paper" or compress a qualified source fact into a broader claim).
 7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -53,7 +53,7 @@ First test: <variants, metric>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -70,7 +70,7 @@ End with the **Principle, framework, source** block:
 - [ ] The platform, audience temperature, awareness level and landing destination are stated, and the copy fits them.
 - [ ] Format limits are either verified against current platform documentation or the account, or marked "to confirm". None is stated from memory as current.
 - [ ] Variants are grouped by angle and differ in one element at a time.
-- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed (including 0 em dashes in ad copy).
+- [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
 - [ ] Every claim is in the claims table with a source. No invented numbers, testimonials or scarcity, and nothing likely to breach ad policy.
 - [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
 - [ ] No file in `context/` changed.

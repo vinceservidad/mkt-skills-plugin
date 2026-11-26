@@ -1,6 +1,6 @@
 ---
 name: 10-headlines
-description: "Write headlines, subheads and leads by awareness level, using Bly's types, Great Leads, the 4Us and open loops. Use for headline options, hooks for a page top, taglines to test or a weak headline."
+description: Write headlines, subheads and leads by awareness level, using Bly's types, Great Leads, the 4Us and open loops. Use for headline options, hooks for a page top, taglines to test or a weak headline.
 metadata:
   section: "10 Copywriting"
   covers: "4Us (Masterson); Bly's headline types; Headline formulas; Open loops / curiosity gap"
@@ -28,7 +28,7 @@ Required (drafted or confirmed, with content):
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
 5. **Write two or three leads,** the opening paragraph after the headline, for the top headlines.
 6. **Recommend three to test,** each with the reason and what the test would learn.
-7. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (0 em dashes in headlines, no buzzwords, no "It's not X, it's Y", no colon reveals, no negative listing, and pass the portability test).
+7. **Run the Anti-AI second pass** in [references/anti-ai-check.md](references/anti-ai-check.md): name the reader, fix the 6 whole-piece rules and all 13 sentence issues (0 em dashes, no buzzwords, no "It's not X, it's Y", no colon reveals, no negative listing), and reread once as the reader.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -51,7 +51,7 @@ To test: <three headlines, and what each test would learn>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -70,7 +70,7 @@ End with the **Principle, framework, source** block:
 - [ ] Every specific (a number, a time frame, a result) is kept by the offer or proved in context, and listed in the claims table.
 - [ ] Testimonial headlines quote real testimonials word for word. Headlines are not wrapped in quotation marks, and `check_quotes.py` reports clean.
 - [ ] Three are recommended to test, with the reason for each.
-- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed.
+- [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

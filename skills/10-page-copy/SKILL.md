@@ -1,6 +1,6 @@
 ---
 name: 10-page-copy
-description: "Write home, about, product, feature and service page copy from the offer and awareness level, using PAS, AIDA, BAB, FAB or a BrandScript. Use for website words. Not for long pages (use 10-sales-page)."
+description: Write home, about, product, feature and service page copy from the offer and awareness level, using PAS, AIDA, BAB, FAB or a BrandScript. Use for website words. Not for long pages (use 10-sales-page).
 metadata:
   section: "10 Copywriting"
   covers: "ACCA; AIDA; BAB (Before–After–Bridge); BrandScript (StoryBrand); FAB; Great Leads (Masterson & Forde); PAS / PASTOR; Problem–Promise–Proof–Proposal"
@@ -29,7 +29,7 @@ Required (drafted or confirmed, with content):
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
    Present each source as what it is: two lines from one review are one customer, never *one customer… another said…*.
 5. **Edit:** cut adjectives that don't add meaning, make every line specific, and keep one call to action.
-6. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (no "It's not X, it's Y", no buzzwords, no colon reveals, no negative listing, no synonym cycling, at most 2 em dashes on long pages, no mid-sentence bold, and pass the portability test).
+6. **Run the Anti-AI second pass** in [references/anti-ai-check.md](references/anti-ai-check.md): name the reader and cut lines that don't serve them, fix the 6 whole-piece rules (max 4 items per sentence list, one point one proof, match terms to the reader, varied paragraph shape), fix all 13 sentence issues (0 em dashes, no buzzwords, no "It's not X, it's Y", no colon reveals, no mid-sentence bold), and reread once as the reader.
 7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -51,7 +51,7 @@ Open questions: <anything the copy needs that the context doesn't hold>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -69,7 +69,7 @@ End with the **Principle, framework, source** block:
 - [ ] The structure named in the header is visible in the copy.
 - [ ] Every claim, number, testimonial, guarantee and price is in the claims table with a source from context or inputs. Nothing is invented.
 - [ ] Buyer language from Voice of customer is used where it exists. Adjectives are replaced by specifics.
-- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed.
+- [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
 - [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
 - [ ] No file in `context/` changed.
 

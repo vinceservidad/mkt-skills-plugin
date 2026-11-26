@@ -1,6 +1,6 @@
 ---
 name: 10-sales-page
-description: "Write a long-form sales page or letter from the offer, proof and objections, with fascinations and a P.S. Use for sales page, order page or direct-response page. Not for webinars (use 10-vsl-script)."
+description: Write a long-form sales page or letter from the offer, proof and objections, with fascinations and a P.S. Use for sales page, order page or direct-response page. Not for webinars (use 10-vsl-script).
 metadata:
   section: "10 Copywriting"
   covers: "Direct response (discipline); Fascinations (bullets); P.S.; QUEST"
@@ -39,7 +39,7 @@ Required (drafted or confirmed, with content):
    Present each source as what it is: two lines from one review are one customer, never *one customer… another said…*.
 5. **Write the P.S.:** restate the promise, the guarantee and the call to action.
 6. **Fill the claims table** for every claim in the page.
-7. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (at most 2 em dashes across the page, no mid-sentence bold, no buzzwords, no "It's not X, it's Y", no colon reveals, no negative listing, no recap endings, vary bullets and sentence lengths, and pass the portability test).
+7. **Run the Anti-AI second pass** in [references/anti-ai-check.md](references/anti-ai-check.md): name the reader, fix the 6 whole-piece rules (max 4 items per sentence list, one point one proof, varied paragraph shape, say each thing once) and all 13 sentence issues (0 em dashes, no mid-sentence bold, no buzzwords, no "It's not X, it's Y", no colon reveals, no recap endings), and reread once as the reader.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -61,7 +61,7 @@ Missing for a stronger page: <proof or terms the context doesn't hold>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -79,7 +79,7 @@ End with the **Principle, framework, source** block:
 - [ ] Price, guarantee, bonuses, urgency and offer terms match `offer.md` exactly. No invented scarcity, deadlines or bonus values.
 - [ ] Every testimonial and result comes from the proof stack or inputs, word for word, and is listed in the claims table.
 - [ ] The top objections from the objection map are answered on the page.
-- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed.
+- [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
 - [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
 - [ ] No file in `context/` changed.
 
