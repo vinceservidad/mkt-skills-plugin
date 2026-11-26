@@ -1,6 +1,6 @@
 ---
 name: 08-objection-map
-description: "Pair every reason not to buy with the belief to shift, the answer and the proof. Use for FAQ, objection answers in marketing, doubts. Not for live calls (use 14-objection-handling)."
+description: Pair every reason not to buy with the belief to shift, the answer and the proof. Use for FAQ, objection answers in marketing, doubts. Not for live calls (use 14-objection-handling).
 metadata:
   section: "08 Message"
   covers: "Objection map"
@@ -69,7 +69,7 @@ End with the **Principle, framework, source** block:
 ```
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words from the source or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
+Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
 
 ## Checks
 

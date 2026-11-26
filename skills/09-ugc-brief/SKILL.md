@@ -1,6 +1,6 @@
 ---
 name: 09-ugc-brief
-description: "Brief creators for UGC such as problem-solution, testimonial, unboxing, day-in-the-life and before-after. Use for UGC briefs, creator scripts, briefing TikTok or Reels creators."
+description: Brief creators for UGC such as problem-solution, testimonial, unboxing, day-in-the-life and before-after. Use for UGC briefs, creator scripts, briefing TikTok or Reels creators.
 metadata:
   section: "09 Creative Strategy"
   covers: "UGC"
@@ -66,7 +66,7 @@ Format: <format — why, awareness level>
 
 Change nothing in `context/`. The brief is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a ticket, an interview), with the source named, and only to show the creator what buyers said, never as lines to repeat. Questions, talking points and suggested hooks go in plain text or italics. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a ticket, an interview), with the source named, and only to show the creator what buyers said, never as lines to repeat. Questions, talking points and suggested hooks go in plain text or italics. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the format chosen and why, and what is still missing (including terms for the owner), then end with the same block.
 

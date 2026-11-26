@@ -1,6 +1,6 @@
 ---
 name: 20-compliance
-description: "Check marketing for ad policy, privacy, consent, claim and dark pattern problems before it ships. Use for compliance checks, is this claim allowed, consent, fake urgency, ad rejected."
+description: Check marketing for ad policy, privacy, consent, claim and dark pattern problems before it ships. Use for compliance checks, is this claim allowed, consent, fake urgency, ad rejected.
 metadata:
   section: "20 Operations"
   covers: "Compliance checklist; Consent and privacy; Dark patterns (what not to do)"
@@ -33,7 +33,7 @@ Use [references/compliance-guide.md](references/compliance-guide.md) for claim s
 8. **Approval.** The checklist is a draft and not legal advice. Changing live pages, forms, emails or ads needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no laws, rules, penalties or policy text from memory as fact; cite with URL and date or mark *to confirm with a lawyer*. Write no evidence for claims that isn't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no laws, rules, penalties or policy text from memory as fact; cite with URL and date or mark *to confirm with a lawyer*. Write no evidence for claims that isn't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -61,7 +61,7 @@ Status: draft for the owner's approval; not legal advice
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/20-operations/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the highest-severity findings with fixes, which claims are unsupported, and what needs a lawyer, and what is still missing, then end with the same block.
 

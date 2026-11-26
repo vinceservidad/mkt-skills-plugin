@@ -1,6 +1,6 @@
 ---
 name: 12-lead-magnet
-description: "Design a lead magnet that solves one narrow problem fast and leads to the core offer, with outline, title and next step. Use for a freebie, opt-in incentive, content upgrade or more email subscribers."
+description: Design a lead magnet that solves one narrow problem fast and leads to the core offer, with outline, title and next step. Use for a freebie, opt-in incentive, content upgrade or more email subscribers.
 metadata:
   section: "12 Funnel"
   covers: "Lead magnet"
@@ -54,7 +54,7 @@ Built from: <context sections used, with their status>
 
 Change nothing in `context/`. This is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the key decision, and what is still missing, then end with the same block.
 

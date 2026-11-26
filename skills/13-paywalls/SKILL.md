@@ -1,6 +1,6 @@
 ---
 name: 13-paywalls
-description: "Design paywalls, feature gates and in-app nudges to upgrade or book a sales call. Use for paywall design, upgrade screens, free-to-paid prompts, trial-end screens."
+description: Design paywalls, feature gates and in-app nudges to upgrade or book a sales call. Use for paywall design, upgrade screens, free-to-paid prompts, trial-end screens.
 metadata:
   section: "13 Conversion"
   covers: "Paywalls / upgrade prompts"
@@ -33,7 +33,7 @@ If something is missing:
 Use [references/upgrade-moments.md](references/upgrade-moments.md) for paywall types, value moments, targeting and the honesty rules.
 
 1. **Name the paid step exactly** as `offer.md` states it: plan or service, price, billing, trial or renewal terms, guarantee if approved. If the paid step is a call or a service rather than a plan, the prompt asks for that step.
-2. **Find the value moments** from evidence: the events or feedback that show a user getting the result they came for (not sign-up, a connection or an automatic event). Sum and rate events with exact funnel step counts and conversion-rate math, never by eye. The prompt appears there, not on the first screen.
+2. **Find the value moments** from evidence: the events or feedback that show a user getting the result they came for (not sign-up, a connection or an automatic event). Sum and rate events with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <segment column>`), never by eye. The prompt appears there, not on the first screen.
 3. **Choose the type** from the evidence: a soft prompt (dismissable, at a value moment), a feature gate, a usage limit, or a time limit (trial end). Where the type changes what is free, the boundary is a pricing decision: propose it, with evidence, for `07-pricing` and the owner.
 4. **Choose who sees it.** Show the paid step to the segments that get value and can buy it. For users the paid step does not fit, say what honest alternative exists in `offer.md` (or that none does), and never push them with pressure.
 5. **Read each prompt with Fogg (B = MAP):** *motivation* (the value this user has just seen, from evidence), *ability* (what taking the paid step asks: price, a call, setup) and *prompt* (the trigger and moment). Name the weakest factor for each prompt and design to fix it; a prompt at a moment with no visible value is a motivation failure, however good the copy.
@@ -41,13 +41,13 @@ Use [references/upgrade-moments.md](references/upgrade-moments.md) for paywall t
 6. **Keep it honest.** No hidden or pre-selected renewals, no countdown that isn't real, no shaming dismiss text, no blocking data the user already put in, and cancelling as easy as upgrading. A guarantee appears only in the owner-approved wording.
 7. **Measure.** Primary: the paid step taken by the right segment within a fixed window after the prompt (upgrades, booked calls, then paid clients). Guardrails: refunds, cancellations, support tickets, retention of free users, wrong-fit calls. Each change is a test with a window and a stopping rule; hand the design to `18-ab-testing`. Read attribution: a call booked from the product may already be counted under another lead source.
 8. **Authorization.** Every live change to the product, its prompts, the free boundary or any price needs the owner's approval and a check afterwards against the baseline.
-9. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Nothing the context doesn't support.** Write no plans, prices, trial lengths, discounts, features or guarantee terms that aren't in `context/` or `inputs/`. A price a user says they would pay is stated preference for `07-pricing`, not a price. Mark inferences `(assumption)` and list what is needed under Open questions.
 
 **Platform facts.** Do not state how an app store, payment provider or subscription tool currently handles trials, renewals or in-app purchases unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise mark it *to verify*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your prompt headlines and buttons go in italics. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your prompt headlines and buttons go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

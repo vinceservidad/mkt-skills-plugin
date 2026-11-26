@@ -1,6 +1,6 @@
 ---
 name: 11-local-seo
-description: "Plan Local SEO and Google Business Profile to win Map Pack visibility. Use for local SEO, Google Business Profile, Google Maps ranking, local citations, NAP consistency, or service-area pages."
+description: Plan Local SEO and Google Business Profile to win Map Pack visibility. Use for local SEO, Google Business Profile, Google Maps ranking, local citations, NAP consistency, or service-area pages.
 metadata:
   section: "11 Distribution"
   covers: "Local SEO"
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/local-seo-guide.md](references/local-seo-guide.md) for the Relevance–Distance–Prominence framework, Google Business Profile audit, storefront vs. service-area eligibility rules, NAP citations, local landing pages and review velocity.
 
 1. **Outcome and local eligibility.** Name the business outcome (qualified local calls, direction requests, consultation bookings or walk-ins) and check whether the business qualifies for Google Business Profile (in-person storefront or direct in-person service-area contact — online-only businesses and virtual/PO-box offices do not qualify under Google's guidelines; verify current rules and mark *to confirm*).
-2. **Audit current local footprint.** Inspect `inputs/` (site inventory, footer address, Search Console queries, existing pages, reviews) and count pages or queries with exact programmatic counting, never by eye. Identify what exists today (for example only a city name in the footer and no local page or `LocalBusiness` schema) and what is missing.
+2. **Audit current local footprint.** Inspect `inputs/` (site inventory, footer address, Search Console queries, existing pages, reviews) and count pages or queries with [scripts/tally.py](scripts/tally.py), never by eye. Identify what exists today (for example only a city name in the footer and no local page or `LocalBusiness` schema) and what is missing.
 3. **Google Business Profile (GBP) architecture.** Specify exact business name (real-world name only, zero keyword stuffing), primary category (strongest local ranking lever) and strictly relevant secondary categories, storefront vs. hidden-address service-area configuration, services/products list, photos, UTM-tagged website link and Q&A. Mark any unverified owner facts (street address, phone, hours, verification status) as *owner to confirm*.
 4. **NAP consistency and core citations.** Define one canonical NAP (Name, Address, Phone) format across website footer, GBP, Apple Business Connect, Bing Places and high-trust local/industry directories (hand broad software/startup directory listings to `11-directories`). Flag duplicate or mismatched listings to clean up before building new citations.
 5. **Local landing page and schema plan.** Plan one real page per physical location or core local service + city pair where genuine local proof exists (local clients, local regulatory/market nuances, embedded map/directions if storefront, local FAQs, clear call/booking CTA). Never generate thin doorway pages swapping only city names. Hand JSON-LD `LocalBusiness` / `AccountingService` / `MedicalBusiness` markup implementation to `11-schema` and general non-local blog/technical SEO to `11-seo`.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; no GBP listing, citation or page changed
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed page titles, GBP descriptions and headlines in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed page titles, GBP descriptions and headlines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, the GBP eligibility check, the top local SEO priorities, and what is still missing, then end with the same block.
 

@@ -1,6 +1,6 @@
 ---
 name: 07-value-ladder
-description: "Lay out the value ladder from free to low-ticket, core, high-ticket and continuity with the trigger to each step. Use for tripwire, memberships, premium tier. Not for core offer (use 07-offer-design)."
+description: Lay out the value ladder from free to low-ticket, core, high-ticket and continuity with the trigger to each step. Use for tripwire, memberships, premium tier. Not for core offer (use 07-offer-design).
 metadata:
   section: "07 Offer"
   covers: "Continuity / subscription; Tripwire; Value Ladder"

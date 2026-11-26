@@ -1,6 +1,6 @@
 ---
 name: 11-aso
-description: "Optimize an app store listing for search, conversion and ratings. Use for ASO, App Store or Google Play listings, downloads, keywords, screenshots, or refusing/replacing fake/staff app reviews."
+description: Optimize an app store listing for search, conversion and ratings. Use for ASO, App Store or Google Play listings, downloads, keywords, screenshots, or refusing/replacing fake/staff app reviews.
 metadata:
   section: "11 Distribution"
   covers: "App Store Optimization (ASO)"
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/aso-guide.md](references/aso-guide.md) for the listing fields, keyword choice, screenshots, ratings and store facts.
 
-1. **Outcome and funnel.** Name the outcome (downloads that log in, subscribe or stay active) and lay out the store funnel from analytics: impressions → product page views → downloads, with conversion at each step computed with exact programmatic counting or shown arithmetic, labelled *observed* or *calculated*. Say which step loses most and whether search, browse or web referrals bring the downloads.
+1. **Outcome and funnel.** Name the outcome (downloads that log in, subscribe or stay active) and lay out the store funnel from analytics: impressions → product page views → downloads, with conversion at each step computed with [scripts/tally.py](scripts/tally.py) or shown arithmetic, labelled *observed* or *calculated*. Say which step loses most and whether search, browse or web referrals bring the downloads.
 2. **Who searches, and for what.** From the ICP, jobs and Voice of customer, list the jobs people would search for (the problem words, not the brand's words). Store analytics may not show search terms; say so, and mark every candidate keyword *(assumption)* until a keyword tool or store data confirms volume and difficulty. A broad, crowded term (a category word) is a poor first target for a small app; prefer specific terms the app answers fully.
 3. **Listing fields.** Write the name, subtitle (or short description) and keyword field within the store's limits, without repeating words across fields where the store indexes them once, and without competitor brand names. Field limits and indexing rules are store facts: cite the current developer documentation with URL and date or mark *to confirm*.
 4. **Screenshots and preview.** Order screenshots by the job: the first two show the main outcome in the user's words, never a login or settings screen. Each frame gets a caption. A preview video is optional and only from real footage.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing submitted
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, the current listing), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write proposed listing text in italics or a plain block. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, the current listing), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write proposed listing text in italics or a plain block. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, the weakest funnel step, the proposed name, subtitle and first two screenshots, and what is still missing, then end with the same block.
 

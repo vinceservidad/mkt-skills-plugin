@@ -1,6 +1,6 @@
 ---
 name: 01-competitor-profiling
-description: "Profile competitors and the real alternatives, including doing nothing or a spreadsheet, from dated evidence. Use for competitor analysis, who we compete with, comparing rivals' prices and claims."
+description: Profile competitors and the real alternatives, including doing nothing or a spreadsheet, from dated evidence. Use for competitor analysis, who we compete with, comparing rivals' prices and claims.
 metadata:
   section: "01 Market"
 ---
@@ -38,7 +38,7 @@ Buyers don't compare you with the competitors you worry about; they compare you 
    - price, as observed, with date and source, or *not shown*;
    - the proof it shows (reviews, case studies, counts), described as *claimed by the company* unless independently verified;
    - where it wins and where it loses for our buyer, from buyer evidence (lost deals, interviews, reviews), not from our opinion of it.
-3. **Count wins and losses.** Use lost-deal reasons, churn reasons and switch stories, with counts. Count with exact programmatic counting, never by eye.
+3. **Count wins and losses.** Use lost-deal reasons, churn reasons and switch stories, with counts. Count with `scripts/tally.py`, never by eye.
 4. **Label every claim by kind:**
    - **Observed:** seen on a dated page, ad or search result.
    - **Reported:** what a buyer or the user said about it.
@@ -47,9 +47,9 @@ Buyers don't compare you with the competitors you worry about; they compare you 
 
    A competitor's claim is what they say, not a fact about the market. A competitor's visible tactic (an ad, a price, a headline) is evidence about that competitor, not proof that it works or that we should copy it.
 5. **Name the threats and openings.** Which alternative takes the most deals today, which is growing (with evidence), and where buyers' unmet needs leave room. Keep this to what the evidence shows; positioning decisions belong to `06-positioning-statement`.
-6. **Check before saving.** Re-read the draft against every item under Checks, and verify every quoted phrase verbatim against its named source. Fix any failure before you save.
+6. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's page as recorded in the notes, a review, an interview. Your summaries, labels and readings go without quotation marks. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's page as recorded in the notes, a review, an interview. Your summaries, labels and readings go without quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

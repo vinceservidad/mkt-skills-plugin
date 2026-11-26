@@ -1,6 +1,6 @@
 ---
 name: 11-schema
-description: "Add structured data that matches visible content and can earn rich results. Use for schema markup, JSON-LD, structured data, rich results, FAQ or product schema."
+description: Add structured data that matches visible content and can earn rich results. Use for schema markup, JSON-LD, structured data, rich results, FAQ or product schema.
 metadata:
   section: "11 Distribution"
   covers: "Schema / structured data"
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; not deployed or validated
 
 Change nothing in `context/` and nothing on the site. The markup is a draft deliverable, not a deployment.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (the page text), with the source named. Inside the JSON-LD, every string value of four or more words (a description, an FAQ question or answer, a headline) counts as a quotation too: copy it word for word from the page, or leave the property out. Write your own explanations in plain text or italics. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the page's exact words or remove the quotation marks or the property, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (the page text), with the source named. Inside the JSON-LD, every string value of four or more words (a description, an FAQ question or answer, a headline) counts as a quotation too: copy it word for word from the page, or leave the property out. Write your own explanations in plain text or italics. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the page's exact words or remove the quotation marks or the property, and run it again until it reports every quotation matches.
 
 Reply with the file path, the types per page, what was deliberately not marked up and why, and the validation steps still to run, then end with the same block.
 

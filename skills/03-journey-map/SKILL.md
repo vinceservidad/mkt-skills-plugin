@@ -1,6 +1,6 @@
 ---
 name: 03-journey-map
-description: "Map the customer journey (See-Think-Do-Care) with each stage's buyer question, intent and gap. Use for buyer's journey, content per stage, search intent. Not for awareness (use 03-awareness-map)."
+description: Map the customer journey (See-Think-Do-Care) with each stage's buyer question, intent and gap. Use for buyer's journey, content per stage, search intent. Not for awareness (use 03-awareness-map).
 metadata:
   section: "03 Awareness"
   covers: "Buyer's journey; Customer journey map; Search intent; See–Think–Do–Care"

@@ -1,6 +1,6 @@
 ---
 name: 11-social
-description: "Plan organic social platforms, formats, cadence and community replies. Use for social media strategy, organic posting plans, Instagram, LinkedIn or TikTok, or posts getting likes without leads."
+description: Plan organic social platforms, formats, cadence and community replies. Use for social media strategy, organic posting plans, Instagram, LinkedIn or TikTok, or posts getting likes without leads.
 metadata:
   section: "11 Distribution"
   covers: "Social media marketing"
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/social-guide.md](references/social-guide.md) for the analytics read, the series and reply rules, and platform claims.
 
 1. **Platforms.** Choose one or two where the evidence puts the ICP (lead sources, journey touchpoints, where reviews or forum posts come from). Say what each platform is for. Name the ones left out and why.
-2. **Read what already ran,** when `inputs/` holds post analytics. Total by format and topic with exact programmatic summing, not by eye. Rank by the outcome columns (downloads, sign-ups, calls) before reach or reactions, show counts, and note who engaged where the notes say (right buyer or not). One post that went viral is one data point: do not build a pillar on it until a second version repeats the result.
+2. **Read what already ran,** when `inputs/` holds post analytics. Total by format and topic with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> format`), not by eye. Rank by the outcome columns (downloads, sign-ups, calls) before reach or reactions, show counts, and note who engaged where the notes say (right buyer or not). One post that went viral is one data point: do not build a pillar on it until a second version repeats the result.
 3. **Series and the give-to-ask mix.** Set 2 to 4 recurring series, each from an evidenced pain, job or belief (or a content-strategy pillar), each in the platform's native format. Most posts give (teach, show, tell the true story); a minority ask, and every ask points to a free step or offer that exists in `offer.md`. Name the mix as a heuristic.
 4. **Voice.** Write in the brand voice if one is on file; otherwise in the buyer's plain words. Example posts are your own lines, in italics.
 5. **Cadence and capacity.** Set a cadence the stated hours and people can keep, including weeks the business is known to be busy. If capacity isn't in `inputs/`, mark the cadence *(assumption)* and ask who writes, designs and replies, and how many hours a week. Dates go to `20-content-calendar`.
@@ -74,7 +74,7 @@ Status: draft for the owner's approval; nothing posted
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a comment log, a post export), with the source named. Write your own post ideas and lines in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a comment log, a post export), with the source named. Write your own post ideas and lines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the platforms and series chosen, and what is still missing, then end with the same block.
 

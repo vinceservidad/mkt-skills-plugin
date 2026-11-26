@@ -1,6 +1,6 @@
 ---
 name: 18-creative-testing
-description: "Test ad creative concepts first, then variations and iterations, and read results honestly. Use for creative testing, ad testing, which ad concepts to test next, ad fatigue, testing hooks/angles."
+description: Test ad creative concepts first, then variations and iterations, and read results honestly. Use for creative testing, ad testing, which ad concepts to test next, ad fatigue, testing hooks/angles.
 metadata:
   section: "18 Experimentation"
   covers: "Creative testing"
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/creative-testing-guide.md](references/creative-testing-guide.md) for concept, variation and iteration layers, budget per read, outcome metrics, platform delivery and fatigue.
 
-1. **Read what ran.** From `inputs/`, list ads with spend, outcomes (cost per business outcome in the stated view) and how different they really are; count with exact programmatic summing. Say whether past tests compared concepts or only variations.
+1. **Read what ran.** From `inputs/`, list ads with spend, outcomes (cost per business outcome in the stated view) and how different they really are; count with [scripts/sum_by.py](scripts/sum_by.py). Say whether past tests compared concepts or only variations.
 2. **Concepts first.** Draft three to five distinct concepts from the Promise, Big idea, Proof stack and the awareness levels (for example a problem-aware comparison, a product-aware review, a how-it-works demo), each with a hypothesis.
 3. **Fair read.** Budget and structure so each concept gets enough spend for a read on the business outcome (a stated number of conversions), not only clicks. Note that platforms skew delivery toward early favourites; use separate ad sets or the platform's own A/B test tool (for example Meta's A/B test tool, marked *to confirm* or cited with URL and date) as fair-read options. Platform testing features are facts to cite with URL and date or mark *to confirm*.
 4. **Then variations and iterations.** Within the winning concept: hooks, openings, visuals; then small edits. Each layer has its own hypothesis and read.
@@ -37,7 +37,7 @@ Use [references/creative-testing-guide.md](references/creative-testing-guide.md)
 7. **Approval.** The plan is a draft. Launching ads or changing budgets needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, costs, conversion counts or platform behaviour that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, costs, conversion counts or platform behaviour that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -67,7 +67,7 @@ Status: draft for the owner's approval; no ad launched, no budget changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/18-experimentation/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, what past ads did and didn't test, the concepts to test with hypotheses, and the budget and read rule, and what is still missing, then end with the same block.
 

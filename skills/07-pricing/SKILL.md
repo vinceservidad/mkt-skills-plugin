@@ -1,6 +1,6 @@
 ---
 name: 07-pricing
-description: "Set the price and pricing model from evidence, with anchoring, decoys, tiers and Van Westendorp. Use for what to charge, too cheap, free trial vs freemium. Not for page (use 13-pricing-page)."
+description: Set the price and pricing model from evidence, with anchoring, decoys, tiers and Van Westendorp. Use for what to charge, too cheap, free trial vs freemium. Not for page (use 13-pricing-page).
 metadata:
   section: "07 Offer"
   covers: "Anchoring; Coupons / discounts / promo codes; Decoy pricing; Free trial vs freemium; Price psychology; Pricing strategy; Van Westendorp / Gabor-Granger"

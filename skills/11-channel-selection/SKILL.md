@@ -1,6 +1,6 @@
 ---
 name: 11-channel-selection
-description: "Choose one or two channels to win with the Bullseye method across paid, owned and earned. Use for which channels, where to advertise, marketing mix, where to find customers."
+description: Choose one or two channels to win with the Bullseye method across paid, owned and earned. Use for which channels, where to advertise, marketing mix, where to find customers.
 metadata:
   section: "11 Distribution"
   covers: "Bullseye Framework (Traction); Demand generation; Direct mail; Localization; Marketplaces (Amazon, app stores); Omnichannel sequencing; OOH, TV, radio, print; POEM (paid, owned, earned)"
@@ -32,7 +32,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/channel-guide.md](references/channel-guide.md) for the 19 channels, the scoring rules and the economics.
 
 1. **The outcome and the economics.** Name the primary business outcome a channel must produce (a qualified call that can close, a paying subscriber who stays). Work out what a customer is worth from context: price, gross margin, retention or tenure. Then the allowable acquisition cost, as a calculation with its inputs shown. If margin or retention is missing, write the formula and mark the figure *unknown, owner to supply*. Never use a benchmark CAC, LTV or conversion rate.
-2. **What already works.** Count where current customers and leads came from, and what each source closed at, from `inputs/` or context. Use exact programmatic summing or count line by line; never by eye. Label each figure *observed*, *calculated* or *inferred*, with its sample size. Small counts are directional.
+2. **What already works.** Count where current customers and leads came from, and what each source closed at, from `inputs/` or context. Use [scripts/sum_by.py](scripts/sum_by.py) or count line by line; never by eye. Label each figure *observed*, *calculated* or *inferred*, with its sample size. Small counts are directional.
 3. **Outer ring: brainstorm all 19.** Give every Traction channel one line: a concrete idea for this business, its POEM class (paid, owned, earned; partnerships count as borrowed), and why it is or is not promising, citing evidence or marking `(assumption)`. Add offline and marketplace channels where they could fit. No channel is dismissed without a reason, and none is promoted without one.
 4. **Middle ring: pick about three to test.** Rank on evidence that the buyer is reachable there, fit with the offer's price and buying process, cost against the allowable acquisition cost, time to a readable result, the owner's capacity (hours, skills, budget) and delivery capacity (how many new customers the business can take). Prefer borrowing an audience that already gathers the buyer (partners, podcasts, communities: Dream 100) before building one.
 5. **Design each test.** For each: the smallest version that gives a readable answer, its cost in money and hours, the time window, the success metric in the business outcome (not clicks, followers or opens), a keep rule and a stop rule. Label any threshold a heuristic. Name the skill that would run the channel (`11-seo`, `paid-search`, `paid-social`, `cold-email`, `pr`, `affiliate-jv`, `co-marketing`, `events`, `podcast-video`, `social`, `content-strategy`, `16-referral-program`...).
@@ -76,7 +76,7 @@ Status: recommendation for the owner's approval; no channel launched or money co
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a sales note), with the source named. Write your own ideas and labels in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a sales note), with the source named. Write your own ideas and labels in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the focus channel and the tests, the economics (or what is missing to compute them), and what is still missing, then end with the same block.
 

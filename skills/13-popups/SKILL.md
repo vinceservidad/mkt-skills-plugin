@@ -1,6 +1,6 @@
 ---
 name: 13-popups
-description: "Design popups and slide-ins that capture without annoying. Use for popups, exit-intent, email capture modal, slide-in offers, popup timing and copy."
+description: Design popups and slide-ins that capture without annoying. Use for popups, exit-intent, email capture modal, slide-in offers, popup timing and copy.
 metadata:
   section: "13 Conversion"
   covers: "Popups / slide-ins"
@@ -32,7 +32,7 @@ If both required sections are missing: stop. Name Core offer → `07-offer-desig
 
 Use [references/popup-rules.md](references/popup-rules.md) for triggers, frequency, mobile, consent and the dark patterns to avoid.
 
-1. **Diagnose the current popups, if any.** Rate views to sign-ups to orders with exact funnel step counts and conversion-rate math or a shown calculation. Compare downstream quality (orders, second orders, qualified leads) of popup sign-ups with others only as an observation: people who chose an incentive are not a random group, so the gap is not proof the incentive caused it. Flag any close text that shames the visitor and any trigger that blocks content.
+1. **Diagnose the current popups, if any.** Rate views to sign-ups to orders with [scripts/funnel.py](scripts/funnel.py) or a shown calculation. Compare downstream quality (orders, second orders, qualified leads) of popup sign-ups with others only as an observation: people who chose an incentive are not a random group, so the gap is not proof the incentive caused it. Flag any close text that shames the visitor and any trigger that blocks content.
 2. **Choose the offer for each popup** from what exists in `offer.md`: a free asset, a sample, a low-ticket first step, a consult. A proposed asset that does not exist yet is a gap, named with its owner (`12-lead-magnet` to build it). A discount appears only if `offer.md` holds one the owner has approved. If a live discount contradicts `offer.md` (for example Price and model recommends no default discount), do not redesign around it and do not remove it on your own: lay out the evidence and the options, and mark the decision *owner to decide*.
 3. **Read each popup with Fogg (B = MAP)** before designing it: *motivation* (what this visitor, on these pages, already wants, from the evidence), *ability* (what the popup asks of them: fields, effort, interruption) and *prompt* (the trigger and moment). A popup fails when one is missing: an offer nobody on that page wants, a form too long for a phone, or a prompt that fires before the visitor has any reason to care. Write this read for the current popups and for every new one.
 4. **Match offer to visitor:** cold readers on content pages get the free step; visitors on product or pricing pages get help with the decision or the first step; existing subscribers and customers see nothing.
@@ -40,13 +40,13 @@ Use [references/popup-rules.md](references/popup-rules.md) for triggers, frequen
 6. **Consent.** Say exactly what the visitor signs up for, keep any marketing opt-in unticked, and mark consent wording *to check with counsel* for the markets served. Do not assert what the law requires.
 7. **Measure what matters.** Primary: the downstream outcome the business values (first orders, second orders or qualified leads per 1,000 views), with sign-ups per view as a supporting metric. Guardrails: bounce or exit rate on the pages it shows on, unsubscribes, complaints, discount cost. Each change is a test with a holdout or a split, a window and a stopping rule; hand design of the test to `18-ab-testing`, and the follow-up emails to `12-email-sequences`.
 8. **Authorization.** Every live change to the popups, their offers or any discount needs the owner's approval and a check afterwards against the baseline.
-9. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Nothing the context doesn't support.** Write no discounts, free assets, deadlines, stock counts, numbers of subscribers or results that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. No fake urgency, no confirmshaming, no hidden close buttons, no pre-ticked boxes.
 
 **Platform facts.** Do not state how a popup tool, email platform or search engine currently treats popups (for example on mobile) unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise mark it *to check*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your popup headlines, buttons and close text go in italics. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your popup headlines, buttons and close text go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

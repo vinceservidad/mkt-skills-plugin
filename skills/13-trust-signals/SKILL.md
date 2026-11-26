@@ -1,6 +1,6 @@
 ---
 name: 13-trust-signals
-description: "Place the trust stack of reviews, logos, guarantees, real people and specific numbers on a page. Use for trust signals, social proof placement, credibility on a landing or checkout page."
+description: Place the trust stack of reviews, logos, guarantees, real people and specific numbers on a page. Use for trust signals, social proof placement, credibility on a landing or checkout page.
 metadata:
   section: "13 Conversion"
   covers: "Trust signals"
@@ -39,11 +39,11 @@ Use [references/trust-stack.md](references/trust-stack.md) for the signal types,
 6. **Permission.** Mark every quote, name, photo and logo that needs permission before publishing. Remove names and details that identify a private person unless they consented.
 7. **Measure.** Each placement is a test with a primary outcome (orders or qualified leads from the page), guardrails (refunds, complaints, support questions about the claim), a window and a stopping rule; hand test design to `18-ab-testing` and copy to `10-page-copy`.
 8. **Authorization.** Every live change (adding, removing or rewording a trust element) needs the owner's approval and a check afterwards.
-9. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Nothing the context doesn't support.** Write no customer counts, ratings, review totals, awards, press mentions, certifications, client names, logos, years in business or guarantee terms that aren't in `context/` or `inputs/`. A quote that appears in a page draft but in no review export is not proof just because it is in the file. Do not state that a payment or security provider's badge may be shown, or what a certification requires, unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`; otherwise mark it *to check*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date. Your proposed lines go in italics. Verify every quoted phrase in the file verbatim against its named source file. Count reviews with exact programmatic counting, never by eye.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date. Your proposed lines go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Count reviews with [scripts/tally.py](scripts/tally.py), never by eye.
 
 ## Output
 

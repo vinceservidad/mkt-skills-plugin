@@ -1,6 +1,6 @@
 ---
 name: 01-sophistication-stage
-description: "Place the market on Schwartz's five sophistication stages and pick the claim type that still works. Use for market sophistication, why claims stop working, what to lead with."
+description: Place the market on Schwartz's five sophistication stages and pick the claim type that still works. Use for market sophistication, why claims stop working, what to lead with.
 metadata:
   section: "01 Market"
   covers: "Market sophistication (Schwartz)"
@@ -33,7 +33,7 @@ Use [references/stages.md](references/stages.md) for the five stages, their sign
    - **Improved mechanism:** a newer, easier or surer version of a mechanism already claimed.
    - **Identification:** speaks to who the buyer is, with little product claim (*for people who'd rather be outside*).
 
-   Count each type with exact programmatic counting or `python3`, not by eye.
+   Count each type with `scripts/tally.py` or `python3`, not by eye.
 2. **Add buyer evidence.** Scepticism (*they all promise the same thing*), comparisons of numbers, or questions about how it works show that claims are worn. Quote only exact words.
 3. **Place the stage.** Name the stage (1–5) where most of the claims and buyer evidence sit, with the evidence that puts it there.
    - If segments, channels or regions differ, say so and place each.
@@ -48,9 +48,9 @@ Use [references/stages.md](references/stages.md) for the five stages, their sign
 
    Give two or three directions, in italics, never as finished copy. Use only mechanisms, numbers and guarantees that exist in the offer, the proof or the inputs; anything else is *Gap: needs …* for its owner (`06-unique-mechanism` for the mechanism, `08-proof-stack` for proof).
 6. **Note the awareness interplay.** If an awareness map exists, say how the stage changes the entry message at the main level. Leave the map itself to `03-awareness-map`.
-7. **Check before saving.** Re-read the draft against every item under Checks, and verify every quoted phrase verbatim against its named source. Fix any failure before you save.
+7. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's headline as recorded, a review, an interview. Your claim types, directions, example lines and summaries go in italics or plain text, in the section and in the reply alike (*for the owner who signed the lease first*, never "for the owner who signed the lease first"). Verify every quoted phrase in the file verbatim against its named source file. Counts come from exact programmatic counting or `python3`.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's headline as recorded, a review, an interview. Your claim types, directions, example lines and summaries go in italics or plain text, in the section and in the reply alike (*for the owner who signed the lease first*, never "for the owner who signed the lease first"). Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Counts come from [scripts/tally.py](scripts/tally.py) or `python3`.
 
 **Competitor claims are claims.** A claim competitors make shows what buyers have heard, not that it is true or that it works. Never copy one because it is visible.
 

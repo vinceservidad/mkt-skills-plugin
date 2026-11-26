@@ -1,6 +1,6 @@
 ---
 name: 03-traffic-temperature
-description: "Classify traffic as cold, warm or hot and match each source to a landing page, offer and call to action. Use for where traffic should land. Not for awareness levels (use 03-awareness-map)."
+description: Classify traffic as cold, warm or hot and match each source to a landing page, offer and call to action. Use for where traffic should land. Not for awareness levels (use 03-awareness-map).
 metadata:
   section: "03 Awareness"
   covers: "Traffic temperature"

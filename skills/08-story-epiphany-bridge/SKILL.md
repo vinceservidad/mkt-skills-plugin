@@ -1,6 +1,6 @@
 ---
 name: 08-story-epiphany-bridge
-description: "Write the founder or brand discovery story as an Epiphany Bridge from real events. Use for origin story, about us story, webinar or VSL story, Brunson. Not for the core message (use 08-message-doc)."
+description: Write the founder or brand discovery story as an Epiphany Bridge from real events. Use for origin story, about us story, webinar or VSL story, Brunson. Not for the core message (use 08-message-doc).
 metadata:
   section: "08 Message"
   covers: "Epiphany Bridge; Hero's Journey"
@@ -79,7 +79,7 @@ End with the **Principle, framework, source** block:
 ```
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words from the source or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
+Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
 
 ## Checks
 

@@ -1,6 +1,6 @@
 ---
 name: 07-guarantee-risk-reversal
-description: "Design a guarantee or risk reversal that answers the buyer's top fear and fits the economics. Use for money-back terms, what if it fails. Not for refund policy pages, legal terms or bonuses."
+description: Design a guarantee or risk reversal that answers the buyer's top fear and fits the economics. Use for money-back terms, what if it fails. Not for refund policy pages, legal terms or bonuses.
 metadata:
   section: "07 Offer"
   covers: "Guarantee / risk reversal"

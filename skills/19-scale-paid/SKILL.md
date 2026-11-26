@@ -1,6 +1,6 @@
 ---
 name: 19-scale-paid
-description: "Scale paid media through gated budget steps, more creative, broader targeting and new placements. Use for scaling ads, raising ad budget, should we double spend, ads stopped scaling."
+description: Scale paid media through gated budget steps, more creative, broader targeting and new placements. Use for scaling ads, raising ad budget, should we double spend, ads stopped scaling.
 metadata:
   section: "19 Growth"
   covers: "Scaling paid media"
@@ -33,7 +33,7 @@ Use [references/scale-paid-guide.md](references/scale-paid-guide.md) for readine
 7. **Approval.** The plan is a draft. Any budget, bid or campaign change needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no ROAS, costs, margins, budgets or platform behaviour that aren't in `context/` or `inputs/`, computed from them, or cited with a date. No universal budget-increase rule. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no ROAS, costs, margins, budgets or platform behaviour that aren't in `context/` or `inputs/`, computed from them, or cited with a date. No universal budget-increase rule. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -66,7 +66,7 @@ Status: draft for the owner's approval; no budget changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/19-growth/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, which readiness gates pass or fail with the numbers, whether to scale now, and the first step and its stop rule, and what is still missing, then end with the same block.
 

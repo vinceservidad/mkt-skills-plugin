@@ -1,6 +1,6 @@
 ---
 name: 02-jobs-to-be-done
-description: "Map the jobs customers hire a product to do, with forces of progress and a before-after grid. Use for what people pay for, why they switch or stay, JTBD. Not for objections (use 02-buyer-psychology)."
+description: Map the jobs customers hire a product to do, with forces of progress and a before-after grid. Use for what people pay for, why they switch or stay, JTBD. Not for objections (use 02-buyer-psychology).
 metadata:
   section: "02 Customer"
   covers: "Before–After grid; Jobs to Be Done"

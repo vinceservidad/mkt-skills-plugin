@@ -1,6 +1,6 @@
 ---
 name: 13-cro-audit
-description: "Audit a page for clarity, friction, anxiety and proof using analytics, heatmaps and session recordings. Use for CRO audit, why a page doesn't convert, page review, conversion rate optimization."
+description: Audit a page for clarity, friction, anxiety and proof using analytics, heatmaps and session recordings. Use for CRO audit, why a page doesn't convert, page review, conversion rate optimization.
 metadata:
   section: "13 Conversion"
   covers: "Behavioral nudges; Chatbots / conversational marketing; Conversion rate optimization (CRO); Five-second test; Fogg Behavior Model; Heatmaps / session recordings; Heuristic evaluation (Nielsen); LIFT model; Live chat; MECLABS sequence; Personalization; User testing"
@@ -42,20 +42,20 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/lift-audit.md](references/lift-audit.md) for the LIFT questions, the five-second test, the defect-versus-hypothesis rule and the ranking.
 
 1. **Fix the scope.** One page, its one conversion goal (a booked call, a sign-up, a purchase), the traffic sources and their temperature, and where the conversion boundary is (form submit, order paid). Name the business outcome behind the goal (qualified calls, paid orders), not clicks.
-2. **Read the numbers.** Sum and rate every step with exact funnel step counts and conversion-rate math, never by eye, overall and by device and source. Keep each step's source definition, period and denominator. Flag counts too small to read (single digits) and say how the page's numbers relate to downstream records (a form submit may already be counted under another lead source).
+2. **Read the numbers.** Sum and rate every step with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <column> ...`), never by eye, overall and by device and source. Keep each step's source definition, period and denominator. Flag counts too small to read (single digits) and say how the page's numbers relate to downstream records (a form submit may already be counted under another lead source).
 3. **Run the five-second test on the page as written.** From the words above the fold only: what is it, who is it for, what do I do next? Quote the page's own words. This is a heuristic read by you, not a user test, unless a real test was supplied.
 4. **Walk the LIFT factors.** For each: value proposition (does the page say the Core offer and Promise?), relevance (does it match the sources and their awareness?), clarity, anxiety (which evidenced objections and fears are unanswered at the point of decision; which claims are unsupported), distraction (competing links, navigation, extra fields), urgency (only what offer.md says is true). For each finding record: location, what the page says (quoted), the evidence, the factor, who it affects, the suspected mechanism, and confidence.
 5. **Separate defects from hypotheses.** A defect is something broken, false or contradicting context: a service the offer doesn't include, an unsupported claim, a promise of a slower or different next step than the business delivers, a field nobody uses. Defects are fixed first, with the owner's approval. Everything else is a hypothesis to test, not a diagnosed cause.
 6. **Rank.** Order fixes by evidence strength, how many of the right visitors the step touches, and effort. Bigger levers first (offer, headline, form, layout), small cosmetic changes last. Keep necessary qualification, legal, pricing and expectation-setting information even if removing it would raise raw conversion.
 7. **Hand off, don't rewrite.** For each fix name the owner skill: copy → `10-page-copy` with a brief of the problem the rewrite must solve; trust elements → `13-trust-signals`; pricing display → `13-pricing-page`; checkout → `13-checkout`; sign-up flows → `13-signup`; traffic quality → `11-channel-selection`; the test design → `18-ab-testing`. Every row of Ranked tests fills all four parts, each written out for that test: a metric, a guardrail, a window, and a stopping rule (when to stop early or call it: for example the guardrail falls below its baseline, or the window ends without a readable difference). "Same as above" or a blank part fails the check.
 8. **Authorization.** This is an audit. Say that every live change needs the owner's approval and a check afterwards against the baseline.
-9. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Labels.** Every number is copied from a named export or note (with its date), *calculated* (show numerator and denominator), or marked `(assumption)`. Every motive or behaviour you attribute to visitors is evidence-backed or marked `(assumption)`. No unmarked inference.
 
 **Platform facts.** Do not state how an analytics tool, page builder, search engine or ad platform currently works unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise describe only what the material shows and mark anything else *unverified*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from the page or a source, with the source named. Your own suggested directions go in italics. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from the page or a source, with the source named. Your own suggested directions go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

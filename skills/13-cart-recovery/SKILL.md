@@ -1,6 +1,6 @@
 ---
 name: 13-cart-recovery
-description: "Write the cart and checkout recovery sequence with an escalating reason to return. Use for abandoned cart emails or SMS, checkout recovery. Not for fixing the checkout (13-checkout)."
+description: Write the cart and checkout recovery sequence with an escalating reason to return. Use for abandoned cart emails or SMS, checkout recovery. Not for fixing the checkout (13-checkout).
 metadata:
   section: "13 Conversion"
   covers: "Cart abandonment recovery"
@@ -34,8 +34,8 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/recovery-sequence.md](references/recovery-sequence.md) for timing, the escalation ladder, eligibility and the measurement rules.
 
-1. **Diagnose before writing.** Why do people leave? Use exit polls (count with exact programmatic counting or the source's own counts, and say how many answered of how many asked), tickets and Beliefs, objections and drivers. A reason caused by the checkout (a cost shown late, a forced account) is fixed in the checkout first: hand it to `13-checkout` and say the emails cannot fix it.
-2. **Read the current recovery, if any.** Rate sent, opened or clicked, and attributed orders with exact funnel step counts and conversion-rate math or a shown calculation, and name the attribution rule. Attributed orders are not incremental orders: some would have come back anyway. Without a holdout, the true lift is unknown; say so.
+1. **Diagnose before writing.** Why do people leave? Use exit polls (count with [scripts/tally.py](scripts/tally.py) or the source's own counts, and say how many answered of how many asked), tickets and Beliefs, objections and drivers. A reason caused by the checkout (a cost shown late, a forced account) is fixed in the checkout first: hand it to `13-checkout` and say the emails cannot fix it.
+2. **Read the current recovery, if any.** Rate sent, opened or clicked, and attributed orders with [scripts/funnel.py](scripts/funnel.py) or a shown calculation, and name the attribution rule. Attributed orders are not incremental orders: some would have come back anyway. Without a holdout, the true lift is unknown; say so.
 3. **Eligibility and consent.** Who may receive each message: an abandoned checkout with an email, minus anyone who bought, unsubscribed or is already a subscriber. Whether a recovery email needs marketing consent where the buyers live is a legal question: mark it *to check with counsel*, and design so it works for both answers (for example, send only to people who opted in until counsel confirms). SMS goes only to people with recorded SMS consent; a phone number collected for shipping is not consent.
 4. **Write the sequence: one reason per message, escalating.**
    - **About 1 hour:** a reminder and help. What they left, what happens after ordering, a way to ask a question.
@@ -46,13 +46,13 @@ Use [references/recovery-sequence.md](references/recovery-sequence.md) for timin
 6. **Stop rules.** Stop immediately on purchase, unsubscribe or reply; no more than the planned messages per abandoned checkout; suppress repeat abandoners within a stated window.
 7. **Measure.** Primary: incremental orders (or revenue and margin) per abandoned checkout, against a holdout that receives nothing. Report attributed recoveries as a secondary number with their rule. Guardrails: unsubscribes, spam complaints, discount cost, cancellations or refunds after recovered orders. Hand test design to `18-ab-testing`; platform setup is the owner's job.
 8. **Authorization.** Switching the sequence on, changing who receives it, or offering any incentive needs the owner's approval, and counsel where consent is unclear.
-9. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Nothing the context doesn't support.** Write no discounts, deadlines (*your cart expires*), stock levels, terms, guarantees, results or customer numbers that aren't in `context/` or `inputs/`. Proposed offer elements (a one-step cancel not yet built, an automatic refund rule) are not promised. Mark inferences `(assumption)` and list what is needed under Open questions.
 
 **Platform facts.** Do not state how an email or SMS tool, store platform or mailbox provider currently works (triggers, attribution windows, sender requirements) unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise mark it *to verify*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date (a review used in a message must be verbatim and permitted). Your subject lines and email copy go in italics or plain text, never in quotation marks. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date (a review used in a message must be verbatim and permitted). Your subject lines and email copy go in italics or plain text, never in quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

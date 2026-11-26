@@ -1,6 +1,6 @@
 ---
 name: 09-angle-matrix
-description: "Generate ad angles across awareness level, emotional driver and format, where every cell is a test. Use for ad angles, what to test next in creative, creative ideas, guerrilla or meme-style ads."
+description: Generate ad angles across awareness level, emotional driver and format, where every cell is a test. Use for ad angles, what to test next in creative, creative ideas, guerrilla or meme-style ads.
 metadata:
   section: "09 Creative Strategy"
   covers: "Angle; Angle matrix; Guerrilla marketing; Memes / culture-jacking"
@@ -66,7 +66,7 @@ Dropped cells: <cell — reason>
 
 Change nothing in `context/`. The matrix is a deliverable, not a decision; the business's message and awareness map stay with their owners.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a VoC line), with the source named. Write every angle, line and label you compose in italics or plain text, never in quotation marks; in table cells, paraphrase and cite the ID. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a VoC line), with the source named. Write every angle, line and label you compose in italics or plain text, never in quotation marks; in table cells, paraphrase and cite the ID. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the first cells to test and why, and what is still missing, then end with the same block.
 

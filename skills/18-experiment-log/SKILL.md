@@ -1,6 +1,6 @@
 ---
 name: 18-experiment-log
-description: "Keep a searchable experiment log of wins, losses and nulls and run the weekly growth meeting process. Use for logging tests, recording results, what we learned from past tests, test repository."
+description: Keep a searchable experiment log of wins, losses and nulls and run the weekly growth meeting process. Use for logging tests, recording results, what we learned from past tests, test repository.
 metadata:
   section: "18 Experimentation"
   covers: "Growth process (Hacking Growth); Learning log / experiment repository"
@@ -32,7 +32,7 @@ Use [references/experiment-log-guide.md](references/experiment-log-guide.md) for
 7. **Approval.** The log is a draft. Changing shared documents or team processes needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, samples, dates or insights that aren't in `inputs/`. Unknown fields stay *unknown*. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, samples, dates or insights that aren't in `inputs/`. Unknown fields stay *unknown*. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -58,7 +58,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/18-experimentation/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the entries recorded with their validity, what is actually learned, and the weekly rhythm, and what is still missing, then end with the same block.
 

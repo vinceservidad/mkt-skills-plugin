@@ -1,6 +1,6 @@
 ---
 name: 13-checkout
-description: "Optimize checkout fields, guest checkout, payments and order bumps. Use for checkout drop-off, checkout UX, payment step. Not for shipping prices (07-pricing) or recovery emails (13-cart-recovery)."
+description: Optimize checkout fields, guest checkout, payments and order bumps. Use for checkout drop-off, checkout UX, payment step. Not for shipping prices (07-pricing) or recovery emails (13-cart-recovery).
 metadata:
   section: "13 Conversion"
   covers: "Checkout optimization"
@@ -30,7 +30,7 @@ If there is no checkout material, do not audit an imagined checkout. Write the p
 Use [references/checkout-friction.md](references/checkout-friction.md) for the field test, the surprise list and the payment and account rules.
 
 1. **Map the checkout as it is,** step by step, from the walk-through: every field, whether it is required, who uses it and for what. Copy the step definitions from the export.
-2. **Read the numbers.** Sum and rate every step with exact funnel step counts and conversion-rate math, never by eye, overall and by device and visitor type. Name the step that loses the most buyers, for whom, with counts. Count poll answers with exact programmatic counting or copy the source's own counts, and treat them as stated reasons from the people who answered, not measured causes.
+2. **Read the numbers.** Sum and rate every step with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <column> ...`), never by eye, overall and by device and visitor type. Name the step that loses the most buyers, for whom, with counts. Count poll answers with [scripts/tally.py](scripts/tally.py) or copy the source's own counts, and treat them as stated reasons from the people who answered, not measured causes.
 3. **Test every field.** Keep it only if fulfilment, payment, the law or a named downstream decision needs it now. Otherwise make it optional, move it after purchase, or remove it. Where you are not sure whether a field is legally or operationally needed (a phone number for the carrier, a tax field), mark it *to check with <who>*; do not assert the law.
 4. **Remove surprises.** The full price, including shipping, tax and fees, is visible before the checkout starts. For a subscription, the renewal, how to skip, pause and cancel, and any guarantee are stated next to the pay button, using only terms that exist today. Proposed terms (a one-step cancel, an automatic refund, a guarantee the owner has not approved) are held and listed under Open questions, never shown as live.
 5. **Account.** Prefer guest checkout, or an account created after payment from the confirmation, when the product allows it. For a subscription the buyer needs a way to manage it; say how that would work and mark the store's capability *unverified* until checked.
@@ -39,13 +39,13 @@ Use [references/checkout-friction.md](references/checkout-friction.md) for the f
 8. **Order bump.** Note only whether a bump belongs in this checkout and where; its design, offer and price go to `12-upsell-path`, using real offers only. Never pre-checked.
 9. **Rank the changes as tests.** Defects and surprises first (a cost shown late, an unused required field), then friction, then additions. Each test gets a metric (orders per checkout started, by device), guardrails (refunds, cancellations before the second order, support tickets, order value), a window and a stopping rule. Hand test design to `18-ab-testing`, page copy to `10-page-copy`, and recovery messages to `13-cart-recovery`.
 10. **Authorization.** Every live change to the checkout, prices, payment methods or terms needs the owner's approval and a check afterwards against the baseline.
-11. **Check before saving.** Re-read the draft against the Checks, verify every quoted phrase verbatim against its named source, and fix any failure.
+11. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
 
 **Nothing the context doesn't support.** Write no prices, fees, terms, guarantees, offers, payment methods or delivery promises that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. No dark patterns: no pre-checked boxes, hidden renewals, fake timers, or confirmshaming.
 
 **Labels.** Every number is copied from a named export or note (with its date), *calculated* (show numerator and denominator), or marked `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed field labels and microcopy go in italics. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed field labels and microcopy go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 

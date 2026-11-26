@@ -1,6 +1,6 @@
 ---
 name: 16-ugc-program
-description: "Run a UGC program with prompts, contests, creator seeding and featuring customers, with rights and rules. Use for user-generated content, customer photos, giveaways, contests, hashtag campaigns."
+description: Run a UGC program with prompts, contests, creator seeding and featuring customers, with rights and rules. Use for user-generated content, customer photos, giveaways, contests, hashtag campaigns.
 metadata:
   section: "16 Referral and Community"
   covers: "Giveaways / contests"
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/ugc-guide.md](references/ugc-guide.md) for prompts, permissions and rights, giveaway and contest rules, seeding with disclosure, and measurement.
 
-1. **What customers already post.** Count posts and tags from `inputs/` with exact programmatic counting and note the moments they post (unboxing, first cup, a result).
+1. **What customers already post.** Count posts and tags from `inputs/` with [scripts/tally.py](scripts/tally.py) and note the moments they post (unboxing, first cup, a result).
 2. **Prompts.** One or two prompts tied to those moments, with an easy way to share (a card in the box, a hashtag, a short ask in an email).
 3. **Permission and rights.** Before reusing any post on the site, in emails or ads: ask the creator, record their yes, credit them, and state where it will run. Paid use in ads needs explicit rights.
 4. **Featuring customers.** Where and how featured content appears, chosen for buyers who fit the ICP.
@@ -38,7 +38,7 @@ Use [references/ugc-guide.md](references/ugc-guide.md) for prompts, permissions 
 8. **Approval.** The plan is a draft. Reusing posts, launching contests, shipping free product or contacting customers needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no post counts, reach, results, prizes or customer content that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no post counts, reach, results, prizes or customer content that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; nothing reused, launched or shipped
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, what customers already post, the prompt, the permission process, the giveaway verdict, and the seeding rules, and what is still missing, then end with the same block.
 

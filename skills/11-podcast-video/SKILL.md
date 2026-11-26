@@ -1,6 +1,6 @@
 ---
 name: 11-podcast-video
-description: "Use podcasts, guesting and video (YouTube) as a distribution channel. Use for podcast guest spots, starting a podcast, YouTube channel plans, video content strategy, pitching podcast hosts."
+description: Use podcasts, guesting and video (YouTube) as a distribution channel. Use for podcast guest spots, starting a podcast, YouTube channel plans, video content strategy, pitching podcast hosts.
 metadata:
   section: "11 Distribution"
   covers: "Podcast marketing / guesting; YouTube / video marketing"
@@ -27,7 +27,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/podcast-video-guide.md](references/podcast-video-guide.md) for guesting, running a show or channel, topics, repurposing and platform facts.
 
-1. **Outcome and evidence so far.** Name the outcome (leads, booked calls, clients) and read what podcasts or video have already produced, counted from `inputs/` with exact programmatic counting: leads and clients by show, with how the source was recorded.
+1. **Outcome and evidence so far.** Name the outcome (leads, booked calls, clients) and read what podcasts or video have already produced, counted from `inputs/` with [scripts/tally.py](scripts/tally.py): leads and clients by show, with how the source was recorded.
 2. **Guest or own?** Start with guesting when the business has no audience: it borrows one now and costs only time. Recommend an own show or channel only when the founder's stated hours can sustain a steady cadence for months and topics are deep enough; scale the cadence to those hours, never the reverse.
 3. **Shows to pitch.** Shows the ICP follows, with the evidence (discovery calls, lead sources, the owner's knowledge); a host who already had the founder on comes first. Describe hosts by role; never look up or add real names or contacts. Show size claims are the host's.
 4. **Topics.** Episode topics from the buyer's jobs and pains and the founder's Story and Big idea, each with what the listener learns. Customer stories and client material appear only with permission; private client work is never reused.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; nothing pitched or published
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write pitch drafts in italics or a plain block. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write pitch drafts in italics or a plain block. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, the guest-or-own decision and why, the first shows to pitch, the cadence, and what is still missing, then end with the same block.
 

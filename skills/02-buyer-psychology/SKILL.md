@@ -1,6 +1,6 @@
 ---
 name: 02-buyer-psychology
-description: "Map the beliefs, objections and drivers that block the sale (Cialdini, loss aversion). Use for why people hesitate, say it is too expensive, or churn. Not for writing answers (use 08-objection-map)."
+description: Map the beliefs, objections and drivers that block the sale (Cialdini, loss aversion). Use for why people hesitate, say it is too expensive, or churn. Not for writing answers (use 08-objection-map).
 metadata:
   section: "02 Customer"
   covers: "Behavioral economics (Kahneman, Ariely); Belief mapping; Buyer psychology; Cialdini's principles; Life-Force 8 (Whitman)"

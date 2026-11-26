@@ -1,6 +1,6 @@
 ---
 name: 02-segmentation
-description: "Split a market into segments, score them and pick who to target first (STP, Kotler). Use for who to focus on, which niche, we sell to everyone. Not for personas (use 02-icp-persona)."
+description: Split a market into segments, score them and pick who to target first (STP, Kotler). Use for who to focus on, which niche, we sell to everyone. Not for personas (use 02-icp-persona).
 metadata:
   section: "02 Customer"
   covers: "Segmentation; STP"

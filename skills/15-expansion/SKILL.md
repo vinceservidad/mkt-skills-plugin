@@ -1,6 +1,6 @@
 ---
 name: 15-expansion
-description: "Plan upsell, cross-sell, fee-band moves and account expansion from usage and value ladder. Use for upselling, cross-sell, moving clients up a tier or fee band, account growth, B2B account management."
+description: Plan upsell, cross-sell, fee-band moves and account expansion from usage and value ladder. Use for upselling, cross-sell, moving clients up a tier or fee band, account growth, B2B account management.
 metadata:
   section: "15 Retention"
   covers: "Account management (B2B); Expansion playbook (upsell / cross-sell)"
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/expansion-guide.md](references/expansion-guide.md) for expansion signals, account management, the offer conversation and net revenue retention.
 
-1. **Who is ready.** From account data in `inputs/`, list accounts with expansion signals (asked about the next offer, usage or size growth, a band change, high engagement) and those that are not yet getting core value (low engagement, recent problems). Count with exact row-by-row counting and summing.
+1. **Who is ready.** From account data in `inputs/`, list accounts with expansion signals (asked about the next offer, usage or size growth, a band change, high engagement) and those that are not yet getting core value (low engagement, recent problems). Count with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py).
 2. **Is the next step real?** Check the Value ladder: is the upsell or cross-sell defined, priced and deliverable within capacity? If not, design a small pilot with a few ready accounts and leave the price to the owner.
 3. **Triggers.** For each expansion path: the signal that starts it, who acts (the account manager, the founder), the conversation, and the next step. Tie each to a success moment (a good quarter, a goal reached), not a renewal or a complaint.
 4. **Account management (B2B).** For key accounts: owner, review rhythm, health signals, and a simple account plan (goals, risks, opportunities).
@@ -37,7 +37,7 @@ Use [references/expansion-guide.md](references/expansion-guide.md) for expansion
 7. **Approval.** The playbook is a draft. Offering anything to a client, changing prices or contracts needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no prices, account facts, results or capacity that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no prices, account facts, results or capacity that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -65,7 +65,7 @@ Status: draft for the owner's approval; nothing offered or changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the accounts ready to expand and why, whether the next offer is ready to sell, and the first pilot or trigger, and what is still missing, then end with the same block.
 

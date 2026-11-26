@@ -1,6 +1,6 @@
 ---
 name: 02-customer-research
-description: "Plan customer interviews (The Mom Test) and surveys, or turn interview notes, reviews and tickets into buyer pains and triggers. Use for who buys and why. Not for exact quotes (use 02-voc-mining)."
+description: Plan customer interviews (The Mom Test) and surveys, or turn interview notes, reviews and tickets into buyer pains and triggers. Use for who buys and why. Not for exact quotes (use 02-voc-mining).
 metadata:
   section: "02 Customer"
   covers: "Customer interviews (Mom Test); Surveys (market research)"
@@ -66,7 +66,7 @@ Write the research plan from [references/interview-guide.md](references/intervie
 
 Put the founder's beliefs under "Hypotheses to test". Then ask the user to run the interviews and bring the notes back.
 
-Compute exact row and category counts programmatically whenever the material is a file; never estimate counts by eye.
+Count with [scripts/tally.py](scripts/tally.py) whenever the material is a file: `python3 <this skill's folder>/scripts/tally.py inputs/reviews.csv` prints rows and per-column counts, and `tally.py notes.md 'R\d+|T-\d+'` counts distinct item IDs. Use its numbers, not counts made by reading.
 
 ## Output
 

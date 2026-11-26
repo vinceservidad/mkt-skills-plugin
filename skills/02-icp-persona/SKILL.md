@@ -1,6 +1,6 @@
 ---
 name: 02-icp-persona
-description: "Define the ideal customer profile and buyer personas with an empathy map, from evidence. Use for ICP, ideal customer, avatar, dream buyer, who decides. Not for market splits (use 02-segmentation)."
+description: Define the ideal customer profile and buyer personas with an empathy map, from evidence. Use for ICP, ideal customer, avatar, dream buyer, who decides. Not for market splits (use 02-segmentation).
 metadata:
   section: "02 Customer"
   covers: "Empathy map; ICP / persona"
@@ -83,7 +83,7 @@ End with the **Principle, framework, source** block:
 - [ ] Disqualifiers are listed with reasons and evidence.
 - [ ] Personas are built from quotes and behaviour. No invented names, ages, hobbies or demographics.
 - [ ] No unmarked inference: any statement about buyers that the evidence does not state (a motive, a habit, a frequency word such as "often" or "most", which group an unlabelled review came from, a rate for a channel the notes don't give) carries `(assumption)` or is left out.
-- [ ] Quotation marks hold only words copied exactly from a source (no added or moved words, not even a leading *who*). Paraphrases, inferences, labels and suggested questions go without quotation marks (use italics for a suggested question). Before saving, copy your section into a scratch file outside `context/` and run verbatim quote verification against the source file on it; fix every line it prints.
+- [ ] Quotation marks hold only words copied exactly from a source (no added or moved words, not even a leading *who*). Paraphrases, inferences, labels and suggested questions go without quotation marks (use italics for a suggested question). Before saving, copy your section into a scratch file outside `context/` and run [scripts/check_quotes.py](scripts/check_quotes.py) on it (`python3 <this skill's folder>/scripts/check_quotes.py <scratch file>`); fix every line it prints.
 - [ ] Quotes are verbatim with a source; no personal data.
 - [ ] Only `## ICP and personas` changed (plus any upstream sections written by an upstream skill run first). It has Status, Evidence and Method lines, and the change log has a line for this write.
 

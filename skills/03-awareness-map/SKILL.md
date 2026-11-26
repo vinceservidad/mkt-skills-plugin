@@ -1,6 +1,6 @@
 ---
 name: 03-awareness-map
-description: "Map buyers across Schwartz's five awareness levels with an entry message, proof and offer for each. Use for cold vs warm audiences, Breakthrough Advertising. Not for journeys (use 03-journey-map)."
+description: Map buyers across Schwartz's five awareness levels with an entry message, proof and offer for each. Use for cold vs warm audiences, Breakthrough Advertising. Not for journeys (use 03-journey-map).
 metadata:
   section: "03 Awareness"
   covers: "Awareness levels (Schwartz); Awareness × Sophistication grid"

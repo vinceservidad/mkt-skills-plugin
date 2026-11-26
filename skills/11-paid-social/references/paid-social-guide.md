@@ -11,7 +11,7 @@ Every paid social plan names four things, in this order:
 
 ## Reading results that already ran
 
-- Total by concept with exact programmatic summing. Report spend, platform-reported results and business outcomes side by side, and the cost per business outcome with its count (n).
+- Total by concept with `scripts/sum_by.py`. Report spend, platform-reported results and business outcomes side by side, and the cost per business outcome with its count (n).
 - Small counts decide nothing on their own. With one or two outcomes per concept, say the read is directional (heuristic) and name the spend or count that would make it decidable.
 - Platform-reported leads and CRM outcomes disagree routinely. Keep them in separate columns; never substitute one for the other.
 - When a cheap-click concept brings the wrong buyers (the wrong company size, freelancers instead of owners), that is a qualification failure in the creative or the audience, not a winner to scale.
@@ -37,6 +37,23 @@ Every paid social plan names four things, in this order:
 - Source each angle from the awareness map, a pain, belief or objection with its evidence ID, or proof that exists with permission.
 - Production belongs to `09-creative-strategy` (`ad-creative`, `ugc-brief`, `image-video`). Copy belongs to `10-ad-copy`.
 - A concept that ran unchanged for weeks has not been tested against a fresh version of itself; say so before calling it dead.
+
+## Pre-launch build order (before spending $1)
+
+1. **Gate 1 (Strategy and economics):** Lock the core offer (`07-offer-design`), target segment and exclusions (`02-segmentation`), promise and proof (`08-message-doc`), and allowable cost per business outcome (`17-unit-economics`, or owner-set tolerance).
+2. **Gate 2 (Destination QA):** Publish and test the landing page on mobile and desktop so the page load, headline, offer, and CTA match the campaign's awareness level (`12-landing-page`).
+3. **Gate 3 (Tracking and CAPI verification):** Configure browser Pixel plus Conversions API deduplication, verify domain and dataset permissions, connect CRM offline events or Conversion Leads if lead-gen, and lock UTMs (`17-tracking-plan`).
+4. **Gate 4 (Compliance and billing):** Confirm billing, Special Ad Category declarations, consent flags, and policy rules (`20-compliance`).
+
+Build inside Ads Manager in this order (every object stays paused or in draft until owner approval):
+
+1. Account, billing, consent, and Special Ad Category check.
+2. Published destination URL verified live.
+3. Tracking events, CAPI deduplication, and UTMs tested.
+4. Creative concepts and copy checked against placement safe zones (`09-ad-creative`, `09-image-video`, `10-ad-copy`).
+5. Draft Campaign (objective, CBO/ABO) -> Ad Set (optimization event, audience and exclusions, placements, schedule, budget) -> Ads (concepts, copy, UTMs, final URL).
+6. Pre-publish QA and explicit owner approval.
+7. Publish, confirm active delivery, and verify live event firing in Events Manager.
 
 ## Budget, learning and stop rules
 

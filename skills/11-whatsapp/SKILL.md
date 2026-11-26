@@ -1,6 +1,6 @@
 ---
 name: 11-whatsapp
-description: "Plan WhatsApp and conversational messaging with opt-in, templates and flows. Use for WhatsApp marketing, WhatsApp Business API, Click-to-WhatsApp ads, chat cart recovery, or Messenger automation."
+description: Plan WhatsApp and conversational messaging with opt-in, templates and flows. Use for WhatsApp marketing, WhatsApp Business API, Click-to-WhatsApp ads, chat cart recovery, or Messenger automation.
 metadata:
   section: "11 Distribution"
   covers: "WhatsApp & conversational messaging"
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/whatsapp-guide.md](references/whatsapp-guide.md) for WhatsApp Business App vs. Platform (API), explicit opt-in consent, Meta template categories, the 24-hour customer-service window, quality-rating protection, Click-to-WhatsApp ads and Messenger/ManyChat conversational flows.
 
 1. **Outcome and channel fit.** Name what WhatsApp or conversational messaging is for (fewer "where is my order" tickets, higher-speed replies, abandoned-cart recovery, replenishment reminders or qualified lead triage) and verify regional audience fit (do buyers actually use WhatsApp vs. SMS in `11-sms`?). Raw open/read rates are never the outcome.
-2. **Who can be messaged, and for what.** Count contacts by how their phone numbers were collected with exact programmatic counting or the notes. A phone number entered at checkout for the carrier is **not** WhatsApp opt-in consent. Separate customer-initiated conversations (24-hour service window), opted-in **Utility** templates (order/shipment confirmations, delivery heads-up — zero promotional upsell tucked inside, or Meta reclassifies and rejects them), and explicitly opted-in **Marketing** templates (restocks, cart recovery, promos). Verify local privacy law (GDPR, UK PECR, TCPA, LGPD, etc.) and mark *to confirm*.
+2. **Who can be messaged, and for what.** Count contacts by how their phone numbers were collected with [scripts/tally.py](scripts/tally.py) or the notes. A phone number entered at checkout for the carrier is **not** WhatsApp opt-in consent. Separate customer-initiated conversations (24-hour service window), opted-in **Utility** templates (order/shipment confirmations, delivery heads-up — zero promotional upsell tucked inside, or Meta reclassifies and rejects them), and explicitly opted-in **Marketing** templates (restocks, cart recovery, promos). Verify local privacy law (GDPR, UK PECR, TCPA, LGPD, etc.) and mark *to confirm*.
 3. **Collect explicit channel opt-in.** Design clean opt-in entry points (unchecked checkout/thank-you box naming WhatsApp explicitly, QR/wa.me links on packaging or site, Click-to-WhatsApp ad entry, or chat widget), log timestamp + source + exact consent text, and include an immediate one-tap opt-out button or STOP reply on every marketing template. Route final consent copy to legal review.
 4. **Templates and conversational flows by journey moment.** Map each message or two-way flow to an evidenced journey moment (a ticket group, a checkout drop-off, a reorder window). Utility/service messages that fix real customer friction come first. Keep automated flows short (2 to 3 quick-reply steps) with a clear human escalation path so no customer is trapped in a bot loop. Never stuff an unconfirmed promo or upsell inside a Utility template.
 5. **Cadence, quiet hours and quality-rating guardrails.** Cap Marketing templates tightly, respect local quiet hours, segment inactive or non-engaging recipients out early, and monitor Meta's Phone Number Quality Rating (Green / Yellow / Red) and block/report rates before increasing volume.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing sent, no opt-in changed, no BSP/
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write draft WhatsApp messages and button labels in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write draft WhatsApp messages and button labels in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, who can be messaged now (and why checkout numbers cannot receive marketing blasts), the first Utility/service vs. Marketing flows, and what is still missing, then end with the same block.
 

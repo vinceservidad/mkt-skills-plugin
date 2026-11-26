@@ -1,6 +1,6 @@
 ---
 name: 14-sales-script
-description: "Write a sales call script that diagnoses, sells the outcome and closes honestly (CLOSER, Challenger). Use for sales scripts, closing calls, call structure, proposal presentation, setter-closer."
+description: Write a sales call script that diagnoses, sells the outcome and closes honestly (CLOSER, Challenger). Use for sales scripts, closing calls, call structure, proposal presentation, setter-closer.
 metadata:
   section: "14 Sales"
   covers: "Challenger Sale; CLOSER (Hormozi); Consultative / solution selling; Proposal and pricing presentation; Sales script; Sandler; Setter–closer model; Straight Line"
@@ -32,7 +32,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/sales-script-guide.md](references/sales-script-guide.md) for the call frameworks, talk-time balance, the close and what never to say.
 
-1. **Read the current process.** From `inputs/`, record how calls run today (length, who talks when, what happens after), the win rate and lost reasons with counts from exact programmatic counting, and where deals are lost. Name the two or three changes that matter most, each tied to evidence.
+1. **Read the current process.** From `inputs/`, record how calls run today (length, who talks when, what happens after), the win rate and lost reasons with counts from [scripts/tally.py](scripts/tally.py), and where deals are lost. Name the two or three changes that matter most, each tied to evidence.
 2. **Choose the frame.** Pick the structure that fits the sale (see the guide): CLOSER (Hormozi) for a single-call close, consultative / solution selling for a considered B2B buy, Challenger for teaching a buyer a new view of their problem, Sandler for qualifying out early, Straight Line for keeping a long call on track. Name one primary frame and why.
 3. **Who decides.** Ask early who else decides and how they decide. If another person signs, the script books a call with them rather than closing without them.
 4. **Diagnose first.** Most of the call is the buyer talking: the situation, the cost of the problem in their words, what they tried, what a good outcome is. Use the buyer's language from Voice of customer. Hand deeper question design to `14-discovery-spin`.
@@ -44,7 +44,7 @@ Use [references/sales-script-guide.md](references/sales-script-guide.md) for the
 10. **Approval.** The script is a draft. Using it on calls, changing prices or terms, or adding a new role needs the owner's explicit approval.
 11. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, case studies, client names, prices, guarantees, deadlines or claims that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, case studies, client names, prices, guarantees, deadlines or claims that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -77,7 +77,7 @@ Status: draft for the owner's approval; not yet used on calls
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the frame chosen and why, the biggest change to the current call, how the close works, and what is still missing, then end with the same block.
 

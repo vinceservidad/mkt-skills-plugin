@@ -1,6 +1,6 @@
 ---
 name: 02-voc-mining
-description: "Mine reviews, tickets, surveys and call notes for customers' exact words, themes and a language bank. Use for voice of customer, what customers say about us. Not for interviews (02-customer-research)."
+description: Mine reviews, tickets, surveys and call notes for customers' exact words, themes and a language bank. Use for voice of customer, what customers say about us. Not for interviews (02-customer-research).
 metadata:
   section: "02 Customer"
   covers: "Social listening; Voice of Customer"
@@ -57,7 +57,7 @@ Copy is assembled from research, not invented. This skill turns raw customer tex
    - Any jargon of yours that they never use.
 6. **Name the gaps.** Note any missing voices: churned customers, non-buyers, a segment. Note any source that was unreadable or skipped.
 
-Compute exact row and category counts programmatically whenever the material is a file; never estimate counts by eye.
+Count with [scripts/tally.py](scripts/tally.py) whenever the material is a file: `python3 <this skill's folder>/scripts/tally.py inputs/reviews.csv` prints rows and per-column counts, and `tally.py notes.md 'R\d+|T-\d+'` counts distinct item IDs. Use its numbers, not counts made by reading.
 
 ## Output
 

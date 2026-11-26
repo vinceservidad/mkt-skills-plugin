@@ -1,6 +1,6 @@
 ---
 name: 07-offer-design
-description: "Design or rebuild the core offer with the Value Equation and Grand Slam Offer. Use for packaging, deliverables, what should I sell, or leads not buying. Not for price or bonuses (use 07-pricing)."
+description: Design or rebuild the core offer with the Value Equation and Grand Slam Offer. Use for packaging, deliverables, what should I sell, or leads not buying. Not for price or bonuses (use 07-pricing).
 metadata:
   section: "07 Offer"
   covers: "Best-prospect offer test; Bundles; Dream outcome; Grand Slam Offer; Irresistible Offer (Joyner); MAGIC naming; Offer stack; Reason to Buy; Value Equation"

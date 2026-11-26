@@ -1,6 +1,6 @@
 ---
 name: 11-content-strategy
-description: "Plan content pillars, clusters, repurposing and distribution against the buyer journey. Use for content strategy, blog plan, content pillars, what content to make and where."
+description: Plan content pillars, clusters, repurposing and distribution against the buyer journey. Use for content strategy, blog plan, content pillars, what content to make and where.
 metadata:
   section: "11 Distribution"
   covers: "Content marketing; Content repurposing"
@@ -73,7 +73,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The strategy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a ticket), with the source named. Write your own titles, topics and lines in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim. Count anything you report from files with exact programmatic counting, not by eye.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a ticket), with the source named. Write your own titles, topics and lines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches. Count anything you report from files with [scripts/tally.py](scripts/tally.py), not by eye.
 
 Reply with the file path, the pillars chosen, and what is still missing, then end with the same block.
 

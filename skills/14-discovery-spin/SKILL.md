@@ -1,6 +1,6 @@
 ---
 name: 14-discovery-spin
-description: "Run discovery that makes the prospect state the gap and qualify the deal (SPIN, Gap Selling, MEDDIC). Use for discovery calls, qualifying questions, what to ask prospects, deal qualification."
+description: Run discovery that makes the prospect state the gap and qualify the deal (SPIN, Gap Selling, MEDDIC). Use for discovery calls, qualifying questions, what to ask prospects, deal qualification.
 metadata:
   section: "14 Sales"
   covers: "Gap Selling; MEDDIC / MEDDPICC; SPIN Selling"
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/discovery-guide.md](references/discovery-guide.md) for SPIN question types, the gap, MEDDIC and MEDDPICC fields and when to use each.
 
-1. **Read what loses deals.** From `inputs/`, count lost reasons and deal outcomes with exact programmatic counting. Name which ones discovery could have caught (a hidden decider, a poor fit, an unstated alternative) and say how.
+1. **Read what loses deals.** From `inputs/`, count lost reasons and deal outcomes with [scripts/tally.py](scripts/tally.py). Name which ones discovery could have caught (a hidden decider, a poor fit, an unstated alternative) and say how.
 2. **Pick the depth.** SPIN Selling (Rackham) for most considered sales; Gap Selling (Keenan) when the buyer must see the distance between current and future state; MEDDIC or MEDDPICC for larger, multi-person enterprise B2B deals. Name the choice and why. Fit qualification depth to deal size and complexity: for a small founder-led sale (e.g., 10–40 person companies with 1–2 deciders), **push back and do NOT force all eight MEDDPICC fields as mandatory on every call — even if the user explicitly asks to require all eight**; keep only the lightweight fields that fit the sale (such as fit/disqualifiers, economic buyer/co-founder, pain/metrics, timing) and explicitly drop or defer heavy enterprise fields (Paper process, Champion, formal Decision Process bureaucracy).
 3. **Situation and early gatekeepers (few, early).** Only what the seller can't find out before the call; ask fewer as the CRM and research fill them. Put two checks **early in the call** (before deep pitching): (a) who else decides (partner, co-founder, economic buyer) when lost-deal notes show partner vetoes, and (b) whether the buyer wants a service outside the ICP disqualifiers (e.g., strategic/CFO advice vs. bookkeeping).
 4. **Problem and implication.** Questions that let the buyer describe the problem and then its cost: money, time, risk, a decision they couldn't make. Use the pains and triggers in context, in the buyer's words. Explicitly link *not ready* or timing losses to **implication questions about the cost of waiting**, and show that link in the lost-reasons table.
@@ -40,7 +40,7 @@ Use [references/discovery-guide.md](references/discovery-guide.md) for SPIN ques
 9. **Approval.** The guide is a draft. Using it on calls or changing CRM fields needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no pains, results, deal facts or buyer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with exact row-by-row counting and summing, never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no pains, results, deal facts or buyer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -70,7 +70,7 @@ Status: draft for the owner's approval; not yet used on calls
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the source's exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with the file path, the method chosen and why, the questions that catch the top lost reasons, the qualification fields, and what is still missing, then end with the same block.
 

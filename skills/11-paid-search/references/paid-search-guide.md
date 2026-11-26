@@ -41,10 +41,26 @@ Volume never overrides fit. A term with large volume that the ICP does not use, 
 
 ## Reading a search terms report
 
-- Total by term and by theme with exact programmatic summing; show clicks, cost, platform conversions and business outcomes side by side.
+- Total by term and by theme with `scripts/sum_by.py`; show clicks, cost, platform conversions and business outcomes side by side.
 - Compute share of spend on irrelevant intent (calculated) and cost per qualified outcome on relevant intent.
 - Small counts (one or two outcomes) are directional; say what spend or count would make a call.
 - Maximise-clicks style bidding with broad match and a form-fill conversion tends to buy cheap, broad clicks (pattern to confirm, not proof).
+
+## Pre-launch build order (before spending $1)
+
+1. **Gate 1 (Strategy and economics):** Lock the core offer (`07-offer-design`), target segment (`02-segmentation`), promise and proof (`08-message-doc`), and allowable cost per business outcome (`17-unit-economics`).
+2. **Gate 2 (Intent-matched landing pages):** Publish and QA dedicated destination pages whose headline, offer, and proof match each ad group's search intent (`12-landing-page`).
+3. **Gate 3 (Conversion tracking and offline imports):** Verify Primary vs. Secondary conversion goals, Enhanced Conversions, CRM offline conversion imports (never raw form fills as Primary when CRM quality matters), auto-tagging, and UTMs (`17-tracking-plan`).
+4. **Gate 4 (Account hygiene and compliance):** Verify billing, location presence settings, network exclusions (Display expansion and Search Partners off unless explicitly tested), and trademark/policy compliance (`20-compliance`).
+
+Build inside Google Ads in this order (every object stays paused or in draft until owner approval):
+
+1. Billing, auto-tagging, and verified Primary vs. Secondary Conversion Actions.
+2. Live QA of each intent-matched destination landing page (`12-landing-page`).
+3. Upload starter account and campaign negative keyword lists before spend goes live.
+4. Draft Campaign (goal, Search network only unless tested, location presence, schedule, budget, initial bidding) -> Ad Groups (one intent theme each, exact/phrase keywords) -> RSAs and extensions/assets (`10-ad-copy`) with verified final URLs.
+5. Pre-publish QA and explicit owner approval.
+6. Publish, confirm live conversion tracking, and schedule the first search-terms review.
 
 ## Bidding and budget
 

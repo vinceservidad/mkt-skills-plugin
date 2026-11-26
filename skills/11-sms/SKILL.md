@@ -1,6 +1,6 @@
 ---
 name: 11-sms
-description: "Plan SMS as an owned channel with consent, cadence and message types. Use for SMS marketing, text message campaigns, shipping texts, collecting phone opt-ins, how often to text customers."
+description: Plan SMS as an owned channel with consent, cadence and message types. Use for SMS marketing, text message campaigns, shipping texts, collecting phone opt-ins, how often to text customers.
 metadata:
   section: "11 Distribution"
   covers: "SMS marketing"
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/sms-guide.md](references/sms-guide.md) for consent, message types, cadence and the legal and carrier facts to verify.
 
 1. **Outcome.** Name what SMS is for (fewer missed deliveries and "where is my box" tickets, repeat orders, replies) and how it is judged, with counts. Click rate alone is not the outcome.
-2. **Who can be texted, and for what.** Count phone numbers by how they were collected with exact programmatic counting or the notes. A number given at checkout for delivery is not consent to marketing texts. Separate transactional or service messages (shipment notices, order updates the customer opted into) from marketing messages (offers, promotions). Marketing texts need prior express written consent where the law requires it (for example the US TCPA) and a clear opt-in; verify the rules for each country and mark *to confirm*.
+2. **Who can be texted, and for what.** Count phone numbers by how they were collected with [scripts/tally.py](scripts/tally.py) or the notes. A number given at checkout for delivery is not consent to marketing texts. Separate transactional or service messages (shipment notices, order updates the customer opted into) from marketing messages (offers, promotions). Marketing texts need prior express written consent where the law requires it (for example the US TCPA) and a clear opt-in; verify the rules for each country and mark *to confirm*.
 3. **Collect consent.** Design the opt-in: where it appears (checkout, account, app), the exact disclosure the owner must approve (what messages, roughly how often, that rates may apply, how to stop), a confirmation text, and keyword opt-out (STOP) honored at once. The final wording goes to legal review.
 4. **Message types by journey moment.** Map each text to a moment in Journey with its evidence (a ticket group, a review). Service texts that answer a real problem come first. Each message type gets its trigger, content, and whether it is service or marketing.
 5. **Cadence and quiet hours.** Few marketing texts, sent at reasonable local hours, never more often than the disclosure says. Service texts follow the event. State the caps.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; nothing sent, no opt-in changed, no tool
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write draft texts in italics or a plain block. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write draft texts in italics or a plain block. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, who can be texted now and for what, the first message types, and what is still missing, then end with the same block.
 
