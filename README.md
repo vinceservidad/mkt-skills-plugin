@@ -6,6 +6,21 @@ Includes an optional read-only MKT Skills connector (`https://mktskills.com/mcp`
 
 Built by [Vince Servidad](https://www.vinceservidad.com/) · Website: <https://mktskills.com> · Support: <https://mktskills.com/support>
 
+## Install
+
+In Claude Code 2.1.275 or later:
+
+```
+/plugin install mkt-skills --marketplace vinceservidad/mkt-skills-plugin
+```
+
+On older versions, add the marketplace first, then install:
+
+```
+/plugin marketplace add vinceservidad/mkt-skills-plugin
+/plugin install mkt-skills@mkt-skills-plugin
+```
+
 ## Full Skills Repository
 
 For CLI install (`npx skills add vinceservidad/marketingskills`), Cursor, Codex, and Antigravity, see <https://github.com/vinceservidad/marketingskills>.
