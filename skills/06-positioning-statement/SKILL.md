@@ -1,9 +1,9 @@
 ---
 name: 06-positioning-statement
-description: "Position the product against the real alternatives with unique attributes, value, best-fit customers and category. Use for positioning, positioning statement, how we're different, April Dunford."
+description: Position the product against the real alternatives with unique attributes, value, best-fit customers and category. Use for positioning, positioning statement, how we're different, April Dunford.
 metadata:
   section: "06 Positioning"
-  covers: "Competitive alternatives; Obviously Awesome (Dunford); Only-ness statement; Perceptual map; Positioning (Ries & Trout); Positioning statement (Moore); USP; Value proposition (canvas)"
+  covers: "22 Immutable Laws of Marketing (Ries & Trout); Competitive alternatives; Obviously Awesome (Dunford); Only-ness statement; Perceptual map; Positioning (Ries & Trout); Positioning statement (Moore); USP; Value proposition (canvas)"
 ---
 # Positioning statement
 
@@ -33,9 +33,9 @@ Positioning is not what you do to the product; it is what you do to the buyer's 
 
 ## Process
 
-Follow Dunford's order. Each step uses the one before it. Detail and traps: [references/obviously-awesome.md](references/obviously-awesome.md).
+Follow Dunford's order. Each step uses the one before it. Detail and traps: [references/obviously-awesome.md](references/obviously-awesome.md). Test the final frame and USP against the Ries & Trout laws and Reeves's 3-part USP check in [references/positioning-classics.md](references/positioning-classics.md).
 
-1. **Competitive alternatives.** What would the best-fit customers do if the business did not exist? Take the list from the context, including DIY, an in-house hire and doing nothing wherever evidence shows them. Rank them by how often buyers actually choose them (lost deals, switch stories, counts), not by how much they worry you, and sort the table rows in that order, highest count first. Count with exact programmatic counting when you count from files.
+1. **Competitive alternatives.** What would the best-fit customers do if the business did not exist? Take the list from the context, including DIY, an in-house hire and doing nothing wherever evidence shows them. Rank them by how often buyers actually choose them (lost deals, switch stories, counts), not by how much they worry you, and sort the table rows in that order, highest count first. Count with `scripts/tally.py` when you count from files.
 2. **Unique attributes.** List what the business has that the alternatives lack: capabilities, delivery, expertise, terms. Use only what is confirmed to exist across the product today: any `offer.md` item marked *proposed*, *planned*, *unknown*, or only seen once / *confirm it is standard* is NOT a current attribute and must appear only under Future differentiators — never as a current attribute, a current "Where we beat it" edge in the Alternatives table, or a claim in the Positioning statement. For each attribute, check the alternatives' dated claims:
    - **Unique:** no alternative claims it, as far as the evidence shows (say *as observed on <date>*).
    - **Shared:** an alternative claims it too (name who); it can't carry the position alone.
@@ -54,11 +54,11 @@ Follow Dunford's order. Each step uses the one before it. Detail and traps: [ref
    - **Perceptual map**, only when two axes buyers care about are evidenced (for example speed of numbers and depth of advice), placing each alternative from evidence; unplaced alternatives say *unknown*.
    - **USP and value proposition:** the one benefit the alternatives cannot or do not claim, and the jobs, pains and gains it serves (Value Proposition Canvas), in a line each.
 7. **Proof and test.** For each claim in the statement, name its proof or mark the gap. Propose how to test the position: sales-call framing, win rate against the primary alternative over a stated number of calls, the questions buyers stop asking.
-8. **Check before saving.** Re-read the draft against every item under Checks, and verify every quoted phrase verbatim against its named source on the file. Fix every failure before you save.
+8. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on the file. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No capability, result, price, customer count, competitor fact or buyer motive that is not in `context/` or `inputs/`. Competitor claims are their claims, with the date seen. A competitor's visible tactic is not proof that it works. Inferences carry `(assumption)`. A proposed capability is never written as if it exists.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a customer, a competitor's page as recorded), with the source named. The statements and your summaries are your own words: write them in italics or plain text. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a customer, a competitor's page as recorded), with the source named. The statements and your summaries are your own words: write them in italics or plain text. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/positioning.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 
@@ -148,4 +148,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-A position is a place in the buyer's mind relative to the alternatives they already know, built from what you have that they lack, the value it creates for the customers who care most, and the category frame that makes that value obvious; who you are not for is part of it. Obviously Awesome (April Dunford); Crossing the Chasm (Geoffrey Moore); Positioning: The Battle for Your Mind (Al Ries and Jack Trout); The Complete Marketing System, section 6 Positioning (Servidad, 2026).
+A position is a place in the buyer's mind relative to the alternatives they already know, built from what you have that they lack, the value it creates for the customers who care most, and the category frame that makes that value obvious; who you are not for is part of it. Obviously Awesome (April Dunford); Crossing the Chasm (Geoffrey Moore); Positioning: The Battle for Your Mind and The 22 Immutable Laws of Marketing (Al Ries and Jack Trout); Reality in Advertising (Rosser Reeves); The Complete Marketing System, section 6 Positioning (Servidad, 2026).

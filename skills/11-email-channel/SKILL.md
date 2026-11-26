@@ -1,9 +1,9 @@
 ---
 name: 11-email-channel
-description: "Run email as a channel with list growth, consent, deliverability and a broadcast calendar. Use for email marketing, newsletter plan, growing the list, inbox placement, how often to email."
+description: Run email as a channel with list growth, consent, deliverability and a broadcast calendar. Use for email marketing, newsletter plan, growing the list, inbox placement, how often to email.
 metadata:
   section: "11 Distribution"
-  covers: "Email marketing"
+  covers: "Email marketing; Permission Marketing (Godin)"
 ---
 # Email channel
 
@@ -26,11 +26,11 @@ Required (drafted or confirmed, with content):
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/email-channel-guide.md](references/email-channel-guide.md) for consent, list hygiene, deliverability, cadence and measurement.
+Use [references/email-channel-guide.md](references/email-channel-guide.md) for consent, list hygiene, deliverability, cadence and measurement, and [references/godin-permission.md](references/godin-permission.md) for Seth Godin's Permission Marketing ladder and three-part email test.
 
 1. **Outcome.** Name what the channel is judged on (orders, repeat orders, qualified replies) and the measure the plan reports (orders or revenue per email delivered, with the attribution rule the tool uses). Opens are a weak signal; privacy features inflate them.
-2. **The list by source and consent.** Count contacts by source with exact programmatic counting or the export, never by eye. For each source, record what the person agreed to (the exact sign-up wording if supplied). Contacts with no record of consent to marketing email are held out of broadcasts until the owner gets consent or confirms a lawful basis; never mail them to "warm up" or to see what happens. Consent and legal rules are facts to verify (see the guide) or mark *to confirm*.
-3. **Read the reports.** Compute click rate, unsubscribe rate and orders per 1,000 delivered from the reports with exact programmatic summing, with each figure labelled *observed* (tool) or *calculated*. Note trends (rising unsubscribes, falling clicks) and the limit of the tool's attribution window. No industry benchmark is evidence.
+2. **The list by source and consent.** Count contacts by source with [scripts/tally.py](scripts/tally.py) or the export, never by eye. For each source, record what the person agreed to (the exact sign-up wording if supplied). Contacts with no record of consent to marketing email are held out of broadcasts until the owner gets consent or confirms a lawful basis; never mail them to "warm up" or to see what happens. Consent and legal rules are facts to verify (see the guide) or mark *to confirm*.
+3. **Read the reports.** Compute click rate, unsubscribe rate and orders per 1,000 delivered from the reports with [scripts/sum_by.py](scripts/sum_by.py), with each figure labelled *observed* (tool) or *calculated*. Note trends (rising unsubscribes, falling clicks) and the limit of the tool's attribution window. No industry benchmark is evidence.
 4. **Deliverability.** Check authentication (SPF, DKIM, DMARC), the sending domain, list hygiene (bounces, long-inactive contacts), complaint handling and one-click unsubscribe. If DMARC is unknown, say so and put it first. Raise frequency gradually from what the list is used to; a list mailed every two months is not ready for weekly email overnight. Mailbox-provider rules are platform facts: cite the current page with URL and date, or mark *to confirm*.
 5. **Growth.** Plan how the list grows from sources that fit the ICP and collect clear consent: the sign-up points that exist, a lead magnet (`12-lead-magnet`), checkout opt-in. An incentive is an owner commitment. Never suggest buying, renting or scraping lists.
 6. **Broadcast calendar.** Cadence the owner can sustain (their stated time), content types that serve the ICP and the journey, and the share that sells versus helps. Each slot names its purpose and the offer it may use, only from `offer.md`.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing sent or imported
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, verify every quoted phrase in your draft verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
 
 Reply with the file path, which contacts can be mailed now and which are held with the reason, the cadence and why, and what is still missing, then end with the same block.
 
@@ -97,4 +97,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-Mail only people who asked to hear from you, often enough to stay useful and never faster than the domain can carry, and judge email on the orders it brings. Email marketing, The Complete Marketing System, section 11 Distribution (Servidad, 2026); permission marketing (Seth Godin).
+Mail only people who asked to hear from you, often enough to stay useful and never faster than the domain can carry, and judge email on the orders it brings. Email marketing, The Complete Marketing System, section 11 Distribution (Servidad, 2026); Permission Marketing (Seth Godin).

@@ -3,7 +3,7 @@ name: 10-sales-page
 description: Write a long-form sales page or letter from the offer, proof and objections, with fascinations and a P.S. Use for sales page, order page or direct-response page. Not for webinars (use 10-vsl-script).
 metadata:
   section: "10 Copywriting"
-  covers: "Direct response (discipline); Fascinations (bullets); P.S.; QUEST"
+  covers: "Bullet-proof fascinations (Bencivenga); Direct response (discipline); Fascinations (bullets); P.S.; QUEST"
 ---
 # Sales page
 
@@ -27,7 +27,7 @@ Required (drafted or confirmed, with content):
 ## Process
 
 1. **Set the reader and level:** the awareness level of the traffic, which decides how long the lead and the problem section run.
-2. **Outline in direct-response order** (the direct response discipline: one measurable action, every claim backed by the offer and proof), using [references/sales-page.md](references/sales-page.md): headline and lead → problem in their words → story (if Story exists) → mechanism → benefits and fascination bullets → proof → the offer stack (core, bonuses) → price with the anchor → guarantee → objections and FAQ → urgency (only what's true) → close → P.S.
+2. **Outline in direct-response order** (the direct response discipline: one measurable action, every claim backed by the offer and proof), using [references/sales-page.md](references/sales-page.md) and [references/direct-response-masters.md](references/direct-response-masters.md): headline and lead → problem in their words → story (if Story exists) → mechanism → benefits and fascination bullets → proof → the offer stack (core, bonuses) → price with the anchor → guarantee → objections and FAQ → urgency (only what's true) → close → P.S.
 3. **Write each section from its source:**
    - offer terms, price, guarantee, bonuses and urgency exactly as in `offer.md`;
    - proof from the proof stack, with testimonials word for word;
@@ -85,4 +85,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-Long copy sells when every section is earned: the offer, the proof and the answer to each objection, in the order the reader needs them, and nothing the business can't stand behind. Direct-response copywriting, Scientific Advertising (Claude Hopkins); The Boron Letters (Gary Halbert); QUEST (Michel Fortin); The Ultimate Sales Letter (Dan Kennedy); The Complete Marketing System, section 10 Copywriting (Servidad, 2026).
+Long copy sells when every section is earned: the offer, the proof and the answer to each objection, in the order the reader needs them, and nothing the business can't stand behind. Direct-response copywriting, Scientific Advertising (Claude Hopkins); The Boron Letters (Gary Halbert); Persuasion Equation and bullet-proof fascinations (Gary Bencivenga); Breakthrough Advertising (Eugene Schwartz); Ogilvy on Advertising (David Ogilvy); QUEST (Michel Fortin); The Ultimate Sales Letter (Dan Kennedy); The Complete Marketing System, section 10 Copywriting (Servidad, 2026).

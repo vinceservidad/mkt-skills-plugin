@@ -3,6 +3,7 @@ name: 10-email-copy
 description: Write one marketing email with subject lines, preview text, body, CTA and P.S. Use for broadcasts, promos, newsletters and win-back emails. Not for multi-email sequences (use 12-email-sequences).
 metadata:
   section: "10 Copywriting"
+  covers: "A-pile opener and greased slide (Halbert)"
 ---
 # Email copy
 
@@ -23,7 +24,7 @@ Required (drafted or confirmed, with content):
 ## Process
 
 1. **Define the send.** For a re-engagement or win-back email, read the evidenced reasons people left or stalled (Beliefs, objections and drivers; Voice of customer) and answer the top ones with offer elements that `offer.md` lists as existing. Proposed or planned elements must not be implied. In the file, list every evidenced reason as *answered by <element>* or *can't answer yet*. Then define: who receives it (segment, stage or awareness level), its one purpose (announce, promote, educate, re-engage), and its one action.
-2. **Choose the structure,** using [references/email.md](references/email.md): PAS, BAB, story-lesson-offer, a news announcement or a plain-text letter. Every part of the structure you name must show in the body. PAS needs all three: the problem, an agitate line on what it costs the reader (from the evidence, not invented), then the solution. A list of problems each followed by its fix is not PAS.
+2. **Choose the structure,** using [references/email.md](references/email.md) and Halbert's A-pile opener and greased-slide rules in [references/halbert-mail-playbook.md](references/halbert-mail-playbook.md): PAS, BAB, story-lesson-offer, a news announcement or a plain-text letter. Every part of the structure you name must show in the body. PAS needs all three: the problem, an agitate line on what it costs the reader (from the evidence, not invented), then the solution. A list of problems each followed by its fix is not PAS.
 3. **Write three to five subject lines and the preview text.** Specific beats clever. No misleading subjects ("Re:", "Your order") and no false urgency.
 4. **Write the body:** short paragraphs, one idea and one call to action, and a P.S. that restates the action. Use real offer terms only. Use deadlines only if `offer.md` → Urgency and scarcity has them. A capacity limit is stated as a limit (*we take four new agencies a month*), never as demand or slots already taken (*four agencies start next month*) unless the context says so.
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.

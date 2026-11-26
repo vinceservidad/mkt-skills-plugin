@@ -1,9 +1,9 @@
 ---
 name: 08-proof-stack
-description: "Assemble real proof under every claim and flag claims with none. Use for social proof, reason to believe, which testimonials to use. Not for collecting them (use 16-testimonials-case-studies)."
+description: Assemble real proof under every claim and flag claims with none. Use for social proof, reason to believe, which testimonials to use. Not for collecting them (use 16-testimonials-case-studies).
 metadata:
   section: "08 Message"
-  covers: "Proof stack; Reason to Believe; Social proof"
+  covers: "Persuasion Equation (Bencivenga); Preemptive claim (Hopkins); Proof stack; Reason to Believe; Social proof"
 ---
 # Proof stack
 
@@ -34,7 +34,7 @@ The reason to buy and the reason to believe are two different jobs, and most wea
 ## Process
 
 1. **List the claims:** the promise, each pillar, and any number or superlative the business uses.
-2. **Find proof for each claim** in the material, by type, using [references/proof-types.md](references/proof-types.md):
+2. **Find proof for each claim** in the material, by type, using [references/proof-types.md](references/proof-types.md) and the persuasion/preemptive proof rules in [references/proof-classics.md](references/proof-classics.md):
    - results and data;
    - testimonials and reviews;
    - case studies;
@@ -78,7 +78,7 @@ Reply with:
 - the next skill: `08-objection-map`.
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words from the source or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
+Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
 
 The reply's last lines are always the **Principle, framework, source** block, after the next skill, on a build and on a stop:
 
@@ -100,4 +100,4 @@ The reply's last lines are always the **Principle, framework, source** block, af
 
 ## Principle and source
 
-The reason to buy and the reason to believe are different jobs: put specific, sourced proof under every claim, and weaken or withdraw any claim you cannot prove. Reason to believe and social proof (Robert Cialdini, Influence); proof, Scientific Advertising (Claude Hopkins); The Complete Marketing System, section 8 Message (Servidad, 2026).
+The reason to buy and the reason to believe are different jobs: put specific, sourced proof under every claim, and weaken or withdraw any claim you cannot prove. Persuasion Equation (Gary Bencivenga); third-party authority (Edward Bernays); Reason to believe and social proof (Robert Cialdini, Influence); preemptive claim and proof, Scientific Advertising (Claude Hopkins); The Complete Marketing System, section 8 Message (Servidad, 2026).

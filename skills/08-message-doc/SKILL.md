@@ -1,9 +1,9 @@
 ---
 name: 08-message-doc
-description: "Write the message document every ad, page and email draws from, with big idea, promise, mechanism, reason why, enemy and message house. Use for what to say, messaging framework, Rule of One."
+description: Write the message document every ad, page and email draws from, with big idea, promise, mechanism, reason why, enemy and message house. Use for what to say, messaging framework, Rule of One.
 metadata:
   section: "08 Message"
-  covers: "4Ps of persuasion (taught by AWAI); Big Idea; Enemy / villain; Laddering (benefit ladder); Message house; Reason Why (Hopkins); Rule of One; SUCCESs (Heath)"
+  covers: "4Ps of persuasion (taught by AWAI); Big Idea; Big Idea 5-question test (Ogilvy); Enemy / villain; Intensification and copy mechanics (Schwartz); Laddering (benefit ladder); Message house; Reason Why (Hopkins); Rule of One; SUCCESs (Heath)"
 ---
 # Message document
 
@@ -34,7 +34,7 @@ Decide what you say before writing any ad or page. One message, one idea, one re
    - **Roof:** the core promise.
    - **Three pillars:** supporting messages, each tied to a top objection or job.
    - **Foundation:** the proof each pillar needs. Leave the proof detail to `08-proof-stack`.
-7. **Run the 4Ps of persuasion (taught by AWAI) check:** Promise, Picture, Proof, Push, each present or flagged as a gap. Then the Rule of One and SUCCESs checks: one idea, one reader, one emotion, one action; simple, unexpected, concrete, credible, emotional, story. See [references/message-tests.md](references/message-tests.md).
+7. **Run the 4Ps of persuasion (taught by AWAI) check:** Promise, Picture, Proof, Push, each present or flagged as a gap. Then run the Rule of One, SUCCESs, Ogilvy's Big Idea 5-question filter, and Schwartz's intensification checks using [references/message-tests.md](references/message-tests.md) and [references/message-classics.md](references/message-classics.md).
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -76,7 +76,7 @@ End with the **Principle, framework, source** block:
 ```
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words from the source or drop the quotation marks and use italics, then run it again until every quotation matches verbatim.
+Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
 
 ## Checks
 
@@ -91,4 +91,4 @@ Then verify every quoted phrase in your draft verbatim against its named source 
 
 ## Principle and source
 
-One message, one idea, one reader, with a reason why: a claim with a reason outperforms the bare claim, and the best message is found in customer research, not invented. Big Idea (David Ogilvy, Ogilvy on Advertising); Reason Why, Scientific Advertising (Claude Hopkins); Rule of One, Great Leads (Michael Masterson & John Forde); SUCCESs, Made to Stick (Chip & Dan Heath); The Complete Marketing System, section 8 Message (Servidad, 2026).
+One message, one idea, one reader, with a reason why: a claim with a reason outperforms the bare claim, and the best message is found in customer research, not invented. Big Idea (David Ogilvy, Ogilvy on Advertising); Breakthrough Advertising (Eugene Schwartz); Reason Why, Scientific Advertising (Claude Hopkins); Rule of One, Great Leads (Michael Masterson & John Forde); SUCCESs, Made to Stick (Chip & Dan Heath); The Complete Marketing System, section 8 Message (Servidad, 2026).

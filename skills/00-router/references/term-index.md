@@ -4,12 +4,14 @@ Every term in the master index, with the skill that owns the decision. Generated
 
 | Term | Owning section | Skill |
 | --- | --- | --- |
+| 22 Immutable Laws of Marketing (Ries & Trout) | 06 Positioning | `06-positioning-statement` |
 | 4Cs | 10 Copywriting | `10-copy-editing` |
 | 4Ps (McCarthy) | 04 Product | `04-pmf-check` |
 | 4Ps of persuasion (taught by AWAI) | 08 Message | `08-message-doc` |
 | 4Us (Masterson) | 10 Copywriting | `10-headlines` |
 | 70/20/10 budget | 20 Operations | `20-budget` |
 | 7Ps (services mix) | 04 Product | `04-pmf-check` |
+| A-pile opener and greased slide (Halbert) | 10 Copywriting | `10-email-copy` |
 | A/B testing | 18 Experimentation | `18-ab-testing` |
 | AARRR / Pirate metrics | 12 Funnel | `12-funnel-design` |
 | Abraham's three ways to grow | 19 Growth | `19-growth-model` |
@@ -34,12 +36,14 @@ Every term in the master index, with the skill that owns the decision. Generated
 | BAB (Before–After–Bridge) | 10 Copywriting | `10-page-copy` |
 | BANT | 14 Sales | `14-lead-scoring` |
 | Battle cards / sales enablement | 14 Sales | `14-sales-enablement` |
+| Beat-the-control testing (Bencivenga) | 18 Experimentation | `18-ab-testing` |
 | Before–After grid | 02 Customer | `02-jobs-to-be-done` |
 | Behavioral economics (Kahneman, Ariely) | 02 Customer | `02-buyer-psychology` |
 | Behavioral nudges | 13 Conversion | `13-cro-audit` |
 | Belief mapping | 02 Customer | `02-buyer-psychology` |
 | Best-prospect offer test | 07 Offer | `07-offer-design` |
 | Big Idea | 08 Message | `08-message-doc` |
+| Big Idea 5-question test (Ogilvy) | 08 Message | `08-message-doc` |
 | Binet & Field (60/40) | 05 Brand | `05-brand-foundation` |
 | Blue Ocean | 01 Market | `01-market-assessment` |
 | Bly's headline types | 10 Copywriting | `10-headlines` |
@@ -52,6 +56,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | BrandScript (StoryBrand) | 10 Copywriting | `10-page-copy` |
 | Bucket brigade | 10 Copywriting | `10-copy-editing` |
 | Build–Measure–Learn | 18 Experimentation | `18-hypothesis` |
+| Bullet-proof fascinations (Bencivenga) | 10 Copywriting | `10-sales-page` |
 | Bullseye Framework (Traction) | 11 Distribution | `11-channel-selection` |
 | Bundles | 07 Offer | `07-offer-design` |
 | Buyer psychology | 02 Customer | `02-buyer-psychology` |
@@ -74,6 +79,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Community-led growth | 16 Referral and Community | `16-community` |
 | Comparison / alternative pages | 06 Positioning | `06-competitor-pages` |
 | Competitive alternatives | 06 Positioning | `06-positioning-statement` |
+| Competitive posture playbook (Kotler) | 06 Positioning | `06-competitor-pages` |
 | Compliance checklist | 20 Operations | `20-compliance` |
 | Consent and privacy | 20 Operations | `20-compliance` |
 | Consultative / solution selling | 14 Sales | `14-sales-script` |
@@ -112,6 +118,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Dream 100 | 11 Distribution | `11-co-marketing` |
 | Dream outcome | 07 Offer | `07-offer-design` |
 | Dunning / failed-payment recovery | 15 Retention | `15-churn-prevention` |
+| Earned publicity showmanship (Barnum) | 11 Distribution | `11-pr` |
 | Email marketing | 11 Distribution | `11-email-channel` |
 | Empathy map | 02 Customer | `02-icp-persona` |
 | Enemy / villain | 08 Message | `08-message-doc` |
@@ -124,6 +131,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Fascinations (bullets) | 10 Copywriting | `10-sales-page` |
 | First-party data / CDP | 17 Measurement | `17-tracking-plan` |
 | Five Forces (Porter) | 01 Market | `01-market-assessment` |
+| Five Product Levels and 4Cs (Kotler) | 04 Product | `04-pmf-check` |
 | Five-second test | 13 Conversion | `13-cro-audit` |
 | Flash sales | 07 Offer | `07-bonuses-urgency` |
 | Flywheel | 19 Growth | `19-growth-loops` |
@@ -151,6 +159,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Heatmaps / session recordings | 13 Conversion | `13-cro-audit` |
 | Hero's Journey | 08 Message | `08-story-epiphany-bridge` |
 | Heuristic evaluation (Nielsen) | 13 Conversion | `13-cro-audit` |
+| Honest admission and visual-verbal tension (Bernbach) | 09 Creative Strategy | `09-creative-brief` |
 | Hook | 09 Creative Strategy | `09-hooks` |
 | Hook Model (Eyal) | 04 Product | `04-plg-audit` |
 | Hook–Story–Offer | 09 Creative Strategy | `09-ad-creative` |
@@ -162,11 +171,15 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Image and video generation | 09 Creative Strategy | `09-image-video` |
 | Incrementality / geo-lift | 17 Measurement | `17-incrementality` |
 | Influencer / creator marketing | 11 Distribution | `11-influencer` |
+| Inherent Drama (Burnett) | 05 Brand | `05-distinctive-assets` |
+| Intensification and copy mechanics (Schwartz) | 08 Message | `08-message-doc` |
 | Irresistible Offer (Joyner) | 07 Offer | `07-offer-design` |
 | Jobs to Be Done | 02 Customer | `02-jobs-to-be-done` |
 | JV launches | 11 Distribution | `11-affiliate-jv` |
 | K-factor / viral loop | 16 Referral and Community | `16-viral-loop` |
 | Kano model | 04 Product | `04-pmf-check` |
+| Keyed-ad testing (Hopkins) | 18 Experimentation | `18-ab-testing` |
+| Keynote launch playbook (Jobs) | 12 Funnel | `12-launch` |
 | KPI tree / driver tree | 17 Measurement | `17-dashboard` |
 | Laddering (benefit ladder) | 08 Message | `08-message-doc` |
 | Landing page | 12 Funnel | `12-landing-page` |
@@ -203,6 +216,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Naming (product and brand) | 05 Brand | `05-naming` |
 | Native advertising | 09 Creative Strategy | `09-ad-creative` |
 | Network effects | 16 Referral and Community | `16-viral-loop` |
+| News-event PR and third-party authority (Bernays) | 11 Distribution | `11-pr` |
 | Newsjacking | 11 Distribution | `11-pr` |
 | Newsletter sponsorships | 11 Distribution | `11-co-marketing` |
 | North Star Metric | 17 Measurement | `17-dashboard` |
@@ -225,7 +239,9 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Paywalls / upgrade prompts | 13 Conversion | `13-paywalls` |
 | Perceptual map | 06 Positioning | `06-positioning-statement` |
 | Perfect Webinar | 10 Copywriting | `10-vsl-script` |
+| Permission Marketing (Godin) | 11 Distribution | `11-email-channel` |
 | Personalization | 13 Conversion | `13-cro-audit` |
+| Persuasion Equation (Bencivenga) | 08 Message | `08-proof-stack` |
 | PESTLE | 01 Market | `01-market-assessment` |
 | Podcast marketing / guesting | 11 Distribution | `11-podcast-video` |
 | POEM (paid, owned, earned) | 11 Distribution | `11-channel-selection` |
@@ -234,6 +250,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Positioning statement (Moore) | 06 Positioning | `06-positioning-statement` |
 | Post-mortem / campaign review | 20 Operations | `20-campaign-review` |
 | PR / earned media | 11 Distribution | `11-pr` |
+| Preemptive claim (Hopkins) | 08 Message | `08-proof-stack` |
 | Price psychology | 07 Offer | `07-pricing` |
 | Price testing | 18 Experimentation | `18-price-testing` |
 | Pricing page design | 13 Conversion | `13-pricing-page` |
@@ -247,6 +264,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Proof stack | 08 Message | `08-proof-stack` |
 | Proposal and pricing presentation | 14 Sales | `14-sales-script` |
 | Prospecting / list building | 14 Sales | `14-prospecting` |
+| Purple Cow and Smallest Viable Market (Godin) | 05 Brand | `05-brand-foundation` |
 | Push notifications | 15 Retention | `15-lifecycle` |
 | QUEST | 10 Copywriting | `10-sales-page` |
 | Quiz funnel | 12 Funnel | `12-funnel-design` |
@@ -284,6 +302,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | SLAP | 10 Copywriting | `10-ad-copy` |
 | Slippery slide (Sugarman) | 10 Copywriting | `10-copy-editing` |
 | SMS marketing | 11 Distribution | `11-sms` |
+| Sneezers and IdeaVirus (Godin) | 16 Referral and Community | `16-viral-loop` |
 | Soap Opera Sequence | 12 Funnel | `12-email-sequences` |
 | Social listening | 02 Customer | `02-voc-mining` |
 | Social media marketing | 11 Distribution | `11-social` |
@@ -302,6 +321,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Swipe file | 10 Copywriting | `10-swipe-file` |
 | T-shaped marketer / pod structure | 20 Operations | `20-marketing-plan` |
 | TAM / SAM / SOM | 01 Market | `01-market-assessment` |
+| Tested headline rules (Caples) | 10 Copywriting | `10-headlines` |
 | Testimonials | 16 Referral and Community | `16-testimonials-case-studies` |
 | Theory of Constraints | 19 Growth | `19-constraint-finder` |
 | Thought leadership | 05 Brand | `05-brand-foundation` |
@@ -318,6 +338,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Value Equation | 07 Offer | `07-offer-design` |
 | Value Ladder | 07 Offer | `07-value-ladder` |
 | Value proposition (canvas) | 06 Positioning | `06-positioning-statement` |
+| Vampire Video check (Reeves) | 09 Creative Strategy | `09-image-video` |
 | Van Westendorp / Gabor-Granger | 07 Offer | `07-pricing` |
 | Visual hierarchy | 09 Creative Strategy | `09-ad-creative` |
 | Voice of Customer | 02 Customer | `02-voc-mining` |

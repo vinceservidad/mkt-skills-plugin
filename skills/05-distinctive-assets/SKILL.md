@@ -1,9 +1,9 @@
 ---
 name: 05-distinctive-assets
-description: "Audit and build the colours, shapes, sounds and characters buyers recognise as yours, from recognition evidence. Use for distinctive brand assets, brand recognition, mental availability."
+description: Audit and build the colours, shapes, sounds and characters buyers recognise as yours, from recognition evidence. Use for distinctive brand assets, brand recognition, mental availability.
 metadata:
   section: "05 Brand"
-  covers: "Distinctive assets; How Brands Grow (Sharp); Mental / physical availability"
+  covers: "Distinctive assets; How Brands Grow (Sharp); Inherent Drama (Burnett); Mental / physical availability"
 ---
 # Distinctive assets
 
@@ -21,10 +21,10 @@ Distinctive beats different: buyers must recognise the brand before they can be 
 
 ## Process
 
-Use the method in [references/asset-audit.md](references/asset-audit.md).
+Use the method in [references/asset-audit.md](references/asset-audit.md) alongside Leo Burnett's Inherent Drama and brand-character rules in [references/burnett-inherent-drama.md](references/burnett-inherent-drama.md).
 
 1. **Inventory.** List every asset in use: what it is, where it appears, since when, and how consistently. Note inconsistencies (two colours, three taglines) from the material.
-2. **Score fame and uniqueness** from recognition data only. Compute exact Fame and Uniqueness scores from the survey file and record the numbers; never compute percentages by eye.
+2. **Score fame and uniqueness** from recognition data only. Run [scripts/asset_grid.py](scripts/asset_grid.py) on the survey file (`python3 <this skill's folder>/scripts/asset_grid.py inputs/<survey>.csv`) and copy its numbers; never compute percentages by eye.
    - **Fame:** the share of category buyers who link the asset to the brand.
    - **Uniqueness:** of those who link it to any brand, the share who name this one.
    - State the sample: who was asked, how many, how recruited, and the bias (for example, an audience already exposed to the brand). Small bases make a position tentative.
@@ -71,7 +71,7 @@ Then update the file:
 - In the frontmatter, set `status: draft` and `updated: <date>`.
 - Append one line to `## Change log`.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Before saving, verify every quoted phrase in your draft verbatim against its named source file. For any mismatch, copy the exact words or drop the quotation marks, and run it again until every quotation matches verbatim.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks, and run it again until it reports every quotation matches.
 
 Reply with:
 - the core set and the single biggest decision (protect, build or drop);
@@ -98,4 +98,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-Distinctive beats different: pick the few cues buyers already link to you and to no one else, use them everywhere for years, and measure before you change them. Distinctive Asset Grid (Jenni Romaniuk, Building Distinctive Brand Assets); mental availability (Byron Sharp, How Brands Grow, Ehrenberg-Bass Institute); The Complete Marketing System, section 5 Brand (Servidad, 2026).
+Distinctive beats different: pick the few cues buyers already link to you and to no one else, use them everywhere for years, and measure before you change them. Distinctive Asset Grid (Jenni Romaniuk, Building Distinctive Brand Assets); mental availability (Byron Sharp, How Brands Grow, Ehrenberg-Bass Institute); Inherent Drama and brand characters (Leo Burnett); The Complete Marketing System, section 5 Brand (Servidad, 2026).

@@ -1,6 +1,6 @@
 ---
 name: 00-router
-description: "Diagnose marketing symptoms and route to the owning skill, upstream first. Use for leads but no sales, stalled growth, where do I start, or explaining a framework. Not for task requests."
+description: Diagnose marketing symptoms and route to the owning skill, upstream first. Use for leads but no sales, stalled growth, where do I start, or explaining a framework. Not for task requests.
 ---
 # Marketing router
 

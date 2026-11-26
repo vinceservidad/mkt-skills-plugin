@@ -3,7 +3,7 @@ name: 10-headlines
 description: Write headlines, subheads and leads by awareness level, using Bly's types, Great Leads, the 4Us and open loops. Use for headline options, hooks for a page top, taglines to test or a weak headline.
 metadata:
   section: "10 Copywriting"
-  covers: "4Us (Masterson); Bly's headline types; Headline formulas; Open loops / curiosity gap"
+  covers: "4Us (Masterson); Bly's headline types; Headline formulas; Open loops / curiosity gap; Tested headline rules (Caples)"
 ---
 # Headlines and leads
 
@@ -22,7 +22,7 @@ Required (drafted or confirmed, with content):
 ## Process
 
 1. **Fix the target:** the asset (page, email, ad), the traffic, and its awareness level from the map.
-2. **Choose the lead type for that level,** using [references/headline-types.md](references/headline-types.md): offer or promise for most and product aware, problem–solution or big secret for solution and problem aware, story or proclamation for unaware.
+2. **Choose the lead type for that level,** using [references/headline-types.md](references/headline-types.md) and the tested headline scorecards and 5x readership rules in [references/caples-ogilvy-headlines.md](references/caples-ogilvy-headlines.md): offer or promise for most and product aware, problem–solution or big secret for solution and problem aware, story or proclamation for unaware.
 3. **Write 15–25 headlines across Bly's headline types:** direct, indirect, news, how-to, question, command, reason-why, testimonial (Caples' tested types are among them). Kennedy's headline formulas are a source of shapes ([references/headline-types.md](references/headline-types.md)). Build them from the promise, the mechanism and Voice of customer phrases. A testimonial headline must quote a real testimonial word for word.
 4. **Score each on the 4Us (Masterson)** (useful, urgent, unique, ultra-specific, 1–4 each). Check that the offer can keep every specific in it. Cut any that promise more than the context supports.
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
@@ -75,4 +75,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-The headline decides whether anything else is read, so choose it by the reader's awareness level and make it specific enough to believe. Tested Advertising Methods (John Caples); Great Leads (Michael Masterson & John Forde); 4Us (Michael Masterson); Bly's headline types (Bob Bly, The Copywriter's Handbook); headlines by awareness, Breakthrough Advertising (Eugene Schwartz); The Complete Marketing System, section 10 Copywriting (Servidad, 2026).
+The headline decides whether anything else is read, so choose it by the reader's awareness level and make it specific enough to believe. Tested Advertising Methods (John Caples); Ogilvy on Advertising (David Ogilvy); Great Leads (Michael Masterson & John Forde); 4Us (Michael Masterson); Bly's headline types (Bob Bly, The Copywriter's Handbook); headlines by awareness, Breakthrough Advertising (Eugene Schwartz); The Complete Marketing System, section 10 Copywriting (Servidad, 2026).

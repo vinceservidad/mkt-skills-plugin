@@ -1,9 +1,9 @@
 ---
 name: 06-competitor-pages
-description: "Write comparison and alternative pages that hold the position honestly. Use for X vs Y pages, alternatives to competitor pages, comparison tables. Not for competitor research (01-*)."
+description: Write comparison and alternative pages that hold the position honestly. Use for X vs Y pages, alternatives to competitor pages, comparison tables. Not for competitor research (01-*).
 metadata:
   section: "06 Positioning"
-  covers: "Comparison / alternative pages"
+  covers: "Comparison / alternative pages; Competitive posture playbook (Kotler)"
 ---
 # Competitor pages
 
@@ -29,7 +29,7 @@ Save the page as a Markdown file in `work/06-positioning/` when the required con
 
 ## Process
 
-Use [references/comparison-pages.md](references/comparison-pages.md) for page types, structure and the rules on competitor facts.
+Use [references/comparison-pages.md](references/comparison-pages.md) for page types, structure and the rules on competitor facts, and [references/kotler-competitive-posture.md](references/kotler-competitive-posture.md) for Kotler's competitive posture framing.
 
 1. **Pick the page type and the reader.** *Us vs X*, *alternatives to X*, *us vs DIY, a hire or doing nothing*, or *best options for <buyer>*. Name the buyer from Target customer, and what they are trying to decide.
 2. **Gather the facts, with dates.** For every alternative on the page, take only facts in `market.md` or dated `inputs/`: its stated promise, its price as observed (or *not shown*), its claims labelled as its claims, where it wins and loses from buyer evidence. Keep two kinds of gap apart: *not shown* means the observation looked and the item was absent (a price not on the pricing page); *not checked* means nobody looked (a guarantee, a service channel, reviews the scan didn't cover). Never write *none*, *no* or *not seen on the pages we checked* for something the recorded observation didn't look for. An absence that is only inferred from a partial scan (an upstream note such as *not listed on the pages seen*) is still *not checked* on the page: write *not checked, ask them* in the table and body, and put the inferred note on the *Verify before publishing* list. A public page about a named company never implies it lacks something no one explicitly looked for. That includes sentences that bundle the competitor into a gap, such as *neither of us offers X*, *unlike X, we…* or *only we…*: write them only when the observation records X's side; otherwise speak for the business alone (*we don't offer X*). Facts older than the newest observation, or seen on a single day, go into the *Verify before publishing* list.
@@ -44,11 +44,11 @@ Use [references/comparison-pages.md](references/comparison-pages.md) for page ty
    - an FAQ only from questions buyers actually asked, answered from the context.
 5. **Claims and sources.** Add a table that traces every claim about either party to its source and date (including who-it's-for lines such as a size threshold, citing the context section that sets it), and a *Verify before publishing* list: each competitor fact to re-check on their current page, and the date it was last seen.
 6. **Publishing is the owner's call.** The page is a draft. Comparative claims about named companies need the owner's review, and legal review where the business normally gets it, before publishing. Use a competitor's name only to identify it: no logos, no implied affiliation, no claims about its customers' experience except from cited reviews.
-7. **Check before saving.** Re-read the draft against the Checks and verify every quoted phrase verbatim against its named source. Fix every failure before you save.
+7. **Check before saving.** Re-read the draft against the Checks and run `scripts/check_quotes.py`. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No competitor price, feature, customer count, review score, weakness or lost-deal story that the context doesn't record with a source and date, and none of the business's own results, prices, guarantees or terms beyond `context/`. A competitor's claim (*150+ agencies*, *4.6 out of 5*) is written as their claim. Opinions about a competitor are not facts. Don't claim how search engines rank or treat comparison pages; that is a current platform fact you have not verified. Inferences carry `(assumption)` and go to Open questions, not onto the page.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a competitor's page as recorded, a review, an interview), with the source named. Page copy you write goes in plain text or italics, never in quotation marks. Verify every quoted phrase in the file verbatim against its named source file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a competitor's page as recorded, a review, an interview), with the source named. Page copy you write goes in plain text or italics, never in quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
 
 ## Output
 
@@ -97,4 +97,4 @@ End with the **Principle, framework, source** block:
 
 ## Principle and source
 
-Buyers comparing options trust the page that tells them honestly who each option is for, so a comparison page wins by holding the position with dated facts and conceding where the alternative fits better. They Ask, You Answer (Marcus Sheridan); Obviously Awesome (April Dunford); The Complete Marketing System, section 6 Positioning (Servidad, 2026).
+Buyers comparing options trust the page that tells them honestly who each option is for, so a comparison page wins by holding the position with dated facts and conceding where the alternative fits better. They Ask, You Answer (Marcus Sheridan); Obviously Awesome (April Dunford); Competitive posture playbook, Marketing Management (Philip Kotler); The Complete Marketing System, section 6 Positioning (Servidad, 2026).
