@@ -9,6 +9,8 @@
   "license": "MIT",
   "homepage": "https://mktskills.com/",
   "privacyPolicyUrl": "https://mktskills.com/privacy",
+  "termsOfServiceUrl": "https://mktskills.com/terms",
+  "supportUrl": "https://mktskills.com/support",
   "repository": "https://github.com/vinceservidad/mkt-skills-plugin",
   "icon": "./assets/mkt-skills-512.png",
   "keywords": [
