@@ -3,7 +3,7 @@ name: 17-unit-economics
 description: Model CAC, LTV, payback, contribution margin, MER and ROAS from the business's own numbers. Use for unit economics, CAC, lifetime value, payback, break-even ROAS, can we afford to scale.
 metadata:
   section: "17 Measurement"
-  covers: "CAC / LTV / payback; MER; ROAS; Unit economics"
+  covers: "CAC / LTV / payback; Lead-to-revenue cohorts; MER; ROAS; Unit economics"
 ---
 # Unit economics
 
@@ -25,7 +25,7 @@ Required (drafted or confirmed, with content):
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/unit-economics-guide.md](references/unit-economics-guide.md) for contribution margin, CAC, LTV with observed retention, payback, MER, break-even ROAS and their traps.
+Use [references/unit-economics-guide.md](references/unit-economics-guide.md) for contribution margin, CAC, LTV with observed retention, payback, MER, break-even ROAS and their traps, and [references/cohort-ltv-and-lead-revenue.md](references/cohort-ltv-and-lead-revenue.md) for fixed acquisition-month cohort LTV, billing-period payback discipline, and B2B lead-to-revenue cohorts with open pipeline share.
 
 1. **Contribution margin per order.** Price minus variable costs (product, fulfilment, shipping, payment fees, refunds if not already in net revenue), with each input labelled *observed*, *owner's estimate* or *calculated*. Name the profit level (contribution margin before marketing, after marketing).
 2. **Retention and LTV.** Use observed retention from cohorts; compute contribution per customer over the observed window first, then any extrapolation as a labelled scenario. Never revenue × a guessed lifetime.

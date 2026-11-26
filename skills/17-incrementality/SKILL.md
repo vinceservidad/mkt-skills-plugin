@@ -3,7 +3,7 @@ name: 17-incrementality
 description: Design holdout and geo-lift tests that measure what marketing spend really adds. Use for incrementality, geo tests, holdout tests, conversion lift studies, does this channel actually work.
 metadata:
   section: "17 Measurement"
-  covers: "Incrementality / geo-lift"
+  covers: "Causal evidence ladder (C0-C5); Incrementality / geo-lift"
 ---
 # Incrementality
 
@@ -16,13 +16,13 @@ Save the test design as a Markdown file in `work/17-measurement/` when the requi
 No context section is required: this skill works from the data in `inputs/`. Spend, outcome data by region or group, and the decision in `inputs/` are the evidence.
 - If present, also read `context/offer.md` → Price and model; spend, sales by region and week, platform reports, tracking notes and the decision in `inputs/`; any work in `work/17-measurement/17-attribution-*.md`, `17-unit-economics-*.md` or `work/18-experimentation/`.
 - **When `inputs/` contains spend and monthly store/subscriber totals or margin/retention notes** (even without a regional breakdown CSV yet), **write the complete draft test design file** to `work/17-measurement/17-incrementality-<YYYY-MM-DD>-<slug>.md` — never stop with just a reply outline. Compute unit-economics contribution margin and break-even incremental CAC from `inputs/`, size the test duration from baseline monthly volume with explicit assumptions, specify matched US regions fixed before launch (noting pre-launch baseline export needed to balance them), and write the read rule and guardrails in advance.
-- **No data:** Only when `inputs/` has no spend or store/outcome figures at all, design the test in outline, list the data needed to size it (spend by channel, new customers by region and week), give no expected lift, and explicitly state **how to provide it** (drop exports in `inputs/` or paste into chat). Write nothing until it arrives. A stop reply still ends with the **Principle, framework, source** block.
+- **No data:** Only when `inputs/` has no spend or store/outcome figures at all, present the full structural test design directly in your reply (decision, method and pre-fixed matched groups, store/CRM outcome, guardrails, and pre-written read rule) without guessing duration or expected lift, list the data needed to size it (spend by channel, new customers by region and week) and explicitly state **how to provide it** (drop exports in `inputs/` or paste into chat), and save no file in `work/17-measurement/` until the data arrives. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/incrementality-guide.md](references/incrementality-guide.md) for holdout and geo-lift designs, choosing regions, sizing, duration, reading results and platform lift studies, and [references/measurement-trifecta-and-meridian.md](references/measurement-trifecta-and-meridian.md) when connecting incrementality tests with attribution and Bayesian Marketing Mix Modeling (such as Google Meridian calibrated with lift priors).
+Use [references/incrementality-guide.md](references/incrementality-guide.md) for holdout and geo-lift designs, choosing regions, sizing, duration, reading results and platform lift studies; [references/measurement-trifecta-and-meridian.md](references/measurement-trifecta-and-meridian.md) when connecting incrementality tests with attribution and Bayesian Marketing Mix Modeling (such as Google Meridian calibrated with lift priors); and [references/causal-ladder-and-lift-designs.md](references/causal-ladder-and-lift-designs.md) for grading claims on the C0 to C5 causal evidence ladder, selecting User Holdout vs. Geo-Lift vs. Platform Lift, and applying Meta Blueprint lift-study guardrails.
 
 1. **One decision.** State the decision the test informs (double, hold or cut a channel) and the effect size that would change it, from the business's own unit economics.
 2. **Design.** Choose the method: a user holdout (where the platform supports it), a geo-lift test (regions on and off), or a time-based on/off with controls. Fix the groups before launch, matched on past sales; the platform's own lift studies are facts to cite with URL and date or mark *to confirm*.

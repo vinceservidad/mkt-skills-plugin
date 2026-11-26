@@ -3,7 +3,7 @@ name: 11-influencer
 description: Plan and vet influencer programs (seeding, sponsorship, affiliate, whitelisting). Use for influencer marketing, creator partnerships, vetting influencer lists, finding influencers, gifting.
 metadata:
   section: "11 Distribution"
-  covers: "Influencer / creator marketing"
+  covers: "Influencer / creator marketing; Meta Partnership Ads / Collaborative Ads"
 ---
 # Influencer
 
@@ -26,7 +26,7 @@ Required (drafted or confirmed, with content):
 
 ## Process
 
-Use [references/influencer-guide.md](references/influencer-guide.md) for the vetting tests, deal types, rights and disclosure, and platform claims.
+Use [references/influencer-guide.md](references/influencer-guide.md) for the vetting tests, deal types, rights and disclosure, and platform claims, and [references/meta-partnerships-and-seeding.md](references/meta-partnerships-and-seeding.md) for Meta Creator Partnership Ads vs. Retailer Collaborative Ads, product-seeding pilot costing and authenticity screening, and compensation structures.
 
 1. **Goal and outcome.** Say what the program is for (a small test, reach to a new audience, sales, content to reuse as ads) and the business outcome that judges it (first orders, subscribers who stay, qualified calls). Views, likes, follower growth and engagement rate are signals, not the outcome.
 2. **Vet each creator on fit before reach.** Score every candidate against the ICP and its disqualifiers: who the audience is (the comments, the niche, the location share), whether the creator would use the product as it is, and conflicts (a competitor sponsorship, contempt for the buyer's current alternative, a price point far from the buyer's). Compute ratios from the shortlist with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> creator avg_views_last_10 followers rate_usd --ratio rate_usd/avg_views_last_10 --ratio avg_views_last_10/followers`), never by eye. Label each figure as the creator's own claim, platform-verified or calculated. Flag what looks inauthentic (sudden follower jumps, views far below the follower count) and ask for platform screenshots or analytics before paying.

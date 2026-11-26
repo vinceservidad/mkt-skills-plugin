@@ -3,7 +3,7 @@ name: 15-onboarding
 description: Onboard customers to first value and adjust first-box or week-one steps without cutting essentials. Use for onboarding, activation, aha moment, first-week setup, trimming onboarding steps.
 metadata:
   section: "15 Retention"
-  covers: "Activation / aha moment; Onboarding"
+  covers: "Activation / aha moment; Activation path-to-value audit; Onboarding"
 ---
 # Onboarding
 
@@ -27,7 +27,7 @@ Required (drafted or confirmed, with content):
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/onboarding-guide.md](references/onboarding-guide.md) for defining activation, the path to first value, the first-week plan and what to measure.
+Use [references/onboarding-guide.md](references/onboarding-guide.md) for defining activation, the path to first value, the first-week plan and what to measure, and [references/activation-path-and-friction.md](references/activation-path-and-friction.md) for cohort retention validation of activation events, classifying essential setup vs. unnecessary friction, and equal-window activation experiments.
 
 1. **Define activation.** The first meaningful value in the customer's terms (from Dream outcome and Jobs), with a time window and a denominator (new customers in the period). Reject tracking-convenience definitions such as an email open, a login or a tutorial completed, and say why. If the value can't be observed directly, name the closest true proxy and label it.
 2. **Map the path.** Every step from payment to activation, with time and who acts; mark necessary steps (qualification, safety, setup the result depends on) as kept, and remove or merge the rest.

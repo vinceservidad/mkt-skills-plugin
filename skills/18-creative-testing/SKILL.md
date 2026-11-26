@@ -3,7 +3,7 @@ name: 18-creative-testing
 description: Test ad creative concepts first, then variations and iterations, and read results honestly. Use for creative testing, ad testing, which ad concepts to test next, ad fatigue, testing hooks/angles.
 metadata:
   section: "18 Experimentation"
-  covers: "Creative testing"
+  covers: "Creative diagnostic matrix (Hook / Hold / CTR / CVR); Creative testing; Meta Creative Learning Agenda"
 ---
 # Creative testing
 
@@ -26,7 +26,7 @@ Required (drafted or confirmed, with content):
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/creative-testing-guide.md](references/creative-testing-guide.md) for concept, variation and iteration layers, budget per read, outcome metrics, platform delivery and fatigue.
+Use [references/creative-testing-guide.md](references/creative-testing-guide.md) for concept, variation and iteration layers, budget per read, outcome metrics, platform delivery and fatigue, and [references/creative-diagnostics-and-sprint-os.md](references/creative-diagnostics-and-sprint-os.md) for the Hook/Hold/CTR/CVR funnel-drop diagnostic matrix, weekly creative sprint OS (70/30 cadence, hit rate, naming taxonomy), and the Meta Blueprint Creative Learning Agenda.
 
 1. **Read what ran.** From `inputs/`, list ads with spend, outcomes (cost per business outcome in the stated view) and how different they really are; count with [scripts/sum_by.py](scripts/sum_by.py). Say whether past tests compared concepts or only variations.
 2. **Concepts first.** Draft three to five distinct concepts from the Promise, Big idea, Proof stack and the awareness levels (for example a problem-aware comparison, a product-aware review, a how-it-works demo), each with a hypothesis.

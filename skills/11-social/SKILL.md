@@ -26,7 +26,7 @@ Required (drafted or confirmed, with content):
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/social-guide.md](references/social-guide.md) for the analytics read, the series and reply rules, and platform claims.
+Use [references/social-guide.md](references/social-guide.md) for the analytics read, the series and reply rules, and platform claims, and [references/meta-organic-and-algorithm-fit.md](references/meta-organic-and-algorithm-fit.md) for Facebook Page, Instagram Profile and Business Suite readiness, communication jobs, distribution fit, and the organic-to-paid creative bridge.
 
 1. **Platforms.** Choose one or two where the evidence puts the ICP (lead sources, journey touchpoints, where reviews or forum posts come from). Say what each platform is for. Name the ones left out and why.
 2. **Read what already ran,** when `inputs/` holds post analytics. Total by format and topic with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> format`), not by eye. Rank by the outcome columns (downloads, sign-ups, calls) before reach or reactions, show counts, and note who engaged where the notes say (right buyer or not). One post that went viral is one data point: do not build a pillar on it until a second version repeats the result.

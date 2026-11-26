@@ -3,7 +3,7 @@ name: 15-churn-prevention
 description: Diagnose churn and design save, pause and dunning flows. Use for churn analysis, cancellations, failed payments, exit surveys, save offers, customer success. Not for PMF (use 04-pmf-check).
 metadata:
   section: "15 Retention"
-  covers: "Churn analysis; Customer success; Dunning / failed-payment recovery; Exit surveys / save offers"
+  covers: "Churn analysis; Churn reason coding & save verification; Customer success; Dunning / failed-payment recovery; Exit surveys / save offers"
 ---
 # Churn prevention
 
@@ -24,7 +24,7 @@ No context section is required: this skill works from the data in `inputs/`. If 
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/churn-guide.md](references/churn-guide.md) for churn types, the diagnosis, dunning, pause and save design, and what is never allowed.
+Use [references/churn-guide.md](references/churn-guide.md) for churn types, the diagnosis, dunning, pause and save design, and what is never allowed, and [references/retention-reason-coding-and-saves.md](references/retention-reason-coding-and-saves.md) for structured churn reason coding, reason-matched honest save flows, verification windows, and targeted win-back.
 
 1. **Measure churn by type.** From `inputs/`, compute retention by cohort and churn by type (voluntary, involuntary from failed payments, lapse) with [scripts/sum_by.py](scripts/sum_by.py) or [scripts/tally.py](scripts/tally.py), each figure labelled. State the denominator and the window.
 2. **Churn analysis.** Count exit reasons and ticket groups; note how many customers answered and that answers are self-reported. Separate fit (wrong customers), product or service failure, operations, price-value, and life events. Each reason gets its owner.

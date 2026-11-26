@@ -3,7 +3,7 @@ name: 17-tracking-plan
 description: Design tracking plans with events, UTMs, pixels, CAPI and CRM fields, and fix collection defects. Use for tracking plans, UTMs, conversion tracking, Meta reporting more purchases than orders.
 metadata:
   section: "17 Measurement"
-  covers: "First-party data / CDP; Tracking plan / UTMs / server-side tracking"
+  covers: "First-party data / CDP; Meta Conversions API / offline signal validation; Tracking plan / UTMs / server-side tracking"
 ---
 # Tracking plan
 
@@ -21,7 +21,7 @@ No context section is required: this skill works from the data in `inputs/`. The
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/tracking-guide.md](references/tracking-guide.md) for event design, UTM conventions, browser and server-side collection, reconciliation, consent and first-party data, and [references/google-data-manager-and-tag-gateway.md](references/google-data-manager-and-tag-gateway.md) when planning Google Ads first-party signal infrastructure (Data Manager CRM/offline imports, Google Tag Gateway first-party tagging, Enhanced Conversions and Consent Mode v2 rollout checks).
+Use [references/tracking-guide.md](references/tracking-guide.md) for event design, UTM conventions, browser and server-side collection, reconciliation, consent and first-party data; [references/google-data-manager-and-tag-gateway.md](references/google-data-manager-and-tag-gateway.md) when planning Google Ads first-party signal infrastructure (Data Manager CRM/offline imports, Google Tag Gateway first-party tagging, Enhanced Conversions and Consent Mode v2 rollout checks); and [references/signal-validation-and-offline-conversions.md](references/signal-validation-and-offline-conversions.md) for the 11-column source-to-business event map, Pixel + CAPI deduplication checks, and offline CRM conversion validation.
 
 1. **Business questions first.** List the questions measurement must answer (which channels bring subscribers who stay, where the checkout loses people), and map each to the events and fields needed.
 2. **Source of truth.** For each number (orders, revenue, subscribers, leads), name the system of record (store, billing, CRM) and treat platform numbers as that platform's view.

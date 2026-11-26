@@ -3,7 +3,7 @@ name: 11-paid-search
 description: Plan and audit Google or Bing search ads with keywords, search terms reports, match types and bidding. Use for search ad plans, wasted search spend, search terms reports, negative keywords.
 metadata:
   section: "11 Distribution"
-  covers: "Paid search"
+  covers: "Google Customer Match / audience observation; Paid search; Programmatic supply-path optimization (SPO)"
 ---
 # Paid search
 
@@ -27,7 +27,7 @@ Required (drafted or confirmed, with content):
 
 ## Process
 
-Use [references/paid-search-guide.md](references/paid-search-guide.md) for match types, negatives, bidding, the results read and the platform-claims rule; [references/gaql-and-account-diagnostics.md](references/gaql-and-account-diagnostics.md) for read-only GAQL pulls, call/GA4 rules, competitor ad-library logs, consent and regulated checks; [references/search-pmax-and-asset-validation.md](references/search-pmax-and-asset-validation.md) for the Search alignment chain, Performance Max / AI Max inspection, and RSA/DKI asset validation; and [references/google-ads-power-pack-and-vbb.md](references/google-ads-power-pack-and-vbb.md) for the AI Power Pack (Demand Gen channel controls, AI Max for Search, PMax channel reporting), Value-Based Bidding for lead gen and AI-qualified calls, daily/monthly spending limit hygiene, and clean Google Ads Experiments.
+Use [references/paid-search-guide.md](references/paid-search-guide.md) for match types, negatives, bidding, the results read, the pre-launch build order and the platform-claims rule; [references/gaql-and-account-diagnostics.md](references/gaql-and-account-diagnostics.md) for read-only GAQL pulls, call/GA4 rules, competitor ad-library logs, consent and regulated checks; [references/search-pmax-and-asset-validation.md](references/search-pmax-and-asset-validation.md) for the Search alignment chain, Performance Max / AI Max inspection, and RSA/DKI asset validation; [references/google-ads-power-pack-and-vbb.md](references/google-ads-power-pack-and-vbb.md) for the AI Power Pack (Demand Gen channel controls, AI Max for Search, PMax channel reporting), Value-Based Bidding for lead gen and AI-qualified calls, daily/monthly spending limit hygiene, and clean Google Ads Experiments; and [references/google-audience-and-display-guardrails.md](references/google-audience-and-display-guardrails.md) for Google audience readiness (Customer Match, RLSA Targeting vs. Observation, PMax signals) and programmatic/Display supply-path optimization (SPO), MFA exclusions and invalid-traffic screening.
 
 1. **The outcome that decides.** Name the primary business outcome (a qualified call, a client, a paying subscriber who stays) and the conversion action the campaign will optimise for: the nearest tracked event that stands for that outcome. Clicks, CTR, quality score and platform-counted conversions are signals, never the outcome. If the account counts any form fill as a conversion, say what it gets wrong and what to import instead (CRM-qualified outcomes), handing tracking gaps to `17-tracking-plan`.
 2. **Economics.** The allowable cost per business outcome, from price, margin and retention in context or `inputs/`, with the calculation shown; otherwise the formula and *to set by the owner*. Never a benchmark CPC, CPA or conversion rate.

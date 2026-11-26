@@ -19,6 +19,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Account management (B2B) | 15 Retention | `15-expansion` |
 | Account-Based Marketing (ABM) | 11 Distribution | `11-cold-email` |
 | Activation / aha moment | 15 Retention | `15-onboarding` |
+| Activation path-to-value audit | 15 Retention | `15-onboarding` |
 | Affiliate marketing | 11 Distribution | `11-affiliate-jv` |
 | Agency and freelancer management | 20 Operations | `20-sops` |
 | AI search / GEO (generative engine optimization) | 11 Distribution | `11-ai-seo-geo` |
@@ -65,12 +66,14 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Cart abandonment recovery | 13 Conversion | `13-cart-recovery` |
 | Case studies | 16 Referral and Community | `16-testimonials-case-studies` |
 | Category Design | 06 Positioning | `06-category-design` |
+| Causal evidence ladder (C0-C5) | 17 Measurement | `17-incrementality` |
 | CBBE pyramid (Keller) | 05 Brand | `05-brand-foundation` |
 | Challenge funnel | 12 Funnel | `12-webinar-challenge` |
 | Challenger Sale | 14 Sales | `14-sales-script` |
 | Chatbots / conversational marketing | 13 Conversion | `13-cro-audit` |
 | Checkout optimization | 13 Conversion | `13-checkout` |
 | Churn analysis | 15 Retention | `15-churn-prevention` |
+| Churn reason coding & save verification | 15 Retention | `15-churn-prevention` |
 | Cialdini's principles | 02 Customer | `02-buyer-psychology` |
 | CLOSER (Hormozi) | 14 Sales | `14-sales-script` |
 | Co-marketing / partnerships | 11 Distribution | `11-co-marketing` |
@@ -92,6 +95,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Core–Adjacent–Transformational | 19 Growth | `19-horizontal-expansion` |
 | Coupons / discounts / promo codes | 07 Offer | `07-pricing` |
 | Creative brief | 09 Creative Strategy | `09-creative-brief` |
+| Creative diagnostic matrix (Hook / Hold / CTR / CVR) | 18 Experimentation | `18-creative-testing` |
 | Creative production pipeline | 20 Operations | `20-sops` |
 | Creative testing | 18 Experimentation | `18-creative-testing` |
 | Crisis communications | 05 Brand | `05-reputation` |
@@ -146,6 +150,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Gap Selling | 14 Sales | `14-discovery-spin` |
 | Giveaways / contests | 16 Referral and Community | `16-ugc-program` |
 | Golden Circle | 05 Brand | `05-brand-foundation` |
+| Google Customer Match / audience observation | 11 Distribution | `11-paid-search` |
 | Grand Slam Offer | 07 Offer | `07-offer-design` |
 | Great Leads (Masterson & Forde) | 10 Copywriting | `10-page-copy` |
 | Growth loops | 19 Growth | `19-growth-loops` |
@@ -186,11 +191,13 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Launch playbook | 12 Funnel | `12-launch` |
 | Lead magnet | 12 Funnel | `12-lead-magnet` |
 | Lead scoring | 14 Sales | `14-lead-scoring` |
+| Lead-to-revenue cohorts | 17 Measurement | `17-unit-economics` |
 | Lean Startup / MVP | 04 Product | `04-pmf-check` |
 | Learning log / experiment repository | 18 Experimentation | `18-experiment-log` |
 | Life-Force 8 (Whitman) | 02 Customer | `02-buyer-psychology` |
 | Lifecycle marketing | 15 Retention | `15-lifecycle` |
 | LIFT model | 13 Conversion | `13-cro-audit` |
+| LinkedIn ABM / Thought Leader Ads | 11 Distribution | `11-paid-social` |
 | Live chat | 13 Conversion | `13-cro-audit` |
 | Local SEO | 11 Distribution | `11-local-seo` |
 | Localization | 11 Distribution | `11-channel-selection` |
@@ -211,6 +218,12 @@ Every term in the master index, with the skill that owns the decision. Generated
 | MER | 17 Measurement | `17-unit-economics` |
 | Message house | 08 Message | `08-message-doc` |
 | Message–market–media match (Kennedy) | 09 Creative Strategy | `09-creative-brief` |
+| Meta Andromeda / creative diversity | 09 Creative Strategy | `09-ad-creative` |
+| Meta Conversions API / offline signal validation | 17 Measurement | `17-tracking-plan` |
+| Meta Creative Learning Agenda | 18 Experimentation | `18-creative-testing` |
+| Meta Partnership Ads / Collaborative Ads | 11 Distribution | `11-influencer` |
+| Meta Performance 5 | 11 Distribution | `11-paid-social` |
+| Meta Reels creative essentials | 09 Creative Strategy | `09-ad-creative` |
 | Minimum Viable Test | 18 Experimentation | `18-hypothesis` |
 | Multivariate testing | 18 Experimentation | `18-ab-testing` |
 | Naming (product and brand) | 05 Brand | `05-naming` |
@@ -233,6 +246,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Open loops / curiosity gap | 10 Copywriting | `10-headlines` |
 | Order bump / upsell / downsell | 12 Funnel | `12-upsell-path` |
 | P.S. | 10 Copywriting | `10-sales-page` |
+| Paid scaling readiness gates (Meta & Google) | 19 Growth | `19-scale-paid` |
 | Paid search | 11 Distribution | `11-paid-search` |
 | Paid social | 11 Distribution | `11-paid-social` |
 | PAS / PASTOR | 10 Copywriting | `10-page-copy` |
@@ -261,6 +275,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Product-led growth | 04 Product | `04-plg-audit` |
 | Product–market fit | 04 Product | `04-pmf-check` |
 | Programmatic SEO | 11 Distribution | `11-programmatic-seo` |
+| Programmatic supply-path optimization (SPO) | 11 Distribution | `11-paid-search` |
 | Proof stack | 08 Message | `08-proof-stack` |
 | Proposal and pricing presentation | 14 Sales | `14-sales-script` |
 | Prospecting / list building | 14 Sales | `14-prospecting` |
@@ -325,6 +340,7 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Testimonials | 16 Referral and Community | `16-testimonials-case-studies` |
 | Theory of Constraints | 19 Growth | `19-constraint-finder` |
 | Thought leadership | 05 Brand | `05-brand-foundation` |
+| TikTok Ads / Spark Ads | 11 Distribution | `11-paid-social` |
 | TOFU / MOFU / BOFU | 12 Funnel | `12-funnel-design` |
 | Tracking plan / UTMs / server-side tracking | 17 Measurement | `17-tracking-plan` |
 | Traffic temperature | 03 Awareness | `03-traffic-temperature` |
@@ -349,3 +365,4 @@ Every term in the master index, with the skill that owns the decision. Generated
 | Win-back | 15 Retention | `15-lifecycle` |
 | Word of mouth | 16 Referral and Community | `16-referral-program` |
 | YouTube / video marketing | 11 Distribution | `11-podcast-video` |
+| YouTube Ads format selection | 11 Distribution | `11-paid-social` |

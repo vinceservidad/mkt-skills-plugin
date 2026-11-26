@@ -3,7 +3,7 @@ name: 19-scale-paid
 description: Scale paid media through gated budget steps, more creative, broader targeting and new placements. Use for scaling ads, raising ad budget, should we double spend, ads stopped scaling.
 metadata:
   section: "19 Growth"
-  covers: "Scaling paid media"
+  covers: "Paid scaling readiness gates (Meta & Google); Scaling paid media"
 ---
 # Scaling paid media
 
@@ -22,7 +22,7 @@ No context section is required: this skill works from the data in `inputs/`. Spe
 
 For the named methods this skill owns, see [references/methods.md](references/methods.md).
 
-Use [references/scale-paid-guide.md](references/scale-paid-guide.md) for readiness gates, marginal cost, budget steps, creative volume, broader targeting, new placements and stopping rules.
+Use [references/scale-paid-guide.md](references/scale-paid-guide.md) for readiness gates, marginal cost, budget steps, creative volume, broader targeting, new placements and stopping rules, and [references/meta-and-google-scaling-playbook.md](references/meta-and-google-scaling-playbook.md) for the 6 readiness gates with causal proof standards, controlled pacing and rollback triggers, and channel-specific Meta Ads and Google Ads (Search/Shopping/PMax) scaling modes.
 
 1. **Readiness gates.** Economics (contribution margin and payback allow the target cost per customer, from `17-unit-economics` or computed), measurement (platform counts reconciled with the source of truth; known defects named), constraint (acquisition is the limit, not retention or capacity), capacity (fulfilment and team can absorb the volume), and creative supply. Any failed gate stops the plan at that gate with the fix.
 2. **Marginal, not average.** Cost per new customer from the business's own data at the current spend, and what is known about the next dollar (spend vs new customers by month, any lift test); platform ROAS is a signal only.
@@ -33,7 +33,7 @@ Use [references/scale-paid-guide.md](references/scale-paid-guide.md) for readine
 7. **Approval.** The plan is a draft. Any budget, bid or campaign change needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no ROAS, costs, margins, budgets or platform behaviour that aren't in `context/` or `inputs/`, computed from them, or cited with a date. No universal budget-increase rule. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no ROAS, costs, margins, budgets or platform behaviour that aren't in `context/` or `inputs/`, computed from them, or cited with a date. No universal budget-increase rule. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business. Compute every percentage and ratio directly from exact numerators and denominators in inputs/ (never approximate into a guessed range), and never label a threshold as an owner number unless an input or the user explicitly sets it.
 
 ## Output
 
