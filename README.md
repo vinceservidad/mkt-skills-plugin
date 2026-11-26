@@ -1,4 +1,4 @@
-# MKT Skills (Claude Plugin)
+# MKT Skills Marketing (Claude Plugin)
 
 133 evidence-led marketing skills for Claude, Cowork, and Claude Code: a diagnosis router (`00-router`) plus 132 skills across 20 sections covering market research, customer research, positioning, offers, copywriting, creative strategy, paid ads, shopping feeds, local SEO, marketplaces, WhatsApp, funnels, CRO, sales, retention, referrals, measurement, experimentation, growth, and operations.
 
