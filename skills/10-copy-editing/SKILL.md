@@ -17,14 +17,15 @@ Write first, edit ruthlessly: cut every word that doesn't earn its place, and re
 ## Process
 
 1. **Read the copy for its job:** who it's for, what action it wants, and the awareness level. If the copy is missing, the material is missing: stop and ask for it. Never write a "sample" to edit.
-2. **Run the 4Cs pass,** using [references/editing.md](references/editing.md):
-   - **Clear:** one idea per sentence; plain words.
-   - **Concise:** cut filler, hedges and repetition.
-   - **Compelling:** benefits and outcomes before features; you-focused; active voice.
-   - **Credible:** specifics, and proof under claims.
+2. **Run the 4Cs and 15-point Anti-AI check,** using [references/editing.md](references/editing.md):
+   - Clear: one idea per sentence; plain words.
+   - Concise: cut filler, hedges and repetition.
+   - Compelling: benefits and outcomes before features; you-focused; active voice.
+   - Credible: specifics, and proof under claims.
+   - Anti-AI check (15 rules): fix "It's not X, it's Y", rhetorical question hooks, buzzwords, mic-drop/recap endings, forced rule-of-three bullets, vague claims, colon reveals, trailing "-ing" meaning claims, weasel attribution, synonym cycling, negative listing, dramatic fragments, em dashes (none in short text, at most 2 in long text), formatting slop (no emoji in headers, no mid-sentence bold), and lines that fail the portability test.
 3. **Check every claim against the context.** If a claim isn't supported by the proof stack, offer or inputs, flag it: *needs proof*. Suggest a softer, provable version. Never strengthen a claim or add numbers, testimonials or guarantees that aren't in the context.
-4. **Keep the offer's terms and the brand voice.** Don't change prices, guarantees or promises; flag anything that contradicts `offer.md`.
-5. **Return two versions:** a marked-up version and a clean version. In the marked-up version, tag each change's one-line reason with the C it serves, such as *[Concise] cut "really": filler* or *[Credible] needs proof: no source for "thousands"*, so the 4Cs pass shows in the edit, not only its name.
+4. **Keep the offer's terms and the writer's voice.** Don't change prices, guarantees or promises; flag anything that contradicts `offer.md`. When editing the user's own draft, keep their voice (their hedges, bluntness, asides and long spoken sentences) and make the smallest edit that fixes the problem.
+5. **Return two versions:** a marked-up version and a clean version (plus a short "What changed" list when editing the user's own draft). In the marked-up version, tag each change's one-line reason with the C or Anti-AI rule it serves, such as *[Concise] cut "really": filler*, *[Anti-AI #1] cut "It's not X, it's Y"*, or *[Credible] needs proof: no source for "thousands"*, so the edit shows its reasoning, not only its name.
 6. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
@@ -58,7 +59,8 @@ Reply with the file path, the key choice made (structure, angle or level) and wh
 
 ## Checks
 
-- [ ] The edit keeps the offer's terms, the promise and the brand voice. Contradictions with `offer.md` are flagged, not silently changed.
+- [ ] The edit keeps the offer's terms, the promise and the brand or writer's voice (smallest edit needed on a user's own draft). Contradictions with `offer.md` are flagged, not silently changed.
+- [ ] All 15 Anti-AI rules in `references/editing.md` are checked and fixed.
 - [ ] No claim is made stronger than its proof, and no new numbers, testimonials or guarantees are added. Unsupported claims are flagged *needs proof*.
 - [ ] Both a marked-up version (with reasons) and a clean version are delivered.
 - [ ] Without the copy to edit, nothing was written except a request for it.

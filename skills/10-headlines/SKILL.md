@@ -28,7 +28,8 @@ Required (drafted or confirmed, with content):
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
 5. **Write two or three leads,** the opening paragraph after the headline, for the top headlines.
 6. **Recommend three to test,** each with the reason and what the test would learn.
-7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
+7. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (0 em dashes in headlines, no buzzwords, no "It's not X, it's Y", no colon reveals, no negative listing, and pass the portability test).
+8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
 
@@ -69,6 +70,7 @@ End with the **Principle, framework, source** block:
 - [ ] Every specific (a number, a time frame, a result) is kept by the offer or proved in context, and listed in the claims table.
 - [ ] Testimonial headlines quote real testimonials word for word. Headlines are not wrapped in quotation marks, and `check_quotes.py` reports clean.
 - [ ] Three are recommended to test, with the reason for each.
+- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

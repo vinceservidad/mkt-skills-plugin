@@ -37,7 +37,8 @@ Required (drafted or confirmed, with content):
    Write nothing in the copy that the context doesn't support: no illustrative guidance, no generalisations such as *many people* or *most customers*, and no delivery terms, timings or conditions beyond what `offer.md` says. If the copy needs it, put it under Open questions instead.
    Present each source as what it is: two lines from one review are one customer, never *one customer… another said…*.
 5. **Fill the claims table** for every result, number and testimonial.
-6. **Check before saving.** Re-read the draft against the Checks and fix any failure.
+6. **Run the Anti-AI check** in [references/anti-ai-check.md](references/anti-ai-check.md): fix every rule (at most 2 em dashes in the script, no buzzwords, no rhetorical setups or mic-drop endings, no "It's not X, it's Y", no negative listing, no synonym cycling, and pass the portability test). Keep every number, count, and qualifier strictly identical to `context/` and `inputs/` during the Anti-AI pass; never invent an extrapolated summary count (such as "none of those ten") that is not in the source.
+7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
 ## Output
 
@@ -77,6 +78,7 @@ End with the **Principle, framework, source** block:
 - [ ] Stories and results come only from Story, Proof stack or inputs. No invented case studies, numbers or testimonials.
 - [ ] The stack, price, guarantee and urgency match `offer.md` exactly.
 - [ ] Objections from the objection map are answered before or in the close.
+- [ ] All 15 Anti-AI rules in `references/anti-ai-check.md` are checked and fixed.
 - [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
 - [ ] Each quote is attributed to the person and source it came from; no speaker is built from two sources.
 - [ ] No file in `context/` changed.
