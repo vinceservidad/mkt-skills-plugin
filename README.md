@@ -11,14 +11,14 @@ Built by [Vince Servidad](https://www.vinceservidad.com/) · Website: <https://m
 In Claude Code 2.1.275 or later:
 
 ```
-/plugin install mkt-skills --marketplace vinceservidad/mkt-skills-plugin
+/plugin install mktskills-marketing --marketplace vinceservidad/mkt-skills-plugin
 ```
 
 On older versions, add the marketplace first, then install:
 
 ```
 /plugin marketplace add vinceservidad/mkt-skills-plugin
-/plugin install mkt-skills@mkt-skills-plugin
+/plugin install mktskills-marketing@mkt-skills-plugin
 ```
 
 ## Full Skills Repository

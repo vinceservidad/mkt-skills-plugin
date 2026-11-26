@@ -6,7 +6,7 @@
   "description": "The MKT Skills Claude plugin: 133 marketing skills plus an optional read-only connector.",
   "plugins": [
     {
-      "name": "mkt-skills",
+      "name": "mktskills-marketing",
       "source": "./",
       "description": "133 evidence-led marketing skills across 20 sections, with an optional read-only MKT Skills connector."
     }
