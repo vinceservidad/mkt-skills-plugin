@@ -1,10 +1,12 @@
 {
   "name": "mkt-skills",
-  "displayName": "MKT Skills",
-  "version": "1.1.0",
-  "description": "133 evidence-led marketing skills across 20 sections (marketing router, research, positioning, offers, copywriting, creative, paid ads, shopping feeds, local SEO, marketplaces, WhatsApp, funnels, CRO, sales, retention, measurement, growth, and operations), with an optional read-only MKT Skills connector.",
+  "displayName": "Marketing Skills",
+  "version": "1.2.0",
+  "description": "133 evidence-led marketing skills for Claude: a router plus 132 skills across 20 sections (research, positioning, offers, copywriting, paid ads, CRO, retention, measurement, growth, operations), with an optional read-only connector to mktskills.com. Published by Vince Servidad, mktskills.com; independent of Anthropic.",
   "author": {
-    "name": "Vince Servidad"
+    "name": "Vince Servidad",
+    "email": "hi@mktskills.com",
+    "url": "https://mktskills.com"
   },
   "license": "MIT",
   "homepage": "https://mktskills.com/",
