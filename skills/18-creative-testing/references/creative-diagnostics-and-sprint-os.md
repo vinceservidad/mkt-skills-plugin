@@ -24,7 +24,7 @@ Run creative testing as an explicit feedback loop rather than ad-hoc boosts:
 
 ## 3. Meta Creative Learning Agenda
 
-Distilled from the Meta Blueprint Creative Strategy Professional study guide (July 2026) and aligned with MKT experiment governance (`17-incrementality`, `18-experiment-log`):
+Distilled from the Meta Blueprint Creative Strategy Professional study guide (July 2026) and aligned with Marketing Skills experiment governance (`17-incrementality`, `18-experiment-log`):
 
 Populate one decision-changing row before launching a structured study:
 `decision | learning question | hypothesis | evidence gap | method | assigned arms | primary metric (source) | guardrails | lag/window | stopping rule | next brief`
