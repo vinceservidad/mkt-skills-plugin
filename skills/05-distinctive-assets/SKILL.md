@@ -24,7 +24,7 @@ Distinctive beats different: buyers must recognise the brand before they can be 
 Use the method in [references/asset-audit.md](references/asset-audit.md) alongside Leo Burnett's Inherent Drama and brand-character rules in [references/burnett-inherent-drama.md](references/burnett-inherent-drama.md).
 
 1. **Inventory.** List every asset in use: what it is, where it appears, since when, and how consistently. Note inconsistencies (two colours, three taglines) from the material.
-2. **Score fame and uniqueness** from recognition data only. Run [scripts/asset_grid.py](scripts/asset_grid.py) on the survey file (`python3 <this skill's folder>/scripts/asset_grid.py inputs/<survey>.csv`) and copy its numbers; never compute percentages by eye.
+2. **Score fame and uniqueness** from recognition data only. Work it out by hand from the survey counts, never by eye: fame = respondents who named our brand ÷ respondents; uniqueness = named our brand ÷ (named our brand + named another brand), or n/a when nobody named any brand; write each with its counts, and flag uniqueness resting on fewer than 10 attributions.
    - **Fame:** the share of category buyers who link the asset to the brand.
    - **Uniqueness:** of those who link it to any brand, the share who name this one.
    - State the sample: who was asked, how many, how recruited, and the bias (for example, an audience already exposed to the brand). Small bases make a position tentative.
@@ -71,7 +71,7 @@ Then update the file:
 - In the frontmatter, set `status: draft` and `updated: <date>`.
 - Append one line to `## Change log`.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Before saving, check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with:
 - the core set and the single biggest decision (protect, build or drop);
@@ -88,12 +88,12 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Fame and uniqueness come from recognition data copied from `asset_grid.py`, with the sample and its bias stated; unmeasured assets are marked *unmeasured*, not ranked.
+- [ ] Fame and uniqueness come from recognition data worked out by hand from the survey counts, with the sample and its bias stated; unmeasured assets are marked *unmeasured*, not ranked.
 - [ ] Every asset has a grid position (or *unmeasured*) and a decision: protect, build, pair, fix or drop.
 - [ ] Assets shared with competitors or generic to the category are not treated as distinctive; competitor observations carry their date and source.
 - [ ] A known, unique asset is never dropped for a new design without the owner's decision, the cost of lost fame and a test.
 - [ ] A next recognition check is named: who, how many, the question, when.
-- [ ] No invented recognition figures, competitor facts, trademark status or costs. Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] No invented recognition figures, competitor facts, trademark status or costs. Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] Only `## Distinctive assets` changed. It has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

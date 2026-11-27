@@ -25,7 +25,7 @@ Use [references/tracking-guide.md](references/tracking-guide.md) for event desig
 
 1. **Business questions first.** List the questions measurement must answer (which channels bring subscribers who stay, where the checkout loses people), and map each to the events and fields needed.
 2. **Source of truth.** For each number (orders, revenue, subscribers, leads), name the system of record (store, billing, CRM) and treat platform numbers as that platform's view.
-3. **Reconcile and find defects.** Compare platform-reported conversions with the source system for the same period, with [scripts/sum_by.py](scripts/sum_by.py). Separate collection defects (an event firing on the wrong page, double counting, missing tags) from attribution differences (windows, view-through, models) and from real business change. Each defect gets a fix and an owner.
+3. **Reconcile and find defects.** Compare platform-reported conversions with the source system for the same period, with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a). Separate collection defects (an event firing on the wrong page, double counting, missing tags) from attribution differences (windows, view-through, models) and from real business change. Each defect gets a fix and an owner.
 4. **Event spec.** Event names, when each fires, parameters, and where it is sent (analytics, ad platforms, CRM), in one naming convention. Fire purchase events once per new order, with an order ID for deduplication.
 5. **UTMs.** One convention for source, medium, campaign, content; required on every owned link (email, podcast, social bio, partners); a short list of allowed values.
 6. **Server-side and first-party data.** Where server-side collection (for example a platform's conversions API) would improve match and reliability, say so with the deduplication rule; what first-party data (email, order history, survey answers) is kept, where, and with what consent. A CDP only if the stack needs one.
@@ -34,7 +34,7 @@ Use [references/tracking-guide.md](references/tracking-guide.md) for event desig
 9. **Approval.** The plan is a draft. Installing, removing or changing tags, pixels, server-side connections or CRM fields needs the owner's explicit approval and a post-change check.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no counts, match rates, defects or platform behaviour that aren't in `context/` or `inputs/` or a cited, dated source. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no counts, match rates, defects or platform behaviour that aren't in `context/` or `inputs/` or a cited, dated source. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; no tag, pixel or field changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the defects found with their fixes, the source of truth for each number, the UTM rule, and what is still missing, and what is still missing, then end with the same block.
 
@@ -86,11 +86,11 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] Every event maps to a business question; each number has a named system of record.
-- [ ] Platform and source counts are reconciled with `sum_by.py`; collection defects, attribution differences and business change are separated.
+- [ ] Platform and source counts are reconciled with hand group totals; collection defects, attribution differences and business change are separated.
 - [ ] Purchase events fire once per new order with deduplication; UTMs are required on every owned link.
 - [ ] Server-side, first-party data and consent are planned with dated or *to confirm* platform and legal facts.
 - [ ] QA and a monthly reconciliation are set; nothing changes without approval and a post-change check.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

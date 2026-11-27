@@ -1,6 +1,6 @@
 # Term index
 
-Every term in the master index, with the skill that owns the decision. Generated from `catalog.json` by `tools/build.py`; do not edit by hand. When a user names a framework, tactic or metric, route to its owner.
+Every term in the master index, with the skill that owns the decision. Generated from `catalog.json`; do not edit by hand. When a user names a framework, tactic or metric, route to its owner.
 
 | Term | Owning section | Skill |
 | --- | --- | --- |

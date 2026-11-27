@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (founder notes, interviews or sales notes in `inputs/` but no Big idea or Story): run `08-story-epiphany-bridge` or `08-message-doc` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skills that fill it (Big idea → `08-message-doc`; Story → `08-story-epiphany-bridge`), and ask for evidence (founder notes, customer interviews), not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Permissions.** A named customer, a family member's or partner's story, and customer data (even anonymised totals) can be used only with the permission the owner holds. If a story needs a permission the notes don't record, the plan may prepare it but marks it *blocked until permission*, with the exact question to ask.
-- If `08-message-doc` and `08-story-epiphany-bridge` are both not loaded, stop and say: enable mkt-q3-message.
+- `08-message-doc` and `08-story-epiphany-bridge` are in this plugin; run them first when the rules above call for them.
 
 ## Process
 
@@ -30,7 +30,7 @@ Use [references/pr-guide.md](references/pr-guide.md) for story types, outlet fit
 
 1. **Goal and outcome.** Name what coverage is for (reach the buyer, borrowed trust for the proof stack, links, booked conversations) and what judges it (leads or calls traced to a story, with counts). Mentions and impressions are signals.
 2. **Story inventory.** List every story the business can tell, each with its source: the founder story (from Story), data the business owns, a contrarian view from the Big idea or Enemy, customer results with permission, a dated real event. For each, record what is true, what is still missing and what permission it needs.
-3. **Data stories.** Count and describe data only as it is: who it covers, how many, when, and how it was pulled. A business's own customers are its customers, not the industry: say so in the headline, never "agencies wait 41 days" from 24 clients. Check whether publishing even anonymised totals is allowed by the customer agreement and ask the owner; until then the story is *blocked until permission*. Count from files with [scripts/tally.py](scripts/tally.py), never by eye.
+3. **Data stories.** Count and describe data only as it is: who it covers, how many, when, and how it was pulled. A business's own customers are its customers, not the industry: say so in the headline, never "agencies wait 41 days" from 24 clients. Check whether publishing even anonymised totals is allowed by the customer agreement and ask the owner; until then the story is *blocked until permission*. Count from files with a hand tally (one line per item, counted one by one), never by eye.
 4. **Outlets by buyer fit.** Choose outlets the ICP reads, listens to or watches, with the evidence (discovery calls, interviews, the owner's reading). Order by fit and by how reachable they are (a host who already knows the founder first). A famous outlet the buyer doesn't read is a stretch goal, not the plan; say why. Never look up, invent or add journalists' names or contact details.
 5. **Pitches.** One pitch per outlet and story: a subject that says the story, why it matters to that outlet's readers now, the evidence, what the founder can offer (an interview, the data, a guest piece), and a short close. Plain and specific; no press-release boilerplate, no claim the context doesn't hold.
 6. **Newsjacking.** Tie a story to news only when the news is real, dated in `inputs/` or cited with a URL and date, and the business has something useful to add. Never use a tragedy, disaster or someone's harm as a hook. Without a real current event, write the rule for when to use it and leave the hook empty.
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; nothing pitched or published
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the owner's notes), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write pitch drafts in italics or a plain block, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the owner's notes), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write pitch drafts in italics or a plain block, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the stories ready now and those blocked with the permission each needs, the outlets in order with the reason, and what is still missing, then end with the same block.
 
@@ -92,7 +92,7 @@ End with the **Principle, framework, source** block:
 - [ ] News hooks are real and dated; no tragedy is used as a hook.
 - [ ] Pitches and interviews fit the founder's stated capacity.
 - [ ] Coverage is judged on leads or calls with counts; the plan says nothing is pitched or published without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

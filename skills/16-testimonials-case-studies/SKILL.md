@@ -20,8 +20,8 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (interviews, call notes or reviews in `inputs/`): run the skill that fills the missing section (`07-offer-design` or `02-buyer-psychology`) first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Dream outcome → `07-offer-design`; Beliefs, objections and drivers → `02-buyer-psychology`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `02-buyer-psychology` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -39,7 +39,7 @@ Use [references/proof-collection-guide.md](references/proof-collection-guide.md)
 8. **Approval.** The plan is a draft. Contacting customers, publishing any story or using any name needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no testimonials, quotes, results, names or company details that aren't in `context/` or `inputs/`. Never invent or paraphrase a testimonial as if the customer said it. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no testimonials, quotes, results, names or company details that aren't in `context/` or `inputs/`. Never invent or paraphrase a testimonial as if the customer said it. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -70,7 +70,7 @@ Status: draft for the owner's approval; nobody contacted, nothing published
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the doubts that need proof, the candidates with permission status, and the interview to run first, and what is still missing, then end with the same block.
 
@@ -89,7 +89,7 @@ End with the **Principle, framework, source** block:
 - [ ] Results are verified against records and signed off; unverifiable claims stay in the customer's words.
 - [ ] No testimonial is written for a customer; quotes are exact.
 - [ ] Endorsement rules are dated or *to confirm*; nothing is published without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

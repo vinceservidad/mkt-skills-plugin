@@ -20,8 +20,8 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (reviews, tickets, sales or customer notes in `inputs/`): run `02-segmentation` or `07-value-ladder` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Segments or ICP and personas → `02-segmentation` (or `02-icp-persona`); Value ladder or Core offer → `07-value-ladder` (or `07-offer-design`)), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `02-segmentation` is not loaded, stop and say: enable mkt-q1-audience.
-- If `07-value-ladder` is not loaded, stop and say: enable mkt-q2-offer.
+- `02-segmentation` is in this plugin; run it first when the rules above call for it.
+- `07-value-ladder` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -38,7 +38,7 @@ Use [references/expansion-guide.md](references/expansion-guide.md) for core stab
 7. **Approval.** The options are a draft. Launching products, entering markets or committing money needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no market sizes, demand, costs or regulations that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no market sizes, demand, costs or regulations that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -66,7 +66,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/19-growth/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, whether the core is ready, the first option and its test, and what waits and why, and what is still missing, then end with the same block.
 
@@ -85,7 +85,7 @@ End with the **Principle, framework, source** block:
 - [ ] New segments are checked for different buying reasons and whole product (beachhead named).
 - [ ] The first option has needs, capacity, cost or *unknown*, a smallest test and a stop rule; market facts are dated or *to confirm*.
 - [ ] Non-priorities are explicit; nothing launches without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

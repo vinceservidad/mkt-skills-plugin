@@ -21,7 +21,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (reviews, tickets or interviews in `inputs/`): run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Promise → `08-message-doc`; Voice of customer → `02-voc-mining`), and ask for evidence (reviews, interviews, tickets), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Creator terms are the owner's commitments.** Payment or free product, usage rights (where and for how long the business may run the content, including as paid ads), exclusivity, revisions and deadlines. If the request needs these in the brief and the owner hasn't given them, stop before writing, ask for each, and write no brief on assumed terms. A brief without terms is fine when the user asks only for the creative direction; then list the terms as *to be set by the owner*.
-- If `02-voc-mining` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-voc-mining` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -66,7 +66,7 @@ Format: <format — why, awareness level>
 
 Change nothing in `context/`. The brief is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a ticket, an interview), with the source named, and only to show the creator what buyers said, never as lines to repeat. Questions, talking points and suggested hooks go in plain text or italics. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a ticket, an interview), with the source named, and only to show the creator what buyers said, never as lines to repeat. Questions, talking points and suggested hooks go in plain text or italics. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the format chosen and why, and what is still missing (including terms for the owner), then end with the same block.
 
@@ -85,7 +85,7 @@ End with the **Principle, framework, source** block:
 - [ ] Must-not-say lists the unproven and contradicted claims from the proof stack and objection map.
 - [ ] Disclosure is required, with the exact rule *to confirm* against current law and platform rules.
 - [ ] Payment, usage rights, exclusivity and deadlines are the owner's; none is invented, and no line generalises about buyers (*most people*) without a source.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

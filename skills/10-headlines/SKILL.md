@@ -16,7 +16,7 @@ Required (drafted or confirmed, with content):
 - `context/awareness.md` → **Awareness map**, from `03-awareness-map`.
 - If present, also read `context/customer.md` → Voice of customer (`02-voc-mining`) for the buyer's phrases; `context/message.md` → Big idea, Mechanism and Proof stack; `context/offer.md` for real terms.
 - If a required section is missing:
-  - **The upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q1-audience.
+  - **The upstream evidence exists:** run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Promise → `08-message-doc`; Awareness map → `03-awareness-map`), and what the user should bring. Do not write copy on an invented offer, promise or proof. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -51,7 +51,7 @@ To test: <three headlines, and what each test would learn>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -68,7 +68,7 @@ End with the **Principle, framework, source** block:
 - [ ] The awareness level and lead type are stated, and the headlines fit that level.
 - [ ] At least 15 headlines across several Caples types (within Bly's headline types), each scored on the 4Us.
 - [ ] Every specific (a number, a time frame, a result) is kept by the offer or proved in context, and listed in the claims table.
-- [ ] Testimonial headlines quote real testimonials word for word. Headlines are not wrapped in quotation marks, and `check_quotes.py` reports clean.
+- [ ] Testimonial headlines quote real testimonials word for word. Headlines are not wrapped in quotation marks, and every quotation was checked word for word against a source.
 - [ ] Three are recommended to test, with the reason for each.
 - [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
 - [ ] No file in `context/` changed.

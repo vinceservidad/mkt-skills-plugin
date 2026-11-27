@@ -24,8 +24,8 @@ If present, also read:
 - the page or site as it is (copy, screenshots), and any review exports, in `inputs/` or pasted.
 
 If both required sections are missing: stop. Name Proof stack → `08-proof-stack` and Beliefs, objections and drivers → `02-buyer-psychology`, and say what to bring (reviews, testimonials, the fears buyers raise). A stop reply still ends with the **Principle, framework, source** block.
-- If `08-proof-stack` is not loaded, stop and say: enable mkt-q3-message.
-- If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience.
+- `08-proof-stack` is in this plugin; run it first when the rules above call for it.
+- `02-buyer-psychology` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -39,11 +39,11 @@ Use [references/trust-stack.md](references/trust-stack.md) for the signal types,
 6. **Permission.** Mark every quote, name, photo and logo that needs permission before publishing. Remove names and details that identify a private person unless they consented.
 7. **Measure.** Each placement is a test with a primary outcome (orders or qualified leads from the page), guardrails (refunds, complaints, support questions about the claim), a window and a stopping rule; hand test design to `18-ab-testing` and copy to `10-page-copy`.
 8. **Authorization.** Every live change (adding, removing or rewording a trust element) needs the owner's approval and a check afterwards.
-9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, check by hand that every quotation of four or more words appears word for word in a source, and fix any failure.
 
 **Nothing the context doesn't support.** Write no customer counts, ratings, review totals, awards, press mentions, certifications, client names, logos, years in business or guarantee terms that aren't in `context/` or `inputs/`. A quote that appears in a page draft but in no review export is not proof just because it is in the file. Do not state that a payment or security provider's badge may be shown, or what a certification requires, unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`; otherwise mark it *to check*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date. Your proposed lines go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Count reviews with [scripts/tally.py](scripts/tally.py), never by eye.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source and date. Your proposed lines go in italics. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches. Count reviews with a hand tally (one line per item, counted one by one), never by eye.
 
 ## Output
 
@@ -94,7 +94,7 @@ End with the **Principle, framework, source** block:
 - [ ] No provider badge rule or certification is asserted without a first-party citation and date.
 - [ ] Placements are tests with metric, guardrails, window and stopping rule; no live change is made or implied as done.
 - [ ] Every test is written out on its own: metric, guardrails, window and stopping rule (when to stop early or call it), none blank or deferred to another test.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

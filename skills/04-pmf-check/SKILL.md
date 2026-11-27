@@ -27,12 +27,12 @@ Fit is measured by retention and word of mouth, not by sales. Sales can be bough
 Use [references/pmf-signals.md](references/pmf-signals.md) for the survey questions, how to read each signal, its limits and the verdict ladder, and [references/kotler-product-levels.md](references/kotler-product-levels.md) for Kotler's Five Product Levels and 4Ps-to-4Cs translation.
 
 1. **Name what is being tested.** The product and its promised result (from `offer.md` if present, otherwise as the user states it, marked), the unit (customer, account, subscriber) and the segments to split by. Fit is for a product *and* a segment, never for the business in general.
-2. **Score the survey,** if there is one, with [scripts/pmf_score.py](scripts/pmf_score.py) (`python3 <this skill's folder>/scripts/pmf_score.py <survey.csv> <answer column> <segment column>`), never by eye.
+2. **Score the survey,** if there is one, by hand, never by eye: count each answer; leave blank, *N/A* and *no longer use* answers out of the denominator and report them separately; the share answering *Very disappointed* is those answers ÷ the remaining n, for all respondents and for each segment column value, with n and a 95% Wilson interval so a small sample is visible.
    - Report the very-disappointed share overall *and by segment*, each with its n and interval, the number asked, the response rate and who did not answer.
    - Check who was asked: people who have experienced the core product. Very new customers, churned customers and non-users answer different questions; say how many of each are in the sample.
    - The 40% line is Ellis's heuristic, not a law and not proof. Compare against it, name it as a heuristic, and say when the sample is too small to tell (an interval that straddles it).
    - Read the main benefit and the "who benefits" answers *of the very-disappointed group*: that is the result the fit rests on and the customer it rests with.
-3. **Read retention** with [scripts/retention.py](scripts/retention.py) (`python3 <this skill's folder>/scripts/retention.py <log.csv> <YYYY-MM as-of> <segment column>`).
+3. **Read retention** by hand from the customer log (start month, end month, blank end = still a customer), as of a stated month and by segment: per start-year cohort, count customers, those still active, and those retained at 3, 6, 12 and 24 months, counting only customers old enough to have reached that age (show the denominator); give the median tenure to date, for all customers and for those who started 12 or more months before the as-of month (active customers' tenure is still growing, so it is not a lifetime), and count the reasons for leaving.
    - Per start cohort, retention at each age counted only over customers old enough to reach it (show the denominator). Cohorts too young to judge are *too young*, not good.
    - Look at the shape: a curve that flattens means a core that stays; one heading to zero means no fit yet for that group.
    - Sort the reasons for leaving: fit or price for the segment, product or delivery failure, external events (acquired, closed, hired in-house), involuntary (payment). Only fit and failure reasons speak to PMF.
@@ -48,13 +48,13 @@ Use [references/pmf-signals.md](references/pmf-signals.md) for the survey questi
 
    Each verdict names its evidence and its biggest limit. A strong signal in one segment is not fit for the whole customer base. Say what it means for marketing: which segment to aim at and which to stop pulling in, and what to fix first (product, offer or onboarding owners). A verdict here is not permission to scale spend: scaling needs `19-scale-paid`'s readiness, economics and authorization gates.
 7. **Plan the next read.** What would move each unknown or partial verdict: survey the segment again at a larger n, wait for a cohort to reach 12 months, record reasons for leaving, collect fees for revenue retention. Treat changes to the product as Lean Startup experiments (build, measure, learn) owned by `18-hypothesis`.
-8. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+8. **Check before saving.** Re-read the draft against every item under Checks, and check by hand that every quotation of four or more words appears word for word in a source. Fix any failure before you save.
 
-**Labels.** Every number is copied from a named source (with its date), *calculated* from named inputs by the bundled scripts or `python3` (show the formula or the command), or marked `(assumption)`. No unmarked inference; frequency words (*most*, *often*) need a count.
+**Labels.** Every number is copied from a named source (with its date), *calculated* from named inputs by hand or with `python3` (show the formula or the command), or marked `(assumption)`. No unmarked inference; frequency words (*most*, *often*) need a count.
 
 **Denominators.** Every "x of y" uses the source's own population and period: very disappointed out of respondents, respondents out of those asked, referrals out of that quarter's calls.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Survey questions you propose, your own lines, labels for data you lack, and the titles of books, essays or talks (including in the Principle, framework, source block) go in italics, never in quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Counts of rows come from [scripts/tally.py](scripts/tally.py).
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Survey questions you propose, your own lines, labels for data you lack, and the titles of books, essays or talks (including in the Principle, framework, source block) go in italics, never in quotation marks. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches. Counts of rows come from a hand tally (one line per item, counted one by one).
 
 ## Output
 
@@ -108,14 +108,14 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] Every signal is split by segment, and the verdict is per segment, never one verdict for the whole business.
-- [ ] The survey score comes from `pmf_score.py` with n, interval, number asked and response rate; the 40% line is called Ellis's heuristic, and a small or skewed sample is named.
+- [ ] The survey score is worked out by hand from the answers, with n, interval, number asked and response rate; the 40% line is called Ellis's heuristic, and a small or skewed sample is named.
 - [ ] Retention is by cohort with eligible denominators; too-young cohorts are labelled, reasons for leaving are sorted, and revenue retention is stated or marked unknown.
 - [ ] Owner or founder claims are reproduced from the data or shown not to reproduce, with the contradiction kept visible.
 - [ ] Word-of-mouth shares keep their source's denominator and period.
 - [ ] Delivery of the core result is checked; product, price and onboarding issues are routed to their owner skills, not solved here.
 - [ ] No verdict is turned into a scaling or spend decision.
 - [ ] No score, rate or benchmark is invented; without evidence, the file is a plan with no numbers.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

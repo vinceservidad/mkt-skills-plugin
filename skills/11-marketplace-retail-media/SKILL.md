@@ -21,8 +21,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or product notes in `inputs/`): run the skill that fills it first (`07-offer-design` or `03-awareness-map`), then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`; Awareness map → `03-awareness-map`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Marketplace pricing (and DTC price parity), commission rates for TikTok Shop creators, promotional coupons, FBA/fulfillment choices, inventory commitments and ad budgets are the owner's commitments. Never invent COGS, marketplace fee percentages, prices, creator commission rates or sales figures that `offer.md` and `inputs/` do not hold. If the request asks to launch a marketplace discount, coupon or creator commission rate not confirmed in `offer.md` or `inputs/`, stop, ask the owner to confirm the exact terms, and write no launch plan on assumed terms. Unknown COGS or referral fees are not a stop for an entry or catalog readiness audit: give the contribution-margin formula, mark missing economics *owner to supply*, and hold ad-spend targets until confirmed.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -32,7 +32,7 @@ Use [references/marketplace-retail-media-guide.md](references/marketplace-retail
 
 1. **Outcome and channel role.** Name what the marketplace is for (incremental new-to-brand discovery, sampling entry SKUs that feed DTC repeat/subscription, or capturing existing category demand) and check the strategic trade-off: marketplaces own the buyer relationship and charge referral + fulfillment fees.
 2. **Unit economics and break-even ACoS first.** Compute break-even ACoS only from confirmed numbers (`(Price - COGS - Referral Fee - Fulfillment/Shipping Fee) / Price`). When COGS or marketplace fees are missing from `inputs/`, show the exact formula, mark each input *owner to supply / to confirm*, and never invent a fee rate or target ACoS.
-3. **SKU selection and catalog readiness.** Count catalog SKUs by status and demand with [scripts/tally.py](scripts/tally.py) and [scripts/sum_by.py](scripts/sum_by.py), never by eye. Start with 2 to 5 high-velocity, evergreen, in-stock hero SKUs — exclude sold-out, past, fragile/short-shelf-life or thin-margin SKUs that cannot survive marketplace fees and fulfillment SLAs.
+3. **SKU selection and catalog readiness.** Count catalog SKUs by status and demand with a hand tally (one line per item, counted one by one) and hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. Start with 2 to 5 high-velocity, evergreen, in-stock hero SKUs — exclude sold-out, past, fragile/short-shelf-life or thin-margin SKUs that cannot survive marketplace fees and fulfillment SLAs.
 4. **Retail readiness gate (before spending $1 on ads).** Require all six gates before turning on retail media: Buy Box / Featured Offer ownership, conversion-ready main image and gallery, search-indexed listing title/bullets/backend terms (using buyer language from `inputs/` or VoC), A+ / enhanced content, inventory buffer (never run ads into a stockout, which destroys organic rank), and a baseline review plan (e.g., official platform review programs like Amazon Vine — verify current eligibility/fees).
 5. **Retail media structure (platform-matched).**
    - **Amazon Ads:** Separate Sponsored Products into exact/discovery (Auto + Broad/Phrase harvesting into Exact winners), isolate branded vs. non-branded queries so brand defense never hides weak non-brand efficiency, add negative keywords on wasted search terms, and layer Sponsored Brands / Sponsored Display only after Sponsored Products converts cleanly.
@@ -78,7 +78,7 @@ Status: draft for the owner's approval; no listings, commissions or ad campaigns
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed listing titles, bullets and campaign names in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed listing titles, bullets and campaign names in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, the unit-economics gate, which SKUs fit (and which stay out), and what is still missing, then end with the same block.
 
@@ -93,11 +93,11 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] Break-even ACoS and post-fee contribution margin are addressed first; missing COGS and marketplace fees are marked *owner to supply / to confirm* and never guessed.
-- [ ] Catalog SKU counts and sales totals are calculated with `tally.py` / `sum_by.py`; sold-out, past or unfit SKUs are excluded.
+- [ ] Catalog SKU counts and sales totals are calculated with a hand tally / hand group totals; sold-out, past or unfit SKUs are excluded.
 - [ ] Retail readiness gates (Buy Box, listing SEO, images, inventory buffer, baseline reviews) are required before turning on paid retail media.
 - [ ] Branded and non-branded queries are separated; ACoS is evaluated alongside TACoS and net contribution margin, with scaling handed to `19-scale-paid`.
 - [ ] DTC cannibalization and customer-ownership trade-offs are explicit; platform fees and rules are cited with a dated official URL or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

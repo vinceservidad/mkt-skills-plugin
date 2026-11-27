@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (for example interview notes in `inputs/` but no ICP): run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (ICP and personas → `02-icp-persona`, which needs `02-customer-research` evidence), and ask for evidence about the buyer (interviews, sales notes, reviews), not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - No Search Console or keyword data is not a stop: plan from the ICP and journey, mark every volume and ranking *unknown*, and make getting the data the first step.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/seo-guide.md](references/seo-guide.md) for intent, prioritisation, technical checks and the platform-claims rule.
 
 1. **The outcome.** Name the business outcome organic search must produce (qualified calls, subscribers, template downloads that lead to calls) and how it will be measured (analytics landing page to conversion, CRM source). Rankings, impressions and clicks are signals, never the outcome.
-2. **Current visibility.** From Search Console or analytics in `inputs/`, total clicks and impressions by page and by query with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> page`), never by eye. Separate branded from non-branded searches. Label each figure *observed*, *calculated* or *inferred*. A third-party tool's volume or rank estimate is an estimate; say so.
+2. **Current visibility.** From Search Console or analytics in `inputs/`, total clicks and impressions by page and by query with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a; grouped by `page`), never by eye. Separate branded from non-branded searches. Label each figure *observed*, *calculated* or *inferred*. A third-party tool's volume or rank estimate is an estimate; say so.
 3. **Keyword research by intent.** Sort the searches (from the data, the keyword tool, and the buyer's own words in Voice of customer) into informational, commercial, transactional and navigational intent, and map each to the journey stage and awareness level it serves. Score relevance to the ICP and the offer before volume: a large generic term the ICP does not use, or whose searchers the offer cannot serve, is a non-priority, whatever its volume.
 4. **Priorities.** Rank actions by expected business impact, confidence, effort and reversibility:
    - **Fix and protect** what already earns clicks and links; never delete or redirect a ranking page without evidence and approval.
@@ -84,7 +84,7 @@ Status: draft for the owner's approval; nothing on the site changed
 
 Change nothing in `context/`, and change nothing on the site. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a review, an interview, a search query in an export), with the source named. Write your own titles, headings and proposals in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a review, an interview, a search query in an export), with the source named. Write your own titles, headings and proposals in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the top three actions, what is not a priority and why, and what is still missing, then end with the same block.
 
@@ -99,13 +99,13 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] The plan names a business outcome; rankings, impressions and traffic are treated as signals, not the outcome.
-- [ ] Visibility figures are totalled with `sum_by.py` from the supplied data and labelled; tool estimates are called estimates; missing data is marked unknown, not filled in.
+- [ ] Visibility figures are totalled with hand group totals from the supplied data and labelled; tool estimates are called estimates; missing data is marked unknown, not filled in.
 - [ ] Every priority keyword has an intent, a journey stage, and relevance to the ICP and offer; high-volume generic terms the buyer does not use are non-priorities.
 - [ ] Existing ranking pages are protected; merges, redirects, robots, canonical and noindex changes are proposals needing the owner's approval.
 - [ ] Technical findings cite the material and say what was not checked; structure, schema, programmatic pages and AI answers are handed to their skills.
 - [ ] No ranking change is attributed to a cause without ruling out alternatives; every search-engine fact is cited with a dated official URL or marked *to confirm*; no benchmark is used.
 - [ ] Links are earnable; no paid links, schemes or doorway pages; the plan fits stated capacity or asks for it.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

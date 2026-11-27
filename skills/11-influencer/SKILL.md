@@ -21,15 +21,15 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or call notes in `inputs/` but no ICP): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`; Core offer → `07-offer-design`), and ask for evidence (interviews, reviews, sales notes), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Creator fees, budget, product allowances, discount codes, commission rates, free trials, guarantees, launch dates and stock are the owner's commitments. If the program must carry one that `offer.md` and `inputs/` don't hold (a follower discount, a commission percentage, a giveaway), stop before writing without proposing alternative workarounds, ask the owner to confirm the exact terms — for any discount or code: first-order-only vs ongoing, eligibility, end date, usage cap, margin impact and who covers the cost — along with approved creator fees and schedule, and write no plan or outreach on assumed terms. An unknown budget alone is not a stop: plan in units (boxes, posts) and ask for the figure.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
 Use [references/influencer-guide.md](references/influencer-guide.md) for the vetting tests, deal types, rights and disclosure, and platform claims, and [references/meta-partnerships-and-seeding.md](references/meta-partnerships-and-seeding.md) for Meta Creator Partnership Ads vs. Retailer Collaborative Ads, product-seeding pilot costing and authenticity screening, and compensation structures.
 
 1. **Goal and outcome.** Say what the program is for (a small test, reach to a new audience, sales, content to reuse as ads) and the business outcome that judges it (first orders, subscribers who stay, qualified calls). Views, likes, follower growth and engagement rate are signals, not the outcome.
-2. **Vet each creator on fit before reach.** Score every candidate against the ICP and its disqualifiers: who the audience is (the comments, the niche, the location share), whether the creator would use the product as it is, and conflicts (a competitor sponsorship, contempt for the buyer's current alternative, a price point far from the buyer's). Compute ratios from the shortlist with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> creator avg_views_last_10 followers rate_usd --ratio rate_usd/avg_views_last_10 --ratio avg_views_last_10/followers`), never by eye. Label each figure as the creator's own claim, platform-verified or calculated. Flag what looks inauthentic (sudden follower jumps, views far below the follower count) and ask for platform screenshots or analytics before paying.
+2. **Vet each creator on fit before reach.** Score every candidate against the ICP and its disqualifiers: who the audience is (the comments, the niche, the location share), whether the creator would use the product as it is, and conflicts (a competitor sponsorship, contempt for the buyer's current alternative, a price point far from the buyer's). Compute ratios from the shortlist with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a; grouped by `creator`; columns `avg_views_last_10`, `followers`, `rate_usd`; ratio `rate_usd` ÷ `avg_views_last_10`; ratio `avg_views_last_10` ÷ `followers`), never by eye. Label each figure as the creator's own claim, platform-verified or calculated. Flag what looks inauthentic (sudden follower jumps, views far below the follower count) and ask for platform screenshots or analytics before paying.
 3. **Choose the deal per creator.** Gifted seeding (product, no obligation to post), paid sponsorship (fee for agreed deliverables), affiliate commission (pay on tracked sales; the program design itself goes to `11-affiliate-jv`), or whitelisting (running the creator's content or handle as ads, which needs explicit rights). Use only offers in `offer.md`; any code or discount is an owner commitment.
 4. **Budget and capacity.** Fit fees and product cost inside the owner's stated budget and stock or shipping capacity, with the arithmetic shown. Start with a small test cohort before any long commitment.
 5. **The brief.** What the creator is asked to show (the real product, its real terms, the buyer's actual question), what must be true (only claims and offers in context, required disclosure), and what is the creator's call (voice, format). Production briefs for content the business will own go to `09-ugc-brief`.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; nobody contacted, contracted or paid
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a creator's note in the shortlist, the owner's notes), with the source named. Write your own brief lines and outreach ideas in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches. Count anything you report from files with [scripts/tally.py](scripts/tally.py) or `sum_by.py`, not by eye.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a creator's note in the shortlist, the owner's notes), with the source named. Write your own brief lines and outreach ideas in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches. Count anything you report from files with a hand tally (one line per item, counted one by one) or hand group totals, not by eye.
 
 Reply with the file path, the creators chosen and rejected with the reason, the deal for each, and what is still missing, then end with the same block.
 
@@ -88,12 +88,12 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] Every creator is vetted on audience fit to the ICP and its disqualifiers before reach; misfits and conflicts are rejected with the reason.
-- [ ] Every number is labelled claimed, verified or calculated; ratios come from `sum_by.py`; suspected inauthentic audiences are flagged with a verification request.
+- [ ] Every number is labelled claimed, verified or calculated; ratios come from hand group totals; suspected inauthentic audiences are flagged with a verification request.
 - [ ] Each creator has one deal type; fees and product cost fit the owner's budget and capacity with the arithmetic shown; no code, discount or commission the owner hasn't set.
 - [ ] Usage rights, whitelisting, exclusivity and disclosure are listed as contract points, legal and platform facts are dated or *to confirm*, and legal review is flagged.
 - [ ] The program is judged on a business outcome per creator with counts; views and engagement are signals; links and codes are not called incrementality.
 - [ ] The plan says nobody is contacted, contracted, paid or run as ads without the owner's approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

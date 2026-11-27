@@ -21,8 +21,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or sales notes in `inputs/` but no ICP): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`; Core offer → `07-offer-design`), and ask for evidence (interviews, closed-deal notes), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Offers made in the email (a free audit, a trial, a discount, a deadline), the sending domain and mailbox, the daily volume, the sender's name and the footer address are the owner's commitments. If the request proposes an offer, discount or deadline that `offer.md` and `inputs/` don't hold, stop before writing, ask for the exact terms, and write no deliverable file in `work/11-distribution/` on assumed terms (a stop reply still ends with the **Principle, framework, source** block). Leave missing operational details (such as a sender name or exact street address) as placeholders for the owner to supply in the plan, and reshape an unsafe daily volume rather than stopping.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -31,7 +31,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/cold-email-guide.md](references/cold-email-guide.md) for account tiers, the four-part email, deliverability, the law and platform facts.
 
 1. **Outcome and capacity.** Name the business outcome that judges the outreach (qualified calls, then clients who sign) and the most the business can take on (onboarding slots, calendar hours). Opens and sends are not the outcome. Size the whole plan from capacity, not from a sending target.
-2. **The list.** Score every account against the ICP and its disqualifiers with the evidence from `inputs/` (size, type, location, segment). Disqualified accounts are removed with the reason, never written to "just in case". Count accounts kept and removed with [scripts/tally.py](scripts/tally.py), never by eye. Only lawfully sourced business contacts in roles that decide; never look up, guess or add real people's names or emails, and never suggest buying or scraping a list.
+2. **The list.** Score every account against the ICP and its disqualifiers with the evidence from `inputs/` (size, type, location, segment). Disqualified accounts are removed with the reason, never written to "just in case". Count accounts kept and removed with a hand tally (one line per item, counted one by one), never by eye. Only lawfully sourced business contacts in roles that decide; never look up, guess or add real people's names or emails, and never suggest buying or scraping a list.
 3. **Account-based tiers.** Tier the kept accounts by fit and by a dated public signal (a hire, a move, a public question about the problem). Tier 1 gets a one-to-one email built on its own signal; lower tiers share a written angle. An account with no signal gets no invented one: say there is none and use the segment's pain instead.
 4. **The email.** Four parts, short, plain text, from a real person: a first line that is true and specific to the account (its signal, or the segment's situation), the value (one problem the buyer has, in the buyer's words from Voice of customer, and what changes), proof only from Proof stack or `inputs/` that the owner may use in outreach, and a soft ask (an interest question, not a demand for a 30-minute call). No fake reply chains, no false urgency, no claim the context doesn't hold.
 5. **Follow-up.** A short sequence of follow-ups that each add something new (another angle, a resource that exists, a plain close-the-loop note), spaced over days, stopping at the first reply, opt-out or bounce. State the number of touches and the gaps; no invented open-rate trigger.
@@ -77,7 +77,7 @@ Status: draft for the owner's approval; nothing sent, bought or imported
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the owner's notes), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write email drafts in italics or a plain block, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the owner's notes), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write email drafts in italics or a plain block, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the accounts kept and removed with the reason, the daily volume and why, and what is still missing, then end with the same block.
 
@@ -91,14 +91,14 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Every account is scored on ICP fit and disqualifiers before it is written to; removed accounts carry the reason; counts come from `tally.py`.
+- [ ] Every account is scored on ICP fit and disqualifiers before it is written to; removed accounts carry the reason; counts come from a hand tally.
 - [ ] Every first line is true and specific; accounts with no signal get no invented one; no real person's name or email is added.
 - [ ] Each email has the four parts, one soft ask, proof the owner may use in outreach, and no offer, deadline or claim outside context.
 - [ ] Volume is sized from capacity and domain health; a cold main domain is protected with a slow start; mailbox-provider and legal facts are dated or *to confirm*.
 - [ ] Each email carries an honest sender and subject, the physical address and an honored opt-out; out-of-country accounts and legal review are flagged.
 - [ ] Outreach is judged on positive replies, qualified meetings and clients with counts, not opens.
 - [ ] The plan says nothing is sent, bought or imported without the owner's approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

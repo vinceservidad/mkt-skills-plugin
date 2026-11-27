@@ -27,15 +27,15 @@ Positioning is not what you do to the product; it is what you do to the buyer's 
 - If a required section is missing:
   - **Raw customer or competitor evidence exists** (interviews, call notes, reviews or competitor notes in `inputs/` or the conversation): run the skill that fills the missing section first (`02-icp-persona`, with `02-customer-research` behind it; or `01-competitor-profiling`), then continue.
   - **It doesn't:** stop. Name each missing section with the skill that fills it (ICP and personas → `02-icp-persona`; Current alternatives → `02-customer-research`, or Competitors and alternatives → `01-competitor-profiling`). Ask for customer interviews, sales-call notes or reviews and dated competitor observations, not a description of the buyer. Don't suggest competitors or alternatives by name from memory, even as examples. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
-- If `02-customer-research` is not loaded, stop and say: enable mkt-q1-audience.
-- If `01-competitor-profiling` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
+- `02-customer-research` is in this plugin; run it first when the rules above call for it.
+- `01-competitor-profiling` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
 Follow Dunford's order. Each step uses the one before it. Detail and traps: [references/obviously-awesome.md](references/obviously-awesome.md). Test the final frame and USP against the Ries & Trout laws and Reeves's 3-part USP check in [references/positioning-classics.md](references/positioning-classics.md).
 
-1. **Competitive alternatives.** What would the best-fit customers do if the business did not exist? Take the list from the context, including DIY, an in-house hire and doing nothing wherever evidence shows them. Rank them by how often buyers actually choose them (lost deals, switch stories, counts), not by how much they worry you, and sort the table rows in that order, highest count first. Count with `scripts/tally.py` when you count from files.
+1. **Competitive alternatives.** What would the best-fit customers do if the business did not exist? Take the list from the context, including DIY, an in-house hire and doing nothing wherever evidence shows them. Rank them by how often buyers actually choose them (lost deals, switch stories, counts), not by how much they worry you, and sort the table rows in that order, highest count first. Count with a hand tally when you count from files.
 2. **Unique attributes.** List what the business has that the alternatives lack: capabilities, delivery, expertise, terms. Use only what is confirmed to exist across the product today: any `offer.md` item marked *proposed*, *planned*, *unknown*, or only seen once / *confirm it is standard* is NOT a current attribute and must appear only under Future differentiators — never as a current attribute, a current "Where we beat it" edge in the Alternatives table, or a claim in the Positioning statement. For each attribute, check the alternatives' dated claims:
    - **Unique:** no alternative claims it, as far as the evidence shows (say *as observed on <date>*).
    - **Shared:** an alternative claims it too (name who); it can't carry the position alone.
@@ -54,11 +54,11 @@ Follow Dunford's order. Each step uses the one before it. Detail and traps: [ref
    - **Perceptual map**, only when two axes buyers care about are evidenced (for example speed of numbers and depth of advice), placing each alternative from evidence; unplaced alternatives say *unknown*.
    - **USP and value proposition:** the one benefit the alternatives cannot or do not claim, and the jobs, pains and gains it serves (Value Proposition Canvas), in a line each.
 7. **Proof and test.** For each claim in the statement, name its proof or mark the gap. Propose how to test the position: sales-call framing, win rate against the primary alternative over a stated number of calls, the questions buyers stop asking.
-8. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on the file. Fix every failure before you save.
+8. **Check before saving.** Re-read the draft against every item under Checks, and check by hand that every quotation of four or more words appears word for word in a source. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No capability, result, price, customer count, competitor fact or buyer motive that is not in `context/` or `inputs/`. Competitor claims are their claims, with the date seen. A competitor's visible tactic is not proof that it works. Inferences carry `(assumption)`. A proposed capability is never written as if it exists.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a customer, a competitor's page as recorded), with the source named. The statements and your summaries are your own words: write them in italics or plain text. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/positioning.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a customer, a competitor's page as recorded), with the source named. The statements and your summaries are your own words: write them in italics or plain text. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -143,7 +143,7 @@ End with the **Principle, framework, source** block:
 - [ ] Every value has evidence that customers care; the target customer and who it is *not* for both cite evidence.
 - [ ] The category choice gives a reason from how buyers describe their search; a new category is only an option handed to `06-category-design`.
 - [ ] The Moore statement fills every slot from steps 1–5 and claims nothing the proof line doesn't support.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] Only the five owned sections changed. Each has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

@@ -63,7 +63,7 @@ Then update the file:
 - Append one line to `## Change log`.
 - If `context/brand.md` does not exist, create it with frontmatter, the five brand sections (others `Status: empty`) and a change log.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (customer language, existing copy), with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (customer language, existing copy), with the source named. Before saving, check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words or drop the quotation marks and use italics, then check again until every quotation matches.
 
 Reply with:
 - the recommended name and runner-up, and why;
@@ -86,7 +86,7 @@ End with the **Principle, framework, source** block:
 - [ ] No name is called available, unregistered or trademarkable without a supplied, dated result; clearance, domain and handle checks are listed as still needed.
 - [ ] A name that carries a claim is compared with the brand foundation's Promise and proof, and any caveat recorded there is cited.
 - [ ] The recommendation is conditional on the checks and the owner's decision; `offer.md` is not edited, and any name change there is handed to `07-offer-design`.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] Only `## Naming` changed. It has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

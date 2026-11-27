@@ -45,11 +45,11 @@ Use [references/frameworks.md](references/frameworks.md) for the detail of each 
    - A regulation or legal change the business has not verified is a question to check, not a fact.
 6. **Timing.** Say whether the market is early, growing, mature or declining, on the evidence, and what that means for entering or expanding now.
 7. **Verdict.** One of: *worth pursuing*, *worth pursuing with conditions* (name them), *not yet: evidence missing* (name it), or *not worth it* (why). Name the evidence that would change it. If a less-contested space shows up (a Blue Ocean move, by changing the factors the category competes on), note it as an opening for `06-positioning`, not as a decision.
-8. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+8. **Check before saving.** Re-read the draft against every item under Checks, and check by hand that every quotation of four or more words appears word for word in a source. Fix any failure before you save.
 
 **Calculations and labels.** Every number is either copied from a named source, *calculated* from named inputs (show the formula), or marked `(assumption)`. Survey answers are stated preference (*62% say…*), not behaviour. A trade body's figure is that body's estimate, not a fact about this business. No unmarked inference: a motive, trend or frequency the evidence does not state carries `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Count items with [scripts/tally.py](scripts/tally.py) when the material is a file.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches. Count items with a hand tally (one line per item, counted one by one) when the material is a file.
 
 ## Output
 
@@ -118,7 +118,7 @@ End with the **Principle, framework, source** block:
 - [ ] Survey answers are labelled as stated, and third-party figures name their publisher and date.
 - [ ] Each force is rated with evidence. Unverified regulation is a question to check, not a fact.
 - [ ] The verdict names the evidence that would change it.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] Without evidence, no context section was written.
 - [ ] Only the three owned sections changed. Each has Status, Evidence and Method lines, and the change log has a line for this write.
 

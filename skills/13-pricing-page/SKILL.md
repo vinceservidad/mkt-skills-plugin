@@ -26,7 +26,7 @@ If present, also read:
 If something is missing:
 - **Price and model missing:** stop. Name Price and model → `07-pricing` and say what to bring (the prices and model the owner has set). Price and guarantee are the owner's commitments: never generate them yourself. A stop reply still ends with the **Principle, framework, source** block.
 - **Guarantee missing or not approved:** design the page without one and list it under Open questions with `07-guarantee-risk-reversal`.
-- If `07-pricing` is not loaded, stop and say: enable mkt-q2-offer.
+- `07-pricing` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -45,11 +45,11 @@ Use [references/pricing-page-anatomy.md](references/pricing-page-anatomy.md) for
 9. **Urgency:** only what Urgency and scarcity says is true (a real capacity limit, stated plainly). No countdowns, no invented demand.
 10. **Measure:** primary outcome (paid orders or qualified calls from the page, by plan), guardrails (refunds, wrong-band calls, support questions about price), each change as a test with a window and stopping rule. Hand price experiments to `18-price-testing`, page copy to `10-page-copy`, trust elements to `13-trust-signals`.
 11. **Authorization.** Publishing prices, terms or a guarantee needs the owner's approval and a check afterwards against the baseline.
-12. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+12. **Check before saving.** Re-read the draft against the Checks, check by hand that every quotation of four or more words appears word for word in a source, and fix any failure.
 
 **Nothing the context doesn't support.** Write no prices, discounts, annual deals, tiers, inclusions, guarantee terms, deadlines or customer numbers that aren't decided in `context/` or `inputs/`. Anything marked `(assumption)` or proposed in `offer.md` stays off the page. Show the whole price the buyer pays (shipping, fees, the condition on any free-shipping or free-trial claim).
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your plan names, headlines and FAQ answers go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Your plan names, headlines and FAQ answers go in italics. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -97,7 +97,7 @@ End with the **Principle, framework, source** block:
 - [ ] Objections in the FAQ come from context and are answered only with what is true now; urgency is true or absent.
 - [ ] One next step per plan; tests have metric, guardrails, window and stopping rule; publishing needs the owner's approval.
 - [ ] Every test is written out on its own: metric, guardrails, window and stopping rule (when to stop early or call it), none blank or deferred to another test.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

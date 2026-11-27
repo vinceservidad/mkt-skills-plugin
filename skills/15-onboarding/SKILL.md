@@ -20,8 +20,8 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (tickets, reviews or interviews in `inputs/`): run the skill that fills the missing section (`07-offer-design` or `02-jobs-to-be-done`) first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Dream outcome → `07-offer-design`; Jobs to be done → `02-jobs-to-be-done`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `02-jobs-to-be-done` is not loaded, stop and say: enable mkt-q1-audience.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `02-jobs-to-be-done` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -31,13 +31,13 @@ Use [references/onboarding-guide.md](references/onboarding-guide.md) for definin
 
 1. **Define activation.** The first meaningful value in the customer's terms (from Dream outcome and Jobs), with a time window and a denominator (new customers in the period). Reject tracking-convenience definitions such as an email open, a login or a tutorial completed, and say why. If the value can't be observed directly, name the closest true proxy and label it.
 2. **Map the path.** Every step from payment to activation, with time and who acts; mark necessary steps (qualification, safety, setup the result depends on) as kept, and remove or merge the rest.
-3. **Find where people stall.** From cohorts and tickets in `inputs/`, compute early retention and count first-period questions with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py). Separate causes: fit (wrong customers sold), product or service failure, operations (late delivery), measurement, and onboarding friction. Only the last is fixed here; hand the rest to their owners (`04-product`, `07-offer-design`, operations).
+3. **Find where people stall.** From cohorts and tickets in `inputs/`, compute early retention and count first-period questions with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a). Separate causes: fit (wrong customers sold), product or service failure, operations (late delivery), measurement, and onboarding friction. Only the last is fixed here; hand the rest to their owners (`04-product`, `07-offer-design`, operations).
 4. **Design the first week.** For each stall the evidence supports: the message, setting or step that answers it before it is asked (a sign-up question, a welcome message, a guide), when it happens and on which channel. Each item names the ticket group or cohort drop it targets.
 5. **Measure.** Activation rate and time to first value by cohort, early retention, and the ticket groups targeted, with counts and dates. Compare cohorts before and after on equal windows.
 6. **Approval.** The plan is a draft. Changing sign-up flows, emails, product settings or what ships needs the owner's explicit approval.
 7. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no activation rates, retention, results, features or customer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no activation rates, retention, results, features or customer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -67,7 +67,7 @@ Status: draft for the owner's approval; nothing changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the activation definition and why, the biggest stall with its cause, and the first-week changes, and what is still missing, then end with the same block.
 
@@ -86,7 +86,7 @@ End with the **Principle, framework, source** block:
 - [ ] Stalls are counted from cohorts and tickets; fit, product, operations and measurement causes are separated and handed off.
 - [ ] Each first-week item targets an evidenced stall.
 - [ ] Measurement compares cohorts on equal windows; nothing changes without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

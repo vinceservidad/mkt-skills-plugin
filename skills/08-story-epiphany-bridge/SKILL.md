@@ -16,7 +16,7 @@ People don't change their beliefs because they were told to. They change them wh
 - **The real story material:** founder notes, an interview transcript, an "about" page, or what the user tells you in the conversation. Read `inputs/` for it.
 - If present, also read `context/message.md` (Big idea, Enemy, Mechanism) and Voice of customer.
 - If a required section is missing:
-  - **The evidence exists:** run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue. If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience. If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+  - **The evidence exists:** run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue.
   - **It doesn't:** stop. Name the missing sections and the skills that fill them.
 - If the context is present but there is **no story material**, don't write the Story section and never invent events, people, numbers or feelings. Save the questions that would draw the story out to `work/08-message/08-story-epiphany-bridge-<YYYY-MM-DD>-story-questions.md` and ask the user to answer them.
 - Every reply, including a stop, ends with the **Principle, framework, source** block.
@@ -79,7 +79,7 @@ End with the **Principle, framework, source** block:
 ```
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+Then check every quotation in the file you wrote by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words from the source or drop the quotation marks and use italics, then check again until every quotation matches.
 
 ## Checks
 

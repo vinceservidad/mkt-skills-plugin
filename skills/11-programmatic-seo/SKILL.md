@@ -20,14 +20,14 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (for example interview notes in `inputs/` but no ICP): run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (ICP and personas → `02-icp-persona`), and ask for evidence about the buyer, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - No data set is not a stop: say what data each page would need, and plan nothing at scale until it exists.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
 Use [references/pseo-guide.md](references/pseo-guide.md) for the value test, the quality gates and the platform-claims rule.
 
 1. **The outcome and the pattern.** Name the business outcome the pages should produce and the search pattern (head term plus modifier, such as *bookkeeping for* + *agency type*). Show the evidence that people search the pattern (keyword export, Search Console queries), with tool volumes labelled estimates. No evidence for a modifier is a finding, not a gap to fill with guesses.
-2. **Audit the data, row by row.** For each proposed page type, list the fields each row has and which are unique, true and useful to the searcher (not just the modifier name). Count rows that pass and fail with [scripts/tally.py](scripts/tally.py) or a line-by-line table, never by eye. Rows without enough real data are excluded, not padded.
+2. **Audit the data, row by row.** For each proposed page type, list the fields each row has and which are unique, true and useful to the searcher (not just the modifier name). Count rows that pass and fail with a hand tally (one line per item, counted one by one) or a line-by-line table, never by eye. Rows without enough real data are excluded, not padded.
 3. **The value test.** For each page type, answer: does the page answer a distinct intent, with something the business genuinely has, that a searcher could not get from one general page? A location or type page where the service, price and content are identical everywhere is a doorway page: reject it and say what single page serves that intent instead.
 4. **The template.** For the page types that pass: the sections, which data field fills each, what must be unique per page, the title and H1 pattern, the call to action (only offers that exist), the hub page and internal links (with `11-site-architecture`), canonicals, and the structured data if any (with `11-schema`). AI-written or spun text never stands in for missing data.
 5. **Quality gates.** Before any page is indexable: minimum real fields per page, a duplication check across pages, a human review sample, an owner who checks facts, and a rule for rows whose data changes (sold out, discontinued, out of date): keep with status, redirect to the nearest equivalent, or noindex, as a proposal.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing built or published
 
 Change nothing in `context/` and publish nothing. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a data file, a page, a note), with the source named. Write your own titles, patterns and template text in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a data file, a page, a note), with the source named. Write your own titles, patterns and template text in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, which page types to build, merge or reject and why, the pilot, and what is still missing, then end with the same block.
 
@@ -87,12 +87,12 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] Every page type has search evidence (labelled estimates) or is marked as unevidenced; no volumes are invented.
-- [ ] The data audit counts rows that pass and fail with `tally.py` or a line-by-line table; rows without real data are excluded, not padded with generated text.
+- [ ] The data audit counts rows that pass and fail with a hand tally or a line-by-line table; rows without real data are excluded, not padded with generated text.
 - [ ] Page types that differ only by a swapped word (doorway pages) are rejected, with the single page that serves the intent instead.
 - [ ] The template names the unique data per page, the hub and internal links, and only offers that exist.
 - [ ] Quality gates, a pilot batch with keep, change and stop rules, and a rule for changing or sold-out rows are set before any page is indexable.
 - [ ] Every search-engine policy fact is cited with a dated official URL or marked *to confirm*; nothing is published without the owner's approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

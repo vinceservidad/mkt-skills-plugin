@@ -41,7 +41,7 @@ Volume never overrides fit. A term with large volume that the ICP does not use, 
 
 ## Reading a search terms report
 
-- Total by term and by theme with `scripts/sum_by.py`; show clicks, cost, platform conversions and business outcomes side by side.
+- Total by term and by theme with hand group totals; show clicks, cost, platform conversions and business outcomes side by side.
 - Compute share of spend on irrelevant intent (calculated) and cost per qualified outcome on relevant intent.
 - Small counts (one or two outcomes) are directional; say what spend or count would make a call.
 - Maximise-clicks style bidding with broad match and a form-fill conversion tends to buy cheap, broad clicks (pattern to confirm, not proof).

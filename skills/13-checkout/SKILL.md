@@ -30,7 +30,7 @@ If there is no checkout material, do not audit an imagined checkout. Write the p
 Use [references/checkout-friction.md](references/checkout-friction.md) for the field test, the surprise list and the payment and account rules.
 
 1. **Map the checkout as it is,** step by step, from the walk-through: every field, whether it is required, who uses it and for what. Copy the step definitions from the export.
-2. **Read the numbers.** Sum and rate every step with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <column> ...`), never by eye, overall and by device and visitor type. Name the step that loses the most buyers, for whom, with counts. Count poll answers with [scripts/tally.py](scripts/tally.py) or copy the source's own counts, and treat them as stated reasons from the people who answered, not measured causes.
+2. **Read the numbers.** Sum and rate every step with a hand step table (sum each step, then show each step's count ÷ the previous step's and ÷ the first step's, with numerator and denominator; also split by `<column>`), never by eye, overall and by device and visitor type. Name the step that loses the most buyers, for whom, with counts. Count poll answers with a hand tally (one line per item, counted one by one) or copy the source's own counts, and treat them as stated reasons from the people who answered, not measured causes.
 3. **Test every field.** Keep it only if fulfilment, payment, the law or a named downstream decision needs it now. Otherwise make it optional, move it after purchase, or remove it. Where you are not sure whether a field is legally or operationally needed (a phone number for the carrier, a tax field), mark it *to check with <who>*; do not assert the law.
 4. **Remove surprises.** The full price, including shipping, tax and fees, is visible before the checkout starts. For a subscription, the renewal, how to skip, pause and cancel, and any guarantee are stated next to the pay button, using only terms that exist today. Proposed terms (a one-step cancel, an automatic refund, a guarantee the owner has not approved) are held and listed under Open questions, never shown as live.
 5. **Account.** Prefer guest checkout, or an account created after payment from the confirmation, when the product allows it. For a subscription the buyer needs a way to manage it; say how that would work and mark the store's capability *unverified* until checked.
@@ -39,13 +39,13 @@ Use [references/checkout-friction.md](references/checkout-friction.md) for the f
 8. **Order bump.** Note only whether a bump belongs in this checkout and where; its design, offer and price go to `12-upsell-path`, using real offers only. Never pre-checked.
 9. **Rank the changes as tests.** Defects and surprises first (a cost shown late, an unused required field), then friction, then additions. Each test gets a metric (orders per checkout started, by device), guardrails (refunds, cancellations before the second order, support tickets, order value), a window and a stopping rule. Hand test design to `18-ab-testing`, page copy to `10-page-copy`, and recovery messages to `13-cart-recovery`.
 10. **Authorization.** Every live change to the checkout, prices, payment methods or terms needs the owner's approval and a check afterwards against the baseline.
-11. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+11. **Check before saving.** Re-read the draft against the Checks, check by hand that every quotation of four or more words appears word for word in a source, and fix any failure.
 
 **Nothing the context doesn't support.** Write no prices, fees, terms, guarantees, offers, payment methods or delivery promises that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. No dark patterns: no pre-checked boxes, hidden renewals, fake timers, or confirmshaming.
 
 **Labels.** Every number is copied from a named export or note (with its date), *calculated* (show numerator and denominator), or marked `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed field labels and microcopy go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed field labels and microcopy go in italics. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -91,13 +91,13 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Every step's count and rate comes from `funnel.py` or a shown calculation, keeps its definition and period, and is split by device or visitor type where the data allows. No benchmark is stated.
+- [ ] Every step's count and rate comes from a hand step table or a shown calculation, keeps its definition and period, and is split by device or visitor type where the data allows. No benchmark is stated.
 - [ ] Every field has a reason to stay, or is made optional, moved after purchase, removed, or marked *to check* with a named person; no law is asserted.
 - [ ] The full price and the subscription or renewal terms are shown before payment, using only terms that exist; proposed terms and unapproved guarantees are held.
 - [ ] No platform or payment-provider capability is asserted without a first-party citation and date.
 - [ ] Order bumps are handed to `12-upsell-path`; nothing is pre-checked and no dark pattern is proposed.
 - [ ] Changes are ranked as tests with metric, guardrails, window, stopping rule and owner; no live change is made or implied as done.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

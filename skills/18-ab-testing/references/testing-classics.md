@@ -1,6 +1,6 @@
 # Testing classics (Hopkins & Bencivenga)
 
-Pair these foundational split-testing principles with sample-size math (`sample_size.py`) and strict fixed-horizon or sequential decision rules so experiments produce revenue truth instead of false winners. Never fabricate test data or lifts.
+Pair these foundational split-testing principles with sample-size math (the two-proportion formula) and strict fixed-horizon or sequential decision rules so experiments produce revenue truth instead of false winners. Never fabricate test data or lifts.
 
 ## 1. Keyed-ad testing (Hopkins)
 

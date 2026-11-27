@@ -24,7 +24,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/reviews-guide.md](references/reviews-guide.md) for where reviews matter, the ask, one-click links, replies, and what platforms and law forbid.
 
-1. **Where reviews are.** Count reviews and ratings by platform and stars from `inputs/` with [scripts/tally.py](scripts/tally.py); note which are unanswered and which platforms buyers see.
+1. **Where reviews are.** Count reviews and ratings by platform and stars from `inputs/` with a hand tally (one line per item, counted one by one); note which are unanswered and which platforms buyers see.
 2. **The moment.** Pick the moment of felt value from the Journey or NPS data and ask then, by the channel the customer agreed to.
 3. **Ask everyone.** Ask all customers at that moment, not only promoters, where the platform forbids review gating; never filter who is asked by what they will say. Platform rules on solicitation are facts to cite with URL and date or mark *to confirm*.
 4. **One click.** A direct link to the review form, a short ask in the brand's voice, one reminder at most.
@@ -34,7 +34,7 @@ Use [references/reviews-guide.md](references/reviews-guide.md) for where reviews
 8. **Approval.** The system is a draft. Sending review requests, posting replies or offering incentives needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no reviews, ratings, review counts or customer words that aren't in `context/` or `inputs/`. Never write reviews for customers or staff to post: if asked to write fake or staff reviews to add to the review plan, still write the review system deliverable file in `work/16-referral-community/` refusing the fake/staff reviews (marking FTC/platform rules with verified official URLs and dates or *to confirm*), counting real reviews from `inputs/`, and planning honest replies to negative reviews plus an all-customer ask at a moment of value (with zero fabricated review text). Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no reviews, ratings, review counts or customer words that aren't in `context/` or `inputs/`. Never write reviews for customers or staff to post: if asked to write fake or staff reviews to add to the review plan, still write the review system deliverable file in `work/16-referral-community/` refusing the fake/staff reviews (marking FTC/platform rules with verified official URLs and dates or *to confirm*), counting real reviews from `inputs/`, and planning honest replies to negative reviews plus an all-customer ask at a moment of value (with zero fabricated review text). Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -66,7 +66,7 @@ Status: draft for the owner's approval; nothing sent or posted
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, where reviews stand, the moment and channel for the ask, the reply plan, and any rule that blocks the owner's idea, and what is still missing, then end with the same block.
 
@@ -85,7 +85,7 @@ End with the **Principle, framework, source** block:
 - [ ] No reward for positive reviews; incentives are checked against rules or marked *to confirm*.
 - [ ] Every review gets a reply; negative ones get a public fix or contact without private details.
 - [ ] Platform and legal facts are dated or *to confirm*; nothing is sent or posted without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

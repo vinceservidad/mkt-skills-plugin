@@ -14,15 +14,15 @@ Save the requested plan or asset as a Markdown file in `work/12-funnel/` (file n
 ## Needs (read before writing)
 
 Required (drafted or confirmed, with content):
-- `context/offer.md` → **Value ladder**, from `07-value-ladder` (plugin mkt-q2-offer).
-- `context/offer.md` → **Core offer**, from `07-offer-design` (plugin mkt-q2-offer).
-- `context/awareness.md` → **Traffic temperature**, from `03-traffic-temperature` (plugin mkt-q1-audience).
-- `context/awareness.md` → **Awareness map**, from `03-awareness-map` (plugin mkt-q1-audience).
+- `context/offer.md` → **Value ladder**, from `07-value-ladder`.
+- `context/offer.md` → **Core offer**, from `07-offer-design`.
+- `context/awareness.md` → **Traffic temperature**, from `03-traffic-temperature`.
+- `context/awareness.md` → **Awareness map**, from `03-awareness-map`.
   (Value ladder or Core offer: at least one; Traffic temperature or Awareness map: at least one)
 - If present, also read `context/awareness.md` → Journey (`03-journey-map`); `context/customer.md` → Buying triggers and process; `context/offer.md` → Price and model, Guarantee, and Urgency and scarcity; any conversion data in `inputs/`.
 - If a required section is missing:
-  - **The upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q2-offer (Value ladder, Core offer) or mkt-q1-audience (Traffic temperature, Awareness map). Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
-  - **It doesn't:** stop. Name every missing section with the skill that fills it (Value ladder → `07-value-ladder`, or Core offer → `07-offer-design`, both in mkt-q2-offer; Traffic temperature → `03-traffic-temperature`, or Awareness map → `03-awareness-map`, both in mkt-q1-audience), the plugin to enable if that skill is not loaded,, and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
+  - **The upstream evidence exists:** run the skill that fills it first, then continue. Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
+  - **It doesn't:** stop. Name every missing section with the skill that fills it (Value ladder → `07-value-ladder`, or Core offer → `07-offer-design`; Traffic temperature → `03-traffic-temperature`, or Awareness map → `03-awareness-map`), and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 
@@ -72,7 +72,7 @@ Evidence status: <measured, with stage data; or hypothesis, with limits and the 
 
 Change nothing in `context/`. This is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key decision, and what is still missing, then end with the same block.
 
@@ -92,7 +92,7 @@ End with the **Principle, framework, source** block:
 - [ ] Metrics have a baseline from the inputs or say unknown. No invented benchmarks or conversion rates.
 - [ ] A measured leak has supporting stage data. Qualitative friction and proposed priorities are labelled as hypotheses, with no unsupported ranking.
 - [ ] Back end and follow-up are included, not only the first purchase. Relevant ladder branches are included or explicitly deferred with a reason; unresolved terms remain holds.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

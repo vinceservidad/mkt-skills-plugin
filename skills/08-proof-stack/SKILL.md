@@ -17,7 +17,7 @@ The reason to buy and the reason to believe are two different jobs, and most wea
 
   Also read the Message house pillars, if present.
 - The proof material. Read whatever exists in `inputs/` and these sections, each filled by its own skill:
-  - `context/customer.md` → Voice of customer, from `02-voc-mining` (if absent and not loaded, say: enable mkt-q1-audience);
+  - `context/customer.md` → Voice of customer, from `02-voc-mining`;
   - `context/customer.md` → Research log, from `02-customer-research`;
   - `context/offer.md` → Guarantee, from `07-guarantee-risk-reversal`.
 
@@ -28,7 +28,7 @@ The reason to buy and the reason to believe are two different jobs, and most wea
   - credentials and press;
   - demos and samples.
 - If both Promise and Dream outcome are missing:
-  - **Offer or customer evidence exists:** run `07-offer-design` (or `08-message-doc`) first, then continue. If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+  - **Offer or customer evidence exists:** run `07-offer-design` (or `08-message-doc`) first, then continue.
   - **It doesn't:** stop. Name the missing sections and those skills. If the reply also reports any proof-material section as missing or empty, name the skill that fills it too (listed above): every section the reply calls missing gets its skill. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -78,7 +78,7 @@ Reply with:
 - the next skill: `08-objection-map`.
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+Then check every quotation in the file you wrote by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words from the source or drop the quotation marks and use italics, then check again until every quotation matches.
 
 The reply's last lines are always the **Principle, framework, source** block, after the next skill, on a build and on a stop:
 

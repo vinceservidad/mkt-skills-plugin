@@ -19,7 +19,7 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (interviews, sales notes or closed-deal records in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -27,7 +27,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/prospecting-guide.md](references/prospecting-guide.md) for list sources, account signals, the cadence, capacity sizing and what to measure.
 
-1. **Where wins come from.** Count leads, wins and win rates by source from `inputs/` with [scripts/tally.py](scripts/tally.py). Prospecting adds to the sources that work; it does not replace a source that closes at a higher rate.
+1. **Where wins come from.** Count leads, wins and win rates by source from `inputs/` with a hand tally (one line per item, counted one by one). Prospecting adds to the sources that work; it does not replace a source that closes at a higher rate.
 2. **Size from capacity.** Work backwards from what the business can take on (new clients a month) and its own win rates to the conversations and accounts needed, with the arithmetic shown and labelled *calculated*. No volume target from outside.
 3. **List criteria.** Turn the ICP into observable filters (size, type, location, revenue band, role that decides) and disqualifiers. Name lawful, ethical sources (company sites, public directories, the owner's network, referrals, event lists used as agreed). Never suggest buying or scraping personal data, and never add real people's names or emails.
 4. **Signals.** Dated public reasons to reach out (a hire, a move, a public question about the problem), recorded with source and date. No signal means no invented one.
@@ -37,7 +37,7 @@ Use [references/prospecting-guide.md](references/prospecting-guide.md) for list 
 8. **Approval.** The plan is a draft. Contacting anyone, buying data or tools, or importing contacts needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no accounts, signals, contacts, win rates or results that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no accounts, signals, contacts, win rates or results that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; nobody contacted, nothing bought or impo
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the win rates by source, how many accounts the plan needs and why, the list criteria and the cadence, and what is still missing, then end with the same block.
 
@@ -87,7 +87,7 @@ End with the **Principle, framework, source** block:
 - [ ] List criteria come from the ICP with disqualifiers; sources are lawful; no bought or scraped personal data or invented contacts.
 - [ ] Signals are dated and sourced; the cadence adds something each touch and stops at reply or no.
 - [ ] Tracking counts qualified pipeline and clients by source; nothing is contacted or bought without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

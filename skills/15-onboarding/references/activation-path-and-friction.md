@@ -6,7 +6,7 @@ Use alongside [onboarding-guide.md](onboarding-guide.md) to validate whether the
 
 A valid activation metric proves two things in historical cohorts (`inputs/`):
 1. **Real customer value (`Dream outcome` + `02-jobs-to-be-done`):** The buyer has actually achieved the first meaningful outcome they paid for (e.g., brewed and dialed in their first specialty cup, published their first reconciled monthly report, ran their first live workflow), not merely opened an email or finished a tooltip tour.
-2. **Retention separation across cohorts:** Compare day-30 / month-2 retention of customers who hit the proposed activation event inside the target window against those who did not (`scripts/sum_by.py` from cohorts). If both groups churn identically, the event is a vanity milestone rather than true activation.
+2. **Retention separation across cohorts:** Compare day-30 / month-2 retention of customers who hit the proposed activation event inside the target window against those who did not (hand group totals from cohorts). If both groups churn identically, the event is a vanity milestone rather than true activation.
 
 ## 2. Step-by-step path-to-value friction audit
 

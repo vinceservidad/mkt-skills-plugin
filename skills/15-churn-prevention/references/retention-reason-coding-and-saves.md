@@ -4,7 +4,7 @@ Use alongside [churn-guide.md](churn-guide.md) to separate involuntary vs. volun
 
 ## 1. Retention diagnosis and structured reason coding
 
-Before proposing any save incentive or email flow, segment losses into four distinct buckets from billing and product/order logs (`scripts/tally.py` / `scripts/sum_by.py`):
+Before proposing any save incentive or email flow, segment losses into four distinct buckets from billing and product/order logs (a hand tally / hand group totals):
 1. **Involuntary churn (failed payments):** Track hard vs. soft declines, recovery rate, and silent cancellations after dunning exhaustion. Fix here first because failed-card recovery saves willing customers without margin loss.
 2. **Early-cohort churn (pre-habit drop-off):** Customers cancelling in cycle 1 or 2 usually reflect acquisition/fit mismatch (`02-icp-persona`, ad promises) or unmet activation (`15-onboarding`).
 3. **Voluntary mature churn (explicit cancel):** Code exit-survey answers and support tickets into mutually exclusive root causes (`oversupply / cadence too fast`, `taste or product quality`, `late/damaged fulfilment`, `price vs. perceived value`, `temporary travel/pause`, `fit / competitor switch`), explicitly recording sample coverage (`answered N of M cancels`) and reminding the team that exit surveys are **self-reported**.

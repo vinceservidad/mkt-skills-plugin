@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (tickets, reviews or interviews in `inputs/`): run `03-journey-map` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (Journey → `03-journey-map`; Awareness map → `03-awareness-map`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Any offer, price, discount or deadline in a text is the owner's commitment. If the request asks to write or send a promotional blast or campaign built around an unconfirmed offer, discount or deadline that `offer.md` and `inputs/` don't hold (such as a flash sale), stop, ask the owner to confirm the exact terms, and write no deliverable file in `work/11-distribution/` (a stop reply still ends with the **Principle, framework, source** block). If the request asks for a full SMS channel plan that also mentions an unconfirmed offer idea alongside confirmed channel needs (such as service texts and opt-in design), write the plan without writing that proposed offer as a live text, mark it *owner to set*, and ask for confirmation.
-- If `03-journey-map` and `03-awareness-map` are both not loaded, stop and say: enable mkt-q1-audience.
+- `03-journey-map` and `03-awareness-map` are in this plugin; run them first when the rules above call for them.
 
 ## Process
 
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/sms-guide.md](references/sms-guide.md) for consent, message types, cadence and the legal and carrier facts to verify.
 
 1. **Outcome.** Name what SMS is for (fewer missed deliveries and "where is my box" tickets, repeat orders, replies) and how it is judged, with counts. Click rate alone is not the outcome.
-2. **Who can be texted, and for what.** Count phone numbers by how they were collected with [scripts/tally.py](scripts/tally.py) or the notes. A number given at checkout for delivery is not consent to marketing texts. Separate transactional or service messages (shipment notices, order updates the customer opted into) from marketing messages (offers, promotions). Marketing texts need prior express written consent where the law requires it (for example the US TCPA) and a clear opt-in; verify the rules for each country and mark *to confirm*.
+2. **Who can be texted, and for what.** Count phone numbers by how they were collected with a hand tally (one line per item, counted one by one) or the notes. A number given at checkout for delivery is not consent to marketing texts. Separate transactional or service messages (shipment notices, order updates the customer opted into) from marketing messages (offers, promotions). Marketing texts need prior express written consent where the law requires it (for example the US TCPA) and a clear opt-in; verify the rules for each country and mark *to confirm*.
 3. **Collect consent.** Design the opt-in: where it appears (checkout, account, app), the exact disclosure the owner must approve (what messages, roughly how often, that rates may apply, how to stop), a confirmation text, and keyword opt-out (STOP) honored at once. The final wording goes to legal review.
 4. **Message types by journey moment.** Map each text to a moment in Journey with its evidence (a ticket group, a review). Service texts that answer a real problem come first. Each message type gets its trigger, content, and whether it is service or marketing.
 5. **Cadence and quiet hours.** Few marketing texts, sent at reasonable local hours, never more often than the disclosure says. Service texts follow the event. State the caps.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; nothing sent, no opt-in changed, no tool
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write draft texts in italics or a plain block. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write draft texts in italics or a plain block. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, who can be texted now and for what, the first message types, and what is still missing, then end with the same block.
 
@@ -93,7 +93,7 @@ End with the **Principle, framework, source** block:
 - [ ] Cadence, caps and quiet hours are stated; every marketing text has the opt-out.
 - [ ] Only offers in `offer.md`; proposed offers are marked *owner to set*.
 - [ ] Tool cost and carrier registration are dated or *to confirm*; the plan says nothing is sent or bought without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

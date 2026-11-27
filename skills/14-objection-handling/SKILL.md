@@ -20,8 +20,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (call notes, sales notes or interviews in `inputs/`): run `02-buyer-psychology` (or `08-objection-map` if the beliefs exist) first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Objection map → `08-objection-map`; Beliefs, objections and drivers → `02-buyer-psychology`), and ask for evidence, not a description. Write nothing and do **not** include a generic objection-handling approach or partial playbook in the reply. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Discounts, payment plans, fee waivers, extra guarantees and free extras offered to answer an objection are the owner's commitments. Use only what `offer.md` holds; if the request asks to include a new concession or payment plan not in `offer.md`, **stop and withhold the deliverable file** (write nothing to `work/14-sales/`): ask the owner to confirm the exact terms (schedule, eligibility, fee waiver, margin impact) before writing it, and never discount by default. End the stop reply with the **Principle, framework, source** block.
-- If `08-objection-map` is not loaded, stop and say: enable mkt-q3-message.
-- If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience.
+- `08-objection-map` is in this plugin; run it first when the rules above call for it.
+- `02-buyer-psychology` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/objection-guide.md](references/objection-guide.md) for the acknowledge, ask, answer, check pattern, objection types and when to walk away.
 
-1. **Rank objections by evidence.** Count objections and lost reasons from `inputs/` and context with [scripts/tally.py](scripts/tally.py). Order the playbook by how often each appears and how often it ends a deal.
+1. **Rank objections by evidence.** Count objections and lost reasons from `inputs/` and context with a hand tally (one line per item, counted one by one). Order the playbook by how often each appears and how often it ends a deal.
 2. **Classify each.** Real misfit (the buyer is outside the ICP or needs something the offer doesn't do), missing information, a belief to rebuild, a risk to reverse, timing, or a stall hiding another objection. The handling differs; say which.
 3. **Prevent before answering.** For the top objections, name where in the call or the materials it should be answered before it comes up (discovery question, proof shown early, guarantee stated).
 4. **Live answer per objection.** Acknowledge, ask what is behind it (one question), answer with something true from context (proof that exists, the guarantee as written, the mechanism, the cost of the problem the buyer stated), and check it landed. Write it as a short guide, not a script to read.
@@ -40,7 +40,7 @@ Use [references/objection-guide.md](references/objection-guide.md) for the ackno
 9. **Approval.** The playbook is a draft. Using it on calls or offering any concession needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no proof, results, client names, guarantees, discounts or buyer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no proof, results, client names, guarantees, discounts or buyer quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; not yet used on calls
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the top objections with counts, the live answer for each, and where each is prevented earlier, and what is still missing, then end with the same block.
 
@@ -86,7 +86,7 @@ End with the **Principle, framework, source** block:
 - [ ] Each live answer acknowledges, asks, answers with something true, and checks.
 - [ ] Price answers explore value and real alternatives; no discount or concession outside `offer.md`.
 - [ ] Not ready and other-decider objections get a dated next step or a meeting with the decider; misfits get a polite exit.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

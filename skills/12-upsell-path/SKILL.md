@@ -14,11 +14,11 @@ Save the requested plan or asset as a Markdown file in `work/12-funnel/` (file n
 ## Needs (read before writing)
 
 Required (drafted or confirmed, with content):
-- `context/offer.md` → **Value ladder**, from `07-value-ladder` (plugin mkt-q2-offer).
+- `context/offer.md` → **Value ladder**, from `07-value-ladder`.
 - If present, also read `context/offer.md` → Core offer, and Price and model; `context/customer.md` → Segments and Beliefs, objections and drivers; any average order value or take-rate data in `inputs/`.
 - If a required section is missing:
-  - **The upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q2-offer. Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
-  - **It doesn't:** stop. Name every missing section with the skill that fills it (Value ladder → `07-value-ladder`, in mkt-q2-offer), the plugin to enable if that skill is not loaded,, and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
+  - **The upstream evidence exists:** run the skill that fills it first, then continue. Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
+  - **It doesn't:** stop. Name every missing section with the skill that fills it (Value ladder → `07-value-ladder`), and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 
@@ -56,7 +56,7 @@ Built from: <context sections used, with their status>
 
 Change nothing in `context/`. This is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key decision, and what is still missing, then end with the same block.
 
@@ -74,7 +74,7 @@ End with the **Principle, framework, source** block:
 - [ ] Prices come from `offer.md` or are marked not set. None is invented.
 - [ ] Presentation is honest: no pre-checked boxes, confirmshaming or hidden totals.
 - [ ] Take rate, order value and refunds are measured, with baselines or unknown.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

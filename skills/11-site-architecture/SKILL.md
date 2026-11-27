@@ -21,7 +21,7 @@ Save the plan as a Markdown file in `work/11-distribution/` when the material is
 
 Use [references/architecture-guide.md](references/architecture-guide.md) for hub design, link rules and the redirect rules.
 
-1. **Inventory.** List every page from the material with its purpose, its journey stage or intent, what links to it now and its evidence of value (clicks, impressions, links, conversions, where supplied). Count pages and inbound links with [scripts/tally.py](scripts/tally.py) or a line-by-line table, never by eye. Say what the material does not show (no crawl, no backlinks, no analytics).
+1. **Inventory.** List every page from the material with its purpose, its journey stage or intent, what links to it now and its evidence of value (clicks, impressions, links, conversions, where supplied). Count pages and inbound links with a hand tally (one line per item, counted one by one) or a line-by-line table, never by eye. Say what the material does not show (no crawl, no backlinks, no analytics).
 2. **Problems found.** From the inventory: orphans (no internal links except a list or tag page), pages buried deep, money pages missing for an evident intent, two pages for one intent (possible cannibalisation), thin or off-topic pages, tag or archive pages with no content of their own, blocked or deleted pages without redirects. Cite the evidence for each.
 3. **The target structure.** Build a dedicated hub for every distinct evidenced buyer problem or job (from the Journey, tickets/keywords and the offer — e.g. learning/choosing, account/subscription help, gifting — never collapsing a distinct buyer job into *Shop* or *Blog* or skipping a hub just because only one page exists today), marking missing hubs or supporting pages *proposed* (inventing no unconfirmed offers or features). Each hub has one page that introduces it and links to the cluster. Keep money pages (service, pricing, product, offer) close to the home page. Keep the hierarchy shallow enough that every important page is a few clicks from the home page (label any click-depth target a heuristic).
 4. **Navigation and footer.** Propose the menu and footer from the hubs and money pages, in the buyer's words; few top-level items, each a real destination.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing on the site changed
 
 Change nothing in `context/` and nothing on the site. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page title, a heading, a query), with the source named. Write your own labels, anchors and menu names in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page title, a heading, a query), with the source named. Write your own labels, anchors and menu names in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the target structure in a few lines, the top fixes, and what is still missing, then end with the same block.
 
@@ -86,13 +86,13 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Every page in the material is in the inventory with how it is linked now; counts come from `tally.py` or a line-by-line table; what the material does not show is stated.
+- [ ] Every page in the material is in the inventory with how it is linked now; counts come from a hand tally or a line-by-line table; what the material does not show is stated.
 - [ ] Problems (orphans, cannibalisation, missing money pages, thin or tag pages, blocked or deleted pages) cite their evidence.
 - [ ] Hubs follow every evidenced buyer problem or job in the Journey, tickets or offer (with missing hubs or pages marked *proposed*, not omitted); money pages sit close to the home page.
 - [ ] Specific internal links are listed with descriptive anchors and a next step that exists.
 - [ ] Every merge, removal or URL change has a redirect target, a rollback and needs the owner's approval; pages that earn clicks or links are protected.
 - [ ] Search-engine and CMS facts are cited with a dated official URL or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

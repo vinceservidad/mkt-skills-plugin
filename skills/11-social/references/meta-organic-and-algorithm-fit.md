@@ -17,7 +17,7 @@ Match every series in the content plan to a concrete buyer communication job gro
 - **Show process and team transparency:** Behind-the-scenes production, sourcing, or redaction-safe client walkthroughs that build credibility without hype.
 - **Invite buyer conversation:** Polls, comparisons, or comment-prompting questions that surface VoC language directly in threads.
 
-Evaluate distribution fit empirically per platform inside Insights: compare saves, shares, watch-through retention, profile clicks, and **attributed leads or orders** across formats (`scripts/sum_by.py`) over matched periods. Remember that high top-of-funnel views from non-ICP spectators do not build pipeline (`11-social` ranks formats by outcome first, reach second).
+Evaluate distribution fit empirically per platform inside Insights: compare saves, shares, watch-through retention, profile clicks, and **attributed leads or orders** across formats (hand group totals) over matched periods. Remember that high top-of-funnel views from non-ICP spectators do not build pipeline (`11-social` ranks formats by outcome first, reach second).
 
 ## 3. Organic-to-paid creative validation bridge
 

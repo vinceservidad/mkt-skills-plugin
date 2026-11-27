@@ -1,6 +1,6 @@
 # Sections: jobs, principles and frameworks
 
-Copied from the spec (docs/marketing-system.md) by `tools/build.py`; do not edit by hand. Read only the section you need: each starts with a `### N. Name` heading and gives its job, components, principles and frameworks. The learning path at the end lists the primary sources and the artifact to build in each phase.
+Copied from the spec (docs/marketing-system.md); do not edit by hand. Read only the section you need: each starts with a `### N. Name` heading and gives its job, components, principles and frameworks. The learning path at the end lists the primary sources and the artifact to build in each phase.
 
 ## Q1. Who are we selling to, in what market?
 

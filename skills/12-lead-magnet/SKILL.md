@@ -14,12 +14,12 @@ Save the requested plan or asset as a Markdown file in `work/12-funnel/` (file n
 ## Needs (read before writing)
 
 Required (drafted or confirmed, with content):
-- `context/offer.md` → **Core offer**, from `07-offer-design` (plugin mkt-q2-offer).
-- `context/customer.md` → **Pains, desires and fears**, from `02-customer-research` (plugin mkt-q1-audience).
+- `context/offer.md` → **Core offer**, from `07-offer-design`.
+- `context/customer.md` → **Pains, desires and fears**, from `02-customer-research`.
 - If present, also read `context/awareness.md` → Awareness map; `context/customer.md` → Voice of customer and Jobs to be done; `context/offer.md` → Value ladder (any existing free step).
 - If a required section is missing:
-  - **The upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q2-offer (Core offer) or mkt-q1-audience (Pains, desires and fears). Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
-  - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`, in mkt-q2-offer; Pains, desires and fears → `02-customer-research`, in mkt-q1-audience), the plugin to enable if that skill is not loaded,, and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
+  - **The upstream evidence exists:** run the skill that fills it first, then continue. Price and guarantee are the owner's commitments: never generate them yourself; stop and ask, or offer the owning skill's proposal for approval.
+  - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`; Pains, desires and fears → `02-customer-research`), and what the user should bring. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 
@@ -54,7 +54,7 @@ Built from: <context sections used, with their status>
 
 Change nothing in `context/`. This is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. Write your own lines, proposals and copy in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key decision, and what is still missing, then end with the same block.
 
@@ -72,7 +72,7 @@ End with the **Principle, framework, source** block:
 - [ ] It can be consumed in minutes, and its title is specific and in the buyer's language.
 - [ ] The next step after opt-in uses a real offer or a named gap.
 - [ ] No invented statistics, results or testimonials in the magnet or its promise.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

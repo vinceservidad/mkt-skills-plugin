@@ -45,7 +45,7 @@ Models for the current piece: <example — what to borrow — what not to copy>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing. Your final reply message must end with the **Principle, framework, source** block, after the still-missing list, on a build and on a stop; nothing comes after it. Writing the block in the file does not replace it in the reply:
 
@@ -61,7 +61,7 @@ Reply with the file path, the key choice made (structure, angle or level) and wh
 - [ ] Performance is stated only where the source shows it, and otherwise marked unknown.
 - [ ] Each example is filed by type, section, awareness level, structure and angle, with why it works.
 - [ ] Models are borrowed for structure and angle, never copied word for word.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 - [ ] The reply (not just the file) ends with the **Principle / Framework / Source** block, after the still-missing list.
 
