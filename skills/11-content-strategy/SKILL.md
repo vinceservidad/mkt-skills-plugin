@@ -20,9 +20,9 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (interviews, reviews or call notes in `inputs/` but no ICP or journey): run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`; Journey → `03-journey-map`, or Awareness map → `03-awareness-map`), and ask for evidence (interviews, reviews, sales-call notes), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
-- If `03-journey-map` is not loaded, stop and say: enable mkt-q1-audience.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
+- `03-journey-map` is in this plugin; run it first when the rules above call for it.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -73,7 +73,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The strategy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a ticket), with the source named. Write your own titles, topics and lines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches. Count anything you report from files with [scripts/tally.py](scripts/tally.py), not by eye.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a ticket), with the source named. Write your own titles, topics and lines in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches. Count anything you report from files with a hand tally (one line per item, counted one by one), not by eye.
 
 Reply with the file path, the pillars chosen, and what is still missing, then end with the same block.
 
@@ -93,7 +93,7 @@ End with the **Principle, framework, source** block:
 - [ ] Every pillar has a repurposing path, a distribution route and an owned capture point.
 - [ ] Cadence matches stated capacity, or is marked *(assumption)* with the capacity question asked.
 - [ ] Measurement ties each stage to a business outcome with its attribution method or gap; views are not outcomes.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

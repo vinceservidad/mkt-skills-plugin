@@ -10,7 +10,7 @@ A creator passes when all of these hold, each with its evidence:
 4. **No conflict.** Recent sponsorships of a direct competitor, a stated refusal of products like this one, or an exclusivity elsewhere: ask before going further.
 5. **Numbers hold up.** Views relative to followers, comment quality and growth history look like a real audience. Red flags: a sudden follower jump, views far below the follower count, comments that are generic or off-topic. Ask for the platform's own analytics (screenshots of audience location, age and recent reach) before any fee.
 
-Label every number: *claimed* (media kit, the creator's message), *verified* (platform analytics the creator shared, with date), *calculated* (from the shortlist with `sum_by.py`). A ratio built on claimed numbers is still a claim.
+Label every number: *claimed* (media kit, the creator's message), *verified* (platform analytics the creator shared, with date), *calculated* (from the shortlist with hand group totals). A ratio built on claimed numbers is still a claim.
 
 ## Deal types
 

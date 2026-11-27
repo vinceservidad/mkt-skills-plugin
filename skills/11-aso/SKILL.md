@@ -19,8 +19,8 @@ Required (drafted or confirmed, with content):
 - If the required section is missing:
   - **The upstream evidence exists** (reviews, tickets or interviews in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (Positioning statement → `06-positioning-statement`; ICP and personas → `02-icp-persona`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If neither section has content and `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
-- If neither section has content and `06-positioning-statement` is not loaded, stop and say: enable mkt-q2-offer.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
+- `06-positioning-statement` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/aso-guide.md](references/aso-guide.md) for the listing fields, keyword choice, screenshots, ratings and store facts.
 
-1. **Outcome and funnel.** Name the outcome (downloads that log in, subscribe or stay active) and lay out the store funnel from analytics: impressions → product page views → downloads, with conversion at each step computed with [scripts/tally.py](scripts/tally.py) or shown arithmetic, labelled *observed* or *calculated*. Say which step loses most and whether search, browse or web referrals bring the downloads.
+1. **Outcome and funnel.** Name the outcome (downloads that log in, subscribe or stay active) and lay out the store funnel from analytics: impressions → product page views → downloads, with conversion at each step computed with a hand tally (one line per item, counted one by one) or shown arithmetic, labelled *observed* or *calculated*. Say which step loses most and whether search, browse or web referrals bring the downloads.
 2. **Who searches, and for what.** From the ICP, jobs and Voice of customer, list the jobs people would search for (the problem words, not the brand's words). Store analytics may not show search terms; say so, and mark every candidate keyword *(assumption)* until a keyword tool or store data confirms volume and difficulty. A broad, crowded term (a category word) is a poor first target for a small app; prefer specific terms the app answers fully.
 3. **Listing fields.** Write the name, subtitle (or short description) and keyword field within the store's limits, without repeating words across fields where the store indexes them once, and without competitor brand names. Field limits and indexing rules are store facts: cite the current developer documentation with URL and date or mark *to confirm*.
 4. **Screenshots and preview.** Order screenshots by the job: the first two show the main outcome in the user's words, never a login or settings screen. Each frame gets a caption. A preview video is optional and only from real footage.
@@ -72,7 +72,7 @@ Status: draft for the owner's approval; nothing submitted
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, the current listing), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write proposed listing text in italics or a plain block. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, the current listing), with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Write proposed listing text in italics or a plain block. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, the weakest funnel step, the proposed name, subtitle and first two screenshots, and what is still missing, then end with the same block.
 
@@ -93,7 +93,7 @@ End with the **Principle, framework, source** block:
 - [ ] No "#1", ranking, award or count without a dated source; only features the app has.
 - [ ] Reviews are read, fixed bugs are answered, and ratings are asked for at a moment of success.
 - [ ] Success is judged on page-to-download conversion and active users with counts; nothing is submitted without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

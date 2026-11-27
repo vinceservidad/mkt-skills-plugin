@@ -18,7 +18,7 @@ Every risk you remove is a sale you didn't lose. A good guarantee answers the sp
   - Dream outcome;
   - delivery data in `inputs/`: on-time rates, refund history, results.
 - If a required section is missing:
-  - **Upstream evidence exists:** for example, customer evidence but no objection map. Run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue. If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience.
+  - **Upstream evidence exists:** for example, customer evidence but no objection map. Run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue.
   - **It doesn't:** stop. Name the missing sections and the skills that fill them. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process

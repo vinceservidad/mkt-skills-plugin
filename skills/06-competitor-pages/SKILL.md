@@ -25,7 +25,7 @@ Save the page as a Markdown file in `work/06-positioning/` when the required con
   - **Its upstream exists** (customer ICP and alternatives for the positioning statement; competitor notes in `inputs/` for the competitor section): run `06-positioning-statement` or `01-competitor-profiling` first, then continue.
   - **It doesn't:** stop. Name each missing section with its owner (Positioning statement → `06-positioning-statement`; Competitors and alternatives → `01-competitor-profiling`), and ask for dated competitor observations and customer evidence. Never write a comparison from memory of what a competitor offers. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - The business's price, guarantee and terms are the owner's commitments: use them only as `offer.md` states them. If the page needs a term that isn't there, ask; never generate it.
-- If `01-competitor-profiling` is not loaded, stop and say: enable mkt-q1-audience.
+- `01-competitor-profiling` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -44,11 +44,11 @@ Use [references/comparison-pages.md](references/comparison-pages.md) for page ty
    - an FAQ only from questions buyers actually asked, answered from the context.
 5. **Claims and sources.** Add a table that traces every claim about either party to its source and date (including who-it's-for lines such as a size threshold, citing the context section that sets it), and a *Verify before publishing* list: each competitor fact to re-check on their current page, and the date it was last seen.
 6. **Publishing is the owner's call.** The page is a draft. Comparative claims about named companies need the owner's review, and legal review where the business normally gets it, before publishing. Use a competitor's name only to identify it: no logos, no implied affiliation, no claims about its customers' experience except from cited reviews.
-7. **Check before saving.** Re-read the draft against the Checks and run `scripts/check_quotes.py`. Fix every failure before you save.
+7. **Check before saving.** Re-read the draft against the Checks and check by hand that every quotation of four or more words appears word for word in a source. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No competitor price, feature, customer count, review score, weakness or lost-deal story that the context doesn't record with a source and date, and none of the business's own results, prices, guarantees or terms beyond `context/`. A competitor's claim (*150+ agencies*, *4.6 out of 5*) is written as their claim. Opinions about a competitor are not facts. Don't claim how search engines rank or treat comparison pages; that is a current platform fact you have not verified. Inferences carry `(assumption)` and go to Open questions, not onto the page.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a competitor's page as recorded, a review, an interview), with the source named. Page copy you write goes in plain text or italics, never in quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source (a competitor's page as recorded, a review, an interview), with the source named. Page copy you write goes in plain text or italics, never in quotation marks. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -92,7 +92,7 @@ End with the **Principle, framework, source** block:
 - [ ] The business's own claims, prices, guarantees and terms match `context/` exactly; nothing is generated.
 - [ ] The page holds the positioning statement: same target customer, same primary difference.
 - [ ] A claims-and-sources table and a *Verify before publishing* list are included, and the page is marked draft pending the owner's review of comparative claims.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

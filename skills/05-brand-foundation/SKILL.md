@@ -20,7 +20,7 @@ A brand is what buyers remember when the ad is over, and whether they think of y
   - `context/market.md` → Competitors and alternatives;
   - `inputs/`: founder notes, about pages, existing brand documents, reviews.
 - If ICP and personas is missing:
-  - **Customer evidence exists** (interviews, reviews, call notes in `inputs/`, or the other customer sections): run `02-icp-persona` first (it may run `02-customer-research` itself), then continue. If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+  - **Customer evidence exists** (interviews, reviews, call notes in `inputs/`, or the other customer sections): run `02-icp-persona` first (it may run `02-customer-research` itself), then continue.
   - **It doesn't:** stop. Name the missing section, `customer.md` → ICP and personas, and its owner `02-icp-persona` (with `02-customer-research` for the research behind it), and ask for customer evidence: interviews, reviews, sales-call notes, support tickets. A description of the buyer from the user is a hypothesis, not evidence. A stop reply writes nothing and still ends with the **Principle, framework, source** block.
 - If Positioning statement is missing, continue, but say the differentiation in the foundation is provisional until `06-positioning-statement` sets it. Never write `positioning.md`.
 
@@ -82,7 +82,7 @@ Then update the file:
 - Append one line to `## Change log`.
 - If `context/brand.md` does not exist, create it with frontmatter, the five brand sections (others `Status: empty`), and a change log.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the founder's notes), with its ID. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the source's exact words or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an interview, a review, the founder's notes), with its ID. Before saving, check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks and use italics, then check again until every quotation matches.
 
 Reply with:
 - the promise and essence in one line each;
@@ -105,7 +105,7 @@ End with the **Principle, framework, source** block:
 - [ ] One primary archetype (at most one secondary) is justified from the buyer and the founder's behaviour, with what it rules out.
 - [ ] The story uses the founder's real material only; with none, it is left as questions.
 - [ ] Category entry points come from evidenced buying situations. No budget split, share of voice or competitor fact is invented.
-- [ ] No unmarked inference. Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] No unmarked inference. Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] Only `## Brand foundation` changed. It has Status, Evidence and Method lines, and the change log has a line for this write. `positioning.md` is untouched.
 
 ## Principle and source

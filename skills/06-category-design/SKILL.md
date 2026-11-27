@@ -23,7 +23,7 @@ Buyers file every new thing under a category they already know, and judge it by 
 - If a required section is missing:
   - **Its upstream exists** (customer ICP and alternatives for the positioning statement; dated competitor notes for the competitor section): run `06-positioning-statement` or `01-competitor-profiling` first, then continue.
   - **It doesn't:** stop. Name each missing section with its owner (Positioning statement → `06-positioning-statement`; Competitors and alternatives → `01-competitor-profiling`), and ask for customer evidence and dated competitor observations. Never design a category from your sense of the market or from famous category stories. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `01-competitor-profiling` is not loaded, stop and say: enable mkt-q1-audience.
+- `01-competitor-profiling` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -48,11 +48,11 @@ Use [references/category-design.md](references/category-design.md) for the tests
    - **Category king criteria:** what would show the business owns the category (buyers using the term, search for it, being named first), each measurable.
 5. **Plan the lightning strike only as far as the evidence goes.** List the moments and assets a launch would need (POV document, sales framing, a launch moment) and who owns them (`12-launch`, `08-message-doc`, `11-pr`). Leave dates, budgets, media and partners to the owner: do not invent them.
 6. **Test before committing.** A cheap test first: frame the next set of sales calls around the named problem and log reactions; check search and call language for the term over a stated period; hand search questions to `01-demand-check`. Name the result that would stop the effort.
-7. **Check before saving.** Re-read the draft against the Checks and run `scripts/check_quotes.py`. Fix every failure before you save.
+7. **Check before saving.** Re-read the draft against the Checks and check by hand that every quotation of four or more words appears word for word in a source. Fix every failure before you save.
 
 **Nothing the context doesn't support.** No market size, search volume, trend, budget, timeline, competitor move or case-study outcome that isn't in `context/` or `inputs/`. Famous category stories are illustrations, not evidence for this business, and are never used to promise a result. Inferences carry `(assumption)`.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Category names, the point of view and your summaries go in italics or plain text. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/positioning.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source named. Category names, the point of view and your summaries go in italics or plain text. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -106,7 +106,7 @@ End with the **Principle, framework, source** block:
 - [ ] The point of view uses only differentiators and mechanisms that exist today.
 - [ ] No budget, date, search volume, market size or competitor move is invented; the lightning strike leaves those to the owner.
 - [ ] A cheap test with a stop rule comes before any commitment.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] Only `## Category design` changed. It has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

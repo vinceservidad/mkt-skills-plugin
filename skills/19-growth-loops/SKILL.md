@@ -24,7 +24,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/growth-loops-guide.md](references/growth-loops-guide.md) for loop types, step metrics, cycle time, the multiplier per cycle, the flywheel and incentive risks.
 
 1. **Candidate loops.** From the business: referral or word of mouth, content or SEO, paid (revenue funds acquisition), sales, or user-generated content. Draw each as steps that return to the start.
-2. **Step rates.** Each step's rate from `inputs/` with its source, or *unknown*; compute with [scripts/sum_by.py](scripts/sum_by.py).
+2. **Step rates.** Each step's rate from `inputs/` with its source, or *unknown*; compute with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a).
 3. **Loop maths.** Multiplier per cycle (new customers from one cohort's output), cycle time, and whether the loop closes (paid loop: contribution margin per customer within payback funds the next customer; referral loop: referred customers per customer). Below 1 it adds to growth but doesn't sustain itself; say so.
 4. **Weakest step.** The step whose improvement lifts the multiplier most; hand it to the owning skill (for example `16-referral-program`, `11-seo`, `19-scale-paid`).
 5. **Flywheel.** How the loops feed each other and what slows them (friction such as late deliveries), so friction is removed before force is added.
@@ -32,7 +32,7 @@ Use [references/growth-loops-guide.md](references/growth-loops-guide.md) for loo
 7. **Approval.** The design is a draft. Launching incentives, programs or spend needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no rates, multipliers, cycle times or benchmarks that aren't in `context/` or `inputs/` or computed from them. Unknown rates stay *unknown*. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no rates, multipliers, cycle times or benchmarks that aren't in `context/` or `inputs/` or computed from them. Unknown rates stay *unknown*. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -60,7 +60,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/19-growth/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, which loops exist with their measured rates, which closes, the weakest step, and the first test, and what is still missing, then end with the same block.
 
@@ -79,7 +79,7 @@ End with the **Principle, framework, source** block:
 - [ ] The weakest step is named and handed to its owner; incentive risks are named.
 - [ ] Friction in the flywheel is addressed before adding force.
 - [ ] Nothing launches without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

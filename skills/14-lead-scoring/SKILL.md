@@ -19,7 +19,7 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (closed-deal records, interviews or sales notes in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -27,7 +27,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/lead-scoring-guide.md](references/lead-scoring-guide.md) for fit and intent signals, weighting from outcomes, BANT, bands and routing.
 
-1. **Read the leads.** Count leads, outcomes and conversion by field (source, size, role, location, pages viewed, downloads) from `inputs/` with [scripts/sum_by.py](scripts/sum_by.py) or [scripts/tally.py](scripts/tally.py). Say how many outcomes there are; with few closed leads, weights are *(assumption)* until more data arrives.
+1. **Read the leads.** Count leads, outcomes and conversion by field (source, size, role, location, pages viewed, downloads) from `inputs/` with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a) or a hand tally (one line per item, counted one by one). Say how many outcomes there are; with few closed leads, weights are *(assumption)* until more data arrives.
 2. **Fit score.** Points from ICP traits (size band, type, location, revenue band, deciding role). Disqualifiers (from the ICP — including wanting an excluded service such as strategic CFO advice rather than bookkeeping) **must override all fit and intent points immediately** when scoring leads in `inputs/`, banding those leads as *Not a fit* (never *Sales now*).
 3. **Intent score.** Points from behaviour that the data links to buying (booked a call, viewed pricing, asked about price in a DM, a referral) and less for weaker signals (a single download). Never treat every download as a buyer. **Do not use email opens as an intent signal** (even if the user asks to score opens): explain that automated email privacy features and security bots make open counts unreliable (mark vendor-specific mechanics *to confirm* rather than stating them as current fact), check whether `inputs/` even shows leads being emailed, and replace opens with real buying-intent behaviours from the data.
 4. **BANT check.** Budget (fits a price band), Authority (decides or reaches who does), Need (named pain), Timing. Use it at the first conversation, recorded as heard or unknown.
@@ -37,7 +37,7 @@ Use [references/lead-scoring-guide.md](references/lead-scoring-guide.md) for fit
 8. **Approval.** The model is a draft. Changing CRM fields, automations or routing needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no conversion rates, weights presented as proven, leads or outcomes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no conversion rates, weights presented as proven, leads or outcomes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -71,7 +71,7 @@ Status: draft for the owner's approval; no CRM or routing changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the fit and intent rules, the disqualifiers, the bands with next steps, and the current leads scored, and what is still missing, then end with the same block.
 
@@ -90,7 +90,7 @@ End with the **Principle, framework, source** block:
 - [ ] Intent weights favour signals linked to buying; single downloads are weak.
 - [ ] Each band has an owner, a speed and a next step that fit sales time; the current leads are scored as a worked example.
 - [ ] The model has a check against outcomes; nothing changes in the CRM without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

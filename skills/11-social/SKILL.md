@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or call notes in `inputs/` but no ICP): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (ICP and personas → `02-icp-persona`), and ask for evidence (interviews, reviews, sales-call notes), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - No `brand.md` Voice: say *no brand voice on file*, keep to what the evidence supports (the buyer's own words, words customers distrust), and suggest `05-brand-voice`.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/social-guide.md](references/social-guide.md) for the analytics read, the series and reply rules, and platform claims, and [references/meta-organic-and-algorithm-fit.md](references/meta-organic-and-algorithm-fit.md) for Facebook Page, Instagram Profile and Business Suite readiness, communication jobs, distribution fit, and the organic-to-paid creative bridge.
 
 1. **Platforms.** Choose one or two where the evidence puts the ICP (lead sources, journey touchpoints, where reviews or forum posts come from). Say what each platform is for. Name the ones left out and why.
-2. **Read what already ran,** when `inputs/` holds post analytics. Total by format and topic with [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> format`), not by eye. Rank by the outcome columns (downloads, sign-ups, calls) before reach or reactions, show counts, and note who engaged where the notes say (right buyer or not). One post that went viral is one data point: do not build a pillar on it until a second version repeats the result.
+2. **Read what already ran,** when `inputs/` holds post analytics. Total by format and topic with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a; grouped by `format`), not by eye. Rank by the outcome columns (downloads, sign-ups, calls) before reach or reactions, show counts, and note who engaged where the notes say (right buyer or not). One post that went viral is one data point: do not build a pillar on it until a second version repeats the result.
 3. **Series and the give-to-ask mix.** Set 2 to 4 recurring series, each from an evidenced pain, job or belief (or a content-strategy pillar), each in the platform's native format. Most posts give (teach, show, tell the true story); a minority ask, and every ask points to a free step or offer that exists in `offer.md`. Name the mix as a heuristic.
 4. **Voice.** Write in the brand voice if one is on file; otherwise in the buyer's plain words. Example posts are your own lines, in italics.
 5. **Cadence and capacity.** Set a cadence the stated hours and people can keep, including weeks the business is known to be busy. If capacity isn't in `inputs/`, mark the cadence *(assumption)* and ask who writes, designs and replies, and how many hours a week. Dates go to `20-content-calendar`.
@@ -74,7 +74,7 @@ Status: draft for the owner's approval; nothing posted
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a comment log, a post export), with the source named. Write your own post ideas and lines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a comment log, a post export), with the source named. Write your own post ideas and lines in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the platforms and series chosen, and what is still missing, then end with the same block.
 
@@ -89,12 +89,12 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] One or two platforms, chosen from evidence of where the ICP is, each with a stated job.
-- [ ] Supplied analytics are totalled with `sum_by.py` and ranked by outcome before reach; one viral post is not made a pillar.
+- [ ] Supplied analytics are totalled with hand group totals and ranked by outcome before reach; one viral post is not made a pillar.
 - [ ] Each series comes from evidence, is native to its platform, and every ask points to a real offer or a named gap.
 - [ ] Cadence and reply commitments fit stated capacity, or are marked *(assumption)* for the owner to confirm.
 - [ ] Platform behaviour claims are cited with a dated first-party source or labelled account-observed, inferred or unknown; no third-party benchmark.
 - [ ] Reach and reactions are labelled signals; each series has an outcome metric and attribution method or gap.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

@@ -19,8 +19,8 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (reviews, tickets or interviews in `inputs/`): run `08-message-doc` or `03-awareness-map` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Promise → `08-message-doc`; Awareness map → `03-awareness-map`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `08-message-doc` is not loaded, stop and say: enable mkt-q3-message.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
+- `08-message-doc` is in this plugin; run it first when the rules above call for it.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/creative-testing-guide.md](references/creative-testing-guide.md) for concept, variation and iteration layers, budget per read, outcome metrics, platform delivery and fatigue, and [references/creative-diagnostics-and-sprint-os.md](references/creative-diagnostics-and-sprint-os.md) for the Hook/Hold/CTR/CVR funnel-drop diagnostic matrix, weekly creative sprint OS (70/30 cadence, hit rate, naming taxonomy), and the Meta Blueprint Creative Learning Agenda.
 
-1. **Read what ran.** From `inputs/`, list ads with spend, outcomes (cost per business outcome in the stated view) and how different they really are; count with [scripts/sum_by.py](scripts/sum_by.py). Say whether past tests compared concepts or only variations.
+1. **Read what ran.** From `inputs/`, list ads with spend, outcomes (cost per business outcome in the stated view) and how different they really are; count with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a). Say whether past tests compared concepts or only variations.
 2. **Concepts first.** Draft three to five distinct concepts from the Promise, Big idea, Proof stack and the awareness levels (for example a problem-aware comparison, a product-aware review, a how-it-works demo), each with a hypothesis.
 3. **Fair read.** Budget and structure so each concept gets enough spend for a read on the business outcome (a stated number of conversions), not only clicks. Note that platforms skew delivery toward early favourites; use separate ad sets or the platform's own A/B test tool (for example Meta's A/B test tool, marked *to confirm* or cited with URL and date) as fair-read options. Platform testing features are facts to cite with URL and date or mark *to confirm*.
 4. **Then variations and iterations.** Within the winning concept: hooks, openings, visuals; then small edits. Each layer has its own hypothesis and read.
@@ -37,7 +37,7 @@ Use [references/creative-testing-guide.md](references/creative-testing-guide.md)
 7. **Approval.** The plan is a draft. Launching ads or changing budgets needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no results, costs, conversion counts or platform behaviour that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no results, costs, conversion counts or platform behaviour that aren't in `context/` or `inputs/` or cited with a date. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -67,7 +67,7 @@ Status: draft for the owner's approval; no ad launched, no budget changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/18-experimentation/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, what past ads did and didn't test, the concepts to test with hypotheses, and the budget and read rule, and what is still missing, then end with the same block.
 
@@ -86,7 +86,7 @@ End with the **Principle, framework, source** block:
 - [ ] Each concept gets a fair read on the business outcome; platform delivery skew is addressed; platform facts are dated or *to confirm*.
 - [ ] Variations and iterations follow a winning concept.
 - [ ] Results are judged on cost per business outcome with a guardrail; nothing launches without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

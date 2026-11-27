@@ -23,7 +23,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/feedback-guide.md](references/feedback-guide.md) for when to use NPS, CSAT or CES, survey timing and frequency, scoring, tagging and closing the loop.
 
-1. **Read the results.** Compute the score from the counts (NPS = % promoters − % detractors) with the arithmetic shown, the response rate and the sample, using [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py). Label who answered (self-selected) and what that can and can't show.
+1. **Read the results.** Compute the score from the counts (NPS = % promoters − % detractors) with the arithmetic shown, the response rate and the sample, using a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a). Label who answered (self-selected) and what that can and can't show.
 2. **Themes.** Tag and count comments by theme; link each theme to the evidence elsewhere (tickets, exit reasons) and to its owner (operations, product, offer, onboarding).
 3. **Choose the measures.** NPS for the overall relationship, at a steady interval; CSAT right after a specific interaction; CES after a task (support, setup, cancel). Say which and why; no business needs all three at once.
 4. **Timing and frequency.** Survey each customer at most at the interval the plan sets, not every month by default; transactional surveys follow the event.
@@ -32,7 +32,7 @@ Use [references/feedback-guide.md](references/feedback-guide.md) for when to use
 7. **Approval.** The plan is a draft. Sending surveys or contacting customers needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no scores, response rates, themes or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no scores, response rates, themes or quotes that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -62,7 +62,7 @@ Status: draft for the owner's approval; nothing sent
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the score with its arithmetic and response rate, the top themes and owners, and the survey rhythm, and what is still missing, then end with the same block.
 
@@ -81,7 +81,7 @@ End with the **Principle, framework, source** block:
 - [ ] Each measure (NPS, CSAT, CES) is used for its own question and moment; frequency is limited.
 - [ ] Detractors get a reply with an owner and a time; promoters are routed to reviews or referrals.
 - [ ] Reporting shows trend, response rate and actions taken; nothing is sent without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

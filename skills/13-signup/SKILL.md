@@ -32,7 +32,7 @@ Use [references/signup-flow.md](references/signup-flow.md) for the field test, f
 
 1. **Fix the boundary and the goal.** Where the flow starts (the sign-up click), where it ends (first meaningful value), and who it should bring in, from the ICP and the owner's stated goal.
 2. **Map the flow as it is,** screen by screen and field by field. Copy event definitions from the source.
-3. **Read the numbers.** Sum and rate every step with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <segment column> [--exclude <value>]`), never by eye, overall, by segment and by cohort. Exclude or flag cohorts too young for a later step. Name the step that loses the most of the *right* users.
+3. **Read the numbers.** Sum and rate every step with a hand step table (sum each step, then show each step's count ÷ the previous step's and ÷ the first step's, with numerator and denominator; also split by `<segment column>`; leave out rows containing `<value>`), never by eye, overall, by segment and by cohort. Exclude or flag cohorts too young for a later step. Name the step that loses the most of the *right* users.
 4. **Define first meaningful value.** The first moment the user gets the result they came for. Not account creation, not a connection, not an event the system fires on its own, not a tutorial. State the candidate, why, and how strong the evidence is.
 5. **Diagnose each drop with Fogg** (behaviour happens when motivation, ability and a prompt meet):
    - **ability:** effort, errors, unclear steps, a failing connection. A defect is fixed before anything else, and read by date if it was fixed part-way through the period;
@@ -43,13 +43,13 @@ Use [references/signup-flow.md](references/signup-flow.md) for the field test, f
 7. **Who gets in.** If most sign-ups come from people the paid step can't serve, that is an acquisition or qualification issue: hand sources to `11-channel-selection`, and name the qualification the flow already does.
 8. **Rank the changes as tests.** Each gets a metric (the share of the right segment reaching first value within a fixed window), guardrails (wrong-fit sign-ups, support load, downstream calls or paid conversions), a window and a stopping rule. Hand onboarding after first value to `15-onboarding`, the upgrade step to `13-paywalls`, copy to `10-page-copy`, test design to `18-ab-testing`.
 9. **Authorization.** Every live change to the flow, its questions or its verification needs the owner's approval and a check afterwards against the baseline.
-10. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+10. **Check before saving.** Re-read the draft against the Checks, check by hand that every quotation of four or more words appears word for word in a source, and fix any failure.
 
 **Nothing the context doesn't support.** Write no features, integrations, prices, offers or platform capabilities that aren't in `context/` or `inputs/`. Do not state how a login provider, verification service or integrated app currently works unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`; otherwise mark it *unverified*.
 
 **Labels.** Every number is copied from a named export or note (with its date), *calculated* (show numerator and denominator), or marked `(assumption)`. No unmarked inference about why users drop.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed questions and microcopy go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source, with the source ID. Your proposed questions and microcopy go in italics. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -96,13 +96,13 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] The flow's start, its end at first meaningful value, and who it should bring in are named.
-- [ ] Every count and rate comes from `funnel.py` or a shown calculation, keeps its source definition, is split by segment, and incomplete cohorts are flagged. No benchmark is stated.
+- [ ] Every count and rate comes from a hand step table or a shown calculation, keeps its source definition, is split by segment, and incomplete cohorts are flagged. No benchmark is stated.
 - [ ] First meaningful value is a user result, not sign-up, a connection, an automatic event or a tutorial, and its evidence strength is stated.
 - [ ] Each drop is diagnosed as ability, motivation or prompt, defects are separated from friction, and wrong-fit sign-ups are separated from flow problems.
 - [ ] No necessary qualification, safety or setup step is cut just to raise a rate; added questions are weighed against what they decide.
 - [ ] Changes are tests with metric, guardrails, window, stopping rule and owner; no live change is made or implied as done.
 - [ ] Every test is written out on its own: metric, guardrails, window and stopping rule (when to stop early or call it), none blank or deferred to another test.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

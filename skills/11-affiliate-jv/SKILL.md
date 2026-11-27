@@ -21,8 +21,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (a price list or pricing notes in `inputs/` but no Price and model): run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`; Price and model → `07-pricing`), and ask for the evidence (price list, margin, retention), not a guess. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** The commission rate or JV split, payout timing, bonuses for partners, discounts or codes for partners' audiences, launch dates and capacity are the owner's commitments. When evaluating whether to start a program from `inputs/` on existing offers, the plan proposes a range from the economics and leaves the rate to the owner. If the request asks to launch or plan around a partner discount, code, commission commitment or launch date that `offer.md` and `inputs/` don't hold, stop, show how any asked rate compares with margin (or ask if margin is unaudited/unknown), ask the owner to confirm each exact term — discount buyer eligibility (which buyers or audiences qualify, e.g. new clients only, referred listeners only, or all buyers), which plans or fee bands are covered, end date, who bears the cost; start date; and monthly capacity — before planning, invent no clawback, cap or other terms, and write no deliverable file in `work/11-distribution/` (a stop reply still ends with the **Principle, framework, source** block).
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `07-pricing` is not loaded, stop and say: enable mkt-q2-offer.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `07-pricing` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -32,7 +32,7 @@ Use [references/affiliate-jv-guide.md](references/affiliate-jv-guide.md) for the
 
 1. **The payable outcome.** Define the sale that earns a commission: the business outcome (a client who signs, a subscriber past the refund window or the second box), the qualification rule (the ICP, not disqualified segments), and the clawback (refunds, cancellations within a stated period). Clicks, leads and sign-ups are never payable on their own unless the owner chooses to.
 2. **Economics.** From price, gross margin and retention in context or `inputs/`, compute the value of one payable sale (first-year revenue, gross margin, payback) and the commission range it can carry, with the arithmetic shown and each figure labelled *observed*, *owner's estimate* or *calculated*. Evaluate any partner's ask against it (what share of first-year margin it is). Unknown margin means the commission is *to set by the owner*: write the formula, not a number. Never use a "typical" commission rate as evidence.
-3. **Read what referral data exists.** Count referred leads and clients by source from `inputs/` with [scripts/sum_by.py](scripts/sum_by.py) or by exact count, never by eye. Note how sources are recorded today (a CRM field, no links) and what that can't show.
+3. **Read what referral data exists.** Count referred leads and clients by source from `inputs/` with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a) or by exact count, never by eye. Note how sources are recorded today (a CRM field, no links) and what that can't show.
 4. **Partners.** List candidates by type (customers, complementary service providers, communities and coaches, content creators, newsletters, coupon or cashback sites, networks) and judge each on audience fit to the ICP and its disqualifiers, with the evidence and its source. A partner's own audience figure is their claim. Partners whose audience is mostly a disqualified segment get qualification rules or a no. Customer referral (existing clients sending friends) is `16-referral-program`; individual creators' deals are `11-influencer`.
 5. **Structure.** Affiliate (ongoing, per sale) or JV (a partner promotes a launch or offer to their list for a split). Per partner type: commission or split, the payable event, cookie or attribution window, payout timing, caps tied to capacity, and whether different partner types earn different rates (content and introductions vs coupon interception).
 6. **Tracking and policy.** Unique links or codes per partner, how a referral is recorded in the CRM, last-click limits, brand-bidding policy (partners do not bid on the brand unless the owner allows it), coupon-site rules, fraud screens (self-referrals, sudden spikes, cookie stuffing). Tracking gaps go to `17-tracking-plan`; whether the program adds sales the business wouldn't have had goes to `17-incrementality`.
@@ -76,7 +76,7 @@ Status: draft for the owner's approval; no rate agreed, nothing paid or announce
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an email, the owner's notes, a review), with the source named. Write your own terms, kit lines and proposals in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (an email, the owner's notes, a review), with the source named. Write your own terms, kit lines and proposals in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the payable outcome, the commission range and how it was derived, the partner decisions, and what is still missing, then end with the same block.
 
@@ -96,7 +96,7 @@ End with the **Principle, framework, source** block:
 - [ ] Tracking, brand-bidding, coupon and fraud rules are set; last-click credit is not called incrementality.
 - [ ] Regulated-partner fees, disclosure and the agreement are flagged to verify or for legal review; capacity caps partner volume.
 - [ ] The plan says no rate is agreed and nothing paid, created or announced without the owner's approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

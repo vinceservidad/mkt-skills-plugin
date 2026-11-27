@@ -21,8 +21,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or product notes in `inputs/`): run the skill that fills it first (`07-offer-design` or `03-awareness-map`), then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`; Awareness map → `03-awareness-map`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Prices, sale prices, shipping rates, return policies, promo badges, target ROAS and budgets are the owner's commitments. Never invent a price, discount, free-shipping threshold or margin figure that `offer.md` and `inputs/` do not hold. If a campaign plan depends on an unconfirmed sale price or promotion, stop, ask the owner for exact terms, and write no plan on assumed terms. Unknown margins or budgets are not a stop for a feed audit: label them *owner to set* and separate feed hygiene from bidding targets.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -31,7 +31,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/shopping-feeds-guide.md](references/shopping-feeds-guide.md) for feed architecture, title formulas by vertical, supplemental feed rules, Merchant Center disapproval triage, custom labels and Standard Shopping vs. Performance Max SKU segmentation.
 
 1. **Outcome that decides.** Name the business outcome (profitable SKU orders, first-order contribution margin or paying subscribers acquired through Shopping) and the SKU-level guardrail. Raw clicks or ROAS without margin or stock status are never enough.
-2. **Audit the catalog and feed.** Count products by availability/status (active, seasonal, past/sold-out) and missing attributes with [scripts/tally.py](scripts/tally.py) and [scripts/sum_by.py](scripts/sum_by.py) (`python3 <this skill's folder>/scripts/sum_by.py <file> <col>`), never by eye. Flag every SKU that should be excluded from paid Shopping (sold-out/past SKUs, missing images or landing pages, non-compliant items) and every Merchant Center risk (price/availability mismatch, missing GTIN/MPN, policy or shipping/return settings).
+2. **Audit the catalog and feed.** Count products by availability/status (active, seasonal, past/sold-out) and missing attributes with a hand tally (one line per item, counted one by one) and hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a; grouped by `<col>`), never by eye. Flag every SKU that should be excluded from paid Shopping (sold-out/past SKUs, missing images or landing pages, non-compliant items) and every Merchant Center risk (price/availability mismatch, missing GTIN/MPN, policy or shipping/return settings).
 3. **Title and attribute rules (primary + supplemental feed).** Build a title template ordered by buyer search intent (brand + product type + key attributes buyers search for from `inputs/` or VoC, never internal SKU codes) and keep critical words in the first 70 characters. Specify what stays in the primary store feed vs. what belongs in a **supplemental feed** (title overrides, `custom_label_0`..`4` for margin tier, hero/villain status, seasonality or price band, and missing `product_type` / `google_product_category`). Never overwrite clean storefront titles when a supplemental feed can override the Shopping title safely.
 4. **SKU segmentation and campaign structure.** Group active SKUs using custom labels (hero sellers, seasonal/launch SKUs, low-volume "zombies", margin tiers) and exclude sold-out or past products. Choose Standard Shopping vs. Performance Max (feed-only or full asset) based on catalog size, conversion volume and control needs; hand pure text-search keyword campaigns to `11-paid-search` and budget increases to `19-scale-paid`.
 5. **Bidding, margin guardrails and negative hygiene.** Tie target ROAS or max CPC to contribution margin when known, otherwise give the formula and mark *owner to set*. State search-term review cadence and brand vs. non-brand query controls.
@@ -75,7 +75,7 @@ Status: draft for the owner's approval; no feed, Merchant Center setting or camp
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed Shopping titles and rules in italics, code spans or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed Shopping titles and rules in italics, code spans or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, the catalog audit summary (active vs. excluded SKUs), the supplemental feed title/label design, and what is still missing, then end with the same block.
 
@@ -89,12 +89,12 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Catalog counts and any sales totals are calculated with `tally.py` / `sum_by.py`, never by eye, and sold-out or ineligible SKUs are explicitly excluded from paid Shopping.
+- [ ] Catalog counts and any sales totals are calculated with a hand tally / hand group totals, never by eye, and sold-out or ineligible SKUs are explicitly excluded from paid Shopping.
 - [ ] Shopping title rules place buyer search attributes first, keep storefront copy clean via a supplemental feed, and use real catalog items without inventing prices, GTINs or attributes.
 - [ ] Custom labels and campaign segmentation separate hero/active SKUs from seasonal, low-volume or excluded SKUs; pure text-search goes to `11-paid-search` and scaling to `19-scale-paid`.
 - [ ] Merchant Center parity checks (price, availability, shipping, returns, GTIN/identifier hygiene) are listed and unconfirmed margins/budgets are marked *owner to set*.
 - [ ] Every platform fact is cited with a dated official URL or marked *to confirm*, and the plan states nothing changes without the owner's approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

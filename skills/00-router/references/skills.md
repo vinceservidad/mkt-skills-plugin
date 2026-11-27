@@ -1,6 +1,6 @@
 # Skill index
 
-Generated from `catalog.json` by `tools/build.py`; do not edit by hand. Status `built` means the skill exists in this library; `planned` means the section's frameworks apply but the skill has not shipped yet. A skill is invoked as `/<plugin>:<skill>`; when a built skill is not loaded, name its plugin so the user can enable it.
+Generated from `catalog.json`; do not edit by hand. Status `built` means the skill exists in this library; `planned` means the section's frameworks apply but the skill has not shipped yet. A skill is invoked as `/mkt-skills:<skill>`; every `built` skill ships in this plugin.
 
 Columns: what the skill is for, what it writes, what it requires before it will write (alternatives separated by "or"), and what it reads if present.
 
@@ -8,7 +8,7 @@ Columns: what the skill is for, what it writes, what it requires before it will 
 
 ### 01 Market
 
-Job: choose a market where demand exists, you can win, and the economics work. Plugin: `mkt-q1-audience`.
+Job: choose a market where demand exists, you can win, and the economics work.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -19,7 +19,7 @@ Job: choose a market where demand exists, you can win, and the economics work. P
 
 ### 02 Customer
 
-Job: know the buyer better than they know themselves, in their own words. Plugin: `mkt-q1-audience`.
+Job: know the buyer better than they know themselves, in their own words.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ Job: know the buyer better than they know themselves, in their own words. Plugin
 
 ### 03 Awareness
 
-Job: match what you say to what the buyer already knows. Plugin: `mkt-q1-audience`.
+Job: match what you say to what the buyer already knows.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ Job: match what you say to what the buyer already knows. Plugin: `mkt-q1-audienc
 
 ### 04 Product
 
-Job: make sure the thing being sold actually delivers the result, before marketing amplifies it. Plugin: `mkt-q2-offer`.
+Job: make sure the thing being sold actually delivers the result, before marketing amplifies it.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ Job: make sure the thing being sold actually delivers the result, before marketi
 
 ### 05 Brand
 
-Job: be remembered and preferred before the buyer is ready, so that when they are, you are the first and easiest choice. Plugin: `mkt-q2-offer`.
+Job: be remembered and preferred before the buyer is ready, so that when they are, you are the first and easiest choice.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ Job: be remembered and preferred before the buyer is ready, so that when they ar
 
 ### 06 Positioning
 
-Job: own one clear place in the buyer's mind relative to the alternatives. Plugin: `mkt-q2-offer`.
+Job: own one clear place in the buyer's mind relative to the alternatives.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@ Job: own one clear place in the buyer's mind relative to the alternatives. Plugi
 
 ### 07 Offer
 
-Job: make what they get worth clearly more than what they give up, and make choosing it feel safe and urgent. Plugin: `mkt-q2-offer`.
+Job: make what they get worth clearly more than what they give up, and make choosing it feel safe and urgent.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Job: make what they get worth clearly more than what they give up, and make choo
 
 ### 08 Message
 
-Job: decide the one idea, the promise, and the reasons that make it believable, before any ad or page is written. Plugin: `mkt-q3-message`.
+Job: decide the one idea, the promise, and the reasons that make it believable, before any ad or page is written.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ Job: decide the one idea, the promise, and the reasons that make it believable, 
 
 ### 09 Creative Strategy
 
-Job: turn the message into ideas that stop the scroll for a specific audience at a specific awareness level, in a specific format. Plugin: `mkt-q3-message`.
+Job: turn the message into ideas that stop the scroll for a specific audience at a specific awareness level, in a specific format.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -114,7 +114,7 @@ Job: turn the message into ideas that stop the scroll for a specific audience at
 
 ### 10 Copywriting
 
-Job: write words that move the reader to the next action. This is where the small, famous frameworks live. Plugin: `mkt-q3-message`.
+Job: write words that move the reader to the next action. This is where the small, famous frameworks live.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -131,7 +131,7 @@ Job: write words that move the reader to the next action. This is where the smal
 
 ### 11 Distribution
 
-Job: put the message in front of the right people, at a cost that works, in channels you can grow. Plugin: `mkt-q4-reach`.
+Job: put the message in front of the right people, at a cost that works, in channels you can grow.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -164,7 +164,7 @@ Job: put the message in front of the right people, at a cost that works, in chan
 
 ### 12 Funnel
 
-Job: design the path from first touch to purchase (and beyond) so each step earns the next one. Plugin: `mkt-q4-reach`.
+Job: design the path from first touch to purchase (and beyond) so each step earns the next one.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -181,7 +181,7 @@ Job: design the path from first touch to purchase (and beyond) so each step earn
 
 ### 13 Conversion
 
-Job: turn the visitors you already have into leads and buyers, without buying more traffic. Plugin: `mkt-q5-decide`.
+Job: turn the visitors you already have into leads and buyers, without buying more traffic.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -196,7 +196,7 @@ Job: turn the visitors you already have into leads and buyers, without buying mo
 
 ### 14 Sales
 
-Job: close higher-ticket or complex deals in conversation, where a page cannot do the whole job. Plugin: `mkt-q5-decide`.
+Job: close higher-ticket or complex deals in conversation, where a page cannot do the whole job.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -212,7 +212,7 @@ Job: close higher-ticket or complex deals in conversation, where a page cannot d
 
 ### 15 Retention
 
-Job: get the customer to the promised result, keep them, and grow what they spend. Plugin: `mkt-q6-after`.
+Job: get the customer to the promised result, keep them, and grow what they spend.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -225,7 +225,7 @@ Job: get the customer to the promised result, keep them, and grow what they spen
 
 ### 16 Referral and Community
 
-Job: turn customers into the acquisition channel. Plugin: `mkt-q6-after`.
+Job: turn customers into the acquisition channel.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -240,7 +240,7 @@ Job: turn customers into the acquisition channel. Plugin: `mkt-q6-after`.
 
 ### 17 Measurement
 
-Job: know what is working, what it costs, and what it returns, at every stage. Plugin: `mkt-q7-improve`.
+Job: know what is working, what it costs, and what it returns, at every stage.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -253,7 +253,7 @@ Job: know what is working, what it costs, and what it returns, at every stage. P
 
 ### 18 Experimentation
 
-Job: replace opinions with evidence, in order of expected impact. Plugin: `mkt-q7-improve`.
+Job: replace opinions with evidence, in order of expected impact.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -265,7 +265,7 @@ Job: replace opinions with evidence, in order of expected impact. Plugin: `mkt-q
 
 ### 19 Growth
 
-Job: take what works and make it bigger without breaking it, in the right order. Plugin: `mkt-q7-improve`.
+Job: take what works and make it bigger without breaking it, in the right order.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |
@@ -279,7 +279,7 @@ Job: take what works and make it bigger without breaking it, in the right order.
 
 ### 20 Operations
 
-Job: give the system people, money, tools, process and rules so it runs every week without you. Plugin: `mkt-q8-run`.
+Job: give the system people, money, tools, process and rules so it runs every week without you.
 
 | Skill | Status | Purpose | Writes | Requires | Reads if present |
 | --- | --- | --- | --- | --- | --- |

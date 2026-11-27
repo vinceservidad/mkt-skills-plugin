@@ -26,13 +26,13 @@ Use [references/growth-model-guide.md](references/growth-model-guide.md) for mod
 1. **Structure.** Outcome (for example active subscriptions, revenue, contribution margin) = starting level + new − lost per period; new = traffic × conversion by step; revenue = customers × frequency × price. Draw it as a short chain.
 2. **Inputs from data.** Each input with its value, period and source; derived rates shown with their arithmetic; measurement defects noted. Unknowns are labelled assumptions.
 3. **Abraham's three ways to grow.** Show the effect of more customers, higher value per purchase and more purchases per customer (or longer retention) on the outcome.
-4. **Forecast and scenarios.** Base (current rates), low and high, month by month for the horizon asked; include the settling level (new ÷ loss rate) and capacity limits. Use [scripts/sum_by.py](scripts/sum_by.py) or arithmetic shown.
+4. **Forecast and scenarios.** Base (current rates), low and high, month by month for the horizon asked; include the settling level (new ÷ loss rate) and capacity limits. Use hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a) or arithmetic shown.
 5. **Goal check.** If a target is given, show what would have to be true to reach it (for example new per month at the current loss rate, or the loss rate at the current inflow) and whether evidence supports that.
 6. **Sensitivity.** Which input moves the outcome most per realistic change; hand the lever to the owning skill.
 7. **Approval.** The model is a draft. Using it to set budgets, targets or hires needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no rates, volumes, prices or benchmarks that aren't in `context/` or `inputs/` or computed from them. Scenario changes are labelled assumptions. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no rates, volumes, prices or benchmarks that aren't in `context/` or `inputs/` or computed from them. Scenario changes are labelled assumptions. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -60,7 +60,7 @@ Status: draft for the owner's approval; projections, not results
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/19-growth/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the base forecast and settling level, whether the goal is reachable and what would have to be true, and the biggest lever, and what is still missing, then end with the same block.
 
@@ -79,7 +79,7 @@ End with the **Principle, framework, source** block:
 - [ ] Scenarios vary labelled assumptions; forecasts are labelled projected.
 - [ ] The goal check shows what would have to be true and whether evidence supports it.
 - [ ] The biggest lever is named and handed to its owner; nothing is set without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

@@ -19,7 +19,7 @@ For every Partnership Ad, maintain a relationship ledger recording: partner hand
 ## 2. Product seeding pilot and authenticity screening
 
 Product seeding sends product with **no guaranteed posting obligation** to observe genuine product fit before committing flat sponsorship or Partnership Ad budgets:
-1. **Screen authenticity before shipping:** Inspect the creator's last 10 posts for ICP comment relevance (real buyer questions vs. engagement pods/spam), genuine category affinity, and competing brand conflicts (`scripts/sum_by.py` computes views-to-follower ratio cleanly). Never rely on raw follower count or unverified media-kit screenshots.
+1. **Screen authenticity before shipping:** Inspect the creator's last 10 posts for ICP comment relevance (real buyer questions vs. engagement pods/spam), genuine category affinity, and competing brand conflicts (work out the views-to-follower ratio by hand: average views ÷ followers). Never rely on raw follower count or unverified media-kit screenshots.
 2. **Cost the entire pilot honestly:** Sum product COGS, custom packaging, shipping/fulfillment, and any outreach ops into real landed cost per gift sent. Never treat seeded gifts as "free media."
 3. **Two-track outreach clarity:** Specify clearly in gifting outreach whether the invite is no-obligation product discovery (never silently convert a no-obligation gift into a demanded deliverable) vs. a paid sponsored brief (`09-ugc-brief`).
 4. **Upgrade path:** Track dispatched -> delivered -> voluntary post -> permission requested -> unique-link orders/sign-ups. Only creators showing authentic product enthusiasm and ICP resonance move up to paid content licensing, affiliate links (`11-affiliate-jv`), or Meta Partnership Ads (`11-paid-social`).

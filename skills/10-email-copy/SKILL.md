@@ -18,7 +18,7 @@ Required (drafted or confirmed, with content):
   (Awareness map or Journey: at least one)
 - If present, also read `context/brand.md` → Voice (`05-brand-voice`); `context/offer.md` for real terms; `context/message.md` → Proof stack, Objection map and Story; Voice of customer.
 - If a required section is missing:
-  - **The upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q1-audience.
+  - **The upstream evidence exists:** run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Promise → `08-message-doc`; Awareness map → `03-awareness-map`, or Journey → `03-journey-map`), and what the user should bring. Do not write copy on an invented offer, promise or proof. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -54,7 +54,7 @@ Preview text: <…>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing. Your final reply message must end with the **Principle, framework, source** block, after the still-missing list, on a build and on a stop; nothing comes after it. Writing the block in the file does not replace it in the reply:
 
@@ -70,7 +70,7 @@ Reply with the file path, the key choice made (structure, angle or level) and wh
 - [ ] Subject lines are specific and honest. No fake reply or forward prefixes, and no false urgency.
 - [ ] Offer terms, deadlines and proof match context exactly, and are listed in the claims table.
 - [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] Unsubscribe and sender requirements are noted. Sending is left to the user.
 - [ ] No file in `context/` changed.
 - [ ] The reply (not just the file) ends with the **Principle / Framework / Source** block, after the still-missing list.

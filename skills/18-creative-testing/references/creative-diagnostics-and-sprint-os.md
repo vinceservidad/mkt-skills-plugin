@@ -20,11 +20,11 @@ Run creative testing as an explicit feedback loop rather than ad-hoc boosts:
 2. **Winner graduation rule:** Promote a concept only when it hits the target sample/spend floor and beats or matches the allowable cost per business outcome in `17-unit-economics` with stable post-click quality. Pass scaling budget changes to `19-scale-paid`.
 3. **Portfolio cadence heuristic (owner sets capacity):** Aim roughly `70%` of testing output at single-variable iterations of proven winning angles (new hooks, new creators, static vs. video adaptations) and `30%` at net-new persona, desire, or mechanic swings (`09-angle-matrix`, `09-ad-creative`), labelled heuristic.
 4. **Track Creative Hit Rate:** Divide validated winners by net-new concepts tested each month to spot research gaps vs. production bottlenecks.
-5. **Structured naming taxonomy:** Enforce consistent tags such as `ConceptID_Angle_Hook_Format_Creator_YYYYMM` in ad names so `scripts/sum_by.py` aggregates performance cleanly by angle, hook, or creator across campaigns.
+5. **Structured naming taxonomy:** Enforce consistent tags such as `ConceptID_Angle_Hook_Format_Creator_YYYYMM` in ad names so performance can be totalled by hand per angle, hook, or creator across campaigns.
 
 ## 3. Meta Creative Learning Agenda
 
-Distilled from the Meta Blueprint Creative Strategy Professional study guide (July 2026) and aligned with Marketing Skills experiment governance (`17-incrementality`, `18-experiment-log`):
+Distilled from the Meta Blueprint Creative Strategy Professional study guide (July 2026) and aligned with MKT experiment governance (`17-incrementality`, `18-experiment-log`):
 
 Populate one decision-changing row before launching a structured study:
 `decision | learning question | hypothesis | evidence gap | method | assigned arms | primary metric (source) | guardrails | lag/window | stopping rule | next brief`

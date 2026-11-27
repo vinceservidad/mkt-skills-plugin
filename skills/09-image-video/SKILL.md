@@ -67,7 +67,7 @@ Message: <the one message — source>
 
 Change nothing in `context/`. Visual direction is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a tagline in the inputs, a line in the proof stack), with the source named. Overlay text, voice-over and prompts you write go in plain text or italics. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a tagline in the inputs, a line in the proof stack), with the source named. Overlay text, voice-over and prompts you write go in plain text or italics. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key visual decision, and what is still missing, then end with the same block.
 
@@ -86,7 +86,7 @@ End with the **Principle, framework, source** block:
 - [ ] Video storyboards give seconds, seen, said and on-screen text, with the hook first and captions.
 - [ ] No fabricated customer, result, screenshot or before-after, and no unsourced generalisation about buyers in overlays or voice-over; samples are labelled; consent and licences named.
 - [ ] Platform specs and AI-disclosure rules are cited with a dated first-party source or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

@@ -22,8 +22,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists:** run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Promise → `08-message-doc`; Awareness map → `03-awareness-map`; Core offer → `07-offer-design`), and ask for evidence (interviews, reviews, call notes, past ad results), not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - Price, discounts, guarantees and deadlines are the owner's commitments. Use only what `offer.md` holds; if a concept needs one that isn't there, stop and ask.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -31,7 +31,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/concepts-and-iteration.md](references/concepts-and-iteration.md) for the concept card, native formats, and how to read results; [references/creative-mechanics-and-diversification.md](references/creative-mechanics-and-diversification.md) for the 9 creative mechanic families, creative diversification matrix, AI-invariant rules and post-win single-variable iteration; [references/meta-andromeda-reels-diversity.md](references/meta-andromeda-reels-diversity.md) for Meta Andromeda creative diversity across Persona x Desire x Awareness x Mechanic x Format, similarity vs. fatigue triage, Reels creative essentials and Advantage+ Creative enhancement guardrails; [references/static-dtc-and-mobile-review.md](references/static-dtc-and-mobile-review.md) for static DTC visual direction, centered 4:5 to 1:1 cross-crop framing and the nine-criterion mobile-first review; and [references/demand-gen-and-youtube-creative.md](references/demand-gen-and-youtube-creative.md) for Google Demand Gen and YouTube creative variety (16:9, 1:1, 9:16 Shorts-first), ABCD 5-second structure, creator Partnership Ads and fatigue refresh rules.
 
-1. **Read past results first, if any are in `inputs/`.** Count with [scripts/tally.py](scripts/tally.py) and compute every rate with its formula shown. Per concept, report spend, the platform-reported metrics (impressions, frequency, clicks, leads) and the business outcome from the CRM or orders (qualified calls, trials, purchases) separately. Judge concepts by cost per qualified outcome, not CTR or clicks. Say when samples are too small to call a winner, when concepts differ in more than one thing (destination, format, audience) so the comparison is confounded, and when a falling CTR with rising frequency is a *fatigue pattern* (a hypothesis, not a proven cause). Platform-reported and CRM numbers are different sources; never merge them into one figure.
+1. **Read past results first, if any are in `inputs/`.** Count with a hand tally (one line per item, counted one by one) and compute every rate with its formula shown. Per concept, report spend, the platform-reported metrics (impressions, frequency, clicks, leads) and the business outcome from the CRM or orders (qualified calls, trials, purchases) separately. Judge concepts by cost per qualified outcome, not CTR or clicks. Say when samples are too small to call a winner, when concepts differ in more than one thing (destination, format, audience) so the comparison is confounded, and when a falling CTR with rising frequency is a *fatigue pattern* (a hypothesis, not a proven cause). Platform-reported and CRM numbers are different sources; never merge them into one figure.
 2. **Decide per existing concept:** keep, iterate (new variation of what worked), refresh (same angle, new execution), or retire, each with the evidence. Budget changes, scaling and bid or audience changes are not this skill's call: hand them to `19-scale-paid`, which needs readiness, economics and authorization gates. Never recommend putting more money behind an ad.
 3. **Write new concepts:** three to six, each one angle at one awareness level (from the angle matrix if it exists, or from the message house and awareness map). For each, the concept card: angle and evidence; format and why it suits the angle; **Hook** (seen, said, on-screen, all three written: for a sound-off or no-voiceover cut, *said* is the opening line as spoken in the sound-on cut or read in the first caption, never left blank); **Story** (the beats, in order, each tied to a message or proof item); **Offer** (one CTA to an offer that exists, and a destination that suits the concept's traffic temperature; if no existing destination suits it, leave the concept out and name the missing page under Open questions rather than shipping a concept you call a mismatch); native fit (what makes it look like the feed's content); proof used and its permission status.
 4. **Variations:** for each concept, two or three variants that change exactly one element (hook, visual, proof, CTA), each naming the element. Placement crops and colour swaps are adaptations, not variations.
@@ -77,7 +77,7 @@ Variations: <a — changes: element> · <b — changes: element>
 
 Change nothing in `context/` and nothing in any ad account. Concepts are a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a line from the ad log), with the source named. Hooks, scripts and lines you write go in plain text or italics, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a line from the ad log), with the source named. Hooks, scripts and lines you write go in plain text or italics, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key decisions (what to keep, retire and make next) and what is still missing, then end with the same block.
 
@@ -97,7 +97,7 @@ End with the **Principle, framework, source** block:
 - [ ] Variations change exactly one named element.
 - [ ] No invented results, testimonials, prices or terms, and no unsourced generalisation about buyers (*most owners*); every review ID used in a concept, quoted or paraphrased, carries its permission status.
 - [ ] Platform formats, specs and policies are cited with a dated first-party source or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

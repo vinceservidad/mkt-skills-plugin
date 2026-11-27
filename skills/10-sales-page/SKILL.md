@@ -20,8 +20,8 @@ Required (drafted or confirmed, with content):
 - `context/awareness.md` → **Awareness map**, from `03-awareness-map`.
 - If present, also read `context/message.md` → Story (`08-story-epiphany-bridge`), Promise, Big idea and Mechanism; `context/offer.md` → Bonuses, Urgency and scarcity, and Name and one-liner; Voice of customer.
 - If a required section is missing:
-  - **Price and model or Guarantee is missing:** stop and ask. These are the owner's commercial commitments; you may offer to run `07-pricing` or `07-guarantee-risk-reversal` as a proposal for approval (if they are not loaded, say: enable mkt-q2-offer), but never write the page on terms nobody approved.
-  - **Another section is missing and the upstream evidence exists:** run the skill that fills it first, then continue. If that skill is not loaded, stop and say: enable mkt-q2-offer (for `07-offer-design`, `07-pricing`, `07-guarantee-risk-reversal`) or enable mkt-q1-audience (for `03-awareness-map`).
+  - **Price and model or Guarantee is missing:** stop and ask. These are the owner's commercial commitments; you may offer to run `07-pricing` or `07-guarantee-risk-reversal` as a proposal for approval, but never write the page on terms nobody approved.
+  - **Another section is missing and the upstream evidence exists:** run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Core offer → `07-offer-design`; Price and model → `07-pricing`; Guarantee → `07-guarantee-risk-reversal`; Proof stack → `08-proof-stack`; Objection map → `08-objection-map`; Awareness map → `03-awareness-map`), and what the user should bring. Do not write copy on an invented offer, promise or proof. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -61,7 +61,7 @@ Missing for a stronger page: <proof or terms the context doesn't hold>
 
 Change nothing in `context/`. Copy is a deliverable, not a decision.
 
-**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/10-copywriting/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** In the copy, quotation marks hold only words that appear exactly in a source, such as a testimonial from the proof stack or a review in `inputs/`, with its source in the claims table. Do not wrap your own headlines or lines in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the key choice made (structure, angle or level) and what is still missing, then end with the same block.
 
@@ -80,7 +80,7 @@ End with the **Principle, framework, source** block:
 - [ ] Every testimonial and result comes from the proof stack or inputs, word for word, and is listed in the claims table.
 - [ ] The top objections from the objection map are answered on the page.
 - [ ] The Anti-AI second pass in `references/anti-ai-check.md` (reader check, 6 whole-piece rules, 13 sentence fixes with 0 em dashes, and final reread) is completed.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

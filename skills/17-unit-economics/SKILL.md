@@ -19,7 +19,7 @@ Required (drafted or confirmed, with content):
 - If a required section is missing:
   - **The upstream evidence exists** (price lists or billing exports in `inputs/`): run `07-pricing` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Price and model → `07-pricing`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `07-pricing` is not loaded, stop and say: enable mkt-q2-offer.
+- `07-pricing` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -29,14 +29,14 @@ Use [references/unit-economics-guide.md](references/unit-economics-guide.md) for
 
 1. **Contribution margin per order.** Price minus variable costs (product, fulfilment, shipping, payment fees, refunds if not already in net revenue), with each input labelled *observed*, *owner's estimate* or *calculated*. Name the profit level (contribution margin before marketing, after marketing).
 2. **Retention and LTV.** Use observed retention from cohorts; compute contribution per customer over the observed window first, then any extrapolation as a labelled scenario. Never revenue × a guessed lifetime.
-3. **CAC.** Blended CAC = total marketing spend ÷ new customers from the system of record for the same period. Channel CAC uses a stated attribution view and its bias. Compute with [scripts/sum_by.py](scripts/sum_by.py).
+3. **CAC.** Blended CAC = total marketing spend ÷ new customers from the system of record for the same period. Channel CAC uses a stated attribution view and its bias. Compute with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a).
 4. **Payback.** CAC ÷ contribution per period, in billing periods; compare with observed retention: payback beyond the observed window is a risk.
 5. **MER and ROAS.** MER = total revenue ÷ total marketing spend. Break-even ROAS = 1 ÷ contribution margin rate on first-order revenue (or on the LTV window chosen). Platform ROAS is a platform view, not profit.
 6. **What it means.** Which channel or blended level is profitable, on which window, and what would change the answer; scaling questions go to `19-scale-paid`.
 7. **Approval.** The model is a draft. Budget, price or bid changes based on it need the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no costs, margins, retention, CAC or LTV that aren't in `context/` or `inputs/` or computed from them. Do not use 'profit' without naming the level and costs included. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no costs, margins, retention, CAC or LTV that aren't in `context/` or `inputs/` or computed from them. Do not use 'profit' without naming the level and costs included. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -64,7 +64,7 @@ Status: draft for the owner's review; nothing changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, contribution per order, LTV over the observed window, blended and channel CAC, payback, MER and break-even ROAS, and what is still missing, then end with the same block.
 
@@ -83,7 +83,7 @@ End with the **Principle, framework, source** block:
 - [ ] CAC uses source-system customer counts; channel CAC states its attribution view.
 - [ ] Payback is compared with observed retention; MER and break-even ROAS are computed; platform ROAS is not called profit.
 - [ ] All arithmetic is shown; nothing changes without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

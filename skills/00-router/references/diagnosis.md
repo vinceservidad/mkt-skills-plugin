@@ -43,4 +43,4 @@ Upstream before downstream: Customer → Awareness → Offer → Message → Cop
 
 ## Where do I start
 
-No symptom and no existing context: start with `02-customer-research`, then follow the order of fixes above. Market work (`01-market-assessment`) comes after customer research, not first. If `02-customer-research` is not loaded, say enable mkt-q1-audience.
+No symptom and no existing context: start with `02-customer-research`, then follow the order of fixes above. Market work (`01-market-assessment`) comes after customer research, not first.

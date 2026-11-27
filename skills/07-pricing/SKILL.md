@@ -21,7 +21,7 @@ Price is a signal, not just a number. It should sit well below the value the buy
 - Once Core offer and Dream outcome are present, missing cost, margin or volume data is not a reason to stop. Write the section anyway: mark each unknown as unknown and list the data that would change the price. A question such as "is $X the right price?" or "should we discount?" still gets the section written, with the answer in it.
 - If Core offer or Dream outcome is missing:
   - **The customer sections exist:** run `07-offer-design` first, then continue.
-  - **They don't exist:** stop. Name the missing sections and `07-offer-design`, plus `02-customer-research` if customer evidence is missing too. If that skill is not loaded, say: enable mkt-q1-audience. Give no price, range or benchmark figure in the reply: there is nothing to anchor it to. A stop reply still ends with the **Principle, framework, source** block.
+  - **They don't exist:** stop. Name the missing sections and `07-offer-design`, plus `02-customer-research` if customer evidence is missing too. Give no price, range or benchmark figure in the reply: there is nothing to anchor it to. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 

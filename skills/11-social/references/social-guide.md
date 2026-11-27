@@ -8,7 +8,7 @@
 
 ## Reading the account's own analytics
 
-- Total by format and by topic with `scripts/sum_by.py`; never by eye.
+- Total by format and by topic with hand group totals; never by eye.
 - Rank on the outcome columns first (downloads, sign-ups, sourced calls or orders), then reach and reactions.
 - Report counts. Ten posts in a quarter is a small sample: say the read is directional.
 - Who engaged matters as much as how many. A post that drew freelancers and two-person studios when the ICP is 10–40 staff agencies is reach from the wrong audience.

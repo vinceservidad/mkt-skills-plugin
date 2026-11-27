@@ -17,7 +17,7 @@ Each bonus should answer the next objection in line. A bonus that answers nothin
   - `context/offer.md` → Price and model (`07-pricing`) and Guarantee (`07-guarantee-risk-reversal`);
   - capacity, season or deadline facts in `inputs/` or the user's message.
 - If a required section is missing:
-  - **The evidence exists:** run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue. If `02-buyer-psychology` is not loaded, stop and say: enable mkt-q1-audience.
+  - **The evidence exists:** run the missing skill first (`02-buyer-psychology` or `07-offer-design`), then continue.
   - **It doesn't:** stop. Name the missing sections and the skills that fill them. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -35,7 +35,7 @@ Each bonus should answer the next objection in line. A bonus that answers nothin
 
    If none is true, say so. Recommend a cost-of-waiting reason instead of a fake deadline.
 4. **Write each in one line,** as a proposal without quotation marks, and say where it shows: the offer page, the call or the email. In the objection column, paraphrase the objection and cite its ID (*onboarding is a slog, review 3*). Use quotation marks only for words that appear exactly in the source, never for the note-taker's summary around a quote. Name rejected tactics in italics (*only 3 spots left*), not in quotation marks.
-5. **Check before saving.** Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/offer.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches. This includes objection labels and category names in table cells: a label you coined (*will it work for us*) is italics, not quotation marks. Then re-read the draft against the Checks and fix any failure.
+5. **Check before saving.** Check every quotation in the file you wrote by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words from the source or drop the quotation marks and use italics, then check again until every quotation matches. This includes objection labels and category names in table cells: a label you coined (*will it work for us*) is italics, not quotation marks. Then re-read the draft against the Checks and fix any failure.
 
 ## Output
 
@@ -87,7 +87,7 @@ End with the **Principle, framework, source** block:
 - [ ] Bonus values are the buyer's value with reasoning, never an invented price tag stated as fact. Deliverables are marked as existing or proposed.
 - [ ] Scarcity and urgency are true and sourced. If none exists, the section says so and offers a cost-of-waiting reason instead.
 - [ ] Rejected fake-urgency tactics are listed under "Not to use".
-- [ ] No unmarked inference. Quotation marks hold only words copied exactly from a source, and `check_quotes.py` reports every quotation matches.
+- [ ] No unmarked inference. Quotation marks hold only words copied exactly from a source, and every quotation was checked word for word against a source.
 - [ ] Only `## Bonuses` and `## Urgency and scarcity` changed. Each has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

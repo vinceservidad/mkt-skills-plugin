@@ -16,6 +16,6 @@ Classic icons (such as the Marlboro Man or Tony the Tiger) worked because they m
 
 1. **Tied to one clear product truth:** the character or visual shorthand dramatizes the core buyer feeling or product strength from `Brand foundation`.
 2. **Repeated without fatigue:** used identically across packaging, ads, and digital touchpoints over years rather than swapped out every quarter.
-3. **Measurable recognition:** treated as a candidate asset until category-buyer surveys confirm high fame and high uniqueness via `asset_grid.py`.
+3. **Measurable recognition:** treated as a candidate asset until category-buyer surveys confirm high fame and high uniqueness via the fame and uniqueness figures worked out by hand.
 
 Guardrail: never invent trademark clearance, survey percentages, or historical origin stories. Any proposed character, visual motif, or spoken tagline stays marked as a candidate to test with real buyers first.

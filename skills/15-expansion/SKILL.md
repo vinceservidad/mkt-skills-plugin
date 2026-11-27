@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (account data, sales notes or interviews in `inputs/`): run `07-value-ladder` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Value ladder → `07-value-ladder`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Prices for new tiers or services, discounts, contract changes and delivery capacity are the owner's commitments. If the next step on the ladder has no price or definition, stop before selling it, ask for the exact terms, and plan the triggers and a pilot without it.
-- If `07-value-ladder` is not loaded, stop and say: enable mkt-q2-offer.
+- `07-value-ladder` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/expansion-guide.md](references/expansion-guide.md) for expansion signals, account management, the offer conversation and net revenue retention.
 
-1. **Who is ready.** From account data in `inputs/`, list accounts with expansion signals (asked about the next offer, usage or size growth, a band change, high engagement) and those that are not yet getting core value (low engagement, recent problems). Count with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py).
+1. **Who is ready.** From account data in `inputs/`, list accounts with expansion signals (asked about the next offer, usage or size growth, a band change, high engagement) and those that are not yet getting core value (low engagement, recent problems). Count with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a).
 2. **Is the next step real?** Check the Value ladder: is the upsell or cross-sell defined, priced and deliverable within capacity? If not, design a small pilot with a few ready accounts and leave the price to the owner.
 3. **Triggers.** For each expansion path: the signal that starts it, who acts (the account manager, the founder), the conversation, and the next step. Tie each to a success moment (a good quarter, a goal reached), not a renewal or a complaint.
 4. **Account management (B2B).** For key accounts: owner, review rhythm, health signals, and a simple account plan (goals, risks, opportunities).
@@ -37,7 +37,7 @@ Use [references/expansion-guide.md](references/expansion-guide.md) for expansion
 7. **Approval.** The playbook is a draft. Offering anything to a client, changing prices or contracts needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no prices, account facts, results or capacity that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no prices, account facts, results or capacity that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -65,7 +65,7 @@ Status: draft for the owner's approval; nothing offered or changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the accounts ready to expand and why, whether the next offer is ready to sell, and the first pilot or trigger, and what is still missing, then end with the same block.
 
@@ -83,7 +83,7 @@ End with the **Principle, framework, source** block:
 - [ ] The next offer is defined, priced and deliverable, or a pilot is proposed with the price left to the owner.
 - [ ] Triggers follow success moments; existing contract terms are applied as written.
 - [ ] Measurement covers expansion, contraction, churn and net revenue retention with the arithmetic shown; nothing is offered without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

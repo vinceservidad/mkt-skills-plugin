@@ -63,7 +63,7 @@ Then update the file:
 - In the frontmatter, set `status: draft` and `updated: <date>`.
 - Append one line to `## Change log`.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (copy samples, reviews, interviews), with the source named. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/brand.md`). For every line it prints, copy the exact words or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (copy samples, reviews, interviews), with the source named. Before saving, check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words or drop the quotation marks and use italics, then check again until every quotation matches.
 
 Reply with:
 - the voice in one line (*we are X, not Y*);
@@ -85,7 +85,7 @@ End with the **Principle, framework, source** block:
 - [ ] Tone by context covers the contexts the business actually has, including bad news or apologies, with one concrete rule each.
 - [ ] Words to use come from customer language or the business's own lines, with sources; words to avoid have a reason and a replacement.
 - [ ] Rewrites change wording only: no new claims, numbers, guarantees, response times, offers, processes or next steps; anything needed but unsourced is a bracketed placeholder for the owner.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] Only `## Voice` changed. It has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

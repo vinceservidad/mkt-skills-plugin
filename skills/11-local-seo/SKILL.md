@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, reviews or customer notes in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (ICP and personas → `02-icp-persona`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Physical street addresses, service-area boundaries, staffed office hours, phone numbers, multi-location eligibility and Google Business Profile verification methods are operational facts only the owner can confirm. Never invent a street address, phone number, opening hours, suite number or service radius that is not in `context/` or `inputs/`. If the request asks to create or publish listings for locations whose real physical eligibility (staffed storefront vs. service-area business vs. virtual office) is unconfirmed, stop and ask the owner to confirm before drafting live listings; if planning a local SEO audit for a known city/site, flag unconfirmed address, phone and GBP eligibility facts explicitly as *owner to confirm*.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -29,7 +29,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/local-seo-guide.md](references/local-seo-guide.md) for the Relevance–Distance–Prominence framework, Google Business Profile audit, storefront vs. service-area eligibility rules, NAP citations, local landing pages and review velocity.
 
 1. **Outcome and local eligibility.** Name the business outcome (qualified local calls, direction requests, consultation bookings or walk-ins) and check whether the business qualifies for Google Business Profile (in-person storefront or direct in-person service-area contact — online-only businesses and virtual/PO-box offices do not qualify under Google's guidelines; verify current rules and mark *to confirm*).
-2. **Audit current local footprint.** Inspect `inputs/` (site inventory, footer address, Search Console queries, existing pages, reviews) and count pages or queries with [scripts/tally.py](scripts/tally.py), never by eye. Identify what exists today (for example only a city name in the footer and no local page or `LocalBusiness` schema) and what is missing.
+2. **Audit current local footprint.** Inspect `inputs/` (site inventory, footer address, Search Console queries, existing pages, reviews) and count pages or queries with a hand tally (one line per item, counted one by one), never by eye. Identify what exists today (for example only a city name in the footer and no local page or `LocalBusiness` schema) and what is missing.
 3. **Google Business Profile (GBP) architecture.** Specify exact business name (real-world name only, zero keyword stuffing), primary category (strongest local ranking lever) and strictly relevant secondary categories, storefront vs. hidden-address service-area configuration, services/products list, photos, UTM-tagged website link and Q&A. Mark any unverified owner facts (street address, phone, hours, verification status) as *owner to confirm*.
 4. **NAP consistency and core citations.** Define one canonical NAP (Name, Address, Phone) format across website footer, GBP, Apple Business Connect, Bing Places and high-trust local/industry directories (hand broad software/startup directory listings to `11-directories`). Flag duplicate or mismatched listings to clean up before building new citations.
 5. **Local landing page and schema plan.** Plan one real page per physical location or core local service + city pair where genuine local proof exists (local clients, local regulatory/market nuances, embedded map/directions if storefront, local FAQs, clear call/booking CTA). Never generate thin doorway pages swapping only city names. Hand JSON-LD `LocalBusiness` / `AccountingService` / `MedicalBusiness` markup implementation to `11-schema` and general non-local blog/technical SEO to `11-seo`.
@@ -73,7 +73,7 @@ Status: draft for the owner's approval; no GBP listing, citation or page changed
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed page titles, GBP descriptions and headlines in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write proposed page titles, GBP descriptions and headlines in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, the GBP eligibility check, the top local SEO priorities, and what is still missing, then end with the same block.
 
@@ -92,7 +92,7 @@ End with the **Principle, framework, source** block:
 - [ ] GBP categories, real-world business name (no keyword stuffing), canonical NAP and core local citations are specified.
 - [ ] Local landing pages require genuine local proof (no thin city-swap doorway pages); `LocalBusiness` markup hands off to `11-schema`, broad SEO to `11-seo`, and review collection to `16-reviews`.
 - [ ] GBP website links use UTMs for measurement, and platform rules are cited with a dated official URL or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

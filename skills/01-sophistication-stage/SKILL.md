@@ -33,7 +33,7 @@ Use [references/stages.md](references/stages.md) for the five stages, their sign
    - **Improved mechanism:** a newer, easier or surer version of a mechanism already claimed.
    - **Identification:** speaks to who the buyer is, with little product claim (*for people who'd rather be outside*).
 
-   Count each type with `scripts/tally.py` or `python3`, not by eye.
+   Count each type with a hand tally or `python3`, not by eye.
 2. **Add buyer evidence.** Scepticism (*they all promise the same thing*), comparisons of numbers, or questions about how it works show that claims are worn. Quote only exact words.
 3. **Place the stage.** Name the stage (1–5) where most of the claims and buyer evidence sit, with the evidence that puts it there.
    - If segments, channels or regions differ, say so and place each.
@@ -48,9 +48,9 @@ Use [references/stages.md](references/stages.md) for the five stages, their sign
 
    Give two or three directions, in italics, never as finished copy. Use only mechanisms, numbers and guarantees that exist in the offer, the proof or the inputs; anything else is *Gap: needs …* for its owner (`06-unique-mechanism` for the mechanism, `08-proof-stack` for proof).
 6. **Note the awareness interplay.** If an awareness map exists, say how the stage changes the entry message at the main level. Leave the map itself to `03-awareness-map`.
-7. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+7. **Check before saving.** Re-read the draft against every item under Checks, and check by hand that every quotation of four or more words appears word for word in a source. Fix any failure before you save.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's headline as recorded, a review, an interview. Your claim types, directions, example lines and summaries go in italics or plain text, in the section and in the reply alike (*for the owner who signed the lease first*, never "for the owner who signed the lease first"). Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches. Counts come from [scripts/tally.py](scripts/tally.py) or `python3`.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's headline as recorded, a review, an interview. Your claim types, directions, example lines and summaries go in italics or plain text, in the section and in the reply alike (*for the owner who signed the lease first*, never "for the owner who signed the lease first"). Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches. Counts come from a hand tally (one line per item, counted one by one) or `python3`.
 
 **Competitor claims are claims.** A claim competitors make shows what buyers have heard, not that it is true or that it works. Never copy one because it is visible.
 
@@ -99,7 +99,7 @@ End with the **Principle, framework, source** block:
 - [ ] The claim type that still works matches the stage, and the current claim is compared with it where known.
 - [ ] Directions use only mechanisms, numbers and guarantees that exist; anything else is a named gap with its owner skill.
 - [ ] Directions and example lines are in italics, not quotation marks or finished copy, in the file and in the reply, and no competitor claim is recommended because it is visible.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] With Competitors and alternatives missing and no competitor evidence, nothing was written and the stop names `01-competitor-profiling`.
 - [ ] Only `## Market sophistication` changed (plus Competitors and alternatives if competitor-profiling ran first). It has Status, Evidence and Method lines, and the change log has a line for this write.
 

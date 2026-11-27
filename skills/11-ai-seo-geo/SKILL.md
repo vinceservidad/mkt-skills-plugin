@@ -21,8 +21,8 @@ Required, either one (drafted or confirmed, with content):
   - **The upstream evidence exists** (for example interview notes in `inputs/`): run the skill that fills one first, then continue.
   - **It doesn't:** stop. Name both sections with their skills (Positioning statement → `06-positioning-statement`; ICP and personas → `02-icp-persona`), and ask for evidence (customer interviews, sales notes, competitor research), not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - No AI-answer sample is not a stop: design the prompt set and the baseline as the first step, and state current visibility as *unknown*.
-- If `06-positioning-statement` is not loaded, stop and say: enable mkt-q2-offer.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `06-positioning-statement` is in this plugin; run it first when the rules above call for it.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -30,7 +30,7 @@ Use [references/geo-guide.md](references/geo-guide.md) for the access table, the
 
 1. **The outcome.** Name what being recommended should produce for this business (a qualified call, a subscriber, a visit to a comparison page) and how it will be measured: referral sessions from assistant domains and their conversions in analytics and the CRM, with the referral definition stated. Mention or citation rates from sampled prompts are visibility estimates, not traffic or revenue. An answer read without a click leaves no referral; never fill that gap with an assumed multiplier.
 2. **The prompt set.** Build 10 to 20 prompts from the buyer's real questions: sales-call questions, journey-stage questions, Voice of customer words, alternatives they compare. Cover category ("best … for …"), problem ("how do I …"), comparison ("X vs Y", "alternatives to …") and brand ("[name] reviews").
-3. **Baseline.** If a spot check is in `inputs/`, tally it per prompt and assistant with [scripts/sum_by.py](scripts/sum_by.py) or line by line: who is named, which sources are cited, whether the business appears. Label it a dated snapshot (one run, one account, one place), not a measurement. If no check exists, write the protocol: assistants, dates, runs per prompt, logged-out or logged-in, location, and what to record.
+3. **Baseline.** If a spot check is in `inputs/`, tally it per prompt and assistant with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a) or line by line: who is named, which sources are cited, whether the business appears. Label it a dated snapshot (one run, one account, one place), not a measurement. If no check exists, write the protocol: assistants, dates, runs per prompt, logged-out or logged-in, location, and what to record.
 4. **Access.** Read robots.txt, page directives and any CDN bot settings in the material. For each rule, name the use it affects (search index, AI answers at query time, model training) and whether it supports the business outcome. Never recommend blocking a search crawler to stop training; use the narrowest control that expresses the decision. Which user agent does what is vendor documentation: cite it with URL and date or mark *to confirm*. robots.txt states a preference; it is not enforcement.
 5. **Entity clarity.** Write the one plain description the business should carry everywhere (from the Positioning statement or ICP and Core offer): what it is, for whom, where, and the facts that set it apart. List where it must match: the site's home and About pages, profiles (Google Business, LinkedIn), directories, podcast and partner pages. Inconsistent or missing descriptions are a gap.
 6. **Citable pages.** For the prompts that matter, name the page that should answer each one directly and early, with specific facts the business can stand behind (from context and `inputs/`, with their source). Existing pages already cited are protected and strengthened first. Comparison pages go to `06-competitor-pages`; search fundamentals (indexing, intent) to `11-seo`; structured data to `11-schema`.
@@ -77,7 +77,7 @@ Status: draft for the owner's approval; nothing on the site or in any setting ch
 
 Change nothing in `context/`, on the site, or in any setting. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a spot-check log, a review), with the source named. Write your own descriptions, prompts and proposals in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a page, a spot-check log, a review), with the source named. Write your own descriptions, prompts and proposals in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the baseline in one line (or that there is none), the top three actions, and what is still missing, then end with the same block.
 
@@ -97,7 +97,7 @@ End with the **Principle, framework, source** block:
 - [ ] One entity description, consistent with the positioning or ICP, with the places it must match.
 - [ ] Pages state only facts in context or `inputs/`; third-party presence is earned honestly, with no fake reviews, planted posts or undisclosed incentives.
 - [ ] `llms.txt` and readiness checks are labelled hygiene, not citation levers, unless an engine's documentation is cited.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

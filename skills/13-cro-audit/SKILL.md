@@ -32,8 +32,8 @@ If something is missing:
 - **Core offer and Promise both missing:** stop. Name both sections with their skills (Core offer → `07-offer-design`; Promise → `08-message-doc`) and say what to bring: the offer and the page. A stop reply still ends with the **Principle, framework, source** block.
 - **The page itself is missing:** ask for its copy or screenshots, or a URL to read; audit nothing from imagination.
 - **No analytics:** audit the page against context, mark every finding as a heuristic read, and list the numbers to pull. Never state a "typical" conversion rate or benchmark from memory.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
-- If `08-message-doc` is not loaded, stop and say: enable mkt-q3-message.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
+- `08-message-doc` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -42,20 +42,20 @@ For the named methods this skill owns, see [references/methods.md](references/me
 Use [references/lift-audit.md](references/lift-audit.md) for the LIFT questions, the five-second test, the defect-versus-hypothesis rule and the ranking.
 
 1. **Fix the scope.** One page, its one conversion goal (a booked call, a sign-up, a purchase), the traffic sources and their temperature, and where the conversion boundary is (form submit, order paid). Name the business outcome behind the goal (qualified calls, paid orders), not clicks.
-2. **Read the numbers.** Sum and rate every step with [scripts/funnel.py](scripts/funnel.py) (`python3 <this skill's folder>/scripts/funnel.py <export.csv> <column> ...`), never by eye, overall and by device and source. Keep each step's source definition, period and denominator. Flag counts too small to read (single digits) and say how the page's numbers relate to downstream records (a form submit may already be counted under another lead source).
+2. **Read the numbers.** Sum and rate every step with a hand step table (sum each step, then show each step's count ÷ the previous step's and ÷ the first step's, with numerator and denominator; also split by `<column>`), never by eye, overall and by device and source. Keep each step's source definition, period and denominator. Flag counts too small to read (single digits) and say how the page's numbers relate to downstream records (a form submit may already be counted under another lead source).
 3. **Run the five-second test on the page as written.** From the words above the fold only: what is it, who is it for, what do I do next? Quote the page's own words. This is a heuristic read by you, not a user test, unless a real test was supplied.
 4. **Walk the LIFT factors.** For each: value proposition (does the page say the Core offer and Promise?), relevance (does it match the sources and their awareness?), clarity, anxiety (which evidenced objections and fears are unanswered at the point of decision; which claims are unsupported), distraction (competing links, navigation, extra fields), urgency (only what offer.md says is true). For each finding record: location, what the page says (quoted), the evidence, the factor, who it affects, the suspected mechanism, and confidence.
 5. **Separate defects from hypotheses.** A defect is something broken, false or contradicting context: a service the offer doesn't include, an unsupported claim, a promise of a slower or different next step than the business delivers, a field nobody uses. Defects are fixed first, with the owner's approval. Everything else is a hypothesis to test, not a diagnosed cause.
 6. **Rank.** Order fixes by evidence strength, how many of the right visitors the step touches, and effort. Bigger levers first (offer, headline, form, layout), small cosmetic changes last. Keep necessary qualification, legal, pricing and expectation-setting information even if removing it would raise raw conversion.
 7. **Hand off, don't rewrite.** For each fix name the owner skill: copy → `10-page-copy` with a brief of the problem the rewrite must solve; trust elements → `13-trust-signals`; pricing display → `13-pricing-page`; checkout → `13-checkout`; sign-up flows → `13-signup`; traffic quality → `11-channel-selection`; the test design → `18-ab-testing`. Every row of Ranked tests fills all four parts, each written out for that test: a metric, a guardrail, a window, and a stopping rule (when to stop early or call it: for example the guardrail falls below its baseline, or the window ends without a readable difference). "Same as above" or a blank part fails the check.
 8. **Authorization.** This is an audit. Say that every live change needs the owner's approval and a check afterwards against the baseline.
-9. **Check before saving.** Re-read the draft against the Checks, run `scripts/check_quotes.py`, and fix any failure.
+9. **Check before saving.** Re-read the draft against the Checks, check by hand that every quotation of four or more words appears word for word in a source, and fix any failure.
 
 **Labels.** Every number is copied from a named export or note (with its date), *calculated* (show numerator and denominator), or marked `(assumption)`. Every motive or behaviour you attribute to visitors is evidence-backed or marked `(assumption)`. No unmarked inference.
 
 **Platform facts.** Do not state how an analytics tool, page builder, search engine or ad platform currently works unless you cite its own documentation as `(first-party: <URL>, checked YYYY-MM-DD)`. Otherwise describe only what the material shows and mark anything else *unverified*.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from the page or a source, with the source named. Your own suggested directions go in italics. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py <file>`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from the page or a source, with the source named. Your own suggested directions go in italics. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -100,13 +100,13 @@ End with the **Principle, framework, source** block:
 ## Checks
 
 - [ ] One page, one conversion goal and the business outcome behind it are named.
-- [ ] Every count and rate comes from `funnel.py` or a shown calculation, keeps its definition and period, is split by device or source where the data allows, and small counts are flagged. No benchmark is stated.
+- [ ] Every count and rate comes from a hand step table or a shown calculation, keeps its definition and period, is split by device or source where the data allows, and small counts are flagged. No benchmark is stated.
 - [ ] The five-second test and every LIFT factor are applied to the page's actual words, and each finding names its evidence and confidence.
 - [ ] Defects (broken, false, contradicting context) are separated from hypotheses, and no hypothesis is stated as a proven cause.
 - [ ] Fixes are ranked, bigger levers first, and each has an owner skill. Every ranked test row states its own metric, guardrail, window and stopping rule; none is blank or deferred to another row. Necessary qualification and expectation-setting information is kept.
 - [ ] No new copy is written as final; rewrites go to `10-page-copy` with a brief. No live change is made or implied as done.
 - [ ] No current platform behaviour is asserted without a first-party citation and date.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

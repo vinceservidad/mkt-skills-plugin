@@ -22,8 +22,8 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists:** run the skill that fills it first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Message house or Promise → `08-message-doc`; Awareness map → `03-awareness-map`; Core offer → `07-offer-design`), and ask for evidence, not a description of the buyer. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Price, discounts, promo codes, guarantees, deadlines, free trials and capacity are the owner's commitments. If the brief must carry one that `offer.md` doesn't hold (for example a sale, a launch date or a new bonus), stop before writing, ask the owner for the exact terms, and write no brief on assumed terms.
-- If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
-- If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer.
+- `03-awareness-map` is in this plugin; run it first when the rules above call for it.
+- `07-offer-design` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -77,7 +77,7 @@ Status: draft for the owner's approval
 
 Change nothing in `context/`. The brief is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. The single message, tone notes and example lines you write go in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/09-creative-strategy/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, an interview, a testimonial in the proof stack), with the source named. The single message, tone notes and example lines you write go in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the single message and insight chosen, and what is still missing, then end with the same block.
 
@@ -96,7 +96,7 @@ End with the **Principle, framework, source** block:
 - [ ] Reason to believe uses only proof in the proof stack or inputs, with strength and permission; gaps are named.
 - [ ] CTA and every term in mandatories exist in `offer.md` exactly; no assumed price, discount, deadline, guarantee or bonus.
 - [ ] Platform specs are cited with a dated first-party source or marked *to confirm*.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

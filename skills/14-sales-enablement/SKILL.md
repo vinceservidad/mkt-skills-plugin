@@ -21,10 +21,10 @@ Required (drafted or confirmed, with content):
 - Only when **all three** alternatives sections are empty, or both proof/objection sections are empty:
   - **The upstream evidence exists** (competitor notes, sales notes or reviews in `inputs/`): run the skill that fills the missing section (`01-competitor-profiling`, `06-positioning-statement`, `08-proof-stack` or `08-objection-map`) first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (Competitive alternatives → `06-positioning-statement`; Competitors and alternatives → `01-competitor-profiling`; Proof stack → `08-proof-stack`; Objection map → `08-objection-map`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
-- If `06-positioning-statement` is not loaded, stop and say: enable mkt-q2-offer.
-- If `01-competitor-profiling` is not loaded, stop and say: enable mkt-q1-audience.
-- If `08-proof-stack` is not loaded, stop and say: enable mkt-q3-message.
-- If `08-objection-map` is not loaded, stop and say: enable mkt-q3-message.
+- `06-positioning-statement` is in this plugin; run it first when the rules above call for it.
+- `01-competitor-profiling` is in this plugin; run it first when the rules above call for it.
+- `08-proof-stack` is in this plugin; run it first when the rules above call for it.
+- `08-objection-map` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -32,7 +32,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/enablement-guide.md](references/enablement-guide.md) for battle card structure, one-pager and deck rules, competitor fairness and proof permissions.
 
-1. **Questions first.** List the questions prospects ask most, with counts from `inputs/` ([scripts/tally.py](scripts/tally.py)), and which asset answers each. Build only assets that answer a real question.
+1. **Questions first.** List the questions prospects ask most, with counts from `inputs/` (a hand tally (one line per item, counted one by one)), and which asset answers each. Build only assets that answer a real question.
 2. **Battle cards.** One per alternative buyers weigh (including doing nothing): when buyers choose it, where it is genuinely better, where the offer is better and why, the proof, the question to ask, and the trap to avoid. Competitor facts are dated with a source or marked *to confirm*; no guesses about their prices or quality.
 3. **One-pager.** For the person who signs and wasn't on the call: the problem in the buyer's words, what the offer does, price model as in `offer.md`, the guarantee as written, proof that exists in context or `inputs/` (including founder-reported operational metrics clearly labelled as founder-reported, plus sourced quotes), and the next step. State explicitly if there is no published client case study with written permission yet, and mark any willing reference clients or unapproved quotes as needing written permission before sharing.
 4. **Deck (only if needed).** A few slides that follow the call, not a brand tour: their situation, the gap, how the offer closes it, proof, price and next step.
@@ -41,7 +41,7 @@ Use [references/enablement-guide.md](references/enablement-guide.md) for battle 
 7. **Approval.** The kit is a draft. Sharing assets with prospects or publishing competitor comparisons needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no competitor facts, prices, results, client names, quotes or claims that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no competitor facts, prices, results, client names, quotes or claims that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -69,7 +69,7 @@ Status: draft for the owner's approval; nothing shared with prospects
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/14-sales/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the assets built and the question each answers, the battle cards, and which proof needs permission, and what is still missing, then end with the same block.
 
@@ -87,7 +87,7 @@ End with the **Principle, framework, source** block:
 - [ ] Battle cards are fair, say where the alternative is better, and date or mark *to confirm* every competitor fact.
 - [ ] The one-pager carries price, guarantee and next step exactly as in `offer.md`.
 - [ ] Proof is only what exists, with permissions stated; nothing is shared without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

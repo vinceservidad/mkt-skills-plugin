@@ -19,8 +19,8 @@ People buy when the perceived value is clearly greater than the price. Sell the 
   - `context/positioning.md` → Unique mechanism (`06-unique-mechanism`).
 - Read what the business delivers today (the user's message, `inputs/`, an existing `context/offer.md`). The offer is built from what the business can actually deliver.
 - If both Pains, desires and fears and Voice of customer are missing:
-  - **Raw customer evidence supplied** (interview notes, reviews, call notes): run `02-customer-research` or `02-voc-mining` first, then continue. If that skill is not loaded, stop and say: enable mkt-q1-audience.
-  - **Nothing supplied:** stop. Name the missing sections and those skills, and ask for customer evidence. If they are not loaded, say: enable mkt-q1-audience. Do not design an offer around imagined pains. A stop reply still ends with the **Principle, framework, source** block.
+  - **Raw customer evidence supplied** (interview notes, reviews, call notes): run `02-customer-research` or `02-voc-mining` first, then continue.
+  - **Nothing supplied:** stop. Name the missing sections and those skills, and ask for customer evidence. Do not design an offer around imagined pains. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
 

@@ -38,7 +38,7 @@ Buyers don't compare you with the competitors you worry about; they compare you 
    - price, as observed, with date and source, or *not shown*;
    - the proof it shows (reviews, case studies, counts), described as *claimed by the company* unless independently verified;
    - where it wins and where it loses for our buyer, from buyer evidence (lost deals, interviews, reviews), not from our opinion of it.
-3. **Count wins and losses.** Use lost-deal reasons, churn reasons and switch stories, with counts. Count with `scripts/tally.py`, never by eye.
+3. **Count wins and losses.** Use lost-deal reasons, churn reasons and switch stories, with counts. Count with a hand tally, never by eye.
 4. **Label every claim by kind:**
    - **Observed:** seen on a dated page, ad or search result.
    - **Reported:** what a buyer or the user said about it.
@@ -47,9 +47,9 @@ Buyers don't compare you with the competitors you worry about; they compare you 
 
    A competitor's claim is what they say, not a fact about the market. A competitor's visible tactic (an ad, a price, a headline) is evidence about that competitor, not proof that it works or that we should copy it.
 5. **Name the threats and openings.** Which alternative takes the most deals today, which is growing (with evidence), and where buyers' unmet needs leave room. Keep this to what the evidence shows; positioning decisions belong to `06-positioning-statement`.
-6. **Check before saving.** Re-read the draft against every item under Checks, and run `scripts/check_quotes.py` on it. Fix any failure before you save.
+6. **Check before saving.** Re-read the draft against every item under Checks, and check by hand that every quotation of four or more words appears word for word in a source. Fix any failure before you save.
 
-**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's page as recorded in the notes, a review, an interview. Your summaries, labels and readings go without quotation marks. Run [scripts/check_quotes.py](scripts/check_quotes.py) on the file (`python3 <this skill's folder>/scripts/check_quotes.py context/market.md`); for every line it prints, copy the exact words or drop the quotation marks, until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words copied exactly from a source: a competitor's page as recorded in the notes, a review, an interview. Your summaries, labels and readings go without quotation marks. Check every quotation in the file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear); for every quotation that does not match, copy the exact words or drop the quotation marks, until every quotation matches.
 
 ## Output
 
@@ -97,9 +97,9 @@ End with the **Principle, framework, source** block:
 - [ ] The set includes DIY or in-house and the status quo wherever evidence shows them, not only named companies.
 - [ ] Every competitor, price, claim and count traces to a dated source or the user's words. Nothing comes from memory, and unknown fields say *not shown* or *unknown*.
 - [ ] Each claim is labelled observed, reported, inferred `(assumption)` or unknown. Competitor claims are stated as their claims, not as facts.
-- [ ] Wins and losses come from buyer evidence (lost deals, interviews, reviews), with counts recounted by `tally.py`.
+- [ ] Wins and losses come from buyer evidence (lost deals, interviews, reviews), with counts recounted by a hand tally.
 - [ ] No visible competitor tactic is presented as proof that it works or as something to copy.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] Without evidence, no context section was written and no competitor was named from memory.
 - [ ] Only `## Competitors and alternatives` changed (not `positioning.md`). It has Status, Evidence and Method lines, and the change log has a line for this write.
 

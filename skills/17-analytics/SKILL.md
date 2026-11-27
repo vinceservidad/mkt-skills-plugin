@@ -25,14 +25,14 @@ Use [references/analytics-guide.md](references/analytics-guide.md) for funnel an
 
 1. **The question.** State the business question and the decision it feeds in one or two sentences.
 2. **The data.** Name each source, its grain, period, and known limits (sampling, tracking defects, self-report). If sources disagree, say which is the system of record.
-3. **Funnel analytics.** Compute step-to-step conversion with counts and denominators, by segment (device, source, new or returning) with [scripts/sum_by.py](scripts/sum_by.py). Name the largest drop in absolute and relative terms.
+3. **Funnel analytics.** Compute step-to-step conversion with counts and denominators, by segment (device, source, new or returning) with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a). Name the largest drop in absolute and relative terms.
 4. **Cohort analysis.** Retention by start cohort on the same window (box, week or month since start), with counts; compare only cohorts with the same exposure time.
 5. **Answer.** What the data shows (observed), what it suggests (inference, labelled), and what it can't show. Small counts are flagged; no causal claim without a test.
 6. **Next step.** The decision it supports, and the test or data that would make it surer (`18-ab-testing`, `17-incrementality`, `17-tracking-plan`).
 7. **Approval.** The analysis is a draft. Acting on it in live accounts or pages needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no figures that aren't computed from `inputs/`, and no causes stated as facts without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no figures that aren't computed from `inputs/`, and no causes stated as facts without a test. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -62,7 +62,7 @@ Status: draft for the owner's review; nothing changed in any account
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/17-measurement/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, the answer to the question in one or two sentences, the key numbers with denominators, and how sure it is, and what is still missing, then end with the same block.
 
@@ -78,10 +78,10 @@ End with the **Principle, framework, source** block:
 
 - [ ] The question and decision are stated first.
 - [ ] Sources, grain, period and limits are named; disagreements between sources are explained.
-- [ ] Every rate has a count, denominator and window, computed with `sum_by.py`; segments are compared on equal terms.
+- [ ] Every rate has a count, denominator and window, computed with hand group totals; segments are compared on equal terms.
 - [ ] Cohorts are compared only at equal exposure.
 - [ ] Observed, inferred and unknown are separated; no causal claim without a test.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

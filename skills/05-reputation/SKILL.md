@@ -24,7 +24,7 @@ Reputation is what people say about the brand when it isn't in the room, and it 
 
 Use [references/reputation-playbook.md](references/reputation-playbook.md).
 
-1. **Take stock.** Count reviews and ratings by source with [scripts/tally.py](scripts/tally.py) (`python3 <this skill's folder>/scripts/tally.py inputs/<file> --count '★+☆*'` for star strings, or the CSV mode); never count by eye. Note themes with item IDs, which reviews have replies, and what is monitored today and by whom.
+1. **Take stock.** Count reviews and ratings by source with a hand tally (one line per item, counted one by one; for star strings, count how many times each distinct rating appears, or for a CSV count the values in the rating column); never count by eye. Note themes with item IDs, which reviews have replies, and what is monitored today and by whom.
 2. **Listening plan.** Name the sources where this business's buyers talk (from the evidence), who checks each, and how often. A written plan is *designed*, not running: never say monitoring is active unless a tool or person is confirmed doing it.
 3. **Triage.** Sort each item: praise, fair complaint, factual error, suspected fake or non-customer, legal or safety issue, potential crisis. Check each against the business's own records (logs, CRM) before replying.
 4. **Replies.** Draft replies to the items that need one, in the brand's voice:
@@ -54,7 +54,7 @@ Use [references/reputation-playbook.md](references/reputation-playbook.md).
 ## Reputation
 Status: draft (<YYYY-MM-DD>, 05-reputation)
 Written by: 05-reputation, <YYYY-MM-DD>
-Current state: <counts by source and rating, from tally.py; themes with IDs; replies so far; what is monitored today>
+Current state: <counts by source and rating, from a hand tally; themes with IDs; replies so far; what is monitored today>
 Listening plan (designed, not yet running): <source — who checks — how often>
 Triage and reply rules: <category — what to do — who approves>
 Escalation: <what counts as a potential crisis — who is told — within how long (owner to set)>
@@ -70,7 +70,7 @@ Method: Reputation management loop (listen, triage, reply, fix, learn); Situatio
 
 Never set `confirmed` unless the user approves. Then update the file: in the frontmatter, set `status: draft` and `updated: <date>`, and append one line to `## Change log`. If `context/brand.md` does not exist, create it with frontmatter, the five brand sections (others `Status: empty`) and a change log.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a post, incident notes), with the source named. Your drafted replies and statements are your words: present them as drafts under a heading or in italics, never inside quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on each file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py <file>`). For every line it prints, copy the exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source (a review, a post, incident notes), with the source named. Your drafted replies and statements are your words: present them as drafts under a heading or in italics, never inside quotation marks. Before saving, check every quotation in each file you wrote by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with:
 - the most urgent item and the recommended first action;
@@ -88,14 +88,14 @@ End with the **Principle, framework, source** block:
 
 ## Checks
 
-- [ ] Counts come from `tally.py`; every theme cites item IDs; nothing is counted by eye.
+- [ ] Counts come from a hand tally; every theme cites item IDs; nothing is counted by eye.
 - [ ] The listening plan is labelled *designed*; no monitoring is described as running unless confirmed.
 - [ ] Replies reveal no private client information, argue with no one, and offer no refund, discount or guarantee the owner hasn't committed to.
 - [ ] Suspected fake reviews are handled neutrally, with no public accusation; platform policies are not asserted as current fact.
 - [ ] In a crisis, confirmed facts and unknowns are separate; affected parties are told privately before any public statement; legal and insurance review is flagged; the approver is named; no *one-off* or *nothing else affected* claim before the records show it.
 - [ ] Every private message the crisis order calls for (to affected parties, to anyone asked to delete something) has draft wording for the owner to approve.
 - [ ] Every reply and statement is marked as a draft needing the owner's approval; nothing is posted or sent.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean. No unmarked inference.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source. No unmarked inference.
 - [ ] Only `## Reputation` changed in `context/`. It has Status, Evidence and Method lines, and the change log has a line for this write.
 
 ## Principle and source

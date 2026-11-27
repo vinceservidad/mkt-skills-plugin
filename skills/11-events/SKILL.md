@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (interviews, sales notes in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name the missing section with the skill that fills it (ICP and personas → `02-icp-persona`) and ask for evidence. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Booth fees, sponsorship packages, travel, show-only offers and staff days are the owner's commitments. When evaluating event options whose costs are in `inputs/`, the plan compares options with their costs and leaves the spend decision to the owner. If the request asks to plan around an unconfirmed show-only discount, freebie or unpriced spend that `offer.md` and `inputs/` don't hold, stop, ask the owner to confirm the exact offer terms (eligibility, end date or sign-up deadline, margin impact, capacity) and spend, and write no deliverable file in `work/11-distribution/` (a stop reply still ends with the **Principle, framework, source** block).
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -39,7 +39,7 @@ Use [references/events-guide.md](references/events-guide.md) for event types, th
 9. **Approval.** The plan is a draft. Buying a booth or ticket, applying to speak, or contacting attendees needs the owner's explicit approval.
 10. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no attendance, results, offers or costs that aren't in `context/` or `inputs/`. Count from files with [scripts/tally.py](scripts/tally.py), never by eye. Mark inferences `(assumption)` and list what is needed under Open questions. No benchmark event return is evidence.
+**Nothing the context doesn't support.** Write no attendance, results, offers or costs that aren't in `context/` or `inputs/`. Count from files with a hand tally (one line per item, counted one by one), never by eye. Mark inferences `(assumption)` and list what is needed under Open questions. No benchmark event return is evidence.
 
 ## Output
 
@@ -69,7 +69,7 @@ Status: draft for the owner's approval; nothing bought, applied for or sent
 
 Change nothing in `context/`. The plan is a deliverable, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/11-distribution/<file>.md`) and fix every line it prints until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Titles of books, essays or talks, including in the Principle, framework, source block, go in italics, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear) and fix every quotation that does not match until every quotation matches.
 
 Reply with the file path, the recommended option and why, the cost per conversation needed for each option, the dates and deadlines, and what is still missing, then end with the same block.
 
@@ -89,7 +89,7 @@ End with the **Principle, framework, source** block:
 - [ ] Before, during and after are planned; follow-up has a deadline; attendee data is used only as agreed.
 - [ ] The event is judged on qualified conversations, calls and clients with counts, not scans.
 - [ ] Deadlines and capacity are respected; nothing is bought, applied for or sent without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

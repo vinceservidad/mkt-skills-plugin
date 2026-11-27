@@ -18,7 +18,7 @@ Cold traffic doesn't know you, warm traffic knows you, and hot traffic is ready 
 - Read the list of traffic sources: the user's message, lead-source data in `inputs/`, or Buying triggers and process. Read conversion data by source, if supplied.
 - If the Awareness map is missing:
   - **ICP and pains are present:** run `03-awareness-map` first, then continue.
-  - **Not present:** stop. Name every missing section with the skill that fills it (Awareness map → `03-awareness-map`; ICP and personas → `02-icp-persona`; Pains, desires and fears → `02-customer-research`; Value ladder → `07-value-ladder`, which lives in mkt-q2-offer: if it is not loaded, say enable mkt-q2-offer). Ask for customer evidence (interviews, call notes, reviews), not a description of the buyer: the user's own summary is a hypothesis, not evidence. Do not assign temperatures, pages or offers for an unmapped buyer; one line on the general principle is the most you give.
+  - **Not present:** stop. Name every missing section with the skill that fills it (Awareness map → `03-awareness-map`; ICP and personas → `02-icp-persona`; Pains, desires and fears → `02-customer-research`; Value ladder → `07-value-ladder`). Ask for customer evidence (interviews, call notes, reviews), not a description of the buyer: the user's own summary is a hypothesis, not evidence. Do not assign temperatures, pages or offers for an unmapped buyer; one line on the general principle is the most you give.
   - A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process

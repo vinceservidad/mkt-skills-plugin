@@ -20,7 +20,7 @@ Required (drafted or confirmed, with content):
   - **The upstream evidence exists** (reviews, tickets or social posts in `inputs/`): run `02-icp-persona` first, then continue.
   - **It doesn't:** stop. Name every missing section with the skill that fills it (ICP and personas → `02-icp-persona`), and ask for evidence, not a description. Write nothing. A stop reply still ends with the **Principle, framework, source** block.
 - **Owner commitments.** Prizes, free products for seeding, discounts and contest dates are the owner's commitments; the plan costs them and the owner sets them.
-- If `02-icp-persona` is not loaded, stop and say: enable mkt-q1-audience.
+- `02-icp-persona` is in this plugin; run it first when the rules above call for it.
 
 ## Process
 
@@ -28,7 +28,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/ugc-guide.md](references/ugc-guide.md) for prompts, permissions and rights, giveaway and contest rules, seeding with disclosure, and measurement.
 
-1. **What customers already post.** Count posts and tags from `inputs/` with [scripts/tally.py](scripts/tally.py) and note the moments they post (unboxing, first cup, a result).
+1. **What customers already post.** Count posts and tags from `inputs/` with a hand tally (one line per item, counted one by one) and note the moments they post (unboxing, first cup, a result).
 2. **Prompts.** One or two prompts tied to those moments, with an easy way to share (a card in the box, a hashtag, a short ask in an email).
 3. **Permission and rights.** Before reusing any post on the site, in emails or ads: ask the creator, record their yes, credit them, and state where it will run. Paid use in ads needs explicit rights.
 4. **Featuring customers.** Where and how featured content appears, chosen for buyers who fit the ICP.
@@ -38,7 +38,7 @@ Use [references/ugc-guide.md](references/ugc-guide.md) for prompts, permissions 
 8. **Approval.** The plan is a draft. Reusing posts, launching contests, shipping free product or contacting customers needs the owner's explicit approval.
 9. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no post counts, reach, results, prizes or customer content that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no post counts, reach, results, prizes or customer content that aren't in `context/` or `inputs/`. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -68,7 +68,7 @@ Status: draft for the owner's approval; nothing reused, launched or shipped
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/16-referral-community/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, what customers already post, the prompt, the permission process, the giveaway verdict, and the seeding rules, and what is still missing, then end with the same block.
 
@@ -87,7 +87,7 @@ End with the **Principle, framework, source** block:
 - [ ] Giveaways have official rules, costs and platform checks; laws are dated or *to confirm*; legal review is flagged.
 - [ ] Seeding carries no undisclosed posting obligation.
 - [ ] Success is reach to new buyers and orders with counts; nothing is launched without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

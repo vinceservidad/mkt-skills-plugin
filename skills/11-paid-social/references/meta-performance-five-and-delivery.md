@@ -25,7 +25,7 @@ Score observed evidence across Meta's five pillars without recommending universa
 ## 3. Compatible results arithmetic contract
 
 - Keep Meta attribution settings identical across any comparison window (e.g., 7-day click / 1-day view); flag window changes explicitly.
-- **Never pool incompatible outcomes:** never merge raw leads + qualified SQLs + purchases into one blended cost per result (`use sum_by.py` by campaign/ad/outcome type separately).
+- **Never pool incompatible outcomes:** never merge raw leads + qualified SQLs + purchases into one blended cost per result (total by hand per campaign, ad and outcome type separately).
 - High CTR, thumb-stop rate, or Opportunity Score never justifies scaling spend on a poor business-outcome ad, nor pausing a profitable high-CPA prospect campaign prematurely without CRM margin proof.
 
 ## 4. Current Meta product naming (*to confirm* against Docs / account)

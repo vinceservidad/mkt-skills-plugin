@@ -26,7 +26,7 @@ For the named methods this skill owns, see [references/methods.md](references/me
 
 Use [references/churn-guide.md](references/churn-guide.md) for churn types, the diagnosis, dunning, pause and save design, and what is never allowed, and [references/retention-reason-coding-and-saves.md](references/retention-reason-coding-and-saves.md) for structured churn reason coding, reason-matched honest save flows, verification windows, and targeted win-back.
 
-1. **Measure churn by type.** From `inputs/`, compute retention by cohort and churn by type (voluntary, involuntary from failed payments, lapse) with [scripts/sum_by.py](scripts/sum_by.py) or [scripts/tally.py](scripts/tally.py), each figure labelled. State the denominator and the window.
+1. **Measure churn by type.** From `inputs/`, compute retention by cohort and churn by type (voluntary, involuntary from failed payments, lapse) with hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a) or a hand tally (one line per item, counted one by one), each figure labelled. State the denominator and the window.
 2. **Churn analysis.** Count exit reasons and ticket groups; note how many customers answered and that answers are self-reported. Separate fit (wrong customers), product or service failure, operations, price-value, and life events. Each reason gets its owner.
 3. **Involuntary churn first.** Dunning / failed-payment recovery: notice before a card expires, an email or text when a payment fails (with consent for SMS), several retries spaced over days, an easy card update, and a grace period. Count what is lost today.
 4. **Exit surveys / save offers.** A short required or optional reason question on the cancel flow; for each reason, the honest response: a pause or skip for too much stock or travel, a cadence change, a fix for delivery, a fitting cheaper option if the offer has one. A discount only where price is the diagnosed reason and the owner sets it. Cancellation stays easy and one step.
@@ -35,7 +35,7 @@ Use [references/churn-guide.md](references/churn-guide.md) for churn types, the 
 7. **Approval.** The plan is a draft. Changing the cancel flow, payment retries, messages or offers needs the owner's explicit approval.
 8. **Check before saving.** Re-read the draft against the Checks and fix any failure.
 
-**Nothing the context doesn't support.** Write no churn rates, reasons, results or offers that aren't in `context/` or `inputs/`. Never propose hiding, delaying or obstructing cancellation, or contacting customers against their consent or suppression. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with [scripts/tally.py](scripts/tally.py) or [scripts/sum_by.py](scripts/sum_by.py), never by eye. No third-party benchmark is evidence about this business.
+**Nothing the context doesn't support.** Write no churn rates, reasons, results or offers that aren't in `context/` or `inputs/`. Never propose hiding, delaying or obstructing cancellation, or contacting customers against their consent or suppression. Mark inferences `(assumption)` and list what is needed under Open questions. Count from files with a hand tally (one line per item, counted one by one) or hand group totals (add each numeric column within the group, then divide for each ratio; a zero denominator is n/a), never by eye. No third-party benchmark is evidence about this business.
 
 ## Output
 
@@ -65,7 +65,7 @@ Status: draft for the owner's approval; nothing changed
 
 Change nothing in `context/`. The deliverable is a draft, not a decision.
 
-**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, run [scripts/check_quotes.py](scripts/check_quotes.py) on your file (`python3 <this skill's folder>/scripts/check_quotes.py work/15-retention/<file>.md`). For every line it prints, copy the source's exact words or drop the quotation marks, and run it again until it reports every quotation matches.
+**Quotation marks are evidence.** Quotation marks hold only words that appear exactly in a source, with the source named. Write your own lines, and the titles of books, essays or talks (including in the Principle, framework, source block), in italics or plain text, never in quotation marks. Before saving, check every quotation in your file by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the source's exact words or drop the quotation marks, and check again until every quotation matches.
 
 Reply with the file path, churn by type with counts, the top reasons, the dunning fix, and the cancel-flow design, and what is still missing, then end with the same block.
 
@@ -84,7 +84,7 @@ End with the **Principle, framework, source** block:
 - [ ] Failed-payment recovery has notice, retries, an easy update and a grace period.
 - [ ] Cancellation stays easy; no hidden button, forced call or obstruction; save offers match a diagnosed reason; discounts are *owner to set*.
 - [ ] Saves are verified over the decision-relevant window against a comparison; nothing changes without approval.
-- [ ] Quotation marks hold only exact source words, and `check_quotes.py` reports clean.
+- [ ] Quotation marks hold only exact source words, and every quotation was checked word for word against a source.
 - [ ] No file in `context/` changed.
 
 ## Principle and source

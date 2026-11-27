@@ -19,7 +19,7 @@ Compute payback in the business's **actual billing periods** (`channel or blende
 
 Standard ecommerce payback breaks on B2B lead generation when closing a deal takes 30 to 180+ days:
 1. **Cohort strictly by lead-creation date:** Never cohort by opportunity-creation or close date (survivorship bias hides dead leads created in the same month).
-2. **Keep every stage and the open share visible:** Track `created leads -> MQL -> SQL -> opportunity -> closed-won -> closed-lost -> open share %` side by side (`scripts/sum_by.py` from CRM exports). Never treat an open pipeline lead as won or lost.
+2. **Keep every stage and the open share visible:** Track `created leads -> MQL -> SQL -> opportunity -> closed-won -> closed-lost -> open share %` side by side (hand group totals from CRM exports). Never treat an open pipeline lead as won or lost.
 3. **Judge maturity before killing a channel:** Recent cohorts appear weaker simply because open pipeline has not closed yet. State the *open share %* alongside interim cost per SQL and revenue per lead, and define a maturity threshold (e.g., open share < `15%` or full typical cycle elapsed) before cutting or scaling slow-cycle channels like LinkedIn (`11-paid-social`) or ABM (`14-prospecting`).
 4. **Separate velocity from revenue lag:** One channel can advance prospects to discovery calls faster while another closes larger retainers slower; reconcile pipeline speed separately from realized cash (`19-scale-paid` checks conversion-lag readiness before budget jumps).
 

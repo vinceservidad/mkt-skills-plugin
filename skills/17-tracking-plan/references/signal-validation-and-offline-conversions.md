@@ -16,7 +16,7 @@ Map every commercial conversion event from the real customer action all the way 
 When running browser + server-side tracking together (Meta Pixel + Conversions API; Google tag + Enhanced Conversions / server-side GTM):
 1. **Shared unique `event_id` and order ID:** Transmit matching `event_id` / `transaction_id` values on both browser and server payloads for the exact same customer action so the platform deduplicates 36 transmissions for 18 real orders back down to 18 conversions.
 2. **Event Match Quality (EMQ) vs. semantic accuracy:** High EMQ measures identifier hashing coverage (email, phone, click ID, external ID); it never proves the event fired on the right page, carried net revenue excluding refunds, or deduplicated cleanly.
-3. **Never sum platform-credited conversions across channels:** Google Ads and Meta Ads routinely claim overlapping credit for the same order (`17-attribution`, `17-incrementality`). Reconcile both against non-duplicated store orders or CRM closed-won rows (`scripts/sum_by.py`).
+3. **Never sum platform-credited conversions across channels:** Google Ads and Meta Ads routinely claim overlapping credit for the same order (`17-attribution`, `17-incrementality`). Reconcile both against non-duplicated store orders or CRM closed-won rows (hand group totals).
 
 ## 3. Offline CRM conversion validation (Meta Conversion Leads and Google OCI / Data Manager)
 

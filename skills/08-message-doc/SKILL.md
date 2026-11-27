@@ -20,7 +20,7 @@ Decide what you say before writing any ad or page. One message, one idea, one re
   - `context/positioning.md` → Unique mechanism (`06-unique-mechanism`), the owned mechanism;
   - the rest of `context/offer.md` (guarantee, price).
 - If a required section is missing:
-  - **The upstream evidence exists:** run the missing skill first (`07-offer-design` or `03-awareness-map`), then continue. If `07-offer-design` is not loaded, stop and say: enable mkt-q2-offer. If `03-awareness-map` is not loaded, stop and say: enable mkt-q1-audience.
+  - **The upstream evidence exists:** run the missing skill first (`07-offer-design` or `03-awareness-map`), then continue.
   - **It doesn't:** stop. Name every missing section and the skill that fills it, and what the user should bring. Do not write a message for an undefined offer or buyer. A stop reply still ends with the **Principle, framework, source** block.
 
 ## Process
@@ -76,7 +76,7 @@ End with the **Principle, framework, source** block:
 ```
 
 **Quotation marks are evidence.** Put words in quotation marks only when they appear exactly in a source (a review, an interview, the story material), with its ID. Everything you write yourself (a promise, a belief to shift, an answer, a softened claim, a line of copy, a story line) goes in italics: *like this*. Before saving, find every quotation mark in your draft and check the words against the source.
-Then run [scripts/check_quotes.py](scripts/check_quotes.py) on the file you wrote (`python3 <this skill's folder>/scripts/check_quotes.py context/message.md`). For every line it prints, copy the exact words from the source or drop the quotation marks and use italics, then run it again until it reports every quotation matches.
+Then check every quotation in the file you wrote by hand: any quotation of four or more words must appear word for word in `inputs/` or another context file, ignoring case and punctuation (for an ellipsis or a [bracketed] insert, each part must appear). For every quotation that does not match, copy the exact words from the source or drop the quotation marks and use italics, then check again until every quotation matches.
 
 ## Checks
 

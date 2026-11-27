@@ -57,7 +57,7 @@ Copy is assembled from research, not invented. This skill turns raw customer tex
    - Any jargon of yours that they never use.
 6. **Name the gaps.** Note any missing voices: churned customers, non-buyers, a segment. Note any source that was unreadable or skipped.
 
-Count with [scripts/tally.py](scripts/tally.py) whenever the material is a file: `python3 <this skill's folder>/scripts/tally.py inputs/reviews.csv` prints rows and per-column counts, and `tally.py notes.md 'R\d+|T-\d+'` counts distinct item IDs. Use its numbers, not counts made by reading.
+Count by hand whenever the material is a file: for a spreadsheet, count the rows and the values in every column that has few distinct values; for notes, list each distinct item ID once (for example `R12` or `T-4`) and count them per prefix. Use those counts, not counts made by reading.
 
 ## Output
 
